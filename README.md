@@ -1,1 +1,0 @@
-# QED_manyMolecule_ManyMode_NAMD
