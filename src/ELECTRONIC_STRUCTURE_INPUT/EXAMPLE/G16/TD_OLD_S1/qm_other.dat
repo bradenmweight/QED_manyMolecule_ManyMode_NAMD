@@ -1,0 +1,66 @@
+ Charge=             -0.0000 electrons
+ Dipole moment (field-independent basis, Debye):
+    X=              0.0000    Y=              0.0000    Z=              0.0004  Tot=              0.0004
+ Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=            -30.6045   YY=            -30.6055   ZZ=            -35.1527
+   XY=              0.0003   XZ=              0.0018   YZ=             -0.0028
+ Traceless Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=              1.5164   YY=              1.5154   ZZ=             -3.0318
+   XY=              0.0003   XZ=              0.0018   YZ=             -0.0028
+ Octapole moment (field-independent basis, Debye-Ang**2):
+  XXX=             82.4941  YYY=            -89.9087  ZZZ=              0.0597  XYY=             27.4990
+  XXY=            -29.9648  XXZ=              0.0161  XZZ=             31.5843  YZZ=            -34.4215
+  YYZ=              0.0130  XYZ=              0.0049
+ Hexadecapole moment (field-independent basis, Debye-Ang**3):
+ XXXX=           -404.3383 YYYY=           -432.1775 ZZZZ=            -28.5578 XXXY=             80.7719
+ XXXZ=             -0.0694 YYYX=             80.7862 YYYZ=              0.1019 ZZZX=             -0.0886
+ ZZZY=              0.1403 XXYY=           -139.4091 XXZZ=            -82.2926 YYZZ=            -87.6185
+ XXYZ=              0.0312 YYXZ=             -0.0130 ZZXY=             30.9281
+------------------------------------------------------------- 
+ Ground to excited state transition densities written to RWF  633
+ Ground to excited state transition electric dipole moments (Au):
+       state          X           Y           Z        Dip. S.      Osc.
+         1         0.0001      0.0001      0.0000      0.0000      0.0000
+         2        -0.0003      0.0018     -0.0002      0.0000      0.0000
+         3        -0.0022     -0.0047      0.0000      0.0000      0.0000
+         4        -0.0003      0.0102     -0.0000      0.0001      0.0000
+ Ground to excited state transition velocity dipole moments (Au):
+       state          X           Y           Z        Dip. S.      Osc.
+         1        -0.0000     -0.0000     -0.0000      0.0000      0.0000
+         2         0.0001     -0.0003      0.0000      0.0000      0.0000
+         3         0.0004      0.0009     -0.0000      0.0000      0.0000
+         4         0.0000     -0.0021      0.0000      0.0000      0.0000
+ Ground to excited state transition magnetic dipole moments (Au):
+       state          X           Y           Z
+         1        -0.0001      0.0001      0.0001
+         2        -0.0000     -0.0001      0.0024
+         3        -0.0002     -0.0002     -0.0030
+         4         0.0003      0.0007      0.0032
+ Ground to excited state transition velocity quadrupole moments (Au):
+       state          XX          YY          ZZ          XY          XZ          YZ
+         1         0.0001     -0.0001     -0.0000     -0.0000      0.0000      0.0000
+         2        -0.0001     -0.0012      0.0000      0.0006      0.0001     -0.0000
+         3        -0.0016      0.0036     -0.0000     -0.0006      0.0000     -0.0000
+         4        -0.0002     -0.0078     -0.0000      0.0037      0.0001      0.0000
+ <0|del|b> * <b|rxdel|0> + <0|del|b> * <b|delr+rdel|0>
+ Rotatory Strengths (R) in cgs (10**-40 erg-esu-cm/Gauss)
+       state          XX          YY          ZZ    R(velocity)    E-M Angle
+         1        -0.0000      0.0000      0.0000      0.0000       90.00
+         2         0.0002      0.0001     -0.0000      0.0001       90.00
+         3        -0.0001     -0.0001     -0.0003     -0.0002       90.00
+         4        -0.0012      0.0000     -0.0019     -0.0010       90.00
+ 1/2[<0|r|b>*<b|rxdel|0> + (<0|rxdel|b>*<b|r|0>)*]
+ Rotatory Strengths (R) in cgs (10**-40 erg-esu-cm/Gauss)
+       state          XX          YY          ZZ     R(length)
+         1         0.0000     -0.0000     -0.0000      0.0000
+         2        -0.0000      0.0001      0.0003      0.0001
+         3        -0.0004     -0.0006      0.0001     -0.0003
+         4         0.0001     -0.0050      0.0001     -0.0016
+  1/2[<0|del|b>*<b|r|0> + (<0|r|b>*<b|del|0>)*] (Au)
+       state          X           Y           Z        Dip. S.   Osc.(frdel)
+         1        -0.0000     -0.0000     -0.0000      0.0000      0.0000
+         2        -0.0000     -0.0000     -0.0000      0.0000      0.0000
+         3        -0.0000     -0.0000     -0.0000      0.0000      0.0000
+         4        -0.0000     -0.0000     -0.0000      0.0000      0.0000
+
+------------------------------------------------------------- 
