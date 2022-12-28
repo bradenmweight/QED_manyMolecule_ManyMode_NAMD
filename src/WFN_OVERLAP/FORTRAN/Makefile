@@ -1,7 +1,7 @@
 #
 # Paths to directories commands
 #
-include ../../compiler.mk
+include ./compiler.mk
 
 DIR = ./
 INCDIR = ${DIR}/include

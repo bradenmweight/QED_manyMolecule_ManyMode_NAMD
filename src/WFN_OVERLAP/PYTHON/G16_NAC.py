@@ -991,13 +991,14 @@ def main(DYN_PROPERTIES):
 
     sp.call("rm -r OVERLAP", shell=True)
     sp.call("mkdir OVERLAP", shell=True)
-    n = gau_nac() 
-    n.worker()
+    n = gau_nac(DYN_PROPERTIES) 
+    DYN_PROPERTIES = n.worker()
 
     os.chdir("../")
 
         #ao.collect_qm()
 
+    return DYN_PROPERTIES
 
 if __name__ == "__main__":
     main()

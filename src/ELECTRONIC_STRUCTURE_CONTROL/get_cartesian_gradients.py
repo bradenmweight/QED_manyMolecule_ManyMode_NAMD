@@ -56,6 +56,9 @@ def main(DYN_PROPERTIES):
 
     os.chdir("../")
 
+    DYN_PROPERTIES["DIAG_GRADIENTS"] = DIAG_GRADIENTS
+
+    return DYN_PROPERTIES
 
 
 def read_XYZ():
@@ -87,4 +90,4 @@ if ( __name__ == "__main__" ):
     DYN_PROPERTIES["MD_STEP"] = 1
     DYN_PROPERTIES["RUN_ELEC_STRUC"] = "USE_CURRENT_NODE" # "SUBMIT_SBATCH", "USE_CURRENT_NODE", "TEST"
     DYN_PROPERTIES["SBATCH_G16"] = "~/submit_scripts/submit.gaussian" # For "SUBMIT_SBATCH" in previous only
-    main(DYN_PROPERTIES)
+    DYN_PROPERTIES = main(DYN_PROPERTIES)

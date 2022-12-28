@@ -53,15 +53,17 @@ def load_json(filename, encode='utf-8'):
     
     return obj     
 
-class gau_nac():
+class gau_nac:
     """
     calc. nac data.
     gaussian.chk
     """
-    def __init__(self, config = {}):
+    def __init__(self, DYN_PROPERTIES,  config = {}):
         """
         very ok nac
         """
+        self.DYN_PROPERTIES = DYN_PROPERTIES
+        
         self.directory = {'work': "TD_NEW_S1", \
                           'work_prev': "TD_OLD_S1", \
                           "DIMER": "DIMER", \
@@ -140,6 +142,8 @@ class gau_nac():
         n_state = dim['n_state']    # Number of states
         n_ao = dim['n_basis']       # number of basis functions
         n_occ = dim['nocc_allA']    # number of occupied orbitals        
+        tmp = len( open('ci_1.dat','r').readlines()[1:] )
+        n_csf = tmp // (n_state-1) # number of excited slater determinents per excited state       
 
         fileout1=open('main_overlap_slater_input','w')
         fileout1.write('                        read (*,*)  \n')
@@ -149,6 +153,7 @@ class gau_nac():
         fileout1.write(''+str(n_occ)+'               read (*,*) n_ele_beta \n')
         fileout1.write('                        read (*,*)  \n')
         fileout1.write(''+str(n_state)+'               read (*,*) n_state \n')
+        fileout1.write(''+str(n_csf)+'               read (*,*) n_csf \n')
         fileout1.write('                        read (*,*)  \n')
         fileout1.write('1                       read (*,*)  type_input  \n')
         fileout1.write('ci_1.dat                read (*,*)  filename_input1  \n')
@@ -245,6 +250,29 @@ class gau_nac():
         plt.savefig("wavefunction_overlap_MAT.jpg",dpi=600)
         plt.clf()
 
+        if ( self.DYN_PROPERTIES["MD_STEP"] > 1 ):
+            self.DYN_PROPERTIES["OVERLAP_OLD"] = DYN_PROPERTIES["OVERLAP_NEW"]
+        self.DYN_PROPERTIES["OVERLAP_NEW"] = CI_overlap[:,:]
+
+
+    def check_phase():
+        # NOT IMPLEMENTED YET
+        return
+
+    def calc_NAC(self):
+        """
+        NACT_{jk} \\approx (<j(t0)|k(t1)> - <j(t1)|k(t0)>) / (2*dt)
+        NEED TO CHECK IF THIS IS CORRECT IMPLEMENTATION OF THIS EXPRESSION
+        """
+        # CHECK OVERLAP PHASE. STEAL SHARC VERSION.
+        OVERLAP = self.DYN_PROPERTIES["OVERLAP_NEW"]
+        dtI     = self.DYN_PROPERTIES["dtI"]
+        NACT    = (OVERLAP - OVERLAP.T) / 2 / dtI
+        #NACT    = (OVERLAP + OVERLAP.T) / 2 / dtI # Check this, TODO
+
+        self.DYN_PROPERTIES["NACT_NEW"] = NACT
+
+
     def worker(self):
         """
         prepare; run; dump; finilize
@@ -253,15 +281,16 @@ class gau_nac():
         self.run()
         #self.dump()
         self.dump_braden()
+        self.calc_NAC()
         self.finilize()
         
-        return
-        
+        return self.DYN_PROPERTIES
 
 # main program.
-if __name__ == "__main__":    
-    n = gau_nac() 
-    n.worker()
+if __name__ == "__main__":  
+    DYN_PROPERTIES = {"test":None}  
+    n = gau_nac(DYN_PROPERTIES) 
+    DYN_PROPERTIES = n.worker()
 
    
      

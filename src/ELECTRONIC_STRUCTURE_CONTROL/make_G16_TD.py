@@ -9,20 +9,6 @@ import get_diagonal_electronic_energies
 sys.path.append("/scratch/bweight/software/many_molecule_many_mode_NAMD/src/WFN_OVERLAP/PYTHON/")
 import G16_NAC
 
-# Obtain a geometry
-
-# Move older directories: GS_NEW -> GS_OLD, TD_NEW -> TD_OLD
-
-# Remove OVERLAP directory
-
-# Make directories for GS_NEW (with force), TD_NEW (S1 force), OVERLAP
-
-# Submit all three jobs
-
-# Once TD is done, submit TD for all forces (Sj >= S2) simultaneously (OpenMP used here ?)
-
-# Run data-collecting scripts in top directory (Need to add GS directories to this procedure yet.) # TODO
-
 def check_geometry(Atom_labels,Atom_coords_new):
 
     assert ( isinstance(Atom_labels, list) ), "Atoms labels needs to be a list" 
@@ -128,6 +114,7 @@ def generate_inputs(DYN_PROPERTIES):
         file01 = open("geometry.com","w")
         write_header(file01,MEM,NCPUS)
         if ( FUNCTIONAL.upper() in ['AM1', 'PM3', 'PM6', 'PM7'] ): # By default, gaussian does not compute AO overlap for semi-empirical Hamiltonians
+            # THIS GIVES BAD OVERLAPS STILL. DO NOT USE. ASSERT IS FOUND ELSEWHERE
             file01.write(f"# {FUNCTIONAL}/{BASIS_SET} IOp(3/41=2000) nosymm iop(2/12=3,3/33=1) guess=only pop=full\n\n") ### MAIN LINE ###
         else:
             file01.write(f"# {FUNCTIONAL}/{BASIS_SET} nosymm iop(2/12=3,3/33=1) guess=only pop=full\n\n") ### MAIN LINE ###
@@ -158,7 +145,7 @@ def submit_jobs(DYN_PROPERTIES):
                     exit()
                 try:
                     check = open("geometry.out","r").readlines()[-1]
-                except FileNotFoundError:
+                except (FileNotFoundError, IndexError) as errors:
                     continue
                 if ( check.split()[:4] == "Normal termination of Gaussian".split() ):
                     print("\tGaussian terminated normally in %2.2f s. (%s)" % (time.time() - t0, os.getcwd().split("/")[-1]) )
@@ -202,6 +189,41 @@ def submit_jobs(DYN_PROPERTIES):
     submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP)
     os.chdir("../")
 
+
+
+
+def get_approx_NACR( DYN_PROPERTIES ):
+    """
+    Shu, ..., Truhlar, J. Chem. Theory Comput. 2022, 18, 3, 1320-1328
+    """
+
+    NAtoms = DYN_PROPERTIES["NAtoms"]
+    NStates = DYN_PROPERTIES["NStates"]
+    V     = DYN_PROPERTIES["Atom_velocs_new"]
+    Ead   = DYN_PROPERTIES["DIAG_ENERGIES"]
+    dEad  = DYN_PROPERTIES["DIAG_GRADIENTS"]
+    NACT  = DYN_PROPERTIES["NACT_NEW"]
+
+    alpha = np.zeros(( NStates, NStates ))
+    g = np.zeros(( NStates, NStates, NAtoms, 3 ))
+    G = np.zeros(( NStates, NStates, NAtoms, 3 ))
+    
+    #print( G.shape, g.shape, V.shape, alpha.shape )
+
+    for j in range( NStates ):
+        for k in range( NStates ):
+            g[j,k,:,:] = dEad[j,:,:] - dEad[k,:,:]
+            alpha[j,k] = NACT[j,k] - np.einsum("ad,ad->", V[:,:], g[j,k,:,:])
+            alpha[j,k] /= np.einsum("ad,ad->", V[:,:], V[:,:] )
+            G[j,k,:,:] = g[j,k,:,:] + alpha[j,k] * V[:,:]
+
+    if ( DYN_PROPERTIES["MD_STEP"] > 1 ):
+        DYN_PROPERTIES["NACR_APPROX_OLD"] = DYN_PROPERTIES["NACR_APPROX_NEW"]
+    DYN_PROPERTIES["NACR_APPROX_NEW"] = G[:,:,:,:]
+    
+    return DYN_PROPERTIES
+
+
 def main(DYN_PROPERTIES):
 
     NStates = DYN_PROPERTIES["NStates"] # Total number of electronic states
@@ -220,14 +242,16 @@ def main(DYN_PROPERTIES):
 
     os.chdir("../")
 
-    get_cartesian_gradients.main(DYN_PROPERTIES)
-    get_diagonal_electronic_energies.main(DYN_PROPERTIES)
+    DYN_PROPERTIES = get_cartesian_gradients.main(DYN_PROPERTIES)
+    DYN_PROPERTIES = get_diagonal_electronic_energies.main(DYN_PROPERTIES)
     if ( MD_STEP >= 1 ):
-        G16_NAC.main(DYN_PROPERTIES)
+        DYN_PROPERTIES = G16_NAC.main(DYN_PROPERTIES)
+        DYN_PROPERTIES = get_approx_NACR(DYN_PROPERTIES) # TODO -- Need energies, velocities, and NACT
 
+    return DYN_PROPERTIES
 
-def read_XYZ():
-    XYZ_File = open("geometry_new.xyz","r").readlines()
+def read_XYZ(filename):
+    XYZ_File = open(filename,"r").readlines()
     NAtoms = int(XYZ_File[0])
     Atom_labels = []
     Atom_coords_new = np.zeros(( NAtoms, 3 ))
@@ -245,22 +269,28 @@ if ( __name__ == "__main__" ):
     sp.call("module load gaussian", shell=True)
     sp.call("module load intel", shell=True)
 
-    Atom_labels, Atom_coords_new = read_XYZ()
+    Atom_labels, Atom_coords_new = read_XYZ("geometry_new.xyz")
+    Atom_labels, Atom_velocs_new = read_XYZ("velocities_new.xyz")
 
     DYN_PROPERTIES = {"Atom_labels":Atom_labels, "Atom_coords_new":Atom_coords_new }
     Atom_coords_old = Atom_coords_new * 1.0
-    Atom_coords_old[0,0] += 0.005
+    Atom_coords_old[0,0] += 0.1
     DYN_PROPERTIES["Atom_coords_old"] = DYN_PROPERTIES["Atom_coords_new"]
+    
+    DYN_PROPERTIES["Atom_velocs_new"] = DYN_PROPERTIES["Atom_coords_new"]
 
     DYN_PROPERTIES["NStates"] = 4
     DYN_PROPERTIES["NAtoms"] = len(DYN_PROPERTIES["Atom_labels"])
-    DYN_PROPERTIES["FUNCTIONAL"] = "AM1"
+    DYN_PROPERTIES["FUNCTIONAL"] = "BLYP"
     DYN_PROPERTIES["CHARGE"] = 0
     DYN_PROPERTIES["MULTIPLICITY"] = 1
     DYN_PROPERTIES["BASIS_SET"] = "sto-3g"
     DYN_PROPERTIES["MEMORY"] = 5
     DYN_PROPERTIES["NCPUS"] = 1
     DYN_PROPERTIES["MD_STEP"] = 1
+    DYN_PROPERTIES["dtI"] = 0.1 # fs
     DYN_PROPERTIES["RUN_ELEC_STRUC"] = "SUBMIT_SBATCH" # "SUBMIT_SBATCH", "USE_CURRENT_NODE", "TEST"
-    DYN_PROPERTIES["SBATCH_G16"] = "/scratch/bweight/software/many_molecule_many_mode_NAMD/src/ELECTRONIC_STRUCTURE_INPUT/EXAMPLE/submit.gaussian" # For "SUBMIT_SBATCH" in previous only
-    main(DYN_PROPERTIES)
+    DYN_PROPERTIES["SBATCH_G16"] = "/scratch/bweight/software/many_molecule_many_mode_NAMD/src/ELECTRONIC_STRUCTURE_CONTROL/EXAMPLE/submit.gaussian" # For "SUBMIT_SBATCH" in previous only
+    DYN_PROPERTIES = main(DYN_PROPERTIES)
+    print( "NACR_APPROX_NEW (S1/S2):" )
+    print( (DYN_PROPERTIES["NACR_APPROX_NEW"])[1,2] )

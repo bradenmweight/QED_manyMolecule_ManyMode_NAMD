@@ -139,6 +139,7 @@
         read (*,*) n_ele_beta
         read (*,*) 
         read (*,*) n_state
+        read (*,*) n_csf
         read (*,*) 
         read (*,*) type_input
         read (*,*) filename_input1
@@ -158,7 +159,7 @@
         n_ele_half = n_ele/ 2
         n_mo = n_ao
         
-        n_csf =20
+        !n_csf =18 
 
         allocate (s_ao_overlap       (n_ao, n_ao))
         allocate (s1_ao_to_mo_alpha  (n_ao, n_ao))
