@@ -50,12 +50,15 @@ def main( ):
         # Perform jth electronic structure calculation
             # Get diagonal energies and grad
             # Get overlap and NACT
-        DYN_PROPERTIES["MD_STEP"] +=1
+        DYN_PROPERTIES["MD_STEP"] += 1 # This needs to be exactly here for technical reasons.
         DYN_PROPERTIES = G16_TD.main(DYN_PROPERTIES)
 
-        # Propagate electronic DOFs (Interpolated Hamiltonian)
+        if ( DYN_PROPERTIES["NStates"] >= 2 ):
+            # Propagate electronic DOFs (Interpolated Hamiltonian)
+            DYN_PROPERTIES = Eh.propagage_Mapping(DYN_PROPERTIES)
 
-        # Transform electronic DOFs from t0 basis to t1 basis
+            # Rotate electronic DOFs from t0 basis to t1 basis
+            DYN_PROPERTIES = Eh.rotate_Mapping(DYN_PROPERTIES)
 
         # Propagate nuclear momenta
         DYN_PROPERTIES = nuclear_propagation.Nuclear_V_Step(DYN_PROPERTIES)

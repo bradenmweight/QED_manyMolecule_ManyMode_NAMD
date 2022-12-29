@@ -176,7 +176,10 @@ def set_masses(Atom_labels):
                    "N":14.0067,
                    "O":15.9994,
                    "F":18.998403,
-                   "Ne":20.179}
+                   "Ne":20.179,
+                   "Cl":35.453,
+                   "Fe":55.845,
+                   "Cu":63.546}
 
     masses = []
     for at in Atom_labels:
@@ -213,6 +216,8 @@ def initialize_MD_variables(DYN_PROPERTIES):
     DYN_PROPERTIES["NAtoms"] = len( DYN_PROPERTIES["Atom_labels"] )
 
     DYN_PROPERTIES["MASSES"] = set_masses(DYN_PROPERTIES["Atom_labels"])
+
+    DYN_PROPERTIES["dtE"] = DYN_PROPERTIES["dtI"] / DYN_PROPERTIES["ESTEPS"]
 
     DYN_PROPERTIES["Atom_velocs_new"] = get_initial_velocs(DYN_PROPERTIES)
 

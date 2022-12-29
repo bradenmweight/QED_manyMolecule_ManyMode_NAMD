@@ -252,7 +252,7 @@ class gau_nac:
 
         if ( self.DYN_PROPERTIES["MD_STEP"] >= 2 ):
             self.DYN_PROPERTIES["OVERLAP_OLD"] = self.DYN_PROPERTIES["OVERLAP_NEW"]
-        self.DYN_PROPERTIES["OVERLAP_NEW"] = CI_overlap[:,:]
+        self.DYN_PROPERTIES["OVERLAP_NEW"] = CI_overlap[:,:] + np.identity(NStates) # TODO NEED TO FXI DIAGONAL
 
 
     def check_phase():
@@ -267,9 +267,10 @@ class gau_nac:
         # CHECK OVERLAP PHASE. STEAL SHARC VERSION.
         OVERLAP = self.DYN_PROPERTIES["OVERLAP_NEW"]
         dtI     = self.DYN_PROPERTIES["dtI"]
-        NACT    = (OVERLAP - OVERLAP.T) / 2 / dtI
-        #NACT    = (OVERLAP + OVERLAP.T) / 2 / dtI # Check this, TODO
+        NACT    = (OVERLAP - OVERLAP.T) / 2 / dtI # Check this, TODO
 
+        if ( self.DYN_PROPERTIES["MD_STEP"] >= 2 ):
+            self.DYN_PROPERTIES["NACT_OLD"] = self.DYN_PROPERTIES["NACT_NEW"] * 1.0
         self.DYN_PROPERTIES["NACT_NEW"] = NACT
 
 

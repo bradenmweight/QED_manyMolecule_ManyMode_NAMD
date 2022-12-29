@@ -210,7 +210,7 @@ def get_approx_NACR( DYN_PROPERTIES ):
     NAtoms = DYN_PROPERTIES["NAtoms"]
     NStates = DYN_PROPERTIES["NStates"]
     V     = DYN_PROPERTIES["Atom_velocs_new"]
-    Ead   = DYN_PROPERTIES["DIAG_ENERGIES"]
+    Ead   = DYN_PROPERTIES["DIAG_ENERGIES_NEW"]
     dEad  = DYN_PROPERTIES["DIAG_GRADIENTS"]
     NACT  = DYN_PROPERTIES["NACT_NEW"]
 

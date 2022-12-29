@@ -20,9 +20,9 @@ def save_data(DYN_PROPERTIES):
 
     with open("MD_OUTPUT/PES.dat","a") as file01:
         if ( DYN_PROPERTIES["NStates"] >= 2 ):
-            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,DYN_PROPERTIES["DIAG_ENERGIES"]*27.2114 )) + "\n" )
+            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,DYN_PROPERTIES["DIAG_ENERGIES_NEW"]*27.2114 )) + "\n" )
         else:
-            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  {DYN_PROPERTIES['DIAG_ENERGIES']*27.2114}\n" )
+            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  {DYN_PROPERTIES['DIAG_ENERGIES_NEW']*27.2114}\n" )
 
     with open("MD_OUTPUT/mapping_re.dat","a") as file01:
         if ( DYN_PROPERTIES["NStates"] >= 2 ):

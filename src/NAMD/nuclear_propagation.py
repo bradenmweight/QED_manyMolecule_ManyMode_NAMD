@@ -35,8 +35,11 @@ def Nuclear_V_Step(DYN_PROPERTIES):
     # Propagate nuclear coordinates
     DYN_PROPERTIES["FORCE_OLD"] = DYN_PROPERTIES["FORCE_NEW"] * 1.0 # Store old force
     DYN_PROPERTIES["FORCE_NEW"] = Eh.get_Force(DYN_PROPERTIES)
+
     anew = DYN_PROPERTIES["FORCE_NEW"] / masses 
     aold = DYN_PROPERTIES["FORCE_OLD"] / masses
+
+    DYN_PROPERTIES["Atom_velocs_old"] += DYN_PROPERTIES["Atom_velocs_new"]
     DYN_PROPERTIES["Atom_velocs_new"] += 0.5000000 * (aold[:,:] + anew[:,:]) * dtI
     
     return DYN_PROPERTIES
