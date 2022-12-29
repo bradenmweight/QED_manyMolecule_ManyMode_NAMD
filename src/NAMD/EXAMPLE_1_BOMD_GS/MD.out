@@ -1,0 +1,3014 @@
+MANDATORY INPUT VARIABLES:
+	NStates = 1
+	NSteps = 1000
+	dtI = 1.0 (fs)
+	ESTEPS = 100
+	ISTATE = 0
+	FUNCTIONAL = BLYP
+	BASIS_SET = STO-3G
+	CHARGE = 0
+	MULTIPLICITY = 1
+	MEMORY = 5 (GB)
+Submitting electronic structure for step 0.
+	Gaussian terminated normally in 4.24 s. (GS_NEW)
+R(Li-H) = 3.0
+R(Li-H) = 2.9922792170438974
+Submitting electronic structure for step 1.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 2.964079196729202
+Submitting electronic structure for step 2.
+	Gaussian terminated normally in 4.56 s. (GS_NEW)
+R(Li-H) = 2.9150640533396395
+Submitting electronic structure for step 3.
+	Gaussian terminated normally in 4.88 s. (GS_NEW)
+R(Li-H) = 2.8446595038468403
+Submitting electronic structure for step 4.
+	Gaussian terminated normally in 4.45 s. (GS_NEW)
+R(Li-H) = 2.7520680431368163
+Submitting electronic structure for step 5.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 2.636304165356306
+Submitting electronic structure for step 6.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.4962710498660234
+Submitting electronic structure for step 7.
+	Gaussian terminated normally in 4.54 s. (GS_NEW)
+R(Li-H) = 2.330927029440012
+Submitting electronic structure for step 8.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.139633227849187
+Submitting electronic structure for step 9.
+	Gaussian terminated normally in 4.60 s. (GS_NEW)
+R(Li-H) = 1.9229101299763518
+Submitting electronic structure for step 10.
+	Gaussian terminated normally in 4.63 s. (GS_NEW)
+R(Li-H) = 1.6841574834047215
+Submitting electronic structure for step 11.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 1.4334842706697402
+Submitting electronic structure for step 12.
+	Gaussian terminated normally in 4.27 s. (GS_NEW)
+R(Li-H) = 1.1953244971556958
+Submitting electronic structure for step 13.
+	Gaussian terminated normally in 4.28 s. (GS_NEW)
+R(Li-H) = 1.0194402403084448
+Submitting electronic structure for step 14.
+	Gaussian terminated normally in 4.37 s. (GS_NEW)
+R(Li-H) = 0.9767984107883035
+Submitting electronic structure for step 15.
+	Gaussian terminated normally in 4.24 s. (GS_NEW)
+R(Li-H) = 1.0919803413322975
+Submitting electronic structure for step 16.
+	Gaussian terminated normally in 4.31 s. (GS_NEW)
+R(Li-H) = 1.3060171797695945
+Submitting electronic structure for step 17.
+	Gaussian terminated normally in 4.12 s. (GS_NEW)
+R(Li-H) = 1.5545997506927505
+Submitting electronic structure for step 18.
+	Gaussian terminated normally in 4.29 s. (GS_NEW)
+R(Li-H) = 1.8014723741499292
+Submitting electronic structure for step 19.
+	Gaussian terminated normally in 4.27 s. (GS_NEW)
+R(Li-H) = 2.030346385231361
+Submitting electronic structure for step 20.
+	Gaussian terminated normally in 4.31 s. (GS_NEW)
+R(Li-H) = 2.2350197465646
+Submitting electronic structure for step 21.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 2.413790788462221
+Submitting electronic structure for step 22.
+	Gaussian terminated normally in 4.48 s. (GS_NEW)
+R(Li-H) = 2.5668349368645136
+Submitting electronic structure for step 23.
+	Gaussian terminated normally in 4.94 s. (GS_NEW)
+R(Li-H) = 2.695048308024373
+Submitting electronic structure for step 24.
+	Gaussian terminated normally in 4.51 s. (GS_NEW)
+R(Li-H) = 2.7995260304882392
+Submitting electronic structure for step 25.
+	Gaussian terminated normally in 4.47 s. (GS_NEW)
+R(Li-H) = 2.881327028534999
+Submitting electronic structure for step 26.
+	Gaussian terminated normally in 4.61 s. (GS_NEW)
+R(Li-H) = 2.941352074498378
+Submitting electronic structure for step 27.
+	Gaussian terminated normally in 4.81 s. (GS_NEW)
+R(Li-H) = 2.980293665777146
+Submitting electronic structure for step 28.
+	Gaussian terminated normally in 4.67 s. (GS_NEW)
+R(Li-H) = 2.998612584464047
+Submitting electronic structure for step 29.
+	Gaussian terminated normally in 5.03 s. (GS_NEW)
+R(Li-H) = 2.9965280618601473
+Submitting electronic structure for step 30.
+	Gaussian terminated normally in 4.81 s. (GS_NEW)
+R(Li-H) = 2.9740150734362483
+Submitting electronic structure for step 31.
+	Gaussian terminated normally in 4.60 s. (GS_NEW)
+R(Li-H) = 2.9308045786805175
+Submitting electronic structure for step 32.
+	Gaussian terminated normally in 4.53 s. (GS_NEW)
+R(Li-H) = 2.8663872356669113
+Submitting electronic structure for step 33.
+	Gaussian terminated normally in 4.80 s. (GS_NEW)
+R(Li-H) = 2.7800255819450075
+Submitting electronic structure for step 34.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 2.670780809216273
+Submitting electronic structure for step 35.
+	Gaussian terminated normally in 4.54 s. (GS_NEW)
+R(Li-H) = 2.5375734358332425
+Submitting electronic structure for step 36.
+	Gaussian terminated normally in 4.75 s. (GS_NEW)
+R(Li-H) = 2.3793243106300372
+Submitting electronic structure for step 37.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.1952297751009886
+Submitting electronic structure for step 38.
+	Gaussian terminated normally in 4.60 s. (GS_NEW)
+R(Li-H) = 1.9853724565219353
+Submitting electronic structure for step 39.
+	Gaussian terminated normally in 4.35 s. (GS_NEW)
+R(Li-H) = 1.752090718085144
+Submitting electronic structure for step 40.
+	Gaussian terminated normally in 4.39 s. (GS_NEW)
+R(Li-H) = 1.5030644074953996
+Submitting electronic structure for step 41.
+	Gaussian terminated normally in 4.22 s. (GS_NEW)
+R(Li-H) = 1.2577295343402795
+Submitting electronic structure for step 42.
+	Gaussian terminated normally in 4.52 s. (GS_NEW)
+R(Li-H) = 1.0578512288977897
+Submitting electronic structure for step 43.
+	Gaussian terminated normally in 4.26 s. (GS_NEW)
+R(Li-H) = 0.9719526693931095
+Submitting electronic structure for step 44.
+	Gaussian terminated normally in 4.28 s. (GS_NEW)
+R(Li-H) = 1.04690876768505
+Submitting electronic structure for step 45.
+	Gaussian terminated normally in 4.37 s. (GS_NEW)
+R(Li-H) = 1.2410772659552187
+Submitting electronic structure for step 46.
+	Gaussian terminated normally in 4.28 s. (GS_NEW)
+R(Li-H) = 1.4848678366695343
+Submitting electronic structure for step 47.
+	Gaussian terminated normally in 4.15 s. (GS_NEW)
+R(Li-H) = 1.7344752641424177
+Submitting electronic structure for step 48.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 1.9692444091670074
+Submitting electronic structure for step 49.
+	Gaussian terminated normally in 4.42 s. (GS_NEW)
+R(Li-H) = 2.1809118918471135
+Submitting electronic structure for step 50.
+	Gaussian terminated normally in 4.48 s. (GS_NEW)
+R(Li-H) = 2.366886399538997
+Submitting electronic structure for step 51.
+	Gaussian terminated normally in 4.43 s. (GS_NEW)
+R(Li-H) = 2.526981574181155
+Submitting electronic structure for step 52.
+	Gaussian terminated normally in 4.54 s. (GS_NEW)
+R(Li-H) = 2.6619624872472394
+Submitting electronic structure for step 53.
+	Gaussian terminated normally in 4.52 s. (GS_NEW)
+R(Li-H) = 2.772900722738719
+Submitting electronic structure for step 54.
+	Gaussian terminated normally in 4.41 s. (GS_NEW)
+R(Li-H) = 2.8608812352295714
+Submitting electronic structure for step 55.
+	Gaussian terminated normally in 4.66 s. (GS_NEW)
+R(Li-H) = 2.9268557085380653
+Submitting electronic structure for step 56.
+	Gaussian terminated normally in 4.51 s. (GS_NEW)
+R(Li-H) = 2.9715773941732473
+Submitting electronic structure for step 57.
+	Gaussian terminated normally in 4.59 s. (GS_NEW)
+R(Li-H) = 2.9955726345116793
+Submitting electronic structure for step 58.
+	Gaussian terminated normally in 4.45 s. (GS_NEW)
+R(Li-H) = 2.999127960679052
+Submitting electronic structure for step 59.
+	Gaussian terminated normally in 4.59 s. (GS_NEW)
+R(Li-H) = 2.9822860408413208
+Submitting electronic structure for step 60.
+	Gaussian terminated normally in 4.56 s. (GS_NEW)
+R(Li-H) = 2.944845269822611
+Submitting electronic structure for step 61.
+	Gaussian terminated normally in 4.70 s. (GS_NEW)
+R(Li-H) = 2.8863621364967833
+Submitting electronic structure for step 62.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.8061601700776255
+Submitting electronic structure for step 63.
+	Gaussian terminated normally in 4.57 s. (GS_NEW)
+R(Li-H) = 2.7033523384444744
+Submitting electronic structure for step 64.
+	Gaussian terminated normally in 4.56 s. (GS_NEW)
+R(Li-H) = 2.5768885736592404
+Submitting electronic structure for step 65.
+	Gaussian terminated normally in 4.58 s. (GS_NEW)
+R(Li-H) = 2.425669969916458
+Submitting electronic structure for step 66.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 2.2487735116048646
+Submitting electronic structure for step 67.
+	Gaussian terminated normally in 4.83 s. (GS_NEW)
+R(Li-H) = 2.0459442318704992
+Submitting electronic structure for step 68.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 1.818685159672057
+Submitting electronic structure for step 69.
+	Gaussian terminated normally in 4.19 s. (GS_NEW)
+R(Li-H) = 1.5727333259751002
+Submitting electronic structure for step 70.
+	Gaussian terminated normally in 4.13 s. (GS_NEW)
+R(Li-H) = 1.3233710414984816
+Submitting electronic structure for step 71.
+	Gaussian terminated normally in 4.19 s. (GS_NEW)
+R(Li-H) = 1.105017786181876
+Submitting electronic structure for step 72.
+	Gaussian terminated normally in 4.48 s. (GS_NEW)
+R(Li-H) = 0.9801840167791174
+Submitting electronic structure for step 73.
+	Gaussian terminated normally in 4.38 s. (GS_NEW)
+R(Li-H) = 1.0110882116021647
+Submitting electronic structure for step 74.
+	Gaussian terminated normally in 4.28 s. (GS_NEW)
+R(Li-H) = 1.1797687797296235
+Submitting electronic structure for step 75.
+	Gaussian terminated normally in 4.09 s. (GS_NEW)
+R(Li-H) = 1.4154692597422482
+Submitting electronic structure for step 76.
+	Gaussian terminated normally in 4.13 s. (GS_NEW)
+R(Li-H) = 1.6662951446077863
+Submitting electronic structure for step 77.
+	Gaussian terminated normally in 4.54 s. (GS_NEW)
+R(Li-H) = 1.906362877208452
+Submitting electronic structure for step 78.
+	Gaussian terminated normally in 4.38 s. (GS_NEW)
+R(Li-H) = 2.124840339106518
+Submitting electronic structure for step 79.
+	Gaussian terminated normally in 4.55 s. (GS_NEW)
+R(Li-H) = 2.318007111493978
+Submitting electronic structure for step 80.
+	Gaussian terminated normally in 4.57 s. (GS_NEW)
+R(Li-H) = 2.4852094502214443
+Submitting electronic structure for step 81.
+	Gaussian terminated normally in 4.65 s. (GS_NEW)
+R(Li-H) = 2.627035190256571
+Submitting electronic structure for step 82.
+	Gaussian terminated normally in 4.76 s. (GS_NEW)
+R(Li-H) = 2.7445115560540136
+Submitting electronic structure for step 83.
+	Gaussian terminated normally in 4.30 s. (GS_NEW)
+R(Li-H) = 2.838738854266611
+Submitting electronic structure for step 84.
+	Gaussian terminated normally in 4.64 s. (GS_NEW)
+R(Li-H) = 2.910714803543189
+Submitting electronic structure for step 85.
+	Gaussian terminated normally in 4.63 s. (GS_NEW)
+R(Li-H) = 2.961250818475187
+Submitting electronic structure for step 86.
+	Gaussian terminated normally in 4.89 s. (GS_NEW)
+R(Li-H) = 2.990937831747843
+Submitting electronic structure for step 87.
+	Gaussian terminated normally in 4.60 s. (GS_NEW)
+R(Li-H) = 3.000129442690235
+Submitting electronic structure for step 88.
+	Gaussian terminated normally in 4.42 s. (GS_NEW)
+R(Li-H) = 2.9889359079154048
+Submitting electronic structure for step 89.
+	Gaussian terminated normally in 4.64 s. (GS_NEW)
+R(Li-H) = 2.9572229777182306
+Submitting electronic structure for step 90.
+	Gaussian terminated normally in 4.51 s. (GS_NEW)
+R(Li-H) = 2.9046133502551097
+Submitting electronic structure for step 91.
+	Gaussian terminated normally in 4.94 s. (GS_NEW)
+R(Li-H) = 2.830493572360489
+Submitting electronic structure for step 92.
+	Gaussian terminated normally in 4.64 s. (GS_NEW)
+R(Li-H) = 2.734032209041802
+Submitting electronic structure for step 93.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 2.614216023480483
+Submitting electronic structure for step 94.
+	Gaussian terminated normally in 5.04 s. (GS_NEW)
+R(Li-H) = 2.4699428953297247
+Submitting electronic structure for step 95.
+	Gaussian terminated normally in 4.79 s. (GS_NEW)
+R(Li-H) = 2.3002071992911235
+Submitting electronic structure for step 96.
+	Gaussian terminated normally in 4.35 s. (GS_NEW)
+R(Li-H) = 2.1044968646518747
+Submitting electronic structure for step 97.
+	Gaussian terminated normally in 4.60 s. (GS_NEW)
+R(Li-H) = 1.883661405087887
+Submitting electronic structure for step 98.
+	Gaussian terminated normally in 4.63 s. (GS_NEW)
+R(Li-H) = 1.641890744447252
+Submitting electronic structure for step 99.
+	Gaussian terminated normally in 4.21 s. (GS_NEW)
+R(Li-H) = 1.3910665224283765
+Submitting electronic structure for step 100.
+	Gaussian terminated normally in 4.27 s. (GS_NEW)
+R(Li-H) = 1.1591461354054005
+Submitting electronic structure for step 101.
+	Gaussian terminated normally in 4.25 s. (GS_NEW)
+R(Li-H) = 1.0009175694872323
+Submitting electronic structure for step 102.
+	Gaussian terminated normally in 4.37 s. (GS_NEW)
+R(Li-H) = 0.986164942192403
+Submitting electronic structure for step 103.
+	Gaussian terminated normally in 4.39 s. (GS_NEW)
+R(Li-H) = 1.1235214776778766
+Submitting electronic structure for step 104.
+	Gaussian terminated normally in 4.23 s. (GS_NEW)
+R(Li-H) = 1.3472159617993433
+Submitting electronic structure for step 105.
+	Gaussian terminated normally in 3.87 s. (GS_NEW)
+R(Li-H) = 1.59736300522339
+Submitting electronic structure for step 106.
+	Gaussian terminated normally in 4.16 s. (GS_NEW)
+R(Li-H) = 1.8419430424831162
+Submitting electronic structure for step 107.
+	Gaussian terminated normally in 4.21 s. (GS_NEW)
+R(Li-H) = 2.066961497025226
+Submitting electronic structure for step 108.
+	Gaussian terminated normally in 4.42 s. (GS_NEW)
+R(Li-H) = 2.267271630358063
+Submitting electronic structure for step 109.
+	Gaussian terminated normally in 4.41 s. (GS_NEW)
+R(Li-H) = 2.441621117366032
+Submitting electronic structure for step 110.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 2.590364420931414
+Submitting electronic structure for step 111.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 2.714457746218548
+Submitting electronic structure for step 112.
+	Gaussian terminated normally in 5.07 s. (GS_NEW)
+R(Li-H) = 2.8150025208007063
+Submitting electronic structure for step 113.
+	Gaussian terminated normally in 4.60 s. (GS_NEW)
+R(Li-H) = 2.8930372198088836
+Submitting electronic structure for step 114.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 2.9494292276467977
+Submitting electronic structure for step 115.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 2.984832606295584
+Submitting electronic structure for step 116.
+	Gaussian terminated normally in 4.74 s. (GS_NEW)
+R(Li-H) = 2.999667480358462
+Submitting electronic structure for step 117.
+	Gaussian terminated normally in 4.50 s. (GS_NEW)
+R(Li-H) = 2.9941116100022525
+Submitting electronic structure for step 118.
+	Gaussian terminated normally in 4.57 s. (GS_NEW)
+R(Li-H) = 2.9680983311235916
+Submitting electronic structure for step 119.
+	Gaussian terminated normally in 4.86 s. (GS_NEW)
+R(Li-H) = 2.921317235258002
+Submitting electronic structure for step 120.
+	Gaussian terminated normally in 4.67 s. (GS_NEW)
+R(Li-H) = 2.8532188896026685
+Submitting electronic structure for step 121.
+	Gaussian terminated normally in 4.70 s. (GS_NEW)
+R(Li-H) = 2.7630292149696083
+Submitting electronic structure for step 122.
+	Gaussian terminated normally in 4.52 s. (GS_NEW)
+R(Li-H) = 2.649779822876218
+Submitting electronic structure for step 123.
+	Gaussian terminated normally in 4.37 s. (GS_NEW)
+R(Li-H) = 2.5123786247869355
+Submitting electronic structure for step 124.
+	Gaussian terminated normally in 4.65 s. (GS_NEW)
+R(Li-H) = 2.3497671231950084
+Submitting electronic structure for step 125.
+	Gaussian terminated normally in 4.60 s. (GS_NEW)
+R(Li-H) = 2.161237284300967
+Submitting electronic structure for step 126.
+	Gaussian terminated normally in 4.57 s. (GS_NEW)
+R(Li-H) = 1.9471281903554842
+Submitting electronic structure for step 127.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 1.710401357796291
+Submitting electronic structure for step 128.
+	Gaussian terminated normally in 4.21 s. (GS_NEW)
+R(Li-H) = 1.4601690299527437
+Submitting electronic structure for step 129.
+	Gaussian terminated normally in 4.06 s. (GS_NEW)
+R(Li-H) = 1.218839081747561
+Submitting electronic structure for step 130.
+	Gaussian terminated normally in 3.94 s. (GS_NEW)
+R(Li-H) = 1.0330487120453307
+Submitting electronic structure for step 131.
+	Gaussian terminated normally in 4.09 s. (GS_NEW)
+R(Li-H) = 0.9733869824153667
+Submitting electronic structure for step 132.
+	Gaussian terminated normally in 4.17 s. (GS_NEW)
+R(Li-H) = 1.0736759359479724
+Submitting electronic structure for step 133.
+	Gaussian terminated normally in 4.96 s. (GS_NEW)
+R(Li-H) = 1.2807154991726795
+Submitting electronic structure for step 134.
+	Gaussian terminated normally in 4.21 s. (GS_NEW)
+R(Li-H) = 1.5278118126343463
+Submitting electronic structure for step 135.
+	Gaussian terminated normally in 4.78 s. (GS_NEW)
+R(Li-H) = 1.7758968225539196
+Submitting electronic structure for step 136.
+	Gaussian terminated normally in 4.43 s. (GS_NEW)
+R(Li-H) = 2.0070998393305866
+Submitting electronic structure for step 137.
+	Gaussian terminated normally in 4.65 s. (GS_NEW)
+R(Li-H) = 2.2144815729514447
+Submitting electronic structure for step 138.
+	Gaussian terminated normally in 4.41 s. (GS_NEW)
+R(Li-H) = 2.396023474999447
+Submitting electronic structure for step 139.
+	Gaussian terminated normally in 5.24 s. (GS_NEW)
+R(Li-H) = 2.5517730586203196
+Submitting electronic structure for step 140.
+	Gaussian terminated normally in 4.84 s. (GS_NEW)
+R(Li-H) = 2.682580958130455
+Submitting electronic structure for step 141.
+	Gaussian terminated normally in 4.31 s. (GS_NEW)
+R(Li-H) = 2.7895360702555174
+Submitting electronic structure for step 142.
+	Gaussian terminated normally in 4.42 s. (GS_NEW)
+R(Li-H) = 2.8737086605334943
+Submitting electronic structure for step 143.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 2.9360190802918384
+Submitting electronic structure for step 144.
+	Gaussian terminated normally in 4.43 s. (GS_NEW)
+R(Li-H) = 2.9771836417314645
+Submitting electronic structure for step 145.
+	Gaussian terminated normally in 5.13 s. (GS_NEW)
+R(Li-H) = 2.9976886322434853
+Submitting electronic structure for step 146.
+	Gaussian terminated normally in 4.43 s. (GS_NEW)
+R(Li-H) = 2.9977792788546105
+Submitting electronic structure for step 147.
+	Gaussian terminated normally in 4.40 s. (GS_NEW)
+R(Li-H) = 2.9774566612008724
+Submitting electronic structure for step 148.
+	Gaussian terminated normally in 4.61 s. (GS_NEW)
+R(Li-H) = 2.936477686180306
+Submitting electronic structure for step 149.
+	Gaussian terminated normally in 4.51 s. (GS_NEW)
+R(Li-H) = 2.874358162677237
+Submitting electronic structure for step 150.
+	Gaussian terminated normally in 4.60 s. (GS_NEW)
+R(Li-H) = 2.7903839297636654
+Submitting electronic structure for step 151.
+	Gaussian terminated normally in 4.93 s. (GS_NEW)
+R(Li-H) = 2.683636298953857
+Submitting electronic structure for step 152.
+	Gaussian terminated normally in 4.51 s. (GS_NEW)
+R(Li-H) = 2.553045468075507
+Submitting electronic structure for step 153.
+	Gaussian terminated normally in 4.65 s. (GS_NEW)
+R(Li-H) = 2.3975220931205565
+Submitting electronic structure for step 154.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.2162116039322233
+Submitting electronic structure for step 155.
+	Gaussian terminated normally in 4.61 s. (GS_NEW)
+R(Li-H) = 2.0090553914791816
+Submitting electronic structure for step 156.
+	Gaussian terminated normally in 4.58 s. (GS_NEW)
+R(Li-H) = 1.778044195175707
+Submitting electronic structure for step 157.
+	Gaussian terminated normally in 5.11 s. (GS_NEW)
+R(Li-H) = 1.5300530698544828
+Submitting electronic structure for step 158.
+	Gaussian terminated normally in 4.42 s. (GS_NEW)
+R(Li-H) = 1.2828158305035997
+Submitting electronic structure for step 159.
+	Gaussian terminated normally in 4.08 s. (GS_NEW)
+R(Li-H) = 1.0751605705875704
+Submitting electronic structure for step 160.
+	Gaussian terminated normally in 4.83 s. (GS_NEW)
+R(Li-H) = 0.9735953993472416
+Submitting electronic structure for step 161.
+	Gaussian terminated normally in 8.23 s. (GS_NEW)
+R(Li-H) = 1.0318525912325331
+Submitting electronic structure for step 162.
+	Gaussian terminated normally in 4.26 s. (GS_NEW)
+R(Li-H) = 1.2168508445061252
+Submitting electronic structure for step 163.
+	Gaussian terminated normally in 4.02 s. (GS_NEW)
+R(Li-H) = 1.4579397773702307
+Submitting electronic structure for step 164.
+	Gaussian terminated normally in 4.11 s. (GS_NEW)
+R(Li-H) = 1.708221563107684
+Submitting electronic structure for step 165.
+	Gaussian terminated normally in 4.21 s. (GS_NEW)
+R(Li-H) = 1.9451240178044322
+Submitting electronic structure for step 166.
+	Gaussian terminated normally in 4.71 s. (GS_NEW)
+R(Li-H) = 2.159455057917503
+Submitting electronic structure for step 167.
+	Gaussian terminated normally in 4.46 s. (GS_NEW)
+R(Li-H) = 2.3482183108183983
+Submitting electronic structure for step 168.
+	Gaussian terminated normally in 4.51 s. (GS_NEW)
+R(Li-H) = 2.511060215897813
+Submitting electronic structure for step 169.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 2.6486833935287435
+Submitting electronic structure for step 170.
+	Gaussian terminated normally in 4.78 s. (GS_NEW)
+R(Li-H) = 2.7621446498913347
+Submitting electronic structure for step 171.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 2.85253716422524
+Submitting electronic structure for step 172.
+	Gaussian terminated normally in 4.42 s. (GS_NEW)
+R(Li-H) = 2.9208314525618433
+Submitting electronic structure for step 173.
+	Gaussian terminated normally in 4.64 s. (GS_NEW)
+R(Li-H) = 2.9678027300685117
+Submitting electronic structure for step 174.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.994002402862678
+Submitting electronic structure for step 175.
+	Gaussian terminated normally in 4.64 s. (GS_NEW)
+R(Li-H) = 2.999743223655694
+Submitting electronic structure for step 176.
+	Gaussian terminated normally in 4.39 s. (GS_NEW)
+R(Li-H) = 2.9850941275018505
+Submitting electronic structure for step 177.
+	Gaussian terminated normally in 4.65 s. (GS_NEW)
+R(Li-H) = 2.949879505973001
+Submitting electronic structure for step 178.
+	Gaussian terminated normally in 5.17 s. (GS_NEW)
+R(Li-H) = 2.893681363477354
+Submitting electronic structure for step 179.
+	Gaussian terminated normally in 4.89 s. (GS_NEW)
+R(Li-H) = 2.8158479657762365
+Submitting electronic structure for step 180.
+	Gaussian terminated normally in 4.79 s. (GS_NEW)
+R(Li-H) = 2.715514006639372
+Submitting electronic structure for step 181.
+	Gaussian terminated normally in 4.36 s. (GS_NEW)
+R(Li-H) = 2.5916416988129205
+Submitting electronic structure for step 182.
+	Gaussian terminated normally in 4.83 s. (GS_NEW)
+R(Li-H) = 2.443129721725686
+Submitting electronic structure for step 183.
+	Gaussian terminated normally in 4.56 s. (GS_NEW)
+R(Li-H) = 2.269018291039419
+Submitting electronic structure for step 184.
+	Gaussian terminated normally in 4.35 s. (GS_NEW)
+R(Li-H) = 2.068944099540051
+Submitting electronic structure for step 185.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 1.8441368066914663
+Submitting electronic structure for step 186.
+	Gaussian terminated normally in 4.42 s. (GS_NEW)
+R(Li-H) = 1.5996899949951948
+Submitting electronic structure for step 187.
+	Gaussian terminated normally in 4.28 s. (GS_NEW)
+R(Li-H) = 1.3494809792114721
+Submitting electronic structure for step 188.
+	Gaussian terminated normally in 4.22 s. (GS_NEW)
+R(Li-H) = 1.1253083858950392
+Submitting electronic structure for step 189.
+	Gaussian terminated normally in 4.03 s. (GS_NEW)
+R(Li-H) = 0.9868018544665806
+Submitting electronic structure for step 190.
+	Gaussian terminated normally in 4.13 s. (GS_NEW)
+R(Li-H) = 1.0000249170199365
+Submitting electronic structure for step 191.
+	Gaussian terminated normally in 4.15 s. (GS_NEW)
+R(Li-H) = 1.157237102530956
+Submitting electronic structure for step 192.
+	Gaussian terminated normally in 4.25 s. (GS_NEW)
+R(Li-H) = 1.3887798666736695
+Submitting electronic structure for step 193.
+	Gaussian terminated normally in 4.50 s. (GS_NEW)
+R(Li-H) = 1.6395948767593442
+Submitting electronic structure for step 194.
+	Gaussian terminated normally in 4.06 s. (GS_NEW)
+R(Li-H) = 1.881523619252906
+Submitting electronic structure for step 195.
+	Gaussian terminated normally in 4.37 s. (GS_NEW)
+R(Li-H) = 2.1025823445539733
+Submitting electronic structure for step 196.
+	Gaussian terminated normally in 4.38 s. (GS_NEW)
+R(Li-H) = 2.298534742893427
+Submitting electronic structure for step 197.
+	Gaussian terminated normally in 4.38 s. (GS_NEW)
+R(Li-H) = 2.468511878361862
+Submitting electronic structure for step 198.
+	Gaussian terminated normally in 4.69 s. (GS_NEW)
+R(Li-H) = 2.6130190147420254
+Submitting electronic structure for step 199.
+	Gaussian terminated normally in 4.63 s. (GS_NEW)
+R(Li-H) = 2.7330592366937476
+Submitting electronic structure for step 200.
+	Gaussian terminated normally in 4.77 s. (GS_NEW)
+R(Li-H) = 2.8297357897306674
+Submitting electronic structure for step 201.
+	Gaussian terminated normally in 4.57 s. (GS_NEW)
+R(Li-H) = 2.9040614174241686
+Submitting electronic structure for step 202.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 2.956870456290142
+Submitting electronic structure for step 203.
+	Gaussian terminated normally in 4.70 s. (GS_NEW)
+R(Li-H) = 2.9887791141670057
+Submitting electronic structure for step 204.
+	Gaussian terminated normally in 5.34 s. (GS_NEW)
+R(Li-H) = 3.0001668062291276
+Submitting electronic structure for step 205.
+	Gaussian terminated normally in 5.40 s. (GS_NEW)
+R(Li-H) = 2.9911699757435946
+Submitting electronic structure for step 206.
+	Gaussian terminated normally in 5.25 s. (GS_NEW)
+R(Li-H) = 2.961680776435213
+Submitting electronic structure for step 207.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 2.9113480648965107
+Submitting electronic structure for step 208.
+	Gaussian terminated normally in 4.73 s. (GS_NEW)
+R(Li-H) = 2.8395827601396992
+Submitting electronic structure for step 209.
+	Gaussian terminated normally in 4.79 s. (GS_NEW)
+R(Li-H) = 2.7455746496792113
+Submitting electronic structure for step 210.
+	Gaussian terminated normally in 4.74 s. (GS_NEW)
+R(Li-H) = 2.628328658575797
+Submitting electronic structure for step 211.
+	Gaussian terminated normally in 4.83 s. (GS_NEW)
+R(Li-H) = 2.4867444866130284
+Submitting electronic structure for step 212.
+	Gaussian terminated normally in 4.73 s. (GS_NEW)
+R(Li-H) = 2.3197927511375944
+Submitting electronic structure for step 213.
+	Gaussian terminated normally in 4.82 s. (GS_NEW)
+R(Li-H) = 2.126877857220917
+Submitting electronic structure for step 214.
+	Gaussian terminated normally in 4.32 s. (GS_NEW)
+R(Li-H) = 1.9086348473848644
+Submitting electronic structure for step 215.
+	Gaussian terminated normally in 4.21 s. (GS_NEW)
+R(Li-H) = 1.668739558423182
+Submitting electronic structure for step 216.
+	Gaussian terminated normally in 4.22 s. (GS_NEW)
+R(Li-H) = 1.4179227131028165
+Submitting electronic structure for step 217.
+	Gaussian terminated normally in 4.20 s. (GS_NEW)
+R(Li-H) = 1.181866960930323
+Submitting electronic structure for step 218.
+	Gaussian terminated normally in 4.33 s. (GS_NEW)
+R(Li-H) = 1.0121762820950673
+Submitting electronic structure for step 219.
+	Gaussian terminated normally in 4.32 s. (GS_NEW)
+R(Li-H) = 0.9796674534478553
+Submitting electronic structure for step 220.
+	Gaussian terminated normally in 4.71 s. (GS_NEW)
+R(Li-H) = 1.1032141937675084
+Submitting electronic structure for step 221.
+	Gaussian terminated normally in 4.46 s. (GS_NEW)
+R(Li-H) = 1.3210045734152602
+Submitting electronic structure for step 222.
+	Gaussian terminated normally in 4.75 s. (GS_NEW)
+R(Li-H) = 1.5702753259476476
+Submitting electronic structure for step 223.
+	Gaussian terminated normally in 4.39 s. (GS_NEW)
+R(Li-H) = 1.8163605919239172
+Submitting electronic structure for step 224.
+	Gaussian terminated normally in 4.61 s. (GS_NEW)
+R(Li-H) = 2.043844248956239
+Submitting electronic structure for step 225.
+	Gaussian terminated normally in 4.32 s. (GS_NEW)
+R(Li-H) = 2.2469277596784374
+Submitting electronic structure for step 226.
+	Gaussian terminated normally in 4.41 s. (GS_NEW)
+R(Li-H) = 2.4240818412136793
+Submitting electronic structure for step 227.
+	Gaussian terminated normally in 4.71 s. (GS_NEW)
+R(Li-H) = 2.5755507794164245
+Submitting electronic structure for step 228.
+	Gaussian terminated normally in 4.40 s. (GS_NEW)
+R(Li-H) = 2.7022549297152114
+Submitting electronic structure for step 229.
+	Gaussian terminated normally in 4.53 s. (GS_NEW)
+R(Li-H) = 2.8052916593192054
+Submitting electronic structure for step 230.
+	Gaussian terminated normally in 4.81 s. (GS_NEW)
+R(Li-H) = 2.88571457239233
+Submitting electronic structure for step 231.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 2.9444118167583877
+Submitting electronic structure for step 232.
+	Gaussian terminated normally in 4.65 s. (GS_NEW)
+R(Li-H) = 2.982061109269962
+Submitting electronic structure for step 233.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.9991085235984625
+Submitting electronic structure for step 234.
+	Gaussian terminated normally in 4.64 s. (GS_NEW)
+R(Li-H) = 2.9957583537815093
+Submitting electronic structure for step 235.
+	Gaussian terminated normally in 4.70 s. (GS_NEW)
+R(Li-H) = 2.9719703544029423
+Submitting electronic structure for step 236.
+	Gaussian terminated normally in 4.92 s. (GS_NEW)
+R(Li-H) = 2.927460178266961
+Submitting electronic structure for step 237.
+	Gaussian terminated normally in 4.66 s. (GS_NEW)
+R(Li-H) = 2.8617039308224186
+Submitting electronic structure for step 238.
+	Gaussian terminated normally in 4.79 s. (GS_NEW)
+R(Li-H) = 2.773951790371138
+Submitting electronic structure for step 239.
+	Gaussian terminated normally in 5.00 s. (GS_NEW)
+R(Li-H) = 2.6632537678886314
+Submitting electronic structure for step 240.
+	Gaussian terminated normally in 4.59 s. (GS_NEW)
+R(Li-H) = 2.5285239485914137
+Submitting electronic structure for step 241.
+	Gaussian terminated normally in 4.58 s. (GS_NEW)
+R(Li-H) = 2.3686903003488897
+Submitting electronic structure for step 242.
+	Gaussian terminated normally in 4.43 s. (GS_NEW)
+R(Li-H) = 2.1829817630910493
+Submitting electronic structure for step 243.
+	Gaussian terminated normally in 4.37 s. (GS_NEW)
+R(Li-H) = 1.9715696774749165
+Submitting electronic structure for step 244.
+	Gaussian terminated normally in 4.58 s. (GS_NEW)
+R(Li-H) = 1.73700794704522
+Submitting electronic structure for step 245.
+	Gaussian terminated normally in 4.33 s. (GS_NEW)
+R(Li-H) = 1.4874738948207284
+Submitting electronic structure for step 246.
+	Gaussian terminated normally in 4.50 s. (GS_NEW)
+R(Li-H) = 1.2434450172312446
+Submitting electronic structure for step 247.
+	Gaussian terminated normally in 4.32 s. (GS_NEW)
+R(Li-H) = 1.0484320532332716
+Submitting electronic structure for step 248.
+	Gaussian terminated normally in 4.24 s. (GS_NEW)
+R(Li-H) = 0.9718929380805803
+Submitting electronic structure for step 249.
+	Gaussian terminated normally in 4.42 s. (GS_NEW)
+R(Li-H) = 1.0562447163532913
+Submitting electronic structure for step 250.
+	Gaussian terminated normally in 4.32 s. (GS_NEW)
+R(Li-H) = 1.255333646452299
+Submitting electronic structure for step 251.
+	Gaussian terminated normally in 4.37 s. (GS_NEW)
+R(Li-H) = 1.500464438061281
+Submitting electronic structure for step 252.
+	Gaussian terminated normally in 4.17 s. (GS_NEW)
+R(Li-H) = 1.7495828317754254
+Submitting electronic structure for step 253.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 1.983082344119999
+Submitting electronic structure for step 254.
+	Gaussian terminated normally in 4.83 s. (GS_NEW)
+R(Li-H) = 2.193201631450921
+Submitting electronic structure for step 255.
+	Gaussian terminated normally in 4.36 s. (GS_NEW)
+R(Li-H) = 2.3775676140373374
+Submitting electronic structure for step 256.
+	Gaussian terminated normally in 4.34 s. (GS_NEW)
+R(Li-H) = 2.5360831874717094
+Submitting electronic structure for step 257.
+	Gaussian terminated normally in 4.77 s. (GS_NEW)
+R(Li-H) = 2.669546236542275
+Submitting electronic structure for step 258.
+	Gaussian terminated normally in 4.53 s. (GS_NEW)
+R(Li-H) = 2.7790361242585475
+Submitting electronic structure for step 259.
+	Gaussian terminated normally in 5.16 s. (GS_NEW)
+R(Li-H) = 2.86563252707328
+Submitting electronic structure for step 260.
+	Gaussian terminated normally in 4.71 s. (GS_NEW)
+R(Li-H) = 2.9302756025985
+Submitting electronic structure for step 261.
+	Gaussian terminated normally in 4.71 s. (GS_NEW)
+R(Li-H) = 2.9737059043144356
+Submitting electronic structure for step 262.
+	Gaussian terminated normally in 4.73 s. (GS_NEW)
+R(Li-H) = 2.9964353920793756
+Submitting electronic structure for step 263.
+	Gaussian terminated normally in 4.71 s. (GS_NEW)
+R(Li-H) = 2.9987355340004154
+Submitting electronic structure for step 264.
+	Gaussian terminated normally in 4.58 s. (GS_NEW)
+R(Li-H) = 2.9806339185697053
+Submitting electronic structure for step 265.
+	Gaussian terminated normally in 4.63 s. (GS_NEW)
+R(Li-H) = 2.941914022709314
+Submitting electronic structure for step 266.
+	Gaussian terminated normally in 4.88 s. (GS_NEW)
+R(Li-H) = 2.8821176123954144
+Submitting electronic structure for step 267.
+	Gaussian terminated normally in 4.80 s. (GS_NEW)
+R(Li-H) = 2.800553861033804
+Submitting electronic structure for step 268.
+	Gaussian terminated normally in 5.11 s. (GS_NEW)
+R(Li-H) = 2.6963238707263
+Submitting electronic structure for step 269.
+	Gaussian terminated normally in 5.12 s. (GS_NEW)
+R(Li-H) = 2.568371299874013
+Submitting electronic structure for step 270.
+	Gaussian terminated normally in 4.83 s. (GS_NEW)
+R(Li-H) = 2.4155991239216816
+Submitting electronic structure for step 271.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 2.2371074623764824
+Submitting electronic structure for step 272.
+	Gaussian terminated normally in 4.22 s. (GS_NEW)
+R(Li-H) = 2.0327083169590576
+Submitting electronic structure for step 273.
+	Gaussian terminated normally in 4.79 s. (GS_NEW)
+R(Li-H) = 1.8040726659695845
+Submitting electronic structure for step 274.
+	Gaussian terminated normally in 4.69 s. (GS_NEW)
+R(Li-H) = 1.5573306897937367
+Submitting electronic structure for step 275.
+	Gaussian terminated normally in 4.15 s. (GS_NEW)
+R(Li-H) = 1.308616345869042
+Submitting electronic structure for step 276.
+	Gaussian terminated normally in 4.23 s. (GS_NEW)
+R(Li-H) = 1.0939060137553047
+Submitting electronic structure for step 277.
+	Gaussian terminated normally in 4.47 s. (GS_NEW)
+R(Li-H) = 0.9772480432502219
+Submitting electronic structure for step 278.
+	Gaussian terminated normally in 4.24 s. (GS_NEW)
+R(Li-H) = 1.0181352745688956
+Submitting electronic structure for step 279.
+	Gaussian terminated normally in 4.24 s. (GS_NEW)
+R(Li-H) = 1.192965663668317
+Submitting electronic structure for step 280.
+	Gaussian terminated normally in 4.35 s. (GS_NEW)
+R(Li-H) = 1.4307749052070362
+Submitting electronic structure for step 281.
+	Gaussian terminated normally in 4.27 s. (GS_NEW)
+R(Li-H) = 1.6814810603358958
+Submitting electronic structure for step 282.
+	Gaussian terminated normally in 4.16 s. (GS_NEW)
+R(Li-H) = 1.9204364082447316
+Submitting electronic structure for step 283.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 2.137425964912539
+Submitting electronic structure for step 284.
+	Gaussian terminated normally in 4.86 s. (GS_NEW)
+R(Li-H) = 2.3290030872576737
+Submitting electronic structure for step 285.
+	Gaussian terminated normally in 4.63 s. (GS_NEW)
+R(Li-H) = 2.4946277905754215
+Submitting electronic structure for step 286.
+	Gaussian terminated normally in 4.51 s. (GS_NEW)
+R(Li-H) = 2.6349316894768053
+Submitting electronic structure for step 287.
+	Gaussian terminated normally in 4.76 s. (GS_NEW)
+R(Li-H) = 2.7509537541366833
+Submitting electronic structure for step 288.
+	Gaussian terminated normally in 4.54 s. (GS_NEW)
+R(Li-H) = 2.8437922183887627
+Submitting electronic structure for step 289.
+	Gaussian terminated normally in 5.03 s. (GS_NEW)
+R(Li-H) = 2.914435367274132
+Submitting electronic structure for step 290.
+	Gaussian terminated normally in 4.90 s. (GS_NEW)
+R(Li-H) = 2.9636814963124194
+Submitting electronic structure for step 291.
+	Gaussian terminated normally in 5.04 s. (GS_NEW)
+R(Li-H) = 2.9921072585364965
+Submitting electronic structure for step 292.
+	Gaussian terminated normally in 4.50 s. (GS_NEW)
+R(Li-H) = 3.0000515431254704
+Submitting electronic structure for step 293.
+	Gaussian terminated normally in 4.60 s. (GS_NEW)
+R(Li-H) = 2.987609695169012
+Submitting electronic structure for step 294.
+	Gaussian terminated normally in 4.83 s. (GS_NEW)
+R(Li-H) = 2.9546324862964215
+Submitting electronic structure for step 295.
+	Gaussian terminated normally in 4.70 s. (GS_NEW)
+R(Li-H) = 2.900727825205297
+Submitting electronic structure for step 296.
+	Gaussian terminated normally in 4.70 s. (GS_NEW)
+R(Li-H) = 2.825268453796498
+Submitting electronic structure for step 297.
+	Gaussian terminated normally in 4.74 s. (GS_NEW)
+R(Li-H) = 2.7274109203955548
+Submitting electronic structure for step 298.
+	Gaussian terminated normally in 4.77 s. (GS_NEW)
+R(Li-H) = 2.6061324572483358
+Submitting electronic structure for step 299.
+	Gaussian terminated normally in 4.80 s. (GS_NEW)
+R(Li-H) = 2.4603304905883867
+Submitting electronic structure for step 300.
+	Gaussian terminated normally in 4.73 s. (GS_NEW)
+R(Li-H) = 2.2890149011187515
+Submitting electronic structure for step 301.
+	Gaussian terminated normally in 4.64 s. (GS_NEW)
+R(Li-H) = 2.09172440582581
+Submitting electronic structure for step 302.
+	Gaussian terminated normally in 4.84 s. (GS_NEW)
+R(Li-H) = 1.8694394715057006
+Submitting electronic structure for step 303.
+	Gaussian terminated normally in 4.48 s. (GS_NEW)
+R(Li-H) = 1.6266622699972848
+Submitting electronic structure for step 304.
+	Gaussian terminated normally in 4.25 s. (GS_NEW)
+R(Li-H) = 1.3759671219593665
+Submitting electronic structure for step 305.
+	Gaussian terminated normally in 4.31 s. (GS_NEW)
+R(Li-H) = 1.146660225359595
+Submitting electronic structure for step 306.
+	Gaussian terminated normally in 4.18 s. (GS_NEW)
+R(Li-H) = 0.9953092951972781
+Submitting electronic structure for step 307.
+	Gaussian terminated normally in 4.17 s. (GS_NEW)
+R(Li-H) = 0.9906643824911133
+Submitting electronic structure for step 308.
+	Gaussian terminated normally in 4.26 s. (GS_NEW)
+R(Li-H) = 1.1354486171008473
+Submitting electronic structure for step 309.
+	Gaussian terminated normally in 4.33 s. (GS_NEW)
+R(Li-H) = 1.3621704149054006
+Submitting electronic structure for step 310.
+	Gaussian terminated normally in 4.37 s. (GS_NEW)
+R(Li-H) = 1.6126544608966777
+Submitting electronic structure for step 311.
+	Gaussian terminated normally in 4.16 s. (GS_NEW)
+R(Li-H) = 1.856316554075792
+Submitting electronic structure for step 312.
+	Gaussian terminated normally in 4.30 s. (GS_NEW)
+R(Li-H) = 2.0799179510893477
+Submitting electronic structure for step 313.
+	Gaussian terminated normally in 4.51 s. (GS_NEW)
+R(Li-H) = 2.2786557636457094
+Submitting electronic structure for step 314.
+	Gaussian terminated normally in 4.67 s. (GS_NEW)
+R(Li-H) = 2.45142302520054
+Submitting electronic structure for step 315.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 2.5986313416399427
+Submitting electronic structure for step 316.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.721255549112111
+Submitting electronic structure for step 317.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 2.82039790951565
+Submitting electronic structure for step 318.
+	Gaussian terminated normally in 4.38 s. (GS_NEW)
+R(Li-H) = 2.8970888100381815
+Submitting electronic structure for step 319.
+	Gaussian terminated normally in 4.86 s. (GS_NEW)
+R(Li-H) = 2.9521832792462095
+Submitting electronic structure for step 320.
+	Gaussian terminated normally in 4.76 s. (GS_NEW)
+R(Li-H) = 2.986321531908773
+Submitting electronic structure for step 321.
+	Gaussian terminated normally in 4.88 s. (GS_NEW)
+R(Li-H) = 2.999909097209433
+Submitting electronic structure for step 322.
+	Gaussian terminated normally in 4.58 s. (GS_NEW)
+R(Li-H) = 2.993108858201883
+Submitting electronic structure for step 323.
+	Gaussian terminated normally in 4.78 s. (GS_NEW)
+R(Li-H) = 2.96583921268803
+Submitting electronic structure for step 324.
+	Gaussian terminated normally in 5.03 s. (GS_NEW)
+R(Li-H) = 2.917774919334912
+Submitting electronic structure for step 325.
+	Gaussian terminated normally in 4.84 s. (GS_NEW)
+R(Li-H) = 2.8483522700245123
+Submitting electronic structure for step 326.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 2.75678435275725
+Submitting electronic structure for step 327.
+	Gaussian terminated normally in 4.74 s. (GS_NEW)
+R(Li-H) = 2.642092363519943
+Submitting electronic structure for step 328.
+	Gaussian terminated normally in 4.73 s. (GS_NEW)
+R(Li-H) = 2.5031808147477386
+Submitting electronic structure for step 329.
+	Gaussian terminated normally in 4.54 s. (GS_NEW)
+R(Li-H) = 2.339000990813389
+Submitting electronic structure for step 330.
+	Gaussian terminated normally in 4.71 s. (GS_NEW)
+R(Li-H) = 2.148883532182157
+Submitting electronic structure for step 331.
+	Gaussian terminated normally in 4.52 s. (GS_NEW)
+R(Li-H) = 1.9332693514090795
+Submitting electronic structure for step 332.
+	Gaussian terminated normally in 4.74 s. (GS_NEW)
+R(Li-H) = 1.6953664055940023
+Submitting electronic structure for step 333.
+	Gaussian terminated normally in 4.39 s. (GS_NEW)
+R(Li-H) = 1.4448485246742062
+Submitting electronic structure for step 334.
+	Gaussian terminated normally in 4.23 s. (GS_NEW)
+R(Li-H) = 1.205269737196079
+Submitting electronic structure for step 335.
+	Gaussian terminated normally in 4.45 s. (GS_NEW)
+R(Li-H) = 1.0250561678281882
+Submitting electronic structure for step 336.
+	Gaussian terminated normally in 4.12 s. (GS_NEW)
+R(Li-H) = 0.9751081701012079
+Submitting electronic structure for step 337.
+	Gaussian terminated normally in 4.02 s. (GS_NEW)
+R(Li-H) = 1.0840367572885123
+Submitting electronic structure for step 338.
+	Gaussian terminated normally in 4.35 s. (GS_NEW)
+R(Li-H) = 1.295185365157245
+Submitting electronic structure for step 339.
+	Gaussian terminated normally in 4.20 s. (GS_NEW)
+R(Li-H) = 1.543185234295432
+Submitting electronic structure for step 340.
+	Gaussian terminated normally in 4.27 s. (GS_NEW)
+R(Li-H) = 1.7905969511208362
+Submitting electronic structure for step 341.
+	Gaussian terminated normally in 4.07 s. (GS_NEW)
+R(Li-H) = 2.0204721759786954
+Submitting electronic structure for step 342.
+	Gaussian terminated normally in 4.43 s. (GS_NEW)
+R(Li-H) = 2.2263023126998327
+Submitting electronic structure for step 343.
+	Gaussian terminated normally in 4.47 s. (GS_NEW)
+R(Li-H) = 2.4062542974237404
+Submitting electronic structure for step 344.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 2.560450884025972
+Submitting electronic structure for step 345.
+	Gaussian terminated normally in 4.60 s. (GS_NEW)
+R(Li-H) = 2.689768891828885
+Submitting electronic structure for step 346.
+	Gaussian terminated normally in 4.50 s. (GS_NEW)
+R(Li-H) = 2.7953020241500335
+Submitting electronic structure for step 347.
+	Gaussian terminated normally in 4.56 s. (GS_NEW)
+R(Li-H) = 2.8781127826805744
+Submitting electronic structure for step 348.
+	Gaussian terminated normally in 5.01 s. (GS_NEW)
+R(Li-H) = 2.9391108047689456
+Submitting electronic structure for step 349.
+	Gaussian terminated normally in 4.74 s. (GS_NEW)
+R(Li-H) = 2.978999422348063
+Submitting electronic structure for step 350.
+	Gaussian terminated normally in 4.54 s. (GS_NEW)
+R(Li-H) = 2.998250213072073
+Submitting electronic structure for step 351.
+	Gaussian terminated normally in 4.48 s. (GS_NEW)
+R(Li-H) = 2.9970933514322295
+Submitting electronic structure for step 352.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.975514961915712
+Submitting electronic structure for step 353.
+	Gaussian terminated normally in 4.96 s. (GS_NEW)
+R(Li-H) = 2.933257226558619
+Submitting electronic structure for step 354.
+	Gaussian terminated normally in 4.73 s. (GS_NEW)
+R(Li-H) = 2.8698215246214303
+Submitting electronic structure for step 355.
+	Gaussian terminated normally in 4.83 s. (GS_NEW)
+R(Li-H) = 2.7844795664764277
+Submitting electronic structure for step 356.
+	Gaussian terminated normally in 4.71 s. (GS_NEW)
+R(Li-H) = 2.676301056489557
+Submitting electronic structure for step 357.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 2.5442115100871296
+Submitting electronic structure for step 358.
+	Gaussian terminated normally in 4.67 s. (GS_NEW)
+R(Li-H) = 2.387126150745904
+Submitting electronic structure for step 359.
+	Gaussian terminated normally in 4.38 s. (GS_NEW)
+R(Li-H) = 2.2042194228803407
+Submitting electronic structure for step 360.
+	Gaussian terminated normally in 4.89 s. (GS_NEW)
+R(Li-H) = 1.9955118927040674
+Submitting electronic structure for step 361.
+	Gaussian terminated normally in 4.67 s. (GS_NEW)
+R(Li-H) = 1.763189316985768
+Submitting electronic structure for step 362.
+	Gaussian terminated normally in 4.21 s. (GS_NEW)
+R(Li-H) = 1.5145798516220008
+Submitting electronic structure for step 363.
+	Gaussian terminated normally in 4.26 s. (GS_NEW)
+R(Li-H) = 1.268377804464849
+Submitting electronic structure for step 364.
+	Gaussian terminated normally in 4.16 s. (GS_NEW)
+R(Li-H) = 1.0650816883877676
+Submitting electronic structure for step 365.
+	Gaussian terminated normally in 4.06 s. (GS_NEW)
+R(Li-H) = 0.9724151081956519
+Submitting electronic structure for step 366.
+	Gaussian terminated normally in 4.15 s. (GS_NEW)
+R(Li-H) = 1.0403099370963018
+Submitting electronic structure for step 367.
+	Gaussian terminated normally in 4.24 s. (GS_NEW)
+R(Li-H) = 1.2306693915483709
+Submitting electronic structure for step 368.
+	Gaussian terminated normally in 4.07 s. (GS_NEW)
+R(Li-H) = 1.473368377794509
+Submitting electronic structure for step 369.
+	Gaussian terminated normally in 4.10 s. (GS_NEW)
+R(Li-H) = 1.7232913688661804
+Submitting electronic structure for step 370.
+	Gaussian terminated normally in 4.27 s. (GS_NEW)
+R(Li-H) = 1.958981118671935
+Submitting electronic structure for step 371.
+	Gaussian terminated normally in 4.66 s. (GS_NEW)
+R(Li-H) = 2.171787838900394
+Submitting electronic structure for step 372.
+	Gaussian terminated normally in 4.36 s. (GS_NEW)
+R(Li-H) = 2.358951782126604
+Submitting electronic structure for step 373.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 2.520217035023884
+Submitting electronic structure for step 374.
+	Gaussian terminated normally in 4.74 s. (GS_NEW)
+R(Li-H) = 2.656323220486325
+Submitting electronic structure for step 375.
+	Gaussian terminated normally in 4.66 s. (GS_NEW)
+R(Li-H) = 2.768335106087399
+Submitting electronic structure for step 376.
+	Gaussian terminated normally in 4.67 s. (GS_NEW)
+R(Li-H) = 2.8573425677667283
+Submitting electronic structure for step 377.
+	Gaussian terminated normally in 4.61 s. (GS_NEW)
+R(Li-H) = 2.9243055719404336
+Submitting electronic structure for step 378.
+	Gaussian terminated normally in 4.46 s. (GS_NEW)
+R(Li-H) = 2.9699858647335655
+Submitting electronic structure for step 379.
+	Gaussian terminated normally in 4.75 s. (GS_NEW)
+R(Li-H) = 2.994920395132646
+Submitting electronic structure for step 380.
+	Gaussian terminated normally in 4.70 s. (GS_NEW)
+R(Li-H) = 2.9994070538317037
+Submitting electronic structure for step 381.
+	Gaussian terminated normally in 4.42 s. (GS_NEW)
+R(Li-H) = 2.983499734801931
+Submitting electronic structure for step 382.
+	Gaussian terminated normally in 4.71 s. (GS_NEW)
+R(Li-H) = 2.9470077436955022
+Submitting electronic structure for step 383.
+	Gaussian terminated normally in 4.54 s. (GS_NEW)
+R(Li-H) = 2.889498315560534
+Submitting electronic structure for step 384.
+	Gaussian terminated normally in 4.73 s. (GS_NEW)
+R(Li-H) = 2.8103062284328777
+Submitting electronic structure for step 385.
+	Gaussian terminated normally in 4.74 s. (GS_NEW)
+R(Li-H) = 2.7085543107002894
+Submitting electronic structure for step 386.
+	Gaussian terminated normally in 4.91 s. (GS_NEW)
+R(Li-H) = 2.5831957525363167
+Submitting electronic structure for step 387.
+	Gaussian terminated normally in 5.66 s. (GS_NEW)
+R(Li-H) = 2.4331313229182254
+Submitting electronic structure for step 388.
+	Gaussian terminated normally in 4.56 s. (GS_NEW)
+R(Li-H) = 2.2574211167557534
+Submitting electronic structure for step 389.
+	Gaussian terminated normally in 4.53 s. (GS_NEW)
+R(Li-H) = 2.055763008437275
+Submitting electronic structure for step 390.
+	Gaussian terminated normally in 5.47 s. (GS_NEW)
+R(Li-H) = 1.8295404728096742
+Submitting electronic structure for step 391.
+	Gaussian terminated normally in 4.16 s. (GS_NEW)
+R(Li-H) = 1.5842101185036421
+Submitting electronic structure for step 392.
+	Gaussian terminated normally in 4.54 s. (GS_NEW)
+R(Li-H) = 1.3344432743269845
+Submitting electronic structure for step 393.
+	Gaussian terminated normally in 10.65 s. (GS_NEW)
+R(Li-H) = 1.1135270474626835
+Submitting electronic structure for step 394.
+	Gaussian terminated normally in 9.21 s. (GS_NEW)
+R(Li-H) = 0.9827722444819988
+Submitting electronic structure for step 395.
+	Gaussian terminated normally in 5.67 s. (GS_NEW)
+R(Li-H) = 1.006177897500803
+Submitting electronic structure for step 396.
+	Gaussian terminated normally in 4.32 s. (GS_NEW)
+R(Li-H) = 1.1700887075989315
+Submitting electronic structure for step 397.
+	Gaussian terminated normally in 4.27 s. (GS_NEW)
+R(Li-H) = 1.4040943958022212
+Submitting electronic structure for step 398.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 1.6549512216402567
+Submitting electronic structure for step 399.
+	Gaussian terminated normally in 4.20 s. (GS_NEW)
+R(Li-H) = 1.8958249874335658
+Submitting electronic structure for step 400.
+	Gaussian terminated normally in 4.26 s. (GS_NEW)
+R(Li-H) = 2.115404974671402
+Submitting electronic structure for step 401.
+	Gaussian terminated normally in 4.42 s. (GS_NEW)
+R(Li-H) = 2.3097568272159483
+Submitting electronic structure for step 402.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 2.478137926330494
+Submitting electronic structure for step 403.
+	Gaussian terminated normally in 4.66 s. (GS_NEW)
+R(Li-H) = 2.6211020815200254
+Submitting electronic structure for step 404.
+	Gaussian terminated normally in 4.59 s. (GS_NEW)
+R(Li-H) = 2.7396670179808362
+Submitting electronic structure for step 405.
+	Gaussian terminated normally in 4.30 s. (GS_NEW)
+R(Li-H) = 2.8349338286928076
+Submitting electronic structure for step 406.
+	Gaussian terminated normally in 4.57 s. (GS_NEW)
+R(Li-H) = 2.9079064965726587
+Submitting electronic structure for step 407.
+	Gaussian terminated normally in 4.63 s. (GS_NEW)
+R(Li-H) = 2.9594068995201828
+Submitting electronic structure for step 408.
+	Gaussian terminated normally in 4.90 s. (GS_NEW)
+R(Li-H) = 2.9900368060546985
+Submitting electronic structure for step 409.
+	Gaussian terminated normally in 4.66 s. (GS_NEW)
+R(Li-H) = 3.0001606182322513
+Submitting electronic structure for step 410.
+	Gaussian terminated normally in 4.55 s. (GS_NEW)
+R(Li-H) = 2.9898996460860063
+Submitting electronic structure for step 411.
+	Gaussian terminated normally in 4.81 s. (GS_NEW)
+R(Li-H) = 2.9591309413449336
+Submitting electronic structure for step 412.
+	Gaussian terminated normally in 4.89 s. (GS_NEW)
+R(Li-H) = 2.907488514766522
+Submitting electronic structure for step 413.
+	Gaussian terminated normally in 4.59 s. (GS_NEW)
+R(Li-H) = 2.8343690328425026
+Submitting electronic structure for step 414.
+	Gaussian terminated normally in 4.51 s. (GS_NEW)
+R(Li-H) = 2.7389489554581403
+Submitting electronic structure for step 415.
+	Gaussian terminated normally in 4.41 s. (GS_NEW)
+R(Li-H) = 2.620223526720493
+Submitting electronic structure for step 416.
+	Gaussian terminated normally in 4.47 s. (GS_NEW)
+R(Li-H) = 2.4770916248887893
+Submitting electronic structure for step 417.
+	Gaussian terminated normally in 4.47 s. (GS_NEW)
+R(Li-H) = 2.3085369335964754
+Submitting electronic structure for step 418.
+	Gaussian terminated normally in 4.39 s. (GS_NEW)
+R(Li-H) = 2.1140107298631925
+Submitting electronic structure for step 419.
+	Gaussian terminated normally in 4.36 s. (GS_NEW)
+R(Li-H) = 1.894268998383327
+Submitting electronic structure for step 420.
+	Gaussian terminated normally in 4.29 s. (GS_NEW)
+R(Li-H) = 1.6532784236633422
+Submitting electronic structure for step 421.
+	Gaussian terminated normally in 4.37 s. (GS_NEW)
+R(Li-H) = 1.4024215501410462
+Submitting electronic structure for step 422.
+	Gaussian terminated normally in 4.16 s. (GS_NEW)
+R(Li-H) = 1.168674209793036
+Submitting electronic structure for step 423.
+	Gaussian terminated normally in 4.25 s. (GS_NEW)
+R(Li-H) = 1.005478217829828
+Submitting electronic structure for step 424.
+	Gaussian terminated normally in 4.28 s. (GS_NEW)
+R(Li-H) = 0.9831791986219279
+Submitting electronic structure for step 425.
+	Gaussian terminated normally in 4.26 s. (GS_NEW)
+R(Li-H) = 1.114791456350522
+Submitting electronic structure for step 426.
+	Gaussian terminated normally in 5.74 s. (GS_NEW)
+R(Li-H) = 1.3360753995146335
+Submitting electronic structure for step 427.
+	Gaussian terminated normally in 5.96 s. (GS_NEW)
+R(Li-H) = 1.5858987396056357
+Submitting electronic structure for step 428.
+	Gaussian terminated normally in 4.25 s. (GS_NEW)
+R(Li-H) = 1.83113733260085
+Submitting electronic structure for step 429.
+	Gaussian terminated normally in 4.28 s. (GS_NEW)
+R(Li-H) = 2.0572085324083917
+Submitting electronic structure for step 430.
+	Gaussian terminated normally in 4.19 s. (GS_NEW)
+R(Li-H) = 2.258696144205283
+Submitting electronic structure for step 431.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 2.4342340086608605
+Submitting electronic structure for step 432.
+	Gaussian terminated normally in 4.51 s. (GS_NEW)
+R(Li-H) = 2.584131420623052
+Submitting electronic structure for step 433.
+	Gaussian terminated normally in 4.64 s. (GS_NEW)
+R(Li-H) = 2.7093301811189634
+Submitting electronic structure for step 434.
+	Gaussian terminated normally in 4.78 s. (GS_NEW)
+R(Li-H) = 2.810930587915195
+Submitting electronic structure for step 435.
+	Gaussian terminated normally in 4.77 s. (GS_NEW)
+R(Li-H) = 2.8899764173831497
+Submitting electronic structure for step 436.
+	Gaussian terminated normally in 4.89 s. (GS_NEW)
+R(Li-H) = 2.9473445001230103
+Submitting electronic structure for step 437.
+	Gaussian terminated normally in 4.85 s. (GS_NEW)
+R(Li-H) = 2.9836995886723723
+Submitting electronic structure for step 438.
+	Gaussian terminated normally in 4.80 s. (GS_NEW)
+R(Li-H) = 2.9994727557543337
+Submitting electronic structure for step 439.
+	Gaussian terminated normally in 4.50 s. (GS_NEW)
+R(Li-H) = 2.9948529032109863
+Submitting electronic structure for step 440.
+	Gaussian terminated normally in 4.91 s. (GS_NEW)
+R(Li-H) = 2.9697845941816103
+Submitting electronic structure for step 441.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 2.9239685680150562
+Submitting electronic structure for step 442.
+	Gaussian terminated normally in 4.83 s. (GS_NEW)
+R(Li-H) = 2.856866096616617
+Submitting electronic structure for step 443.
+	Gaussian terminated normally in 4.75 s. (GS_NEW)
+R(Li-H) = 2.767712861168475
+Submitting electronic structure for step 444.
+	Gaussian terminated normally in 4.59 s. (GS_NEW)
+R(Li-H) = 2.655548240731673
+Submitting electronic structure for step 445.
+	Gaussian terminated normally in 4.80 s. (GS_NEW)
+R(Li-H) = 2.5192828196796166
+Submitting electronic structure for step 446.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.35785241552832
+Submitting electronic structure for step 447.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 2.170521036793242
+Submitting electronic structure for step 448.
+	Gaussian terminated normally in 4.52 s. (GS_NEW)
+R(Li-H) = 1.9575541182115497
+Submitting electronic structure for step 449.
+	Gaussian terminated normally in 4.42 s. (GS_NEW)
+R(Li-H) = 1.721735549124176
+Submitting electronic structure for step 450.
+	Gaussian terminated normally in 4.07 s. (GS_NEW)
+R(Li-H) = 1.4717697833859464
+Submitting electronic structure for step 451.
+	Gaussian terminated normally in 3.94 s. (GS_NEW)
+R(Li-H) = 1.2292276698662852
+Submitting electronic structure for step 452.
+	Gaussian terminated normally in 4.30 s. (GS_NEW)
+R(Li-H) = 1.0394079842035127
+Submitting electronic structure for step 453.
+	Gaussian terminated normally in 4.47 s. (GS_NEW)
+R(Li-H) = 0.9724998084835044
+Submitting electronic structure for step 454.
+	Gaussian terminated normally in 3.83 s. (GS_NEW)
+R(Li-H) = 1.0661017011900178
+Submitting electronic structure for step 455.
+	Gaussian terminated normally in 4.13 s. (GS_NEW)
+R(Li-H) = 1.2698652916477164
+Submitting electronic structure for step 456.
+	Gaussian terminated normally in 4.24 s. (GS_NEW)
+R(Li-H) = 1.5161853398803156
+Submitting electronic structure for step 457.
+	Gaussian terminated normally in 4.27 s. (GS_NEW)
+R(Li-H) = 1.7647377077770474
+Submitting electronic structure for step 458.
+	Gaussian terminated normally in 4.40 s. (GS_NEW)
+R(Li-H) = 1.9969289173079108
+Submitting electronic structure for step 459.
+	Gaussian terminated normally in 4.41 s. (GS_NEW)
+R(Li-H) = 2.20547936474994
+Submitting electronic structure for step 460.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 2.388223933714351
+Submitting electronic structure for step 461.
+	Gaussian terminated normally in 4.74 s. (GS_NEW)
+R(Li-H) = 2.5451502452570485
+Submitting electronic structure for step 462.
+	Gaussian terminated normally in 4.58 s. (GS_NEW)
+R(Li-H) = 2.6770876200005826
+Submitting electronic structure for step 463.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.7851201265293266
+Submitting electronic structure for step 464.
+	Gaussian terminated normally in 4.52 s. (GS_NEW)
+R(Li-H) = 2.870324162180248
+Submitting electronic structure for step 465.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 2.9336287417891707
+Submitting electronic structure for step 466.
+	Gaussian terminated normally in 4.80 s. (GS_NEW)
+R(Li-H) = 2.9757591462733117
+Submitting electronic structure for step 467.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.9972125399231766
+Submitting electronic structure for step 468.
+	Gaussian terminated normally in 4.60 s. (GS_NEW)
+R(Li-H) = 2.998245601834996
+Submitting electronic structure for step 469.
+	Gaussian terminated normally in 4.48 s. (GS_NEW)
+R(Li-H) = 2.978870745030044
+Submitting electronic structure for step 470.
+	Gaussian terminated normally in 4.70 s. (GS_NEW)
+R(Li-H) = 2.9388559954337454
+Submitting electronic structure for step 471.
+	Gaussian terminated normally in 4.57 s. (GS_NEW)
+R(Li-H) = 2.877728207369581
+Submitting electronic structure for step 472.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 2.7947842088881862
+Submitting electronic structure for step 473.
+	Gaussian terminated normally in 4.96 s. (GS_NEW)
+R(Li-H) = 2.689113993747016
+Submitting electronic structure for step 474.
+	Gaussian terminated normally in 4.65 s. (GS_NEW)
+R(Li-H) = 2.559651541512619
+Submitting electronic structure for step 475.
+	Gaussian terminated normally in 4.64 s. (GS_NEW)
+R(Li-H) = 2.405304777581616
+Submitting electronic structure for step 476.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 2.2251988795749114
+Submitting electronic structure for step 477.
+	Gaussian terminated normally in 4.33 s. (GS_NEW)
+R(Li-H) = 2.0192183641996415
+Submitting electronic structure for step 478.
+	Gaussian terminated normally in 4.85 s. (GS_NEW)
+R(Li-H) = 1.7892133462187563
+Submitting electronic structure for step 479.
+	Gaussian terminated normally in 4.29 s. (GS_NEW)
+R(Li-H) = 1.5417316005741273
+Submitting electronic structure for step 480.
+	Gaussian terminated normally in 3.96 s. (GS_NEW)
+R(Li-H) = 1.2938078821641805
+Submitting electronic structure for step 481.
+	Gaussian terminated normally in 4.02 s. (GS_NEW)
+R(Li-H) = 1.0830351595531735
+Submitting electronic structure for step 482.
+	Gaussian terminated normally in 4.11 s. (GS_NEW)
+R(Li-H) = 0.9749137746282984
+Submitting electronic structure for step 483.
+	Gaussian terminated normally in 4.38 s. (GS_NEW)
+R(Li-H) = 1.0257909197393391
+Submitting electronic structure for step 484.
+	Gaussian terminated normally in 4.22 s. (GS_NEW)
+R(Li-H) = 1.2065485313245212
+Submitting electronic structure for step 485.
+	Gaussian terminated normally in 4.10 s. (GS_NEW)
+R(Li-H) = 1.446303204916451
+Submitting electronic structure for step 486.
+	Gaussian terminated normally in 4.10 s. (GS_NEW)
+R(Li-H) = 1.696799217519322
+Submitting electronic structure for step 487.
+	Gaussian terminated normally in 4.37 s. (GS_NEW)
+R(Li-H) = 1.9345936098207974
+Submitting electronic structure for step 488.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 2.1500669189673927
+Submitting electronic structure for step 489.
+	Gaussian terminated normally in 4.51 s. (GS_NEW)
+R(Li-H) = 2.3400351582690457
+Submitting electronic structure for step 490.
+	Gaussian terminated normally in 4.61 s. (GS_NEW)
+R(Li-H) = 2.5040677359050245
+Submitting electronic structure for step 491.
+	Gaussian terminated normally in 4.88 s. (GS_NEW)
+R(Li-H) = 2.6428377090199877
+Submitting electronic structure for step 492.
+	Gaussian terminated normally in 4.87 s. (GS_NEW)
+R(Li-H) = 2.7573952851922647
+Submitting electronic structure for step 493.
+	Gaussian terminated normally in 5.53 s. (GS_NEW)
+R(Li-H) = 2.848834257254014
+Submitting electronic structure for step 494.
+	Gaussian terminated normally in 5.00 s. (GS_NEW)
+R(Li-H) = 2.918132111478937
+Submitting electronic structure for step 495.
+	Gaussian terminated normally in 5.08 s. (GS_NEW)
+R(Li-H) = 2.966076143597117
+Submitting electronic structure for step 496.
+	Gaussian terminated normally in 4.67 s. (GS_NEW)
+R(Li-H) = 2.993228793755172
+Submitting electronic structure for step 497.
+	Gaussian terminated normally in 4.77 s. (GS_NEW)
+R(Li-H) = 2.999913548386364
+Submitting electronic structure for step 498.
+	Gaussian terminated normally in 4.28 s. (GS_NEW)
+R(Li-H) = 2.9862105120927698
+Submitting electronic structure for step 499.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 2.951955667646367
+Submitting electronic structure for step 500.
+	Gaussian terminated normally in 4.70 s. (GS_NEW)
+R(Li-H) = 2.8967425562879243
+Submitting electronic structure for step 501.
+	Gaussian terminated normally in 4.79 s. (GS_NEW)
+R(Li-H) = 2.8199290256186735
+Submitting electronic structure for step 502.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.7206569151554887
+Submitting electronic structure for step 503.
+	Gaussian terminated normally in 4.69 s. (GS_NEW)
+R(Li-H) = 2.5978973499384996
+Submitting electronic structure for step 504.
+	Gaussian terminated normally in 5.01 s. (GS_NEW)
+R(Li-H) = 2.4505479723188266
+Submitting electronic structure for step 505.
+	Gaussian terminated normally in 4.75 s. (GS_NEW)
+R(Li-H) = 2.2776355234869863
+Submitting electronic structure for step 506.
+	Gaussian terminated normally in 4.40 s. (GS_NEW)
+R(Li-H) = 2.078753401024459
+Submitting electronic structure for step 507.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 1.8550209118175724
+Submitting electronic structure for step 508.
+	Gaussian terminated normally in 4.31 s. (GS_NEW)
+R(Li-H) = 1.6112714518635374
+Submitting electronic structure for step 509.
+	Gaussian terminated normally in 4.21 s. (GS_NEW)
+R(Li-H) = 1.3608107226832322
+Submitting electronic structure for step 510.
+	Gaussian terminated normally in 4.48 s. (GS_NEW)
+R(Li-H) = 1.1343520779860985
+Submitting electronic structure for step 511.
+	Gaussian terminated normally in 4.12 s. (GS_NEW)
+R(Li-H) = 0.9902285502640281
+Submitting electronic structure for step 512.
+	Gaussian terminated normally in 4.13 s. (GS_NEW)
+R(Li-H) = 0.9957920663276066
+Submitting electronic structure for step 513.
+	Gaussian terminated normally in 3.96 s. (GS_NEW)
+R(Li-H) = 1.1477820971506802
+Submitting electronic structure for step 514.
+	Gaussian terminated normally in 4.23 s. (GS_NEW)
+R(Li-H) = 1.3773365698073694
+Submitting electronic structure for step 515.
+	Gaussian terminated normally in 4.38 s. (GS_NEW)
+R(Li-H) = 1.6280487879565106
+Submitting electronic structure for step 516.
+	Gaussian terminated normally in 4.23 s. (GS_NEW)
+R(Li-H) = 1.870737190258361
+Submitting electronic structure for step 517.
+	Gaussian terminated normally in 4.47 s. (GS_NEW)
+R(Li-H) = 2.0928918442644426
+Submitting electronic structure for step 518.
+	Gaussian terminated normally in 4.43 s. (GS_NEW)
+R(Li-H) = 2.2900396087421475
+Submitting electronic structure for step 519.
+	Gaussian terminated normally in 4.52 s. (GS_NEW)
+R(Li-H) = 2.4612122641288177
+Submitting electronic structure for step 520.
+	Gaussian terminated normally in 4.53 s. (GS_NEW)
+R(Li-H) = 2.606876021246128
+Submitting electronic structure for step 521.
+	Gaussian terminated normally in 4.66 s. (GS_NEW)
+R(Li-H) = 2.7280224513401525
+Submitting electronic structure for step 522.
+	Gaussian terminated normally in 4.71 s. (GS_NEW)
+R(Li-H) = 2.8257542606546773
+Submitting electronic structure for step 523.
+	Gaussian terminated normally in 4.45 s. (GS_NEW)
+R(Li-H) = 2.901092592060139
+Submitting electronic structure for step 524.
+	Gaussian terminated normally in 4.89 s. (GS_NEW)
+R(Li-H) = 2.954880274139105
+Submitting electronic structure for step 525.
+	Gaussian terminated normally in 4.89 s. (GS_NEW)
+R(Li-H) = 2.987743571322527
+Submitting electronic structure for step 526.
+	Gaussian terminated normally in 4.66 s. (GS_NEW)
+R(Li-H) = 3.000073176999131
+Submitting electronic structure for step 527.
+	Gaussian terminated normally in 4.43 s. (GS_NEW)
+R(Li-H) = 2.9920169241312378
+Submitting electronic structure for step 528.
+	Gaussian terminated normally in 4.66 s. (GS_NEW)
+R(Li-H) = 2.9634781370413834
+Submitting electronic structure for step 529.
+	Gaussian terminated normally in 5.26 s. (GS_NEW)
+R(Li-H) = 2.9141166184456613
+Submitting electronic structure for step 530.
+	Gaussian terminated normally in 4.85 s. (GS_NEW)
+R(Li-H) = 2.8433543720489447
+Submitting electronic structure for step 531.
+	Gaussian terminated normally in 4.55 s. (GS_NEW)
+R(Li-H) = 2.750391910551428
+Submitting electronic structure for step 532.
+	Gaussian terminated normally in 4.42 s. (GS_NEW)
+R(Li-H) = 2.634240195638197
+Submitting electronic structure for step 533.
+	Gaussian terminated normally in 4.52 s. (GS_NEW)
+R(Li-H) = 2.4938007575020853
+Submitting electronic structure for step 534.
+	Gaussian terminated normally in 4.63 s. (GS_NEW)
+R(Li-H) = 2.328035403487015
+Submitting electronic structure for step 535.
+	Gaussian terminated normally in 4.55 s. (GS_NEW)
+R(Li-H) = 2.136316013109903
+Submitting electronic structure for step 536.
+	Gaussian terminated normally in 4.32 s. (GS_NEW)
+R(Li-H) = 1.9191924890390495
+Submitting electronic structure for step 537.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 1.68013551570369
+Submitting electronic structure for step 538.
+	Gaussian terminated normally in 4.54 s. (GS_NEW)
+R(Li-H) = 1.4294135799668788
+Submitting electronic structure for step 539.
+	Gaussian terminated normally in 4.07 s. (GS_NEW)
+R(Li-H) = 1.1917825156059902
+Submitting electronic structure for step 540.
+	Gaussian terminated normally in 4.15 s. (GS_NEW)
+R(Li-H) = 1.0174850205049415
+Submitting electronic structure for step 541.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 0.9774820919393878
+Submitting electronic structure for step 542.
+	Gaussian terminated normally in 4.99 s. (GS_NEW)
+R(Li-H) = 1.0948819216516719
+Submitting electronic structure for step 543.
+	Gaussian terminated normally in 4.41 s. (GS_NEW)
+R(Li-H) = 1.309929389544707
+Submitting electronic structure for step 544.
+	Gaussian terminated normally in 4.11 s. (GS_NEW)
+R(Li-H) = 1.5587081447584552
+Submitting electronic structure for step 545.
+	Gaussian terminated normally in 4.17 s. (GS_NEW)
+R(Li-H) = 1.8053833311798444
+Submitting electronic structure for step 546.
+	Gaussian terminated normally in 4.50 s. (GS_NEW)
+R(Li-H) = 2.0338982522454816
+Submitting electronic structure for step 547.
+	Gaussian terminated normally in 4.41 s. (GS_NEW)
+R(Li-H) = 2.2381585775489072
+Submitting electronic structure for step 548.
+	Gaussian terminated normally in 4.45 s. (GS_NEW)
+R(Li-H) = 2.416508721401633
+Submitting electronic structure for step 549.
+	Gaussian terminated normally in 4.81 s. (GS_NEW)
+R(Li-H) = 2.5691424759780572
+Submitting electronic structure for step 550.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 2.6969630127476827
+Submitting electronic structure for step 551.
+	Gaussian terminated normally in 4.55 s. (GS_NEW)
+R(Li-H) = 2.8010655005019958
+Submitting electronic structure for step 552.
+	Gaussian terminated normally in 4.45 s. (GS_NEW)
+R(Li-H) = 2.882508654421018
+Submitting electronic structure for step 553.
+	Gaussian terminated normally in 4.82 s. (GS_NEW)
+R(Li-H) = 2.9421896321753866
+Submitting electronic structure for step 554.
+	Gaussian terminated normally in 4.80 s. (GS_NEW)
+R(Li-H) = 2.980796732299259
+Submitting electronic structure for step 555.
+	Gaussian terminated normally in 4.92 s. (GS_NEW)
+R(Li-H) = 2.9987870262831344
+Submitting electronic structure for step 556.
+	Gaussian terminated normally in 4.73 s. (GS_NEW)
+R(Li-H) = 2.996375982776262
+Submitting electronic structure for step 557.
+	Gaussian terminated normally in 4.82 s. (GS_NEW)
+R(Li-H) = 2.973534653043114
+Submitting electronic structure for step 558.
+	Gaussian terminated normally in 5.08 s. (GS_NEW)
+R(Li-H) = 2.929989980481257
+Submitting electronic structure for step 559.
+	Gaussian terminated normally in 4.60 s. (GS_NEW)
+R(Li-H) = 2.8652288137392548
+Submitting electronic structure for step 560.
+	Gaussian terminated normally in 4.82 s. (GS_NEW)
+R(Li-H) = 2.7785107254026618
+Submitting electronic structure for step 561.
+	Gaussian terminated normally in 4.86 s. (GS_NEW)
+R(Li-H) = 2.66889416710721
+Submitting electronic structure for step 562.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 2.535297294718667
+Submitting electronic structure for step 563.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 2.3766432582328716
+Submitting electronic structure for step 564.
+	Gaussian terminated normally in 4.50 s. (GS_NEW)
+R(Li-H) = 2.19213596594863
+Submitting electronic structure for step 565.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 1.9818799409871435
+Submitting electronic structure for step 566.
+	Gaussian terminated normally in 4.73 s. (GS_NEW)
+R(Li-H) = 1.7482674980265691
+Submitting electronic structure for step 567.
+	Gaussian terminated normally in 4.20 s. (GS_NEW)
+R(Li-H) = 1.499102334394714
+Submitting electronic structure for step 568.
+	Gaussian terminated normally in 4.12 s. (GS_NEW)
+R(Li-H) = 1.2540810522471852
+Submitting electronic structure for step 569.
+	Gaussian terminated normally in 4.20 s. (GS_NEW)
+R(Li-H) = 1.0554096198074399
+Submitting electronic structure for step 570.
+	Gaussian terminated normally in 4.41 s. (GS_NEW)
+R(Li-H) = 0.9718670717238298
+Submitting electronic structure for step 571.
+	Gaussian terminated normally in 4.20 s. (GS_NEW)
+R(Li-H) = 1.0492324052921027
+Submitting electronic structure for step 572.
+	Gaussian terminated normally in 4.27 s. (GS_NEW)
+R(Li-H) = 1.2446817491084963
+Submitting electronic structure for step 573.
+	Gaussian terminated normally in 4.29 s. (GS_NEW)
+R(Li-H) = 1.4888330015161813
+Submitting electronic structure for step 574.
+	Gaussian terminated normally in 4.02 s. (GS_NEW)
+R(Li-H) = 1.7383276472679452
+Submitting electronic structure for step 575.
+	Gaussian terminated normally in 4.38 s. (GS_NEW)
+R(Li-H) = 1.9727812693992002
+Submitting electronic structure for step 576.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 2.1840601529251544
+Submitting electronic structure for step 577.
+	Gaussian terminated normally in 4.46 s. (GS_NEW)
+R(Li-H) = 2.3696298737259656
+Submitting electronic structure for step 578.
+	Gaussian terminated normally in 4.63 s. (GS_NEW)
+R(Li-H) = 2.5293275497050067
+Submitting electronic structure for step 579.
+	Gaussian terminated normally in 4.53 s. (GS_NEW)
+R(Li-H) = 2.6639264054852356
+Submitting electronic structure for step 580.
+	Gaussian terminated normally in 4.75 s. (GS_NEW)
+R(Li-H) = 2.7745013249212205
+Submitting electronic structure for step 581.
+	Gaussian terminated normally in 5.03 s. (GS_NEW)
+R(Li-H) = 2.8621345009280086
+Submitting electronic structure for step 582.
+	Gaussian terminated normally in 5.28 s. (GS_NEW)
+R(Li-H) = 2.9277747912534897
+Submitting electronic structure for step 583.
+	Gaussian terminated normally in 4.81 s. (GS_NEW)
+R(Li-H) = 2.972173333435391
+Submitting electronic structure for step 584.
+	Gaussian terminated normally in 5.64 s. (GS_NEW)
+R(Li-H) = 2.9958528583079107
+Submitting electronic structure for step 585.
+	Gaussian terminated normally in 4.78 s. (GS_NEW)
+R(Li-H) = 2.999095917820478
+Submitting electronic structure for step 586.
+	Gaussian terminated normally in 4.67 s. (GS_NEW)
+R(Li-H) = 2.981941386345478
+Submitting electronic structure for step 587.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 2.944184106857689
+Submitting electronic structure for step 588.
+	Gaussian terminated normally in 4.73 s. (GS_NEW)
+R(Li-H) = 2.885377081320861
+Submitting electronic structure for step 589.
+	Gaussian terminated normally in 4.93 s. (GS_NEW)
+R(Li-H) = 2.804839723272482
+Submitting electronic structure for step 590.
+	Gaussian terminated normally in 4.71 s. (GS_NEW)
+R(Li-H) = 2.701681231020755
+Submitting electronic structure for step 591.
+	Gaussian terminated normally in 4.55 s. (GS_NEW)
+R(Li-H) = 2.5748514216132854
+Submitting electronic structure for step 592.
+	Gaussian terminated normally in 4.76 s. (GS_NEW)
+R(Li-H) = 2.423250936055312
+Submitting electronic structure for step 593.
+	Gaussian terminated normally in 5.08 s. (GS_NEW)
+R(Li-H) = 2.24596276967302
+Submitting electronic structure for step 594.
+	Gaussian terminated normally in 4.52 s. (GS_NEW)
+R(Li-H) = 2.0427475138409705
+Submitting electronic structure for step 595.
+	Gaussian terminated normally in 4.91 s. (GS_NEW)
+R(Li-H) = 1.8151480475575836
+Submitting electronic structure for step 596.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 1.568994805481899
+Submitting electronic structure for step 597.
+	Gaussian terminated normally in 4.11 s. (GS_NEW)
+R(Li-H) = 1.3197735882816926
+Submitting electronic structure for step 598.
+	Gaussian terminated normally in 4.26 s. (GS_NEW)
+R(Li-H) = 1.1022799398603427
+Submitting electronic structure for step 599.
+	Gaussian terminated normally in 4.24 s. (GS_NEW)
+R(Li-H) = 0.9794074568487884
+Submitting electronic structure for step 600.
+	Gaussian terminated normally in 4.26 s. (GS_NEW)
+R(Li-H) = 1.0127493407547317
+Submitting electronic structure for step 601.
+	Gaussian terminated normally in 4.52 s. (GS_NEW)
+R(Li-H) = 1.1829569703523082
+Submitting electronic structure for step 602.
+	Gaussian terminated normally in 4.39 s. (GS_NEW)
+R(Li-H) = 1.4191922549710816
+Submitting electronic structure for step 603.
+	Gaussian terminated normally in 4.16 s. (GS_NEW)
+R(Li-H) = 1.6700014961510572
+Submitting electronic structure for step 604.
+	Gaussian terminated normally in 4.29 s. (GS_NEW)
+R(Li-H) = 1.9098055941386674
+Submitting electronic structure for step 605.
+	Gaussian terminated normally in 4.28 s. (GS_NEW)
+R(Li-H) = 2.1279255211824517
+Submitting electronic structure for step 606.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 2.3207090556868204
+Submitting electronic structure for step 607.
+	Gaussian terminated normally in 4.83 s. (GS_NEW)
+R(Li-H) = 2.487530876767901
+Submitting electronic structure for step 608.
+	Gaussian terminated normally in 4.58 s. (GS_NEW)
+R(Li-H) = 2.6289898263731595
+Submitting electronic structure for step 609.
+	Gaussian terminated normally in 4.74 s. (GS_NEW)
+R(Li-H) = 2.7461158726465973
+Submitting electronic structure for step 610.
+	Gaussian terminated normally in 4.69 s. (GS_NEW)
+R(Li-H) = 2.8400089213101647
+Submitting electronic structure for step 611.
+	Gaussian terminated normally in 4.51 s. (GS_NEW)
+R(Li-H) = 2.9116652958015354
+Submitting electronic structure for step 612.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.9618927070358767
+Submitting electronic structure for step 613.
+	Gaussian terminated normally in 4.78 s. (GS_NEW)
+R(Li-H) = 2.991278440121329
+Submitting electronic structure for step 614.
+	Gaussian terminated normally in 5.03 s. (GS_NEW)
+R(Li-H) = 3.0001726860699596
+Submitting electronic structure for step 615.
+	Gaussian terminated normally in 4.66 s. (GS_NEW)
+R(Li-H) = 2.9886822053129634
+Submitting electronic structure for step 616.
+	Gaussian terminated normally in 4.91 s. (GS_NEW)
+R(Li-H) = 2.956669124181866
+Submitting electronic structure for step 617.
+	Gaussian terminated normally in 4.82 s. (GS_NEW)
+R(Li-H) = 2.9037525453503403
+Submitting electronic structure for step 618.
+	Gaussian terminated normally in 4.81 s. (GS_NEW)
+R(Li-H) = 2.829316025228024
+Submitting electronic structure for step 619.
+	Gaussian terminated normally in 4.42 s. (GS_NEW)
+R(Li-H) = 2.732525768121442
+Submitting electronic structure for step 620.
+	Gaussian terminated normally in 5.22 s. (GS_NEW)
+R(Li-H) = 2.612365367060013
+Submitting electronic structure for step 621.
+	Gaussian terminated normally in 4.84 s. (GS_NEW)
+R(Li-H) = 2.467732652425409
+Submitting electronic structure for step 622.
+	Gaussian terminated normally in 4.78 s. (GS_NEW)
+R(Li-H) = 2.297625418388164
+Submitting electronic structure for step 623.
+	Gaussian terminated normally in 4.86 s. (GS_NEW)
+R(Li-H) = 2.1015432614278917
+Submitting electronic structure for step 624.
+	Gaussian terminated normally in 5.14 s. (GS_NEW)
+R(Li-H) = 1.880365413105706
+Submitting electronic structure for step 625.
+	Gaussian terminated normally in 5.65 s. (GS_NEW)
+R(Li-H) = 1.6383526121193905
+Submitting electronic structure for step 626.
+	Gaussian terminated normally in 4.14 s. (GS_NEW)
+R(Li-H) = 1.3875452366275716
+Submitting electronic structure for step 627.
+	Gaussian terminated normally in 4.29 s. (GS_NEW)
+R(Li-H) = 1.1562111709421017
+Submitting electronic structure for step 628.
+	Gaussian terminated normally in 4.25 s. (GS_NEW)
+R(Li-H) = 0.9995555294774155
+Submitting electronic structure for step 629.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 0.9871572192071693
+Submitting electronic structure for step 630.
+	Gaussian terminated normally in 4.41 s. (GS_NEW)
+R(Li-H) = 1.126274879541279
+Submitting electronic structure for step 631.
+	Gaussian terminated normally in 4.25 s. (GS_NEW)
+R(Li-H) = 1.350698603472303
+Submitting electronic structure for step 632.
+	Gaussian terminated normally in 4.52 s. (GS_NEW)
+R(Li-H) = 1.6009371138123993
+Submitting electronic structure for step 633.
+	Gaussian terminated normally in 4.26 s. (GS_NEW)
+R(Li-H) = 1.845309704373056
+Submitting electronic structure for step 634.
+	Gaussian terminated normally in 4.38 s. (GS_NEW)
+R(Li-H) = 2.070001358954232
+Submitting electronic structure for step 635.
+	Gaussian terminated normally in 5.06 s. (GS_NEW)
+R(Li-H) = 2.2699471915023
+Submitting electronic structure for step 636.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 2.4439295518910176
+Submitting electronic structure for step 637.
+	Gaussian terminated normally in 4.55 s. (GS_NEW)
+R(Li-H) = 2.592316753798649
+Submitting electronic structure for step 638.
+	Gaussian terminated normally in 4.76 s. (GS_NEW)
+R(Li-H) = 2.7160693294203715
+Submitting electronic structure for step 639.
+	Gaussian terminated normally in 4.63 s. (GS_NEW)
+R(Li-H) = 2.816289353766135
+Submitting electronic structure for step 640.
+	Gaussian terminated normally in 4.37 s. (GS_NEW)
+R(Li-H) = 2.8940130380643048
+Submitting electronic structure for step 641.
+	Gaussian terminated normally in 4.70 s. (GS_NEW)
+R(Li-H) = 2.950105034821164
+Submitting electronic structure for step 642.
+	Gaussian terminated normally in 4.65 s. (GS_NEW)
+R(Li-H) = 2.985216456319074
+Submitting electronic structure for step 643.
+	Gaussian terminated normally in 4.99 s. (GS_NEW)
+R(Li-H) = 2.9997640607685288
+Submitting electronic structure for step 644.
+	Gaussian terminated normally in 4.38 s. (GS_NEW)
+R(Li-H) = 2.9939221461843957
+Submitting electronic structure for step 645.
+	Gaussian terminated normally in 4.66 s. (GS_NEW)
+R(Li-H) = 2.9676206255492406
+Submitting electronic structure for step 646.
+	Gaussian terminated normally in 4.52 s. (GS_NEW)
+R(Li-H) = 2.920545726084275
+Submitting electronic structure for step 647.
+	Gaussian terminated normally in 5.69 s. (GS_NEW)
+R(Li-H) = 2.852144638364775
+Submitting electronic structure for step 648.
+	Gaussian terminated normally in 4.42 s. (GS_NEW)
+R(Li-H) = 2.7616399768263626
+Submitting electronic structure for step 649.
+	Gaussian terminated normally in 4.33 s. (GS_NEW)
+R(Li-H) = 2.648061175623921
+Submitting electronic structure for step 650.
+	Gaussian terminated normally in 4.81 s. (GS_NEW)
+R(Li-H) = 2.5103155248530267
+Submitting electronic structure for step 651.
+	Gaussian terminated normally in 4.61 s. (GS_NEW)
+R(Li-H) = 2.3473462003070895
+Submitting electronic structure for step 652.
+	Gaussian terminated normally in 4.42 s. (GS_NEW)
+R(Li-H) = 2.158453777779483
+Submitting electronic structure for step 653.
+	Gaussian terminated normally in 4.36 s. (GS_NEW)
+R(Li-H) = 1.9439997634295982
+Submitting electronic structure for step 654.
+	Gaussian terminated normally in 4.59 s. (GS_NEW)
+R(Li-H) = 1.7070002944731681
+Submitting electronic structure for step 655.
+	Gaussian terminated normally in 5.45 s. (GS_NEW)
+R(Li-H) = 1.456693074305236
+Submitting electronic structure for step 656.
+	Gaussian terminated normally in 4.41 s. (GS_NEW)
+R(Li-H) = 1.2157416124055263
+Submitting electronic structure for step 657.
+	Gaussian terminated normally in 4.20 s. (GS_NEW)
+R(Li-H) = 1.0311887824017882
+Submitting electronic structure for step 658.
+	Gaussian terminated normally in 4.11 s. (GS_NEW)
+R(Li-H) = 0.97371540533649
+Submitting electronic structure for step 659.
+	Gaussian terminated normally in 4.24 s. (GS_NEW)
+R(Li-H) = 1.075987825622633
+Submitting electronic structure for step 660.
+	Gaussian terminated normally in 4.25 s. (GS_NEW)
+R(Li-H) = 1.2839846395001586
+Submitting electronic structure for step 661.
+	Gaussian terminated normally in 4.28 s. (GS_NEW)
+R(Li-H) = 1.5313008059868822
+Submitting electronic structure for step 662.
+	Gaussian terminated normally in 4.28 s. (GS_NEW)
+R(Li-H) = 1.7792407027995916
+Submitting electronic structure for step 663.
+	Gaussian terminated normally in 4.46 s. (GS_NEW)
+R(Li-H) = 2.0101468895734778
+Submitting electronic structure for step 664.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 2.217179307193438
+Submitting electronic structure for step 665.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.3983622314067397
+Submitting electronic structure for step 666.
+	Gaussian terminated normally in 4.56 s. (GS_NEW)
+R(Li-H) = 2.5537609176827223
+Submitting electronic structure for step 667.
+	Gaussian terminated normally in 4.57 s. (GS_NEW)
+R(Li-H) = 2.684232641506096
+Submitting electronic structure for step 668.
+	Gaussian terminated normally in 4.51 s. (GS_NEW)
+R(Li-H) = 2.790867043510969
+Submitting electronic structure for step 669.
+	Gaussian terminated normally in 4.50 s. (GS_NEW)
+R(Li-H) = 2.8747322754209064
+Submitting electronic structure for step 670.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 2.9367467118921455
+Submitting electronic structure for step 671.
+	Gaussian terminated normally in 4.56 s. (GS_NEW)
+R(Li-H) = 2.9776239568341154
+Submitting electronic structure for step 672.
+	Gaussian terminated normally in 4.65 s. (GS_NEW)
+R(Li-H) = 2.9978469239705468
+Submitting electronic structure for step 673.
+	Gaussian terminated normally in 4.48 s. (GS_NEW)
+R(Li-H) = 2.9976574036483505
+Submitting electronic structure for step 674.
+	Gaussian terminated normally in 4.45 s. (GS_NEW)
+R(Li-H) = 2.977053120235049
+Submitting electronic structure for step 675.
+	Gaussian terminated normally in 4.50 s. (GS_NEW)
+R(Li-H) = 2.935787732437194
+Submitting electronic structure for step 676.
+	Gaussian terminated normally in 4.71 s. (GS_NEW)
+R(Li-H) = 2.873373867294954
+Submitting electronic structure for step 677.
+	Gaussian terminated normally in 4.60 s. (GS_NEW)
+R(Li-H) = 2.7890939935686223
+Submitting electronic structure for step 678.
+	Gaussian terminated normally in 4.59 s. (GS_NEW)
+R(Li-H) = 2.6820264716521227
+Submitting electronic structure for step 679.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 2.5511006895011024
+Submitting electronic structure for step 680.
+	Gaussian terminated normally in 4.50 s. (GS_NEW)
+R(Li-H) = 2.3952287931508285
+Submitting electronic structure for step 681.
+	Gaussian terminated normally in 4.54 s. (GS_NEW)
+R(Li-H) = 2.2135617896114974
+Submitting electronic structure for step 682.
+	Gaussian terminated normally in 4.45 s. (GS_NEW)
+R(Li-H) = 2.00605799181803
+Submitting electronic structure for step 683.
+	Gaussian terminated normally in 4.32 s. (GS_NEW)
+R(Li-H) = 1.7747508881593312
+Submitting electronic structure for step 684.
+	Gaussian terminated normally in 4.43 s. (GS_NEW)
+R(Li-H) = 1.526614475516872
+Submitting electronic structure for step 685.
+	Gaussian terminated normally in 4.13 s. (GS_NEW)
+R(Li-H) = 1.2795924348818184
+Submitting electronic structure for step 686.
+	Gaussian terminated normally in 4.25 s. (GS_NEW)
+R(Li-H) = 1.072881479353852
+Submitting electronic structure for step 687.
+	Gaussian terminated normally in 4.87 s. (GS_NEW)
+R(Li-H) = 0.9732732067432803
+Submitting electronic structure for step 688.
+	Gaussian terminated normally in 4.55 s. (GS_NEW)
+R(Li-H) = 1.03368896166562
+Submitting electronic structure for step 689.
+	Gaussian terminated normally in 4.09 s. (GS_NEW)
+R(Li-H) = 1.2199045085366964
+Submitting electronic structure for step 690.
+	Gaussian terminated normally in 4.14 s. (GS_NEW)
+R(Li-H) = 1.4613663577017109
+Submitting electronic structure for step 691.
+	Gaussian terminated normally in 4.24 s. (GS_NEW)
+R(Li-H) = 1.7115752136088147
+Submitting electronic structure for step 692.
+	Gaussian terminated normally in 4.45 s. (GS_NEW)
+R(Li-H) = 1.9482110393327512
+Submitting electronic structure for step 693.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 2.1622041064059996
+Submitting electronic structure for step 694.
+	Gaussian terminated normally in 5.50 s. (GS_NEW)
+R(Li-H) = 2.350611822795087
+Submitting electronic structure for step 695.
+	Gaussian terminated normally in 6.66 s. (GS_NEW)
+R(Li-H) = 2.5131026763303947
+Submitting electronic structure for step 696.
+	Gaussian terminated normally in 4.76 s. (GS_NEW)
+R(Li-H) = 2.650387671093621
+Submitting electronic structure for step 697.
+	Gaussian terminated normally in 4.34 s. (GS_NEW)
+R(Li-H) = 2.7635256724344464
+Submitting electronic structure for step 698.
+	Gaussian terminated normally in 4.48 s. (GS_NEW)
+R(Li-H) = 2.853609454046
+Submitting electronic structure for step 699.
+	Gaussian terminated normally in 4.64 s. (GS_NEW)
+R(Li-H) = 2.9216071916526816
+Submitting electronic structure for step 700.
+	Gaussian terminated normally in 4.59 s. (GS_NEW)
+R(Li-H) = 2.9682908881928594
+Submitting electronic structure for step 701.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 2.99420870056966
+Submitting electronic structure for step 702.
+	Gaussian terminated normally in 4.61 s. (GS_NEW)
+R(Li-H) = 2.9996701163883546
+Submitting electronic structure for step 703.
+	Gaussian terminated normally in 4.37 s. (GS_NEW)
+R(Li-H) = 2.9847407322440405
+Submitting electronic structure for step 704.
+	Gaussian terminated normally in 4.59 s. (GS_NEW)
+R(Li-H) = 2.949241540751006
+Submitting electronic structure for step 705.
+	Gaussian terminated normally in 4.56 s. (GS_NEW)
+R(Li-H) = 2.8927512117921435
+Submitting electronic structure for step 706.
+	Gaussian terminated normally in 4.57 s. (GS_NEW)
+R(Li-H) = 2.814615146359742
+Submitting electronic structure for step 707.
+	Gaussian terminated normally in 4.78 s. (GS_NEW)
+R(Li-H) = 2.713965633852222
+Submitting electronic structure for step 708.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 2.589762509271249
+Submitting electronic structure for step 709.
+	Gaussian terminated normally in 4.71 s. (GS_NEW)
+R(Li-H) = 2.4409045700546845
+Submitting electronic structure for step 710.
+	Gaussian terminated normally in 4.58 s. (GS_NEW)
+R(Li-H) = 2.2664369812632605
+Submitting electronic structure for step 711.
+	Gaussian terminated normally in 4.63 s. (GS_NEW)
+R(Li-H) = 2.066009679879866
+Submitting electronic structure for step 712.
+	Gaussian terminated normally in 4.38 s. (GS_NEW)
+R(Li-H) = 1.8408859787928482
+Submitting electronic structure for step 713.
+	Gaussian terminated normally in 4.26 s. (GS_NEW)
+R(Li-H) = 1.59623857509162
+Submitting electronic structure for step 714.
+	Gaussian terminated normally in 4.34 s. (GS_NEW)
+R(Li-H) = 1.346119055932623
+Submitting electronic structure for step 715.
+	Gaussian terminated normally in 4.07 s. (GS_NEW)
+R(Li-H) = 1.122654435601553
+Submitting electronic structure for step 716.
+	Gaussian terminated normally in 4.11 s. (GS_NEW)
+R(Li-H) = 0.9858544282363885
+Submitting electronic structure for step 717.
+	Gaussian terminated normally in 4.21 s. (GS_NEW)
+R(Li-H) = 1.001350678021648
+Submitting electronic structure for step 718.
+	Gaussian terminated normally in 4.17 s. (GS_NEW)
+R(Li-H) = 1.1600777217245695
+Submitting electronic structure for step 719.
+	Gaussian terminated normally in 4.12 s. (GS_NEW)
+R(Li-H) = 1.3921835831844354
+Submitting electronic structure for step 720.
+	Gaussian terminated normally in 4.18 s. (GS_NEW)
+R(Li-H) = 1.6430138648795416
+Submitting electronic structure for step 721.
+	Gaussian terminated normally in 4.39 s. (GS_NEW)
+R(Li-H) = 1.884709099057012
+Submitting electronic structure for step 722.
+	Gaussian terminated normally in 4.43 s. (GS_NEW)
+R(Li-H) = 2.1054374698516978
+Submitting electronic structure for step 723.
+	Gaussian terminated normally in 4.40 s. (GS_NEW)
+R(Li-H) = 2.3010316212986766
+Submitting electronic structure for step 724.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 2.4706514120460135
+Submitting electronic structure for step 725.
+	Gaussian terminated normally in 4.52 s. (GS_NEW)
+R(Li-H) = 2.6148126937549527
+Submitting electronic structure for step 726.
+	Gaussian terminated normally in 4.64 s. (GS_NEW)
+R(Li-H) = 2.7345221158135953
+Submitting electronic structure for step 727.
+	Gaussian terminated normally in 5.60 s. (GS_NEW)
+R(Li-H) = 2.8308821450996846
+Submitting electronic structure for step 728.
+	Gaussian terminated normally in 4.54 s. (GS_NEW)
+R(Li-H) = 2.9049035923826065
+Submitting electronic structure for step 729.
+	Gaussian terminated normally in 4.83 s. (GS_NEW)
+R(Li-H) = 2.9574182084547656
+Submitting electronic structure for step 730.
+	Gaussian terminated normally in 9.36 s. (GS_NEW)
+R(Li-H) = 2.9890389667359614
+Submitting electronic structure for step 731.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 3.0001418545232914
+Submitting electronic structure for step 732.
+	Gaussian terminated normally in 4.54 s. (GS_NEW)
+R(Li-H) = 2.9908598853893924
+Submitting electronic structure for step 733.
+	Gaussian terminated normally in 5.19 s. (GS_NEW)
+R(Li-H) = 2.961081830644519
+Submitting electronic structure for step 734.
+	Gaussian terminated normally in 6.80 s. (GS_NEW)
+R(Li-H) = 2.9104532590234946
+Submitting electronic structure for step 735.
+	Gaussian terminated normally in 5.77 s. (GS_NEW)
+R(Li-H) = 2.838381850261937
+Submitting electronic structure for step 736.
+	Gaussian terminated normally in 4.94 s. (GS_NEW)
+R(Li-H) = 2.7440540671607128
+Submitting electronic structure for step 737.
+	Gaussian terminated normally in 4.53 s. (GS_NEW)
+R(Li-H) = 2.626472767983405
+Submitting electronic structure for step 738.
+	Gaussian terminated normally in 4.47 s. (GS_NEW)
+R(Li-H) = 2.48453765048165
+Submitting electronic structure for step 739.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 2.317222213725378
+Submitting electronic structure for step 740.
+	Gaussian terminated normally in 5.34 s. (GS_NEW)
+R(Li-H) = 2.1239415810077373
+Submitting electronic structure for step 741.
+	Gaussian terminated normally in 6.19 s. (GS_NEW)
+R(Li-H) = 1.905357799049897
+Submitting electronic structure for step 742.
+	Gaussian terminated normally in 4.06 s. (GS_NEW)
+R(Li-H) = 1.665211545552641
+Submitting electronic structure for step 743.
+	Gaussian terminated normally in 4.31 s. (GS_NEW)
+R(Li-H) = 1.414379880353026
+Submitting electronic structure for step 744.
+	Gaussian terminated normally in 4.12 s. (GS_NEW)
+R(Li-H) = 1.1788362466827085
+Submitting electronic structure for step 745.
+	Gaussian terminated normally in 4.00 s. (GS_NEW)
+R(Li-H) = 1.0106038966470348
+Submitting electronic structure for step 746.
+	Gaussian terminated normally in 4.25 s. (GS_NEW)
+R(Li-H) = 0.9804154040853559
+Submitting electronic structure for step 747.
+	Gaussian terminated normally in 3.96 s. (GS_NEW)
+R(Li-H) = 1.1058220164995052
+Submitting electronic structure for step 748.
+	Gaussian terminated normally in 4.19 s. (GS_NEW)
+R(Li-H) = 1.3244277968064566
+Submitting electronic structure for step 749.
+	Gaussian terminated normally in 3.84 s. (GS_NEW)
+R(Li-H) = 1.5738344721610855
+Submitting electronic structure for step 750.
+	Gaussian terminated normally in 4.31 s. (GS_NEW)
+R(Li-H) = 1.8197309397805241
+Submitting electronic structure for step 751.
+	Gaussian terminated normally in 4.33 s. (GS_NEW)
+R(Li-H) = 2.0468938417259723
+Submitting electronic structure for step 752.
+	Gaussian terminated normally in 4.58 s. (GS_NEW)
+R(Li-H) = 2.2496138408050896
+Submitting electronic structure for step 753.
+	Gaussian terminated normally in 4.60 s. (GS_NEW)
+R(Li-H) = 2.426399523113249
+Submitting electronic structure for step 754.
+	Gaussian terminated normally in 4.66 s. (GS_NEW)
+R(Li-H) = 2.577510395388204
+Submitting electronic structure for step 755.
+	Gaussian terminated normally in 4.61 s. (GS_NEW)
+R(Li-H) = 2.703871238998446
+Submitting electronic structure for step 756.
+	Gaussian terminated normally in 4.54 s. (GS_NEW)
+R(Li-H) = 2.8065805932553833
+Submitting electronic structure for step 757.
+	Gaussian terminated normally in 4.74 s. (GS_NEW)
+R(Li-H) = 2.8866897074951967
+Submitting electronic structure for step 758.
+	Gaussian terminated normally in 4.53 s. (GS_NEW)
+R(Li-H) = 2.9450840468530015
+Submitting electronic structure for step 759.
+	Gaussian terminated normally in 5.07 s. (GS_NEW)
+R(Li-H) = 2.982438434460911
+Submitting electronic structure for step 760.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 2.9991955571813214
+Submitting electronic structure for step 761.
+	Gaussian terminated normally in 4.15 s. (GS_NEW)
+R(Li-H) = 2.995556205062481
+Submitting electronic structure for step 762.
+	Gaussian terminated normally in 4.56 s. (GS_NEW)
+R(Li-H) = 2.971476663720309
+Submitting electronic structure for step 763.
+	Gaussian terminated normally in 4.87 s. (GS_NEW)
+R(Li-H) = 2.9266691665901265
+Submitting electronic structure for step 764.
+	Gaussian terminated normally in 4.66 s. (GS_NEW)
+R(Li-H) = 2.8606064291479054
+Submitting electronic structure for step 765.
+	Gaussian terminated normally in 4.69 s. (GS_NEW)
+R(Li-H) = 2.77253540810313
+Submitting electronic structure for step 766.
+	Gaussian terminated normally in 4.55 s. (GS_NEW)
+R(Li-H) = 2.6615036944657104
+Submitting electronic structure for step 767.
+	Gaussian terminated normally in 4.82 s. (GS_NEW)
+R(Li-H) = 2.5264244565030345
+Submitting electronic structure for step 768.
+	Gaussian terminated normally in 4.69 s. (GS_NEW)
+R(Li-H) = 2.3662271930827234
+Submitting electronic structure for step 769.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.180148748814802
+Submitting electronic structure for step 770.
+	Gaussian terminated normally in 4.47 s. (GS_NEW)
+R(Li-H) = 1.968381541363697
+Submitting electronic structure for step 771.
+	Gaussian terminated normally in 4.76 s. (GS_NEW)
+R(Li-H) = 1.733530776297134
+Submitting electronic structure for step 772.
+	Gaussian terminated normally in 4.47 s. (GS_NEW)
+R(Li-H) = 1.4838916726356701
+Submitting electronic structure for step 773.
+	Gaussian terminated normally in 4.00 s. (GS_NEW)
+R(Li-H) = 1.2401873365549252
+Submitting electronic structure for step 774.
+	Gaussian terminated normally in 4.11 s. (GS_NEW)
+R(Li-H) = 1.0463338439694077
+Submitting electronic structure for step 775.
+	Gaussian terminated normally in 4.15 s. (GS_NEW)
+R(Li-H) = 0.9719748808527687
+Submitting electronic structure for step 776.
+	Gaussian terminated normally in 4.08 s. (GS_NEW)
+R(Li-H) = 1.0584569268542474
+Submitting electronic structure for step 777.
+	Gaussian terminated normally in 4.15 s. (GS_NEW)
+R(Li-H) = 1.2586362841751
+Submitting electronic structure for step 778.
+	Gaussian terminated normally in 4.39 s. (GS_NEW)
+R(Li-H) = 1.5040522345762857
+Submitting electronic structure for step 779.
+	Gaussian terminated normally in 6.47 s. (GS_NEW)
+R(Li-H) = 1.7530479085954136
+Submitting electronic structure for step 780.
+	Gaussian terminated normally in 6.22 s. (GS_NEW)
+R(Li-H) = 1.9862512695776615
+Submitting electronic structure for step 781.
+	Gaussian terminated normally in 6.63 s. (GS_NEW)
+R(Li-H) = 2.196013420569147
+Submitting electronic structure for step 782.
+	Gaussian terminated normally in 6.25 s. (GS_NEW)
+R(Li-H) = 2.380009493836243
+Submitting electronic structure for step 783.
+	Gaussian terminated normally in 4.78 s. (GS_NEW)
+R(Li-H) = 2.5381621554900478
+Submitting electronic structure for step 784.
+	Gaussian terminated normally in 4.78 s. (GS_NEW)
+R(Li-H) = 2.6712768824309436
+Submitting electronic structure for step 785.
+	Gaussian terminated normally in 4.73 s. (GS_NEW)
+R(Li-H) = 2.780433776404444
+Submitting electronic structure for step 786.
+	Gaussian terminated normally in 4.87 s. (GS_NEW)
+R(Li-H) = 2.8667123529860694
+Submitting electronic structure for step 787.
+	Gaussian terminated normally in 4.99 s. (GS_NEW)
+R(Li-H) = 2.9310502153632276
+Submitting electronic structure for step 788.
+	Gaussian terminated normally in 4.89 s. (GS_NEW)
+R(Li-H) = 2.9741841156062296
+Submitting electronic structure for step 789.
+	Gaussian terminated normally in 4.84 s. (GS_NEW)
+R(Li-H) = 2.99662268298069
+Submitting electronic structure for step 790.
+	Gaussian terminated normally in 4.79 s. (GS_NEW)
+R(Li-H) = 2.9986340948506705
+Submitting electronic structure for step 791.
+	Gaussian terminated normally in 4.53 s. (GS_NEW)
+R(Li-H) = 2.9802424962410314
+Submitting electronic structure for step 792.
+	Gaussian terminated normally in 4.58 s. (GS_NEW)
+R(Li-H) = 2.9412277942938023
+Submitting electronic structure for step 793.
+	Gaussian terminated normally in 4.67 s. (GS_NEW)
+R(Li-H) = 2.8811282788259724
+Submitting electronic structure for step 794.
+	Gaussian terminated normally in 4.70 s. (GS_NEW)
+R(Li-H) = 2.7992504322784724
+Submitting electronic structure for step 795.
+	Gaussian terminated normally in 4.60 s. (GS_NEW)
+R(Li-H) = 2.6946931291340004
+Submitting electronic structure for step 796.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 2.5663973906322184
+Submitting electronic structure for step 797.
+	Gaussian terminated normally in 4.37 s. (GS_NEW)
+R(Li-H) = 2.4132672373777084
+Submitting electronic structure for step 798.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 2.2344084349745685
+Submitting electronic structure for step 799.
+	Gaussian terminated normally in 4.48 s. (GS_NEW)
+R(Li-H) = 2.0296491669853434
+Submitting electronic structure for step 800.
+	Gaussian terminated normally in 4.39 s. (GS_NEW)
+R(Li-H) = 1.8007003223423323
+Submitting electronic structure for step 801.
+	Gaussian terminated normally in 4.32 s. (GS_NEW)
+R(Li-H) = 1.5537849270404234
+Submitting electronic structure for step 802.
+	Gaussian terminated normally in 4.05 s. (GS_NEW)
+R(Li-H) = 1.305238656716228
+Submitting electronic structure for step 803.
+	Gaussian terminated normally in 4.14 s. (GS_NEW)
+R(Li-H) = 1.0914012915645177
+Submitting electronic structure for step 804.
+	Gaussian terminated normally in 4.01 s. (GS_NEW)
+R(Li-H) = 0.9766603445077361
+Submitting electronic structure for step 805.
+	Gaussian terminated normally in 4.29 s. (GS_NEW)
+R(Li-H) = 1.0198317025509975
+Submitting electronic structure for step 806.
+	Gaussian terminated normally in 4.12 s. (GS_NEW)
+R(Li-H) = 1.1960377050531195
+Submitting electronic structure for step 807.
+	Gaussian terminated normally in 3.99 s. (GS_NEW)
+R(Li-H) = 1.4343064467477307
+Submitting electronic structure for step 808.
+	Gaussian terminated normally in 4.16 s. (GS_NEW)
+R(Li-H) = 1.6849726715961872
+Submitting electronic structure for step 809.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 1.9236669994018945
+Submitting electronic structure for step 810.
+	Gaussian terminated normally in 4.38 s. (GS_NEW)
+R(Li-H) = 2.140312496243654
+Submitting electronic structure for step 811.
+	Gaussian terminated normally in 4.40 s. (GS_NEW)
+R(Li-H) = 2.331523578563486
+Submitting electronic structure for step 812.
+	Gaussian terminated normally in 4.43 s. (GS_NEW)
+R(Li-H) = 2.496785578784143
+Submitting electronic structure for step 813.
+	Gaussian terminated normally in 4.40 s. (GS_NEW)
+R(Li-H) = 2.636739810043409
+Submitting electronic structure for step 814.
+	Gaussian terminated normally in 4.39 s. (GS_NEW)
+R(Li-H) = 2.752428149154411
+Submitting electronic structure for step 815.
+	Gaussian terminated normally in 4.55 s. (GS_NEW)
+R(Li-H) = 2.8449480186262583
+Submitting electronic structure for step 816.
+	Gaussian terminated normally in 4.65 s. (GS_NEW)
+R(Li-H) = 2.9152848305615437
+Submitting electronic structure for step 817.
+	Gaussian terminated normally in 4.70 s. (GS_NEW)
+R(Li-H) = 2.964234493134264
+Submitting electronic structure for step 818.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 2.9923705554617563
+Submitting electronic structure for step 819.
+	Gaussian terminated normally in 4.50 s. (GS_NEW)
+R(Li-H) = 3.000028404304009
+Submitting electronic structure for step 820.
+	Gaussian terminated normally in 4.58 s. (GS_NEW)
+R(Li-H) = 2.9872999065516175
+Submitting electronic structure for step 821.
+	Gaussian terminated normally in 4.52 s. (GS_NEW)
+R(Li-H) = 2.9540324686654897
+Submitting electronic structure for step 822.
+	Gaussian terminated normally in 4.85 s. (GS_NEW)
+R(Li-H) = 2.899830698409635
+Submitting electronic structure for step 823.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 2.8240638615609965
+Submitting electronic structure for step 824.
+	Gaussian terminated normally in 4.60 s. (GS_NEW)
+R(Li-H) = 2.7258852362554635
+Submitting electronic structure for step 825.
+	Gaussian terminated normally in 4.54 s. (GS_NEW)
+R(Li-H) = 2.604270728208347
+Submitting electronic structure for step 826.
+	Gaussian terminated normally in 4.40 s. (GS_NEW)
+R(Li-H) = 2.4581178178302623
+Submitting electronic structure for step 827.
+	Gaussian terminated normally in 4.69 s. (GS_NEW)
+R(Li-H) = 2.2864396678388594
+Submitting electronic structure for step 828.
+	Gaussian terminated normally in 4.42 s. (GS_NEW)
+R(Li-H) = 2.0887872532267724
+Submitting electronic structure for step 829.
+	Gaussian terminated normally in 4.23 s. (GS_NEW)
+R(Li-H) = 1.8661719660537204
+Submitting electronic structure for step 830.
+	Gaussian terminated normally in 4.40 s. (GS_NEW)
+R(Li-H) = 1.6231696575516334
+Submitting electronic structure for step 831.
+	Gaussian terminated normally in 4.85 s. (GS_NEW)
+R(Li-H) = 1.3725179939111365
+Submitting electronic structure for step 832.
+	Gaussian terminated normally in 3.99 s. (GS_NEW)
+R(Li-H) = 1.143838017406059
+Submitting electronic structure for step 833.
+	Gaussian terminated normally in 4.46 s. (GS_NEW)
+R(Li-H) = 0.994099887746847
+Submitting electronic structure for step 834.
+	Gaussian terminated normally in 4.18 s. (GS_NEW)
+R(Li-H) = 0.9917758133223937
+Submitting electronic structure for step 835.
+	Gaussian terminated normally in 7.17 s. (GS_NEW)
+R(Li-H) = 1.138228723026814
+Submitting electronic structure for step 836.
+	Gaussian terminated normally in 4.41 s. (GS_NEW)
+R(Li-H) = 1.3656157981860642
+Submitting electronic structure for step 837.
+	Gaussian terminated normally in 4.12 s. (GS_NEW)
+R(Li-H) = 1.6161622694963789
+Submitting electronic structure for step 838.
+	Gaussian terminated normally in 4.05 s. (GS_NEW)
+R(Li-H) = 1.8596076431225008
+Submitting electronic structure for step 839.
+	Gaussian terminated normally in 4.36 s. (GS_NEW)
+R(Li-H) = 2.082882030889763
+Submitting electronic structure for step 840.
+	Gaussian terminated normally in 6.16 s. (GS_NEW)
+R(Li-H) = 2.281259131857313
+Submitting electronic structure for step 841.
+	Gaussian terminated normally in 7.34 s. (GS_NEW)
+R(Li-H) = 2.4536641484744455
+Submitting electronic structure for step 842.
+	Gaussian terminated normally in 8.70 s. (GS_NEW)
+R(Li-H) = 2.6005215839071356
+Submitting electronic structure for step 843.
+	Gaussian terminated normally in 4.75 s. (GS_NEW)
+R(Li-H) = 2.7228100223603073
+Submitting electronic structure for step 844.
+	Gaussian terminated normally in 4.81 s. (GS_NEW)
+R(Li-H) = 2.8216320047612
+Submitting electronic structure for step 845.
+	Gaussian terminated normally in 4.63 s. (GS_NEW)
+R(Li-H) = 2.8980162489382555
+Submitting electronic structure for step 846.
+	Gaussian terminated normally in 4.81 s. (GS_NEW)
+R(Li-H) = 2.9528147647311775
+Submitting electronic structure for step 847.
+	Gaussian terminated normally in 4.94 s. (GS_NEW)
+R(Li-H) = 2.9866644037990575
+Submitting electronic structure for step 848.
+	Gaussian terminated normally in 4.52 s. (GS_NEW)
+R(Li-H) = 2.9999673724295977
+Submitting electronic structure for step 849.
+	Gaussian terminated normally in 4.47 s. (GS_NEW)
+R(Li-H) = 2.9928831901643216
+Submitting electronic structure for step 850.
+	Gaussian terminated normally in 6.51 s. (GS_NEW)
+R(Li-H) = 2.9653268332740454
+Submitting electronic structure for step 851.
+	Gaussian terminated normally in 7.29 s. (GS_NEW)
+R(Li-H) = 2.9169696398132268
+Submitting electronic structure for step 852.
+	Gaussian terminated normally in 4.63 s. (GS_NEW)
+R(Li-H) = 2.8472447537254895
+Submitting electronic structure for step 853.
+	Gaussian terminated normally in 4.45 s. (GS_NEW)
+R(Li-H) = 2.7553627042299844
+Submitting electronic structure for step 854.
+	Gaussian terminated normally in 4.17 s. (GS_NEW)
+R(Li-H) = 2.6403423131329995
+Submitting electronic structure for step 855.
+	Gaussian terminated normally in 4.63 s. (GS_NEW)
+R(Li-H) = 2.5010870553560314
+Submitting electronic structure for step 856.
+	Gaussian terminated normally in 4.73 s. (GS_NEW)
+R(Li-H) = 2.3365503081440218
+Submitting electronic structure for step 857.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 2.1460715775877
+Submitting electronic structure for step 858.
+	Gaussian terminated normally in 4.20 s. (GS_NEW)
+R(Li-H) = 1.930115865073856
+Submitting electronic structure for step 859.
+	Gaussian terminated normally in 4.39 s. (GS_NEW)
+R(Li-H) = 1.6919490255787057
+Submitting electronic structure for step 860.
+	Gaussian terminated normally in 4.24 s. (GS_NEW)
+R(Li-H) = 1.4413761709775201
+Submitting electronic structure for step 861.
+	Gaussian terminated normally in 4.23 s. (GS_NEW)
+R(Li-H) = 1.2022174092247884
+Submitting electronic structure for step 862.
+	Gaussian terminated normally in 4.10 s. (GS_NEW)
+R(Li-H) = 1.023305957039622
+Submitting electronic structure for step 863.
+	Gaussian terminated normally in 4.25 s. (GS_NEW)
+R(Li-H) = 0.9755825948182955
+Submitting electronic structure for step 864.
+	Gaussian terminated normally in 4.81 s. (GS_NEW)
+R(Li-H) = 1.0864388690418734
+Submitting electronic structure for step 865.
+	Gaussian terminated normally in 5.70 s. (GS_NEW)
+R(Li-H) = 1.2984898407352277
+Submitting electronic structure for step 866.
+	Gaussian terminated normally in 4.30 s. (GS_NEW)
+R(Li-H) = 1.5466813408630333
+Submitting electronic structure for step 867.
+	Gaussian terminated normally in 4.20 s. (GS_NEW)
+R(Li-H) = 1.7939371552024193
+Submitting electronic structure for step 868.
+	Gaussian terminated normally in 4.12 s. (GS_NEW)
+R(Li-H) = 2.0235125184527964
+Submitting electronic structure for step 869.
+	Gaussian terminated normally in 4.46 s. (GS_NEW)
+R(Li-H) = 2.2289941438069123
+Submitting electronic structure for step 870.
+	Gaussian terminated normally in 4.46 s. (GS_NEW)
+R(Li-H) = 2.408589637183558
+Submitting electronic structure for step 871.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 2.5624381513009626
+Submitting electronic structure for step 872.
+	Gaussian terminated normally in 6.22 s. (GS_NEW)
+R(Li-H) = 2.6914229774174965
+Submitting electronic structure for step 873.
+	Gaussian terminated normally in 5.99 s. (GS_NEW)
+R(Li-H) = 2.7966384052769464
+Submitting electronic structure for step 874.
+	Gaussian terminated normally in 4.54 s. (GS_NEW)
+R(Li-H) = 2.8791463315758463
+Submitting electronic structure for step 875.
+	Gaussian terminated normally in 4.79 s. (GS_NEW)
+R(Li-H) = 2.939853364224829
+Submitting electronic structure for step 876.
+	Gaussian terminated normally in 4.78 s. (GS_NEW)
+R(Li-H) = 2.9794595760042686
+Submitting electronic structure for step 877.
+	Gaussian terminated normally in 4.48 s. (GS_NEW)
+R(Li-H) = 2.9984334459892503
+Submitting electronic structure for step 878.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 2.997001948002445
+Submitting electronic structure for step 879.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 2.9751478990424096
+Submitting electronic structure for step 880.
+	Gaussian terminated normally in 4.58 s. (GS_NEW)
+R(Li-H) = 2.9326101030360245
+Submitting electronic structure for step 881.
+	Gaussian terminated normally in 4.65 s. (GS_NEW)
+R(Li-H) = 2.8688866689422605
+Submitting electronic structure for step 882.
+	Gaussian terminated normally in 4.57 s. (GS_NEW)
+R(Li-H) = 2.7832467130920593
+Submitting electronic structure for step 883.
+	Gaussian terminated normally in 6.58 s. (GS_NEW)
+R(Li-H) = 2.674757711393681
+Submitting electronic structure for step 884.
+	Gaussian terminated normally in 6.57 s. (GS_NEW)
+R(Li-H) = 2.542343139793855
+Submitting electronic structure for step 885.
+	Gaussian terminated normally in 4.62 s. (GS_NEW)
+R(Li-H) = 2.384919868578557
+Submitting electronic structure for step 886.
+	Gaussian terminated normally in 4.60 s. (GS_NEW)
+R(Li-H) = 2.201668068050847
+Submitting electronic structure for step 887.
+	Gaussian terminated normally in 4.61 s. (GS_NEW)
+R(Li-H) = 1.992625752800883
+Submitting electronic structure for step 888.
+	Gaussian terminated normally in 4.46 s. (GS_NEW)
+R(Li-H) = 1.7600217891172598
+Submitting electronic structure for step 889.
+	Gaussian terminated normally in 4.24 s. (GS_NEW)
+R(Li-H) = 1.5112834586061563
+Submitting electronic structure for step 890.
+	Gaussian terminated normally in 4.02 s. (GS_NEW)
+R(Li-H) = 1.2653154869969279
+Submitting electronic structure for step 891.
+	Gaussian terminated normally in 4.24 s. (GS_NEW)
+R(Li-H) = 1.0629784643019606
+Submitting electronic structure for step 892.
+	Gaussian terminated normally in 4.19 s. (GS_NEW)
+R(Li-H) = 0.9722367026145622
+Submitting electronic structure for step 893.
+	Gaussian terminated normally in 4.35 s. (GS_NEW)
+R(Li-H) = 1.0421702001854243
+Submitting electronic structure for step 894.
+	Gaussian terminated normally in 4.07 s. (GS_NEW)
+R(Li-H) = 1.233643391954468
+Submitting electronic structure for step 895.
+	Gaussian terminated normally in 4.19 s. (GS_NEW)
+R(Li-H) = 1.4766699685613642
+Submitting electronic structure for step 896.
+	Gaussian terminated normally in 3.90 s. (GS_NEW)
+R(Li-H) = 1.726511138606974
+Submitting electronic structure for step 897.
+	Gaussian terminated normally in 4.28 s. (GS_NEW)
+R(Li-H) = 1.9619426373915625
+Submitting electronic structure for step 898.
+	Gaussian terminated normally in 4.66 s. (GS_NEW)
+R(Li-H) = 2.1744267848129515
+Submitting electronic structure for step 899.
+	Gaussian terminated normally in 4.42 s. (GS_NEW)
+R(Li-H) = 2.361253223181269
+Submitting electronic structure for step 900.
+	Gaussian terminated normally in 4.43 s. (GS_NEW)
+R(Li-H) = 2.5221864301526367
+Submitting electronic structure for step 901.
+	Gaussian terminated normally in 4.88 s. (GS_NEW)
+R(Li-H) = 2.6579733137380437
+Submitting electronic structure for step 902.
+	Gaussian terminated normally in 4.56 s. (GS_NEW)
+R(Li-H) = 2.7696810202207427
+Submitting electronic structure for step 903.
+	Gaussian terminated normally in 4.55 s. (GS_NEW)
+R(Li-H) = 2.8583979326621307
+Submitting electronic structure for step 904.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.9250817710971764
+Submitting electronic structure for step 905.
+	Gaussian terminated normally in 4.85 s. (GS_NEW)
+R(Li-H) = 2.9704919981620472
+Submitting electronic structure for step 906.
+	Gaussian terminated normally in 4.45 s. (GS_NEW)
+R(Li-H) = 2.9951625856934703
+Submitting electronic structure for step 907.
+	Gaussian terminated normally in 5.72 s. (GS_NEW)
+R(Li-H) = 2.9993882203980777
+Submitting electronic structure for step 908.
+	Gaussian terminated normally in 4.52 s. (GS_NEW)
+R(Li-H) = 2.9832196474608326
+Submitting electronic structure for step 909.
+	Gaussian terminated normally in 4.58 s. (GS_NEW)
+R(Li-H) = 2.9464631358439304
+Submitting electronic structure for step 910.
+	Gaussian terminated normally in 4.40 s. (GS_NEW)
+R(Li-H) = 2.888682945734509
+Submitting electronic structure for step 911.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.8092106397842884
+Submitting electronic structure for step 912.
+	Gaussian terminated normally in 4.86 s. (GS_NEW)
+R(Li-H) = 2.707166080364856
+Submitting electronic structure for step 913.
+	Gaussian terminated normally in 4.51 s. (GS_NEW)
+R(Li-H) = 2.581501783265918
+Submitting electronic structure for step 914.
+	Gaussian terminated normally in 4.52 s. (GS_NEW)
+R(Li-H) = 2.4311183175716455
+Submitting electronic structure for step 915.
+	Gaussian terminated normally in 4.43 s. (GS_NEW)
+R(Li-H) = 2.2550804607737733
+Submitting electronic structure for step 916.
+	Gaussian terminated normally in 4.34 s. (GS_NEW)
+R(Li-H) = 2.0530985127718346
+Submitting electronic structure for step 917.
+	Gaussian terminated normally in 4.27 s. (GS_NEW)
+R(Li-H) = 1.8265880324667714
+Submitting electronic structure for step 918.
+	Gaussian terminated normally in 4.16 s. (GS_NEW)
+R(Li-H) = 1.5810809852540455
+Submitting electronic structure for step 919.
+	Gaussian terminated normally in 4.09 s. (GS_NEW)
+R(Li-H) = 1.3314134719295665
+Submitting electronic structure for step 920.
+	Gaussian terminated normally in 3.92 s. (GS_NEW)
+R(Li-H) = 1.1111807628248165
+Submitting electronic structure for step 921.
+	Gaussian terminated normally in 4.17 s. (GS_NEW)
+R(Li-H) = 0.9820279454641228
+Submitting electronic structure for step 922.
+	Gaussian terminated normally in 4.28 s. (GS_NEW)
+R(Li-H) = 1.0074849020416985
+Submitting electronic structure for step 923.
+	Gaussian terminated normally in 4.25 s. (GS_NEW)
+R(Li-H) = 1.1727146788552
+Submitting electronic structure for step 924.
+	Gaussian terminated normally in 4.03 s. (GS_NEW)
+R(Li-H) = 1.4071961978916034
+Submitting electronic structure for step 925.
+	Gaussian terminated normally in 4.13 s. (GS_NEW)
+R(Li-H) = 1.6580524288544634
+Submitting electronic structure for step 926.
+	Gaussian terminated normally in 3.97 s. (GS_NEW)
+R(Li-H) = 1.8987107727055987
+Submitting electronic structure for step 927.
+	Gaussian terminated normally in 4.26 s. (GS_NEW)
+R(Li-H) = 2.117992887521828
+Submitting electronic structure for step 928.
+	Gaussian terminated normally in 4.68 s. (GS_NEW)
+R(Li-H) = 2.312023765264008
+Submitting electronic structure for step 929.
+	Gaussian terminated normally in 4.25 s. (GS_NEW)
+R(Li-H) = 2.480085420434168
+Submitting electronic structure for step 930.
+	Gaussian terminated normally in 4.53 s. (GS_NEW)
+R(Li-H) = 2.6227412619956754
+Submitting electronic structure for step 931.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 2.7410113670068204
+Submitting electronic structure for step 932.
+	Gaussian terminated normally in 4.44 s. (GS_NEW)
+R(Li-H) = 2.8359972564327074
+Submitting electronic structure for step 933.
+	Gaussian terminated normally in 4.52 s. (GS_NEW)
+R(Li-H) = 2.908701029220274
+Submitting electronic structure for step 934.
+	Gaussian terminated normally in 4.80 s. (GS_NEW)
+R(Li-H) = 2.9599416535952976
+Submitting electronic structure for step 935.
+	Gaussian terminated normally in 4.36 s. (GS_NEW)
+R(Li-H) = 2.9903180997098224
+Submitting electronic structure for step 936.
+	Gaussian terminated normally in 4.71 s. (GS_NEW)
+R(Li-H) = 3.0001919266108104
+Submitting electronic structure for step 937.
+	Gaussian terminated normally in 4.39 s. (GS_NEW)
+R(Li-H) = 2.9896814918101704
+Submitting electronic structure for step 938.
+	Gaussian terminated normally in 4.55 s. (GS_NEW)
+R(Li-H) = 2.9586608031265738
+Submitting electronic structure for step 939.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 2.9067607583327653
+Submitting electronic structure for step 940.
+	Gaussian terminated normally in 4.67 s. (GS_NEW)
+R(Li-H) = 2.8333752236461276
+Submitting electronic structure for step 941.
+	Gaussian terminated normally in 4.70 s. (GS_NEW)
+R(Li-H) = 2.7376788625166206
+Submitting electronic structure for step 942.
+	Gaussian terminated normally in 4.48 s. (GS_NEW)
+R(Li-H) = 2.618664588913927
+Submitting electronic structure for step 943.
+	Gaussian terminated normally in 4.79 s. (GS_NEW)
+R(Li-H) = 2.4752304229315882
+Submitting electronic structure for step 944.
+	Gaussian terminated normally in 4.73 s. (GS_NEW)
+R(Li-H) = 2.306363133085061
+Submitting electronic structure for step 945.
+	Gaussian terminated normally in 4.42 s. (GS_NEW)
+R(Li-H) = 2.1115233851680144
+Submitting electronic structure for step 946.
+	Gaussian terminated normally in 4.53 s. (GS_NEW)
+R(Li-H) = 1.8914913614867184
+Submitting electronic structure for step 947.
+	Gaussian terminated normally in 4.33 s. (GS_NEW)
+R(Li-H) = 1.6502913130552659
+Submitting electronic structure for step 948.
+	Gaussian terminated normally in 4.22 s. (GS_NEW)
+R(Li-H) = 1.399435202322801
+Submitting electronic structure for step 949.
+	Gaussian terminated normally in 4.10 s. (GS_NEW)
+R(Li-H) = 1.166155139918557
+Submitting electronic structure for step 950.
+	Gaussian terminated normally in 3.98 s. (GS_NEW)
+R(Li-H) = 1.0042479480839697
+Submitting electronic structure for step 951.
+	Gaussian terminated normally in 4.06 s. (GS_NEW)
+R(Li-H) = 0.9839314283100765
+Submitting electronic structure for step 952.
+	Gaussian terminated normally in 4.08 s. (GS_NEW)
+R(Li-H) = 1.1170722907290338
+Submitting electronic structure for step 953.
+	Gaussian terminated normally in 4.39 s. (GS_NEW)
+R(Li-H) = 1.3390033733877402
+Submitting electronic structure for step 954.
+	Gaussian terminated normally in 4.08 s. (GS_NEW)
+R(Li-H) = 1.5889182638967427
+Submitting electronic structure for step 955.
+	Gaussian terminated normally in 4.29 s. (GS_NEW)
+R(Li-H) = 1.8339862070710788
+Submitting electronic structure for step 956.
+	Gaussian terminated normally in 4.65 s. (GS_NEW)
+R(Li-H) = 2.059781257850204
+Submitting electronic structure for step 957.
+	Gaussian terminated normally in 4.45 s. (GS_NEW)
+R(Li-H) = 2.2609591280820247
+Submitting electronic structure for step 958.
+	Gaussian terminated normally in 4.67 s. (GS_NEW)
+R(Li-H) = 2.4361840578625684
+Submitting electronic structure for step 959.
+	Gaussian terminated normally in 4.53 s. (GS_NEW)
+R(Li-H) = 2.5857774174258434
+Submitting electronic structure for step 960.
+	Gaussian terminated normally in 4.65 s. (GS_NEW)
+R(Li-H) = 2.710685109278479
+Submitting electronic structure for step 961.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 2.812007156689641
+Submitting electronic structure for step 962.
+	Gaussian terminated normally in 4.59 s. (GS_NEW)
+R(Li-H) = 2.8907865044791343
+Submitting electronic structure for step 963.
+	Gaussian terminated normally in 4.64 s. (GS_NEW)
+R(Li-H) = 2.9478976117096978
+Submitting electronic structure for step 964.
+	Gaussian terminated normally in 4.78 s. (GS_NEW)
+R(Li-H) = 2.984002026401819
+Submitting electronic structure for step 965.
+	Gaussian terminated normally in 4.64 s. (GS_NEW)
+R(Li-H) = 2.9995278574316577
+Submitting electronic structure for step 966.
+	Gaussian terminated normally in 4.47 s. (GS_NEW)
+R(Li-H) = 2.9946610948465295
+Submitting electronic structure for step 967.
+	Gaussian terminated normally in 4.72 s. (GS_NEW)
+R(Li-H) = 2.96934333774836
+Submitting electronic structure for step 968.
+	Gaussian terminated normally in 4.47 s. (GS_NEW)
+R(Li-H) = 2.9232724039273434
+Submitting electronic structure for step 969.
+	Gaussian terminated normally in 4.63 s. (GS_NEW)
+R(Li-H) = 2.8559069507304926
+Submitting electronic structure for step 970.
+	Gaussian terminated normally in 4.55 s. (GS_NEW)
+R(Li-H) = 2.766480198535034
+Submitting electronic structure for step 971.
+	Gaussian terminated normally in 4.77 s. (GS_NEW)
+R(Li-H) = 2.6540289864404816
+Submitting electronic structure for step 972.
+	Gaussian terminated normally in 4.67 s. (GS_NEW)
+R(Li-H) = 2.5174636588443686
+Submitting electronic structure for step 973.
+	Gaussian terminated normally in 4.43 s. (GS_NEW)
+R(Li-H) = 2.355721171581838
+Submitting electronic structure for step 974.
+	Gaussian terminated normally in 4.54 s. (GS_NEW)
+R(Li-H) = 2.1680729682173117
+Submitting electronic structure for step 975.
+	Gaussian terminated normally in 4.31 s. (GS_NEW)
+R(Li-H) = 1.9548036133077995
+Submitting electronic structure for step 976.
+	Gaussian terminated normally in 4.45 s. (GS_NEW)
+R(Li-H) = 1.7187431269465143
+Submitting electronic structure for step 977.
+	Gaussian terminated normally in 4.51 s. (GS_NEW)
+R(Li-H) = 1.468702612731061
+Submitting electronic structure for step 978.
+	Gaussian terminated normally in 4.39 s. (GS_NEW)
+R(Li-H) = 1.226471597060186
+Submitting electronic structure for step 979.
+	Gaussian terminated normally in 4.17 s. (GS_NEW)
+R(Li-H) = 1.0377013864621651
+Submitting electronic structure for step 980.
+	Gaussian terminated normally in 4.34 s. (GS_NEW)
+R(Li-H) = 0.972699988233077
+Submitting electronic structure for step 981.
+	Gaussian terminated normally in 4.21 s. (GS_NEW)
+R(Li-H) = 1.0680809114945062
+Submitting electronic structure for step 982.
+	Gaussian terminated normally in 4.34 s. (GS_NEW)
+R(Li-H) = 1.2727239812784508
+Submitting electronic structure for step 983.
+	Gaussian terminated normally in 3.93 s. (GS_NEW)
+R(Li-H) = 1.5192567577449059
+Submitting electronic structure for step 984.
+	Gaussian terminated normally in 4.26 s. (GS_NEW)
+R(Li-H) = 1.7676887678653685
+Submitting electronic structure for step 985.
+	Gaussian terminated normally in 4.13 s. (GS_NEW)
+R(Li-H) = 1.9996200936755772
+Submitting electronic structure for step 986.
+	Gaussian terminated normally in 4.48 s. (GS_NEW)
+R(Li-H) = 2.20786196147498
+Submitting electronic structure for step 987.
+	Gaussian terminated normally in 4.51 s. (GS_NEW)
+R(Li-H) = 2.390288330627775
+Submitting electronic structure for step 988.
+	Gaussian terminated normally in 4.49 s. (GS_NEW)
+R(Li-H) = 2.5469032648054295
+Submitting electronic structure for step 989.
+	Gaussian terminated normally in 4.83 s. (GS_NEW)
+R(Li-H) = 2.6785417157023415
+Submitting electronic structure for step 990.
+	Gaussian terminated normally in 4.46 s. (GS_NEW)
+R(Li-H) = 2.786290043701664
+Submitting electronic structure for step 991.
+	Gaussian terminated normally in 4.63 s. (GS_NEW)
+R(Li-H) = 2.871220895853611
+Submitting electronic structure for step 992.
+	Gaussian terminated normally in 4.61 s. (GS_NEW)
+R(Li-H) = 2.9342614010544588
+Submitting electronic structure for step 993.
+	Gaussian terminated normally in 4.65 s. (GS_NEW)
+R(Li-H) = 2.976135763595316
+Submitting electronic structure for step 994.
+	Gaussian terminated normally in 4.39 s. (GS_NEW)
+R(Li-H) = 2.997338186149989
+Submitting electronic structure for step 995.
+	Gaussian terminated normally in 4.48 s. (GS_NEW)
+R(Li-H) = 2.9981220214174344
+Submitting electronic structure for step 996.
+	Gaussian terminated normally in 4.48 s. (GS_NEW)
+R(Li-H) = 2.9784966687067165
+Submitting electronic structure for step 997.
+	Gaussian terminated normally in 4.59 s. (GS_NEW)
+R(Li-H) = 2.938227494815872
+Submitting electronic structure for step 998.
+	Gaussian terminated normally in 4.64 s. (GS_NEW)
+R(Li-H) = 2.8768386110475577
+Submitting electronic structure for step 999.
+	Gaussian terminated normally in 4.55 s. (GS_NEW)
+R(Li-H) = 2.793622803692932
+Submitting electronic structure for step 1000.
+	Gaussian terminated normally in 4.86 s. (GS_NEW)

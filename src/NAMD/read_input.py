@@ -194,7 +194,7 @@ def get_initial_velocs(DYN_PROPERTIES):
     if (True):
         import random
         velocs = np.zeros(( len(Atom_labels), 3 ))
-        T = 10 # K
+        T = 300 # K
         kT  = T * (0.025/300) / 27.2114 # K -> eV -> au
         V0  = np.sqrt( 2 * kT / masses ) # Average zero velocity
         SIG = kT / masses

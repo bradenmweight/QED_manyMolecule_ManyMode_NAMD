@@ -6,6 +6,7 @@ import read_input
 import Eh
 import nuclear_propagation
 import output
+import rotation
 
 sys.path.append("/scratch/bweight/software/many_molecule_many_mode_NAMD/src/ELECTRONIC_STRUCTURE_CONTROL/")
 sys.path.append("/scratch/bweight/software/many_molecule_many_mode_NAMD/src/WFN_OVERLAP/PYTHON/")
@@ -26,7 +27,7 @@ def main( ):
     DYN_PROPERTIES = read_input.initialize_MD_variables(DYN_PROPERTIES)
 
     # Initialize electronic DOFs
-    Eh.initialize_mapping(DYN_PROPERTIES)
+    DYN_PROPERTIES = Eh.initialize_mapping(DYN_PROPERTIES)
 
     # Perform first electronic structure calculation
         # Get diagonal energies and gradients
@@ -58,6 +59,12 @@ def main( ):
 
         # Propagate nuclear momenta
         DYN_PROPERTIES = nuclear_propagation.Nuclear_V_Step(DYN_PROPERTIES)
+        
+        """
+        # NOT TESTED YET
+        DYN_PROPERTIES = rotation.shift_COM(DYN_PROPERTIES)
+        DYN_PROPERTIES = rotation.remove_rotations(DYN_PROPERTIES)
+        """
 
         output.save_data(DYN_PROPERTIES)
 

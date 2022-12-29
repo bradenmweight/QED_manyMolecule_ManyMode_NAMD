@@ -1,7 +1,7 @@
  Entering Gaussian System, Link 0=g16
  Initial command:
- /software/gaussian/g16-c01/avx2/g16/l1.exe "/gpfs/fs2/scratch/bweight/software/many_molecule_many_mode_NAMD/src/NAMD/EXAMPLE_2_BOMD_S1/G16/GS_NEW/Gau-3259.inp" -scrdir="/gpfs/fs2/scratch/bweight/software/many_molecule_many_mode_NAMD/src/NAMD/EXAMPLE_2_BOMD_S1/G16/GS_NEW/"
- Entering Link 1 = /software/gaussian/g16-c01/avx2/g16/l1.exe PID=      3260.
+ /software/gaussian/g16-c01/avx2/g16/l1.exe "/gpfs/fs2/scratch/bweight/software/many_molecule_many_mode_NAMD/src/NAMD/EXAMPLE_2_BOMD_S1/G16/GS_NEW/Gau-6660.inp" -scrdir="/gpfs/fs2/scratch/bweight/software/many_molecule_many_mode_NAMD/src/NAMD/EXAMPLE_2_BOMD_S1/G16/GS_NEW/"
+ Entering Link 1 = /software/gaussian/g16-c01/avx2/g16/l1.exe PID=      6661.
   
  Copyright (c) 1988-2019, Gaussian, Inc.  All Rights Reserved.
   
@@ -95,13 +95,13 @@
  7/29=1,30=1/1,2,3,16;
  1/10=7,30=1/3;
  99//99;
- ---------
- MD Step 4
- ---------
+ -----------
+ MD Step 999
+ -----------
  Symbolic Z-matrix:
  Charge =  0 Multiplicity = 1
- Li                    0.0061    0.0061    0.02436 
- H                     0.01584   0.01584   2.88999 
+ Li                    2.05785   1.82841   2.28488 
+ H                     0.27939   1.85967   1.71367 
  
 
  GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
@@ -116,25 +116,25 @@
  Center     Atomic      Atomic             Coordinates (Angstroms)
  Number     Number       Type             X           Y           Z
  ---------------------------------------------------------------------
-      1          3           0        0.006104    0.006103    0.024362
-      2          1           0        0.015842    0.015842    2.889986
+      1          3           0        2.057847    1.828409    2.284877
+      2          1           0        0.279387    1.859669    1.713671
  ---------------------------------------------------------------------
  Symmetry turned off by external request.
  Stoichiometry    HLi
  Framework group  C*V[C*(HLi)]
  Deg. of freedom     1
  Full point group                 C*V     NOp   4
- Rotational constants (GHZ):           0.0000000          69.8353579          69.8353579
+ Rotational constants (GHZ):           0.0000000         164.3149527         164.3149527
  Standard basis: STO-3G (5D, 7F)
      6 basis functions,    18 primitive gaussians,     6 cartesian basis functions
      2 alpha electrons        2 beta electrons
-       nuclear repulsion energy         0.5539851503 Hartrees.
+       nuclear repulsion energy         0.8497652850 Hartrees.
  NAtoms=    2 NActive=    2 NUniq=    2 SFac= 1.00D+00 NAtFMM=   60 NAOKFM=F Big=F
  Integral buffers will be    131072 words long.
  Raffenetti 2 integral format.
  Two-electron integral symmetry is turned off.
  One-electron integrals computed using PRISM.
- NBasis=     6 RedAO= T EigKep=  6.90D-01  NBF=     6
+ NBasis=     6 RedAO= T EigKep=  4.28D-01  NBF=     6
  NBsUse=     6 1.00D-06 EigRej= -1.00D+00 NBFU=     6
  ExpMin= 4.81D-02 ExpMax= 1.61D+01 ExpMxC= 1.61D+01 IAcc=3 IRadAn=         5 AccDes= 0.00D+00
  Harris functional with IExCor=  402 and IRadAn=       5 diagonalized for initial guess.
@@ -150,11 +150,8 @@
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Rare condition: small coef for last iteration:  0.000D+00
- EnCoef did   100 forward-backward iterations
- EnCoef did   100 forward-backward iterations
- SCF Done:  E(RB-LYP) =  -7.84959979500     A.U. after   15 cycles
-            NFock= 15  Conv=0.99D-11     -V/T= 1.9851
+ SCF Done:  E(RB-LYP) =  -7.93129364100     A.U. after   10 cycles
+            NFock= 10  Conv=0.83D-08     -V/T= 2.0053
  QCSCF skips out because SCF is already converged.
 
  **********************************************************************
@@ -163,105 +160,105 @@
 
  **********************************************************************
 
- Alpha  occ. eigenvalues --   -1.80423  -0.09980
- Alpha virt. eigenvalues --   -0.05081   0.01591   0.01591   0.08299
+ Alpha  occ. eigenvalues --   -1.78178  -0.12677
+ Alpha virt. eigenvalues --   -0.03076   0.03111   0.03111   0.26291
      Molecular Orbital Coefficients:
                            1         2         3         4         5
                            O         O         V         V         V
-     Eigenvalues --    -1.80423  -0.09980  -0.05081   0.01591   0.01591
-   1 1   Li 1S          0.98668  -0.17910  -0.22142   0.00000   0.00000
-   2        2S          0.05040   0.61267   0.77048  -0.00000  -0.00000
-   3        2PX        -0.00001   0.00067  -0.00168   0.70713   0.70707
-   4        2PY        -0.00001   0.00067  -0.00168  -0.70708   0.70712
-   5        2PZ        -0.00246   0.19703  -0.49509  -0.00000  -0.00481
-   6 2   H  1S         -0.00446   0.66091  -0.44127  -0.00000  -0.00000
+     Eigenvalues --    -1.78178  -0.12677  -0.03076   0.03111   0.03111
+   1 1   Li 1S          0.98658  -0.17392  -0.21983  -0.00000  -0.00000
+   2        2S          0.05124   0.51031   0.79304   0.00000   0.00000
+   3        2PX         0.00301  -0.27229   0.55804  -0.29449   0.08391
+   4        2PY        -0.00005   0.00479  -0.00981   0.22360   0.97454
+   5        2PZ         0.00097  -0.08745   0.17923   0.92913  -0.20793
+   6 2   H  1S         -0.00347   0.57749  -0.23849  -0.00000  -0.00000
                            6
                            V
-     Eigenvalues --     0.08299
-   1 1   Li 1S         -0.09088
-   2        2S          0.33751
-   3        2PX         0.00298
-   4        2PY         0.00298
-   5        2PZ         0.87558
-   6 2   H  1S         -0.66440
+     Eigenvalues --     0.26291
+   1 1   Li 1S          0.11304
+   2        2S         -0.58249
+   3        2PX         0.89143
+   4        2PY        -0.01567
+   5        2PZ         0.28631
+   6 2   H  1S          1.03614
      Density Matrix:
                            1         2         3         4         5
-   1 1   Li 1S          2.01123
-   2        2S         -0.12000   0.75580
-   3        2PX        -0.00026   0.00082   0.00000
-   4        2PY        -0.00026   0.00082   0.00000   0.00000
-   5        2PZ        -0.07544   0.24118   0.00026   0.00026   0.07766
-   6 2   H  1S         -0.24553   0.80938   0.00089   0.00089   0.26046
+   1 1   Li 1S          2.00716
+   2        2S         -0.07640   0.52608
+   3        2PX         0.10064  -0.27759   0.14830
+   4        2PY        -0.00177   0.00488  -0.00261   0.00005
+   5        2PZ         0.03232  -0.08916   0.04763  -0.00084   0.01530
+   6 2   H  1S         -0.20772   0.58904  -0.31451   0.00553  -0.10101
                            6
-   6 2   H  1S          0.87365
+   6 2   H  1S          0.66702
     Full Mulliken population analysis:
                            1         2         3         4         5
-   1 1   Li 1S          2.01123
-   2        2S         -0.02894   0.75580
-   3        2PX         0.00000   0.00000   0.00000
-   4        2PY         0.00000   0.00000   0.00000   0.00000
-   5        2PZ         0.00000   0.00000   0.00000   0.00000   0.07766
-   6 2   H  1S         -0.00072   0.11392   0.00000   0.00000   0.05657
+   1 1   Li 1S          2.00716
+   2        2S         -0.01842   0.52608
+   3        2PX         0.00000   0.00000   0.14830
+   4        2PY         0.00000   0.00000   0.00000   0.00005
+   5        2PZ         0.00000   0.00000   0.00000   0.00000   0.01530
+   6 2   H  1S         -0.00772   0.19406   0.13605   0.00004   0.01403
                            6
-   6 2   H  1S          0.87365
+   6 2   H  1S          0.66702
      Gross orbital populations:
                            1
-   1 1   Li 1S          1.98157
-   2        2S          0.84078
-   3        2PX         0.00000
-   4        2PY         0.00000
-   5        2PZ         0.13422
-   6 2   H  1S          1.04342
+   1 1   Li 1S          1.98102
+   2        2S          0.70171
+   3        2PX         0.28435
+   4        2PY         0.00009
+   5        2PZ         0.02933
+   6 2   H  1S          1.00349
           Condensed to atoms (all electrons):
                1          2
-     1  Li   2.786807   0.169774
-     2  H    0.169774   0.873645
+     1  Li   2.660039   0.336468
+     2  H    0.336468   0.667025
  Mulliken charges:
                1
-     1  Li   0.043419
-     2  H   -0.043419
- Sum of Mulliken charges =  -0.00000
+     1  Li   0.003493
+     2  H   -0.003493
+ Sum of Mulliken charges =   0.00000
  Mulliken charges with hydrogens summed into heavy atoms:
                1
-     1  Li  -0.000000
- Electronic spatial extent (au):  <R**2>=             46.7418
- Charge=             -0.0000 electrons
+     1  Li   0.000000
+ Electronic spatial extent (au):  <R**2>=            156.7756
+ Charge=              0.0000 electrons
  Dipole moment (field-independent basis, Debye):
-    X=             -0.0142    Y=             -0.0142    Z=             -4.1890  Tot=              4.1890
+    X=              4.4612    Y=             -0.0784    Z=              1.4328  Tot=              4.6863
  Quadrupole moment (field-independent basis, Debye-Ang):
-   XX=             -6.0532   YY=             -6.0532   ZZ=            -10.6345
-   XY=             -0.0002   XZ=             -0.0408   YZ=             -0.0408
+   XX=              9.7921   YY=             -5.8359   ZZ=              0.6879
+   XY=              8.0485   XZ=             12.1717   YZ=              2.4577
  Traceless Quadrupole moment (field-independent basis, Debye-Ang):
-   XX=              1.5271   YY=              1.5271   ZZ=             -3.0542
-   XY=             -0.0002   XZ=             -0.0408   YZ=             -0.0408
+   XX=              8.2441   YY=             -7.3840   ZZ=             -0.8601
+   XY=              8.0485   XZ=             12.1717   YZ=              2.4577
  Octapole moment (field-independent basis, Debye-Ang**2):
-  XXX=             -0.1709  YYY=             -0.1709  ZZZ=            -25.3698  XYY=             -0.0570
-  XXY=             -0.0570  XXZ=             -6.0433  XZZ=             -0.1092  YZZ=             -0.1092
-  YYZ=             -6.0433  XYZ=             -0.0004
+  XXX=             21.3133  YYY=            -31.5043  ZZZ=            -12.5685  XYY=              8.3950
+  XXY=             17.6684  XXZ=             26.6795  XZZ=             25.7387  YZZ=              0.8302
+  YYZ=             -6.7809  XYZ=             22.0332
  Hexadecapole moment (field-independent basis, Debye-Ang**3):
- XXXX=            -16.7067 YYYY=            -16.7067 ZZZZ=            -92.9294 XXXY=             -0.0018
- XXXZ=             -0.2197 YYYX=             -0.0018 YYYZ=             -0.2197 ZZZX=             -0.3012
- ZZZY=             -0.3012 XXYY=             -5.5689 XXZZ=            -16.4150 YYZZ=            -16.4150
- XXYZ=             -0.0732 YYXZ=             -0.0732 ZZXY=             -0.0012
- N-N= 5.539851502918D-01 E-N=-1.937619225276D+01  KE= 7.968490066390D+00
+ XXXX=             35.5073 YYYY=           -129.0829 ZZZZ=            -85.2352 XXXY=             38.4960
+ XXXZ=             57.3477 YYYX=             -7.6900 YYYZ=            -53.6308 ZZZX=             44.3618
+ ZZZY=            -24.2147 XXYY=             20.1099 XXZZ=             57.8469 YYZZ=            -25.6272
+ XXYZ=             48.3078 YYXZ=             27.6370 ZZXY=             46.5117
+ N-N= 8.497652850146D-01 E-N=-2.002270021635D+01  KE= 7.889681019110D+00
  Orbital energies and kinetic energies (alpha):
                                  1                 2
-   1         O                -1.804226          3.480417
-   2         O                -0.099803          0.503828
-   3         V                -0.050806          0.473293
-   4         V                 0.015909          0.319682
-   5         V                 0.015909          0.319682
-   6         V                 0.082995          0.613227
- Total kinetic energy from orbitals= 7.968490066390D+00
+   1         O                -1.781775          3.479717
+   2         O                -0.126770          0.465124
+   3         V                -0.030760          0.411309
+   4         V                 0.031113          0.319682
+   5         V                 0.031113          0.319682
+   6         V                 0.262909          0.971518
+ Total kinetic energy from orbitals= 7.889681019110D+00
  Calling FoFJK, ICntrl=      2527 FMM=F ISym2X=0 I1Cent= 0 IOpClX= 0 NMat=1 NMatS=1 NMatT=0.
  -------------------------------------------------------------------
  Center     Atomic                   Forces (Hartrees/Bohr)
  Number     Number              X              Y              Z
  -------------------------------------------------------------------
-      1        3           0.000132405    0.000132408    0.038961518
-      2        1          -0.000132405   -0.000132408   -0.038961518
+      1        3          -0.034577523    0.000607787   -0.011105609
+      2        1           0.034577523   -0.000607787    0.011105609
  -------------------------------------------------------------------
- Cartesian Forces:  Max     0.038961518 RMS     0.022494703
+ Cartesian Forces:  Max     0.034577523 RMS     0.020970686
 
  GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
  Berny optimization.
@@ -271,53 +268,54 @@
  Second derivative matrix not updated -- first step.
  The second derivative matrix:
                           X1        Y1        Z1        X2        Y2
-           X1           1.00000
-           Y1           0.00000   1.00000
-           Z1           0.00000   0.00000   1.00000
-           X2           0.00000   0.00000   0.00000   1.00000
-           Y2           0.00000   0.00000   0.00000   0.00000   1.00000
-           Z2           0.00000   0.00000   0.00000   0.00000   0.00000
+           X1           0.04894
+           Y1          -0.00086   1.00000
+           Z1           0.01572  -0.00028   0.00505
+           X2          -0.04894   0.00086  -0.01572   0.04894
+           Y2           0.00086  -0.00002   0.00028  -0.00086   1.00000
+           Z2          -0.01572   0.00028  -0.00505   0.01572  -0.00028
                           Z2
-           Z2           1.00000
+           Z2           0.00505
  ITU=  0
-     Eigenvalues ---    1.00000   1.00000   1.00000   1.00000   1.00000
-     Eigenvalues ---    1.00000
- Angle between quadratic step and forces=   0.00 degrees.
+     Eigenvalues ---    0.10105
+ Quadratic step=4.910D-01 exceeds max=3.000D-01 adjusted using Lamda=-6.433D-02.
+ Angle between NR and scaled steps=   0.00 degrees.
+ Angle between quadratic step and forces=  15.00 degrees.
  Linear search not attempted -- first point.
- B after Tr=     0.000001   -0.000001   -0.000000
-         Rot=    1.000000   -0.000000   -0.000000   -0.000024 Ang=  -0.00 deg.
+ B after Tr=    -0.052270    0.000919   -0.016788
+         Rot=    1.000000    0.000000   -0.000000    0.000000 Ang=   0.00 deg.
  Variable       Old X    -DE/DX   Delta X   Delta X   Delta X     New X
                                  (Linear)    (Quad)   (Total)
-    X1        0.01153   0.00013   0.00000   0.00013   0.00013   0.01167
-    Y1        0.01153   0.00013   0.00000   0.00013   0.00013   0.01167
-    Z1        0.04604   0.03896   0.00000   0.03896   0.03896   0.08500
-    X2        0.02994  -0.00013   0.00000  -0.00013  -0.00013   0.02981
-    Y2        0.02994  -0.00013   0.00000  -0.00013  -0.00013   0.02980
-    Z2        5.46128  -0.03896   0.00000  -0.03896  -0.03896   5.42232
+    X1        3.88877  -0.03458   0.00000  -0.14280  -0.19507   3.69369
+    Y1        3.45519   0.00061   0.00000   0.00251   0.00343   3.45862
+    Z1        4.31779  -0.01111   0.00000  -0.04587  -0.06265   4.25514
+    X2        0.52797   0.03458   0.00000   0.24734   0.19507   0.72304
+    Y2        3.51426  -0.00061   0.00000  -0.00435  -0.00343   3.51084
+    Z2        3.23837   0.01111   0.00000   0.07944   0.06265   3.30102
          Item               Value     Threshold  Converged?
- Maximum Force            0.038962     0.000450     NO 
- RMS     Force            0.022495     0.000300     NO 
- Maximum Displacement     0.038962     0.001800     NO 
- RMS     Displacement     0.022495     0.001200     NO 
- Predicted change in Energy=-1.518035D-03
+ Maximum Force            0.034578     0.000450     NO 
+ RMS     Force            0.020971     0.000300     NO 
+ Maximum Displacement     0.195072     0.001800     NO 
+ RMS     Displacement     0.118308     0.001200     NO 
+ Predicted change in Energy=-1.033893D-02
  GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
 
  Unable to Open any file for archive entry.
  1\1\GINC-BHD0001\Force\RBLYP\STO-3G\H1Li1\BWEIGHT\29-Dec-2022\0\\# BLY
- P/STO-3G SCF=XQC FORCE nosym pop=full\\MD Step 4\\0,1\Li,0.00610353,0.
- 00610291,0.02436219\H,0.01584225,0.01584182,2.88998647\\Version=ES64L-
- G16RevC.01\HF=-7.8495998\RMSD=9.923e-12\RMSF=2.249e-02\Dipole=-0.00560
- 1,-0.0056011,-1.6480712\Quadrupole=1.1353689,1.1353689,-2.2707378,-0.0
- 001668,-0.0303272,-0.0303255\PG=C*V [C*(H1Li1)]\\@
+ P/STO-3G SCF=XQC FORCE nosym pop=full\\MD Step 999\\0,1\Li,2.05784675,
+ 1.82840903,2.2848771\H,0.27938737,1.85966853,1.71367059\\Version=ES64L
+ -G16RevC.01\HF=-7.9312936\RMSD=8.324e-09\RMSF=2.097e-02\Dipole=1.75515
+ 38,-0.0308501,0.5637211\Quadrupole=6.1292928,-5.4897943,-0.6394986,5.9
+ 838949,9.0493388,1.8272375\PG=C*V [C*(H1Li1)]\\@
  The archive entry for this job was punched.
 
 
- ... UNTIL SCIENCE IS MIXED WITH EMOTION AND APPEALS TO THE HEART AND
- IMAGINATION , IT IS LIKE DEAD INORGANIC MATTER; AND WHEN IT IS SO MIXED
- AND SO TRANSFORMED IT IS LITERATURE.
+ AS FAR AS THE LAWS OF MATHEMATICS REFER TO REALITY,
+ THEY ARE NOT CERTAIN; AND AS FAR AS THEY ARE CERTAIN,
+ THEY DO NOT REFER TO REALITY.
 
-                                  -- JOHN BURROUGHS
- Job cpu time:       0 days  0 hours  0 minutes  3.9 seconds.
- Elapsed time:       0 days  0 hours  0 minutes  4.1 seconds.
+                                         -- ALBERT EINSTEIN
+ Job cpu time:       0 days  0 hours  0 minutes  3.6 seconds.
+ Elapsed time:       0 days  0 hours  0 minutes  3.9 seconds.
  File lengths (MBytes):  RWF=    272 Int=      0 D2E=      0 Chk=     32 Scr=     32
- Normal termination of Gaussian 16 at Thu Dec 29 00:17:06 2022.
+ Normal termination of Gaussian 16 at Thu Dec 29 05:02:36 2022.

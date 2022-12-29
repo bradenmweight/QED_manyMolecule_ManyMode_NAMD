@@ -8,7 +8,10 @@ def initialize_mapping(DYN_PROPERTIES):
     z = np.zeros(( NStates ), dtype=complex)
     z[ISTATE] = 1.0 + 0.0j # Ehrenfest has no electronic sampling
 
+    #DYN_PROPERTIES["ZPE"] = 0.0 # Ehrenfest has no ZPE 
     DYN_PROPERTIES["MAPPING_VARS"] = z
+
+    return DYN_PROPERTIES
 
 def get_Force(DYN_PROPERTIES):
     

@@ -147,14 +147,18 @@ def submit_jobs(DYN_PROPERTIES):
                     exit()
                 try:
                     check1 = open("geometry.out","r").readlines()[-1]
-                    check2 = open("geometry.out","r").readlines()[-3] # Look for error TODO
+                    check2 = open("geometry.out","r").readlines()[-4]
                 except (FileNotFoundError, IndexError) as errors:
                     continue
                 if ( check1.split()[:4] == "Normal termination of Gaussian".split() ):
                     print("\tGaussian terminated normally in %2.2f s. (%s)" % (time.time() - t0, os.getcwd().split("/")[-1]) )
                     sp.call(f"formchk geometry.chk > /dev/null 2>&1", shell=True) # For dipole matrix calculations
                     break
-                #elif ( check2.split()[:4] )
+                elif ( check2.split()[:2] == "Error termination".split() ):
+                    print("\tGaussian crashed after %2.2f s. (%s)" % (time.time() - t0, os.getcwd().split("/")[-1]) )
+                    error = open("geometry.out","r").readlines()[-5] # Is this where all errors can be found ?
+                    print("Looking for possible error:\n", error)
+
 
         elif( RUN_ELEC_STRUC == "USE_CURRENT_NODE" ):
             t0 = time.time()

@@ -1,6 +1,7 @@
 import numpy as np
 import subprocess as sp
 
+import properties
 
 # MOVE THIS FUNCTION TO NEW FILE OUTPUT.py
 def save_data(DYN_PROPERTIES):
@@ -23,6 +24,31 @@ def save_data(DYN_PROPERTIES):
         else:
             file01.write( f"{DYN_PROPERTIES['MD_STEP']}  {DYN_PROPERTIES['DIAG_ENERGIES']*27.2114}\n" )
 
+    with open("MD_OUTPUT/mapping_re.dat","a") as file01:
+        if ( DYN_PROPERTIES["NStates"] >= 2 ):
+            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,DYN_PROPERTIES["MAPPING_VARS"].real )) + "\n" )
+        else:
+            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  {DYN_PROPERTIES['MAPPING_VARS'].real}\n" )
 
-    #with open("KE.dat","a") as file01:
-    #    file01.write(f"{compute_KE(DYN_PROPERTIES)}\n")
+    with open("MD_OUTPUT/mapping_im.dat","a") as file01:
+        if ( DYN_PROPERTIES["NStates"] >= 2 ):
+            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,DYN_PROPERTIES["MAPPING_VARS"].imag )) + "\n" )
+        else:
+            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  {DYN_PROPERTIES['MAPPING_VARS'].imag}\n" )
+
+    with open("MD_OUTPUT/Energy.dat","a") as file01:
+        
+        DYN_PROPERTIES = properties.compute_KE(DYN_PROPERTIES)
+        DYN_PROPERTIES = properties.compute_PE(DYN_PROPERTIES)
+
+        KE = DYN_PROPERTIES["KE"] * 27.2114
+        PE = DYN_PROPERTIES["PE"] * 27.2114
+        TE = KE + PE
+
+        file01.write(f"{DYN_PROPERTIES['MD_STEP']}  " + "%2.6f  %2.6f  %2.6f\n" % (KE,PE,TE))
+
+
+
+
+
+
