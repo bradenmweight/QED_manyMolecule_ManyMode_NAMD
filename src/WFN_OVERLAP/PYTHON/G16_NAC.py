@@ -752,7 +752,7 @@ class gau_log_parser():
         logfile = self.files['mo']
         file_in = open(logfile, "r")
         # dimensional info.
-        print('Begin to read the CI vector from log file. ') 
+        #print('Begin to read the CI vector from log file. ') 
         
         # ground state energy.
         pat = re.compile("SCF Done")
@@ -798,10 +798,10 @@ class gau_log_parser():
         n_state = dim['n_state']     
         # determine the ci assign problem                
         ci_type = self.ci_type
-        print("current CI type:", ci_type)
+        #print("current CI type:", ci_type)
         
         for i_state in range(1, n_state):
-            print("get X+Y> VECTOR:", i_state)
+            #print("get X+Y> VECTOR:", i_state)
             one_state1 = self.ci['state'][i_state]['trans_ia']
             one_state2 = self.ci['state'][i_state]['trans_ai']
             add_alpha = [[0.0 for i in range(n_vir)] for j in range(n_occ)] 
@@ -812,7 +812,7 @@ class gau_log_parser():
     
                 self.ci['state'][i_state]['trans'] = add_alpha     
                 
-        print("|X+Y> & |X-Y> DONE")
+        #print("|X+Y> & |X-Y> DONE")
         return       
 
 
@@ -826,13 +826,13 @@ class gau_log_parser():
         n_vir = self.dim['nvir_allA']
         
         for i_state in range(1, n_state):
-            print("Check normalization for State:", i_state)
+            #print("Check normalization for State:", i_state)
             norm = 0.0
             one_state = self.ci['state'][i_state]['trans']
             for i_ci_1 in range(n_occ):
                 for i_ci_2 in range(n_vir):
                     norm  =   norm + one_state[i_ci_1][i_ci_2] * one_state[i_ci_1][i_ci_2]
-            print("Norm before Normailzation: ", norm)
+           # print("Norm before Normailzation: ", norm)
 
             for i_ci_1 in range(n_occ) :
                 for i_ci_2 in range(n_vir) :
@@ -841,7 +841,7 @@ class gau_log_parser():
             for i_ci_1 in range(n_occ) :
                 for i_ci_2 in range(n_vir) :
                     norm  =   norm + one_state[i_ci_1][i_ci_2] * one_state[i_ci_1][i_ci_2]
-            print("Norm after Normalization:", norm)              
+            #print("Norm after Normalization:", norm)              
             self.ci['state'][i_state]['trans'] = one_state
         return
 
@@ -857,7 +857,7 @@ class gau_log_parser():
         self.ci['n_index'] = n_index    # mip value
         
 
-        print("CI vector")
+        #print("CI vector")
         ci_info_state = []
         for i_all in range(n_occ*n_vir) :
             ci_info_state.append([])     
@@ -897,7 +897,7 @@ class gau_log_parser():
             norm = 0.0
             for i_index in range(n_index) :
                 norm  =   norm + ci_info_state[i_index]['civector']**2
-            print("Norm (Saved CI vector):", norm)
+            #print("Norm (Saved CI vector):", norm)
 
             for i_index in range(n_index) :
                 file_out.write('S'+str(ci_info_state[i_index]['state'])+'  '+ \
@@ -967,8 +967,6 @@ class gau_log_parser():
 ### main program
 def main(DYN_PROPERTIES):
 
-    os.chdir("G16/")
-
     for dir1 in ["TD_NEW_S1","TD_OLD_S1","DIMER"]:
         
         os.chdir(f"./{dir1}")
@@ -989,14 +987,10 @@ def main(DYN_PROPERTIES):
 
         os.chdir("../")
 
-    sp.call("rm -r OVERLAP", shell=True)
+    sp.call("rm -rf OVERLAP", shell=True)
     sp.call("mkdir OVERLAP", shell=True)
     n = gau_nac(DYN_PROPERTIES) 
     DYN_PROPERTIES = n.worker()
-
-    os.chdir("../")
-
-        #ao.collect_qm()
 
     return DYN_PROPERTIES
 

@@ -4,15 +4,23 @@ import os
 
 def read_Energies(DIAG_ENERGIES,NStates):
 
-    os.chdir("TD_NEW_S1/")
-    DIAG_ENERGIES[0] = float( sp.check_output( "grep 'SCF Done' geometry.out" ,shell=True).split()[4] )
-    tmp = sp.check_output( "grep 'Excited State' geometry.out" ,shell=True).split(b"\n")
-    for count,line in enumerate(tmp):
-        if ( count+1 >= NStates ):
-            break
-        DIAG_ENERGIES[count+1] = float( line.split()[4] )/27.2114 + DIAG_ENERGIES[0]
+    if ( NStates == 1 ):
+        os.chdir("GS_NEW/")
+        DIAG_ENERGIES = float( sp.check_output( "grep 'SCF Done' geometry.out | tail -n 1" ,shell=True).split()[4] )
+        np.savetxt(f"../DIAG_ENERGIES.dat", np.array([DIAG_ENERGIES]), header=f"Diagonal Energies (a.u.)", fmt="%2.8f" )
+
+    else:
+        os.chdir("TD_NEW_S1/")
+        DIAG_ENERGIES[0] = float( sp.check_output( "grep 'SCF Done' geometry.out | tail -n 1" ,shell=True).split()[4] )
     
-    #print((DIAG_ENERGIES - DIAG_ENERGIES[0])*27.2114)
+    if ( NStates >= 2 ):
+        tmp = sp.check_output( "grep 'Excited State' geometry.out" ,shell=True).split(b"\n")
+        for count,line in enumerate(tmp):
+            if ( count+1 >= NStates ):
+                break
+            DIAG_ENERGIES[count+1] = float( line.split()[4] )/27.2114 + DIAG_ENERGIES[0]
+        np.savetxt(f"../DIAG_ENERGIES.dat", DIAG_ENERGIES, header=f"Diagonal Energies (a.u.)", fmt="%2.8f" )
+    
     os.chdir("../")
 
     return DIAG_ENERGIES
@@ -20,16 +28,10 @@ def read_Energies(DIAG_ENERGIES,NStates):
 
 def main(DYN_PROPERTIES):
     
-    os.chdir("G16/")
     NStates = DYN_PROPERTIES["NStates"]
 
     DIAG_ENERGIES = np.zeros(( NStates )) # Diagonal gradients
-    read_Energies(DIAG_ENERGIES,NStates)
-
-    for state in range( NStates ):
-        np.savetxt(f"DIAG_ENERGIES.dat", DIAG_ENERGIES[:], header=f"Diagonal Energies (a.u.)", fmt="%2.8f" )
-
-    os.chdir("../")
+    DIAG_ENERGIES = read_Energies(DIAG_ENERGIES,NStates)
 
     DYN_PROPERTIES["DIAG_ENERGIES"] = DIAG_ENERGIES
 

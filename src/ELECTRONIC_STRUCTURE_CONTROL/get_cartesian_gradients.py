@@ -30,9 +30,10 @@ def read_Gradients(DIAG_GRADIENTS,DYN_PROPERTIES):
     DIAG_GRADIENTS[0,:,:] = read_FCHK_GRAD( DYN_PROPERTIES["NAtoms"] )
     os.chdir("../")
 
-    os.chdir("TD_NEW_S1/")
-    DIAG_GRADIENTS[1,:,:] = read_FCHK_GRAD( DYN_PROPERTIES["NAtoms"] )
-    os.chdir("../")
+    if ( NStates >= 2 ):
+        os.chdir("TD_NEW_S1/")
+        DIAG_GRADIENTS[1,:,:] = read_FCHK_GRAD( DYN_PROPERTIES["NAtoms"] )
+        os.chdir("../")
 
     if ( NStates >= 3 ):
         for state in range( 2, NStates ):
@@ -44,7 +45,6 @@ def read_Gradients(DIAG_GRADIENTS,DYN_PROPERTIES):
 
 def main(DYN_PROPERTIES):
 
-    os.chdir("G16/")
     NStates = DYN_PROPERTIES["NStates"]
     NAtoms  = DYN_PROPERTIES["NAtoms"]
 
@@ -53,8 +53,6 @@ def main(DYN_PROPERTIES):
 
     for state in range( NStates ):
         np.savetxt(f"DIAG_GRADIENT_S{state}.dat", DIAG_GRADIENTS[state,:,:], header=f"Diagonal Gradients (S{state}) (NAtoms x 3)", fmt="%2.8f" )
-
-    os.chdir("../")
 
     DYN_PROPERTIES["DIAG_GRADIENTS"] = DIAG_GRADIENTS
 

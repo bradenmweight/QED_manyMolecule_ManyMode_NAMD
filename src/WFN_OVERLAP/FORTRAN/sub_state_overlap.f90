@@ -170,10 +170,10 @@
 
 !           Compute the overlap between two CSFs.
 
-                if ( output_level .eq. 2 ) then
-                    write (*,*) "Compute CI product between CSF", i,j
-                    write (*,*) ci_product
-                endif
+                !if ( output_level .eq. 2 ) then
+                !    write (*,*) "Compute CI product between CSF", i,j
+                !    write (*,*) ci_product
+                !endif
 
                 call   sub_csf_overlap ( n_atom,  &
                                          n_ao, &
@@ -189,22 +189,22 @@
 
              endif
 
-             if ( output_level .eq. 2 ) then
-                if (s_csf_overlap(i,j)  .ne. 0 ) then
-                   write (*,*) "CSF index at R and R+dR:" ,i, j  
-                   write (*,*) "SCF overlap calculations"
-                   write (*,*) "CI vector for a:", ci_a(i, 1), &
-                                                   ci_a_orb(1) 
-                   write (*,*) "CI vector for b:", ci_b(j, 1), &
-                                                   ci_b_orb(1)
-                   write (*,*) "Normalization factor:", &
-                                                   normal_factor
-                   write (*,*) "CSF overlap:", s_csf_overlap(i,j)
-                   write (*,*) "C_1* CSF_OVERLAP * C_2:",  &
-                               ci_a_orb(1)* s_csf_overlap(i,j)* &
-                               ci_b_orb(1) * normal_factor
-                endif
-             endif
+             !if ( output_level .eq. 2 ) then
+             !   if (s_csf_overlap(i,j)  .ne. 0 ) then
+             !      write (*,*) "CSF index at R and R+dR:" ,i, j  
+             !      write (*,*) "SCF overlap calculations"
+             !      write (*,*) "CI vector for a:", ci_a(i, 1), &
+             !                                      ci_a_orb(1) 
+             !      write (*,*) "CI vector for b:", ci_b(j, 1), &
+             !                                      ci_b_orb(1)
+             !      write (*,*) "Normalization factor:", &
+             !                                      normal_factor
+             !      write (*,*) "CSF overlap:", s_csf_overlap(i,j)
+             !      write (*,*) "C_1* CSF_OVERLAP * C_2:",  &
+             !                  ci_a_orb(1)* s_csf_overlap(i,j)* &
+             !                  ci_b_orb(1) * normal_factor
+             !   endif
+             !endif
 
 
 !      Please note here that CI vector has been modified according to 
@@ -217,7 +217,7 @@
           enddo
        enddo          
 
-       write (*,*) "s_state_overlap", s_state_overlap 
+       !write (*,*) "s_state_overlap", s_state_overlap 
        state_overlap = s_state_overlap
 
 

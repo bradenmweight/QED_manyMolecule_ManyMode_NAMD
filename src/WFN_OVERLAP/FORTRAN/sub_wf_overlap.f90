@@ -73,14 +73,14 @@
 !         enddo
 !      enddo
 
-      write (*,*) "Calculate the overlap of different electronic states"
+      !write (*,*) "Calculate the overlap of different electronic states"
 
       s_wf_overlap(:,:) = 0.d0
 
       do i = 1, n_state
          do j= 1, n_state
 
-            write (*,*)  "Overlap between state:", i, j
+            !write (*,*)  "Overlap between state:", i, j
 
             if ( i .ne. j) then
 
@@ -93,17 +93,17 @@
                  enddo
 
                  if (output_level .eq. 2 )  then
-                      write (*,*) "Geom1: State", i
+                      !write (*,*) "Geom1: State", i
                       do k = 1, n_csf
-                          write (*,*) "CI component"
+                          !write (*,*) "CI component"
                           write (*,9998) ci_a (k,1), ci_a (k,2), ci_a (k,3)
                       enddo
 
 9998                  format (1x, f10.5, ":  ", f20.5, "-->", f20.5)
 
-                      write (*,*) "Geom2: State", j 
+                      !write (*,*) "Geom2: State", j 
                       do k = 1, n_csf
-                         write (*,*) "CI components"
+                         !write (*,*) "CI components"
                          write (*,9998) ci_b (k,1), ci_b (k,2), ci_b (k,3)
                          enddo
                       endif
@@ -129,7 +129,7 @@
          enddo
       enddo       
 
-      write (*,*) "Obtain the overlap of different electronic states"
+      !write (*,*) "Obtain the overlap of different electronic states"
 
 
       open (unit=71, file="wavefuction_overlap.dat")

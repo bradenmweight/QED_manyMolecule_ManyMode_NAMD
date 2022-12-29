@@ -1,0 +1,325 @@
+ Entering Gaussian System, Link 0=g16
+ Initial command:
+ /software/gaussian/g16-c01/avx2/g16/l1.exe "/gpfs/fs2/scratch/bweight/software/many_molecule_many_mode_NAMD/src/NAMD/EXAMPLE_2_BOMD_S1/G16/GS_NEW/Gau-3352.inp" -scrdir="/gpfs/fs2/scratch/bweight/software/many_molecule_many_mode_NAMD/src/NAMD/EXAMPLE_2_BOMD_S1/G16/GS_NEW/"
+ Entering Link 1 = /software/gaussian/g16-c01/avx2/g16/l1.exe PID=      3353.
+  
+ Copyright (c) 1988-2019, Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 16 program.  It is based on
+ the Gaussian(R) 09 system (copyright 2009, Gaussian, Inc.),
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 16, Revision C.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, 
+ G. A. Petersson, H. Nakatsuji, X. Li, M. Caricato, A. V. Marenich, 
+ J. Bloino, B. G. Janesko, R. Gomperts, B. Mennucci, H. P. Hratchian, 
+ J. V. Ortiz, A. F. Izmaylov, J. L. Sonnenberg, D. Williams-Young, 
+ F. Ding, F. Lipparini, F. Egidi, J. Goings, B. Peng, A. Petrone, 
+ T. Henderson, D. Ranasinghe, V. G. Zakrzewski, J. Gao, N. Rega, 
+ G. Zheng, W. Liang, M. Hada, M. Ehara, K. Toyota, R. Fukuda, 
+ J. Hasegawa, M. Ishida, T. Nakajima, Y. Honda, O. Kitao, H. Nakai, 
+ T. Vreven, K. Throssell, J. A. Montgomery, Jr., J. E. Peralta, 
+ F. Ogliaro, M. J. Bearpark, J. J. Heyd, E. N. Brothers, K. N. Kudin, 
+ V. N. Staroverov, T. A. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. P. Rendell, J. C. Burant, S. S. Iyengar, 
+ J. Tomasi, M. Cossi, J. M. Millam, M. Klene, C. Adamo, R. Cammi, 
+ J. W. Ochterski, R. L. Martin, K. Morokuma, O. Farkas, 
+ J. B. Foresman, and D. J. Fox, Gaussian, Inc., Wallingford CT, 2019.
+ 
+ ******************************************
+ Gaussian 16:  ES64L-G16RevC.01  3-Jul-2019
+                29-Dec-2022 
+ ******************************************
+ %oldchk=../GS_OLD/geometry.chk
+ %chk=geometry.chk
+ %nprocshared=1
+ Will use up to    1 processors via shared memory.
+ %mem=5GB
+ Copying data from "../GS_OLD/geometry.chk" to current chk file "geometry.chk"
+ IOpt=  2 FromEx=T IUOpen= 4 IOptOp= 5 NList=   0 IFRang= 0 IUIn= 4 IUOut= 2.
+ ------------------------------------------
+ # BLYP/STO-3G SCF=XQC FORCE nosym pop=full
+ ------------------------------------------
+ 1/10=7,30=1,38=1/1,3;
+ 2/12=2,15=1,17=6,18=5,40=1/2;
+ 3/6=3,11=2,25=1,30=1,71=1,74=402/1,2,3;
+ 4//1;
+ 5/5=2,8=3,13=1,38=5/2,8;
+ 6/7=3,28=1/1;
+ 7/29=1,30=1/1,2,3,16;
+ 1/10=7,30=1/3;
+ 99//99;
+ ---------
+ MD Step 5
+ ---------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1
+ Li                    0.00764   0.00764   0.03627 
+ H                     0.0197    0.0197    2.82237 
+ 
+
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+ Berny optimization.
+ Initialization pass.
+ Trust Radius=3.00D-01 FncErr=1.00D-07 GrdErr=1.00D-07 EigMax=2.50D+02 EigMin=1.00D-04
+ Number of steps in this run=      2 maximum allowed number of steps=      2.
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          3           0        0.007644    0.007643    0.036272
+      2          1           0        0.019701    0.019700    2.822370
+ ---------------------------------------------------------------------
+ Symmetry turned off by external request.
+ Stoichiometry    HLi
+ Framework group  C*V[C*(HLi)]
+ Deg. of freedom     1
+ Full point group                 C*V     NOp   4
+ Rotational constants (GHZ):           0.0000000          73.8779908          73.8779908
+ Standard basis: STO-3G (5D, 7F)
+     6 basis functions,    18 primitive gaussians,     6 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         0.5697941420 Hartrees.
+ NAtoms=    2 NActive=    2 NUniq=    2 SFac= 1.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Raffenetti 2 integral format.
+ Two-electron integral symmetry is turned off.
+ One-electron integrals computed using PRISM.
+ NBasis=     6 RedAO= T EigKep=  6.77D-01  NBF=     6
+ NBsUse=     6 1.00D-06 EigRej= -1.00D+00 NBFU=     6
+ ExpMin= 4.81D-02 ExpMax= 1.61D+01 ExpMxC= 1.61D+01 IAcc=3 IRadAn=         5 AccDes= 0.00D+00
+ Harris functional with IExCor=  402 and IRadAn=       5 diagonalized for initial guess.
+ HarFok:  IExCor=  402 AccDes= 0.00D+00 IRadAn=         5 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=       500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Symmetry not used in FoFCou.
+ Keep J ints in memory in canonical form, NReq=846976.
+ Requested convergence on RMS density matrix=1.00D-08 within  32 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Rare condition: small coef for last iteration:  0.000D+00
+ EnCoef did    11 forward-backward iterations
+ EnCoef did   100 forward-backward iterations
+ EnCoef did   100 forward-backward iterations
+ EnCoef did   100 forward-backward iterations
+ SCF Done:  E(RB-LYP) =  -7.85557049792     A.U. after   14 cycles
+            NFock= 14  Conv=0.50D-08     -V/T= 1.9873
+ QCSCF skips out because SCF is already converged.
+
+ **********************************************************************
+
+            Population analysis using the SCF Density.
+
+ **********************************************************************
+
+ Alpha  occ. eigenvalues --   -1.80370  -0.10116
+ Alpha virt. eigenvalues --   -0.04958   0.01692   0.01692   0.09197
+     Molecular Orbital Coefficients:
+                           1         2         3         4         5
+                           O         O         V         V         V
+     Eigenvalues --    -1.80370  -0.10116  -0.04958   0.01692   0.01692
+   1 1   Li 1S          0.98668  -0.17761  -0.22144  -0.00000  -0.00000
+   2        2S          0.05041   0.60550   0.77155  -0.00000  -0.00000
+   3        2PX        -0.00001   0.00089  -0.00220   0.70713   0.70707
+   4        2PY        -0.00001   0.00089  -0.00220  -0.70708   0.70712
+   5        2PZ        -0.00251   0.20464  -0.50750  -0.00000  -0.00612
+   6 2   H  1S         -0.00467   0.65545  -0.42296  -0.00000  -0.00000
+                           6
+                           V
+     Eigenvalues --     0.09197
+   1 1   Li 1S         -0.09455
+   2        2S          0.35378
+   3        2PX         0.00377
+   4        2PY         0.00377
+   5        2PZ         0.87146
+   6 2   H  1S         -0.69040
+     Density Matrix:
+                           1         2         3         4         5
+   1 1   Li 1S          2.01017
+   2        2S         -0.11560   0.73835
+   3        2PX        -0.00034   0.00107   0.00000
+   4        2PY        -0.00034   0.00107   0.00000   0.00000
+   5        2PZ        -0.07764   0.24757   0.00036   0.00036   0.08377
+   6 2   H  1S         -0.24203   0.79329   0.00116   0.00116   0.26829
+                           6
+   6 2   H  1S          0.85928
+    Full Mulliken population analysis:
+                           1         2         3         4         5
+   1 1   Li 1S          2.01017
+   2        2S         -0.02788   0.73835
+   3        2PX         0.00000   0.00000   0.00000
+   4        2PY         0.00000   0.00000   0.00000   0.00000
+   5        2PZ         0.00000   0.00000   0.00000   0.00000   0.08377
+   6 2   H  1S         -0.00090   0.12047   0.00000   0.00000   0.06251
+                           6
+   6 2   H  1S          0.85928
+     Gross orbital populations:
+                           1
+   1 1   Li 1S          1.98140
+   2        2S          0.83094
+   3        2PX         0.00000
+   4        2PY         0.00000
+   5        2PZ         0.14628
+   6 2   H  1S          1.04137
+          Condensed to atoms (all electrons):
+               1          2
+     1  Li   2.776543   0.182089
+     2  H    0.182089   0.859278
+ Mulliken charges:
+               1
+     1  Li   0.041367
+     2  H   -0.041367
+ Sum of Mulliken charges =  -0.00000
+ Mulliken charges with hydrogens summed into heavy atoms:
+               1
+     1  Li  -0.000000
+ Electronic spatial extent (au):  <R**2>=             45.2971
+ Charge=             -0.0000 electrons
+ Dipole moment (field-independent basis, Debye):
+    X=             -0.0185    Y=             -0.0185    Z=             -4.2645  Tot=              4.2646
+ Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=             -6.0185   YY=             -6.0185   ZZ=            -10.6036
+   XY=             -0.0004   XZ=             -0.0518   YZ=             -0.0518
+ Traceless Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=              1.5283   YY=              1.5283   ZZ=             -3.0567
+   XY=             -0.0004   XZ=             -0.0518   YZ=             -0.0518
+ Octapole moment (field-independent basis, Debye-Ang**2):
+  XXX=             -0.2148  YYY=             -0.2148  ZZZ=            -25.1441  XYY=             -0.0716
+  XXY=             -0.0716  XXZ=             -6.1312  XZZ=             -0.1351  YZZ=             -0.1351
+  YYZ=             -6.1312  XYZ=             -0.0007
+ Hexadecapole moment (field-independent basis, Debye-Ang**3):
+ XXXX=            -16.4969 YYYY=            -16.4969 ZZZZ=            -89.6006 XXXY=             -0.0028
+ XXXZ=             -0.2755 YYYX=             -0.0028 YYYZ=             -0.2754 ZZZX=             -0.3669
+ ZZZY=             -0.3669 XXYY=             -5.4990 XXZZ=            -16.1088 YYZZ=            -16.1088
+ XXYZ=             -0.0918 YYXZ=             -0.0918 ZZXY=             -0.0018
+ N-N= 5.697941420176D-01 E-N=-1.940617383735D+01  KE= 7.956910262885D+00
+ Orbital energies and kinetic energies (alpha):
+                                 1                 2
+   1         O                -1.803695          3.480443
+   2         O                -0.101155          0.498012
+   3         V                -0.049576          0.466023
+   4         V                 0.016924          0.319682
+   5         V                 0.016924          0.319682
+   6         V                 0.091970          0.637211
+ Total kinetic energy from orbitals= 7.956910262885D+00
+ Calling FoFJK, ICntrl=      2527 FMM=F ISym2X=0 I1Cent= 0 IOpClX= 0 NMat=1 NMatS=1 NMatT=0.
+ -------------------------------------------------------------------
+ Center     Atomic                   Forces (Hartrees/Bohr)
+ Number     Number              X              Y              Z
+ -------------------------------------------------------------------
+      1        3           0.000175297    0.000175300    0.040498931
+      2        1          -0.000175297   -0.000175300   -0.040498931
+ -------------------------------------------------------------------
+ Cartesian Forces:  Max     0.040498931 RMS     0.023382507
+
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+ Berny optimization.
+ Search for a local minimum.
+ Step number   1 out of a maximum of    2
+ All quantities printed in internal units (Hartrees-Bohrs-Radians)
+ Second derivative matrix not updated -- first step.
+ The second derivative matrix:
+                          X1        Y1        Z1        X2        Y2
+           X1           1.00000
+           Y1           0.00000   1.00000
+           Z1           0.00000   0.00000   1.00000
+           X2           0.00000   0.00000   0.00000   1.00000
+           Y2           0.00000   0.00000   0.00000   0.00000   1.00000
+           Z2           0.00000   0.00000   0.00000   0.00000   0.00000
+                          Z2
+           Z2           1.00000
+ ITU=  0
+     Eigenvalues ---    1.00000   1.00000   1.00000   1.00000   1.00000
+     Eigenvalues ---    1.00000
+ Angle between quadratic step and forces=   0.00 degrees.
+ Linear search not attempted -- first point.
+ B after Tr=    -0.000000   -0.000000    0.000000
+         Rot=    1.000000    0.000000   -0.000000    0.000000 Ang=   0.00 deg.
+ Variable       Old X    -DE/DX   Delta X   Delta X   Delta X     New X
+                                 (Linear)    (Quad)   (Total)
+    X1        0.01445   0.00018   0.00000   0.00018   0.00018   0.01462
+    Y1        0.01444   0.00018   0.00000   0.00018   0.00018   0.01462
+    Z1        0.06854   0.04050   0.00000   0.04050   0.04050   0.10904
+    X2        0.03723  -0.00018   0.00000  -0.00018  -0.00018   0.03705
+    Y2        0.03723  -0.00018   0.00000  -0.00018  -0.00018   0.03705
+    Z2        5.33351  -0.04050   0.00000  -0.04050  -0.04050   5.29301
+         Item               Value     Threshold  Converged?
+ Maximum Force            0.040499     0.000450     NO 
+ RMS     Force            0.023383     0.000300     NO 
+ Maximum Displacement     0.040499     0.001800     NO 
+ RMS     Displacement     0.023383     0.001200     NO 
+ Predicted change in Energy=-1.640225D-03
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+
+ Unable to Open any file for archive entry.
+ 1\1\GINC-BHD0001\Force\RBLYP\STO-3G\H1Li1\BWEIGHT\29-Dec-2022\0\\# BLY
+ P/STO-3G SCF=XQC FORCE nosym pop=full\\MD Step 5\\0,1\Li,0.0076442,0.0
+ 0764342,0.03627239\H,0.0197009,0.01970037,2.82236966\\Version=ES64L-G1
+ 6RevC.01\HF=-7.8555705\RMSD=5.039e-09\RMSF=2.338e-02\Dipole=-0.0072606
+ ,-0.0072607,-1.677787\Quadrupole=1.1362871,1.1362871,-2.2725742,-0.000
+ 2693,-0.0384916,-0.0384894\PG=C*V [C*(H1Li1)]\\@
+ The archive entry for this job was punched.
+
+
+ LET US PLACE AT THE END OF EVERY CHAPTER.....THE
+ TWO LETTERS USED BY THE ROMAN JUDGES WHEN THEY DID
+ NOT UNDERSTAND A PLEADING.
+ N. L. -NON LIQUET- IT IS NOT CLEAR.
+                                              -- VOLTAIRE
+ Job cpu time:       0 days  0 hours  0 minutes  4.0 seconds.
+ Elapsed time:       0 days  0 hours  0 minutes  4.4 seconds.
+ File lengths (MBytes):  RWF=    272 Int=      0 D2E=      0 Chk=     32 Scr=     32
+ Normal termination of Gaussian 16 at Thu Dec 29 00:17:24 2022.

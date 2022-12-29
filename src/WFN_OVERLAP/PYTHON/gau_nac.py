@@ -216,7 +216,7 @@ class gau_nac:
 
         return
 
-    def finilize(self):
+    #def finilize(self):
         """
         finish the current step & prepare for the following step
         """
@@ -224,7 +224,7 @@ class gau_nac:
         #shutil.copyfile("./qm_result_update.dat", "./qm_results.dat")
         #shutil.copyfile("./qm_results.dat", "../../qm_results.dat")          
         #   Go back to directory of dynamics work
-        os.chdir("../../")     
+        #os.chdir("../")     
            
         return
 
@@ -250,8 +250,8 @@ class gau_nac:
         plt.savefig("wavefunction_overlap_MAT.jpg",dpi=600)
         plt.clf()
 
-        if ( self.DYN_PROPERTIES["MD_STEP"] > 1 ):
-            self.DYN_PROPERTIES["OVERLAP_OLD"] = DYN_PROPERTIES["OVERLAP_NEW"]
+        if ( self.DYN_PROPERTIES["MD_STEP"] >= 2 ):
+            self.DYN_PROPERTIES["OVERLAP_OLD"] = self.DYN_PROPERTIES["OVERLAP_NEW"]
         self.DYN_PROPERTIES["OVERLAP_NEW"] = CI_overlap[:,:]
 
 
@@ -282,7 +282,7 @@ class gau_nac:
         #self.dump()
         self.dump_braden()
         self.calc_NAC()
-        self.finilize()
+        os.chdir("../")
         
         return self.DYN_PROPERTIES
 

@@ -18,22 +18,23 @@ def check_geometry(Atom_labels,Atom_coords_new):
 def clean_directory(NStates, MD_STEP):
 
     sp.call( "rm -rf GS_OLD" ,shell=True)
-    sp.call( "rm -rf TD_OLD_S1" ,shell=True)
-    if ( MD_STEP >= 2 ): sp.call( "rm -rf DIMER" ,shell=True)
+    if ( NStates >= 2 ): sp.call( "rm -rf TD_OLD_S1" ,shell=True)
+    if ( MD_STEP >= 2 and NStates >= 2 ): sp.call( "rm -rf DIMER" ,shell=True)
     if ( NStates >= 3 ):
         for state in range( 2, NStates ):
             sp.call( f"rm -rf TD_OLD_S{state}" ,shell=True)
 
-    if ( os.path.exists("TD_NEW_S1") ):
-        sp.call( "mv TD_NEW_S1 TD_OLD_S1" ,shell=True)
+    
+    if ( MD_STEP >= 1 ): 
         sp.call( "mv GS_NEW GS_OLD" ,shell=True)
+        if ( NStates >= 2 ): sp.call( "mv TD_NEW_S1 TD_OLD_S1" ,shell=True)
         if ( NStates >= 3 ):
             for state in range( 2, NStates ):
                 sp.call( f"mv TD_NEW_S{state} TD_OLD_S{state}" ,shell=True)
 
     sp.call( "mkdir -p GS_NEW" ,shell=True)
-    sp.call( "mkdir -p TD_NEW_S1" ,shell=True)
-    if ( MD_STEP >= 1 ): sp.call( "mkdir -p DIMER" ,shell=True)
+    if ( NStates >= 2 ): sp.call( "mkdir -p TD_NEW_S1" ,shell=True)
+    if ( MD_STEP >= 1 and NStates >= 2 ): sp.call( "mkdir -p DIMER" ,shell=True)
 
     if ( NStates >= 3 ):
         for state in range( 2, NStates ):
@@ -68,32 +69,33 @@ def generate_inputs(DYN_PROPERTIES):
         file01.write(f"MD Step {MD_STEP}\n\n")
         file01.write(f"{CHARGE} {MULTIPLICITY}\n")
         for at in range( len(Atom_labels) ):
-            file01.write( "%s  %2.8f  %2.8f  %2.8f \n" % (Atom_labels[at],Atom_coords_new[at,0],Atom_coords_new[at,1],Atom_coords_new[at,2]) )
+            file01.write( "%s  %2.8f  %2.8f  %2.8f \n" % (Atom_labels[at],Atom_coords_new[at,0]*0.529,Atom_coords_new[at,1]*0.529,Atom_coords_new[at,2]*0.529) )
         if ( method[0] == "DIMER" ):
             coords_dimer = method[1]
             for at in range( len(Atom_labels) ):
-                file01.write( "%s  %2.8f  %2.8f  %2.8f \n" % (Atom_labels[at],coords_dimer[at,0],coords_dimer[at,1],coords_dimer[at,2]) )
+                file01.write( "%s  %2.8f  %2.8f  %2.8f \n" % (Atom_labels[at],coords_dimer[at,0]*0.529,coords_dimer[at,1]*0.529,coords_dimer[at,2]*0.529) )
         file01.write("\n\n\n\n\n\n\n\n")
 
     # Ground State for New Geometry
     os.chdir("GS_NEW/")
     file01 = open("geometry.com","w")
-    if ( MD_STEP > 1 ): 
+    if ( MD_STEP >= 1 ): 
         file01.write(f"%oldchk=../GS_OLD/geometry.chk\n")
     write_header(file01,MEM,NCPUS)
-    file01.write(f"# {FUNCTIONAL}/{BASIS_SET} FORCE nosym pop=full\n\n") ### MAIN LINE ###
+    file01.write(f"# {FUNCTIONAL}/{BASIS_SET} SCF=XQC FORCE nosym pop=full\n\n") ### MAIN LINE ###
     write_geom(file01,Atom_labels,Atom_coords_new,MD_STEP,CHARGE,MULTIPLICITY)
     os.chdir("../")
 
     # Excited State for New Geometry (Use converged wavefunctions from GS at same geometry)
-    os.chdir("TD_NEW_S1/")
-    file01 = open("geometry.com","w")
-    file01.write(f"%oldchk=../GS_NEW/geometry.chk\n")
-    write_header(file01,MEM,NCPUS)
-    # Include one additional excited state even though we only perform NAMD on NStates-1 excied states to converge TD-DFT
-    file01.write(f"# {FUNCTIONAL}/{BASIS_SET} TD=(singlets,nstates={NStates},root=1) FORCE nosym pop=full guess=read\n\n") ### MAIN LINE ###
-    write_geom(file01,Atom_labels,Atom_coords_new,MD_STEP,CHARGE,MULTIPLICITY)
-    os.chdir("../")
+    if ( NStates >= 2 ):
+        os.chdir("TD_NEW_S1/")
+        file01 = open("geometry.com","w")
+        file01.write(f"%oldchk=../GS_NEW/geometry.chk\n")
+        write_header(file01,MEM,NCPUS)
+        # Include one additional excited state even though we only perform NAMD on NStates-1 excied states to converge TD-DFT
+        file01.write(f"# {FUNCTIONAL}/{BASIS_SET} SCF=XQC TD=(singlets,nstates={NStates},root=1) FORCE nosym pop=full guess=read\n\n") ### MAIN LINE ###
+        write_geom(file01,Atom_labels,Atom_coords_new,MD_STEP,CHARGE,MULTIPLICITY)
+        os.chdir("../")
 
     if ( NStates >= 3 ):
         for state in range( 2, NStates ):
@@ -103,12 +105,12 @@ def generate_inputs(DYN_PROPERTIES):
             file01.write(f"%oldchk=../TD_NEW_S1/geometry.chk\n")
             write_header(file01,MEM,NCPUS)
             # Include one additional excited state even though we only perform NAMD on NStates-1 excied states to converge TD-DFT
-            file01.write(f"# {FUNCTIONAL}/{BASIS_SET} TD=(read,singlets,nstates={NStates},root={state}) FORCE nosym pop=full guess=read\n\n") ### MAIN LINE ###
+            file01.write(f"# {FUNCTIONAL}/{BASIS_SET} SCF=XQC TD=(read,singlets,nstates={NStates},root={state}) FORCE nosym pop=full guess=read\n\n") ### MAIN LINE ###
             write_geom(file01,Atom_labels,Atom_coords_new,MD_STEP,CHARGE,MULTIPLICITY)
             os.chdir("../")
     
     # Dimer method for atomic orbital overlaps
-    if ( MD_STEP >= 1 ):
+    if ( MD_STEP >= 1 and NStates >= 2 ):
         Atom_coords_old = DYN_PROPERTIES["Atom_coords_old"]
         os.chdir("DIMER/")
         file01 = open("geometry.com","w")
@@ -144,13 +146,15 @@ def submit_jobs(DYN_PROPERTIES):
                     print(f"\tWARNING! Gaussian did not finish normally in the following directory:\n{os.getcwd()}", )
                     exit()
                 try:
-                    check = open("geometry.out","r").readlines()[-1]
+                    check1 = open("geometry.out","r").readlines()[-1]
+                    check2 = open("geometry.out","r").readlines()[-3] # Look for error TODO
                 except (FileNotFoundError, IndexError) as errors:
                     continue
-                if ( check.split()[:4] == "Normal termination of Gaussian".split() ):
+                if ( check1.split()[:4] == "Normal termination of Gaussian".split() ):
                     print("\tGaussian terminated normally in %2.2f s. (%s)" % (time.time() - t0, os.getcwd().split("/")[-1]) )
                     sp.call(f"formchk geometry.chk > /dev/null 2>&1", shell=True) # For dipole matrix calculations
                     break
+                #elif ( check2.split()[:4] )
 
         elif( RUN_ELEC_STRUC == "USE_CURRENT_NODE" ):
             t0 = time.time()
@@ -173,9 +177,10 @@ def submit_jobs(DYN_PROPERTIES):
     submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP)
     os.chdir("../")
 
-    os.chdir("TD_NEW_S1/")
-    submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP)
-    os.chdir("../")
+    if ( NStates >= 2 ):
+        os.chdir("TD_NEW_S1/")
+        submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP)
+        os.chdir("../")
 
     ### ADD PARALLELIZATION HERE FOR COMPUTING ALL THE EXCITED STATE FORCES IF NSTATES >= 3 ###
 
@@ -185,9 +190,10 @@ def submit_jobs(DYN_PROPERTIES):
             submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP)
             os.chdir("../")
 
-    os.chdir("DIMER/")
-    submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP)
-    os.chdir("../")
+    if ( MD_STEP >= 1 and NStates >= 2 ):
+        os.chdir("DIMER/")
+        submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP)
+        os.chdir("../")
 
 
 
@@ -217,7 +223,7 @@ def get_approx_NACR( DYN_PROPERTIES ):
             alpha[j,k] /= np.einsum("ad,ad->", V[:,:], V[:,:] )
             G[j,k,:,:] = g[j,k,:,:] + alpha[j,k] * V[:,:]
 
-    if ( DYN_PROPERTIES["MD_STEP"] > 1 ):
+    if ( DYN_PROPERTIES["MD_STEP"] >= 2 ):
         DYN_PROPERTIES["NACR_APPROX_OLD"] = DYN_PROPERTIES["NACR_APPROX_NEW"]
     DYN_PROPERTIES["NACR_APPROX_NEW"] = G[:,:,:,:]
     
@@ -227,6 +233,7 @@ def get_approx_NACR( DYN_PROPERTIES ):
 def main(DYN_PROPERTIES):
 
     NStates = DYN_PROPERTIES["NStates"] # Total number of electronic states
+    NAtoms = DYN_PROPERTIES["NAtoms"] # Total number of electronic states
     Atom_labels = DYN_PROPERTIES["Atom_labels"]
     Atom_coords_new = DYN_PROPERTIES["Atom_coords_new"]
     MD_STEP = DYN_PROPERTIES["MD_STEP"]
@@ -240,13 +247,20 @@ def main(DYN_PROPERTIES):
     generate_inputs(DYN_PROPERTIES)
     submit_jobs(DYN_PROPERTIES)
 
-    os.chdir("../")
 
     DYN_PROPERTIES = get_cartesian_gradients.main(DYN_PROPERTIES)
     DYN_PROPERTIES = get_diagonal_electronic_energies.main(DYN_PROPERTIES)
     if ( MD_STEP >= 1 ):
-        DYN_PROPERTIES = G16_NAC.main(DYN_PROPERTIES)
-        DYN_PROPERTIES = get_approx_NACR(DYN_PROPERTIES) # TODO -- Need energies, velocities, and NACT
+        if ( NStates >= 2 ):
+            DYN_PROPERTIES = G16_NAC.main(DYN_PROPERTIES)
+            DYN_PROPERTIES = get_approx_NACR(DYN_PROPERTIES)
+        else:
+            DYN_PROPERTIES["OVERLAP_OLD"] = 0
+            DYN_PROPERTIES["OVERLAP_NEW"] = 0
+            DYN_PROPERTIES["NACR_APPROX_OLD"] = np.zeros(( NStates, NStates, NAtoms, 3 ))
+            DYN_PROPERTIES["NACR_APPROX_NEW"] = np.zeros(( NStates, NStates, NAtoms, 3 ))
+
+    os.chdir("../")
 
     return DYN_PROPERTIES
 
