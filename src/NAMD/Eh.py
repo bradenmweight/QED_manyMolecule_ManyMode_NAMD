@@ -133,5 +133,5 @@ def normalize_Mapping(DYN_PROPERTIES): # Be careful with this. Ehrenfest it is o
         print("Mapping norm is wrong. Will keep going until worse.")
     elif( abs(1.0 - norm) < 1e-2 ):
         print(f"Electronic Norm.: {np.round(norm,4)}")
-        print("Stopping...")
-        exit()
+        #print("Stopping...")
+        #exit()

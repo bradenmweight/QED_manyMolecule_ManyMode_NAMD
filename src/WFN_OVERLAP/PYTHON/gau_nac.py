@@ -277,20 +277,31 @@ class gau_nac:
         NACT_{jk} \\approx (<j(t0)|k(t1)> - <j(t1)|k(t0)>) / (2*dt)
         NEED TO CHECK IF THIS IS CORRECT IMPLEMENTATION OF THIS EXPRESSION
         """
-        # CHECK OVERLAP PHASE. STEAL SHARC VERSION.
+        # TODO CHECK OVERLAP PHASE. STEAL SHARC VERSION.
         OVERLAP = self.DYN_PROPERTIES["OVERLAP_NEW"]
         dtI     = self.DYN_PROPERTIES["dtI"]
         
-        #print("Original Overlap")
-        #print(OVERLAP)
+        print("Original Overlap")
+        print(OVERLAP)
         print("Performing Lowdin Orthogonalization.")
         OVERLAP = self.get_Lowdin_SVD()
-        #print("Orthogonalized Overlap")
-        #print(OVERLAP)
+        print("Orthogonalized Overlap")
+        print(OVERLAP)
 
+        OVERLAP = np.abs(OVERLAP)
+
+        """
+        NOTE HERE THAT THE OVERLAP IS ANTI-SYMMETRIC. NEED TO FIGURE OUT WHAT IS WRONG.
+            -> FOR THIS, I WILL SIMPLY TAKE ABSOLUTE VALUE. DO NOT KEEP THIS. PHASE IS WRONG.
+        ALSO, THE IS NO DIAGONAL ELEMENTS TO THE ORIGINAL OVERLAP. ADDED ONES BEFORE ORTHO.
+        """
+    
         self.DYN_PROPERTIES["OVERLAP_NEW"] = OVERLAP
 
         NACT    = (OVERLAP - OVERLAP.T) / 2 / dtI # Check this, TODO
+
+        print("NAC with Orthogonalized Overlap")
+        print(NACT)
 
         if ( self.DYN_PROPERTIES["MD_STEP"] >= 2 ):
             self.DYN_PROPERTIES["NACT_OLD"] = self.DYN_PROPERTIES["NACT_NEW"] * 1.0
