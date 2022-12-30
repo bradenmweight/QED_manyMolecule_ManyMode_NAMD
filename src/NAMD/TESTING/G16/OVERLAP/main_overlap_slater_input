@@ -1,11 +1,11 @@
                         read (*,*)  
-3               read (*,*) n_atom 
-7                 read (*,*) n_ao 
-5               read (*,*) n_ele_alpha 
-5               read (*,*) n_ele_beta 
+2               read (*,*) n_atom 
+18                 read (*,*) n_ao 
+6               read (*,*) n_ele_alpha 
+6               read (*,*) n_ele_beta 
                         read (*,*)  
 3               read (*,*) n_state 
-10               read (*,*) n_csf 
+20               read (*,*) n_csf 
                         read (*,*)  
 1                       read (*,*)  type_input  
 ci_1.dat                read (*,*)  filename_input1  

@@ -1,11 +1,11 @@
 # Required Inputs
 NSTATES = 2 ! Includes ground state. NSTATES = 1 for GS BOMD
 NSTEPS  = 1000 # Total MD steps
-dtI = 0.5 # Nuclear time-step (fs)
+dtI = 1.0 # Nuclear time-step (fs)
 ESTEPS = 100 # Number of electronic time steps per nuclear step
 ISTATE  = 1 # Initial electronic state for NAMD: 0, 1, 2, ...
 FUNCTIONAL = BLYP # DFT functional
-BASIS = STO-3G # Local basis set
+BASIS = 3-21G # Local basis set
 CHARGE = 0 # System's net charge
 MULTIPLICITY = 1 # System electronic multiplicity
 MEMORY = 5 # Memory for Gaussian (GB)

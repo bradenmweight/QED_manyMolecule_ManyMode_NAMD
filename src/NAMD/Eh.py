@@ -51,13 +51,10 @@ def propagage_Mapping(DYN_PROPERTIES):
     NStates = DYN_PROPERTIES["NStates"]
     z     = DYN_PROPERTIES["MAPPING_VARS"]
 
-    Zreal = np.real(z)
-    Zimag = np.imag(z)
+    Zreal = np.real(z) * 1.0
+    Zimag = np.imag(z) * 1.0
 
-    OVERLAP  = (DYN_PROPERTIES["OVERLAP_NEW"])[:-1,:-1] # Recall, we perform TD-DFT with one additional state
-
-    print( "Wavefunction Overlap:" )
-    print( np.round(OVERLAP,4) )
+    OVERLAP  = (DYN_PROPERTIES["OVERLAP_NEW"]) # Recall, we perform TD-DFT with one additional state. Already removed.
 
     Hamt0 = np.zeros(( NStates, NStates )) # t0 basis
     Hamt1 = np.zeros(( NStates, NStates )) # t1 basis
@@ -93,9 +90,6 @@ def propagage_Mapping(DYN_PROPERTIES):
     # TODO Check the direction of this rotation
     Hamt1 = OVERLAP.T @ Hamt1 @ OVERLAP # Rotate to t0 basis
 
-    print(Hamt0)
-    print(Hamt1)
-
     dtE    = DYN_PROPERTIES["dtE"]
     ESTEPS = DYN_PROPERTIES["ESTEPS"]
 
@@ -113,16 +107,13 @@ def propagage_Mapping(DYN_PROPERTIES):
         # Propagate Imaginary final by dt/2
         Zimag -= 0.5000000 * H @ Zreal * dtE
 
-    print( "Z (t0)", np.abs(DYN_PROPERTIES["MAPPING_VARS"]) )
-    print( "Z (t1)", np.abs(Zreal + 1j*Zimag) )
-
     DYN_PROPERTIES["MAPPING_VARS"] = Zreal + 1j*Zimag
 
     return DYN_PROPERTIES
 
 def rotate_Mapping(DYN_PROPERTIES):
     z = DYN_PROPERTIES["MAPPING_VARS"]
-    OVERLAP = (DYN_PROPERTIES["OVERLAP_NEW"])[:-1,:-1] # Recall, we perform TD-DFT with one additional state
+    OVERLAP = (DYN_PROPERTIES["OVERLAP_NEW"]) # Recall, we perform TD-DFT with one additional state. Already removed.
 
     z = OVERLAP @ z # TODO Check the direction of this rotation
     #z = OVERLAP.T @ z # Maybe is this way
@@ -137,4 +128,10 @@ def rotate_Mapping(DYN_PROPERTIES):
 def normalize_Mapping(DYN_PROPERTIES): # Be careful with this. Ehrenfest it is okay.
     z = DYN_PROPERTIES["MAPPING_VARS"]
     norm = np.sum( np.abs(z) )
-    print(f"Electronic Norm.: {np.round(norm,4)}")
+    if ( abs(1.0 - norm) < 1e-5 ):
+        print(f"Electronic Norm.: {np.round(norm,4)}")
+        print("Mapping norm is wrong. Will keep going until worse.")
+    elif( abs(1.0 - norm) < 1e-2 ):
+        print(f"Electronic Norm.: {np.round(norm,4)}")
+        print("Stopping...")
+        exit()

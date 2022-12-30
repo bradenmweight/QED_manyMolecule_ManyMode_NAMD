@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import numpy as np
+from scipy.linalg import svd
 from matplotlib import pyplot as plt
 import os
 import sys
@@ -164,7 +165,7 @@ class gau_nac:
         fileout1.write('ci_overlap.dat          read (*,*) filename_output  \n')
         fileout1.close()
 
-        print("NAC PREPARED")
+        print("OVERLAP Extracted.")
         
         return
 ###
@@ -249,15 +250,27 @@ class gau_nac:
         plt.tight_layout()
         plt.savefig("wavefunction_overlap_MAT.jpg",dpi=600)
         plt.clf()
-
+ 
+        # Recall, we compute one additional state in TD-DFT. Do not save it here.
         if ( self.DYN_PROPERTIES["MD_STEP"] >= 2 ):
-            self.DYN_PROPERTIES["OVERLAP_OLD"] = self.DYN_PROPERTIES["OVERLAP_NEW"]
-        self.DYN_PROPERTIES["OVERLAP_NEW"] = CI_overlap[:,:] + np.identity(NStates) # TODO NEED TO FXI DIAGONAL
+            self.DYN_PROPERTIES["OVERLAP_OLD"] = (self.DYN_PROPERTIES["OVERLAP_NEW"])
+        self.DYN_PROPERTIES["OVERLAP_NEW"] = (CI_overlap[:,:])[:-1,:-1] + np.identity(self.DYN_PROPERTIES["NStates"]) # TODO NEED TO FXI DIAGONAL
 
 
     def check_phase():
         # NOT IMPLEMENTED YET
         return
+
+    def get_Lowdin_SVD(self):
+        """
+        S = U @ diag(\lambda_i) @ V.T
+        S_Ortho = U @ V.T
+        """
+        OVERLAP = self.DYN_PROPERTIES["OVERLAP_NEW"]
+        U, vals, V = svd(OVERLAP)
+
+        return U @ V
+
 
     def calc_NAC(self):
         """
@@ -267,6 +280,16 @@ class gau_nac:
         # CHECK OVERLAP PHASE. STEAL SHARC VERSION.
         OVERLAP = self.DYN_PROPERTIES["OVERLAP_NEW"]
         dtI     = self.DYN_PROPERTIES["dtI"]
+        
+        #print("Original Overlap")
+        #print(OVERLAP)
+        print("Performing Lowdin Orthogonalization.")
+        OVERLAP = self.get_Lowdin_SVD()
+        #print("Orthogonalized Overlap")
+        #print(OVERLAP)
+
+        self.DYN_PROPERTIES["OVERLAP_NEW"] = OVERLAP
+
         NACT    = (OVERLAP - OVERLAP.T) / 2 / dtI # Check this, TODO
 
         if ( self.DYN_PROPERTIES["MD_STEP"] >= 2 ):
