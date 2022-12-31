@@ -79,5 +79,8 @@ def main( ):
 
         output.save_data(DYN_PROPERTIES)
 
+        #if ( DYN_PROPERTIES["MD_STEP"] == 5 ):
+        #    exit()
+
 if ( __name__ == "__main__" ):
     main()

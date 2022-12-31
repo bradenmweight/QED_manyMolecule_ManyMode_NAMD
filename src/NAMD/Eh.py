@@ -74,14 +74,14 @@ def get_Force(DYN_PROPERTIES):
     #F[:,:] -= 0.5 * ( 0.5 * dEad[0,:,:] + 0.5 * dEad[1,:,:] ) + \
     #          0.5 * ( 0.5 * NACR[0,1,:,:] * (Ead[1] - Ead[0]) + 0.5 * NACR[1,0,:,:] * (Ead[0] - Ead[1]) )
 
-    print("FORCE:")
-    print(F[:,:])
-    print("NACR:")
-    print( NACR[0,1,:,:] )
-    print("dE")
-    print( (Ead[1] - Ead[0]) )
-    print("NACRx dE:")
-    print( NACR[0,1,:,:] * (Ead[0] - Ead[1]) )
+    #print("FORCE:")
+    #print(F[:,:])
+    #print("NACR:")
+    #print( NACR[0,1,:,:] )
+    #print("dE")
+    #print( (Ead[1] - Ead[0]) )
+    #print("NACRx dE:")
+    #print( NACR[0,1,:,:] * (Ead[0] - Ead[1]) )
     return F
 
 

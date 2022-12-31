@@ -1,0 +1,255 @@
+ Entering Gaussian System, Link 0=g16
+ Initial command:
+ /software/gaussian/g16-c01/avx/g16/l1.exe "/gpfs/fs2/scratch/bweight/software/many_molecule_many_mode_NAMD/src/NAMD/TEST_overlap/G16/TD_NEW_S1/Gau-21123.inp" -scrdir="/gpfs/fs2/scratch/bweight/software/many_molecule_many_mode_NAMD/src/NAMD/TEST_overlap/G16/TD_NEW_S1/"
+ Entering Link 1 = /software/gaussian/g16-c01/avx/g16/l1.exe PID=     21124.
+  
+ Copyright (c) 1988-2019, Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 16 program.  It is based on
+ the Gaussian(R) 09 system (copyright 2009, Gaussian, Inc.),
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 16, Revision C.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, 
+ G. A. Petersson, H. Nakatsuji, X. Li, M. Caricato, A. V. Marenich, 
+ J. Bloino, B. G. Janesko, R. Gomperts, B. Mennucci, H. P. Hratchian, 
+ J. V. Ortiz, A. F. Izmaylov, J. L. Sonnenberg, D. Williams-Young, 
+ F. Ding, F. Lipparini, F. Egidi, J. Goings, B. Peng, A. Petrone, 
+ T. Henderson, D. Ranasinghe, V. G. Zakrzewski, J. Gao, N. Rega, 
+ G. Zheng, W. Liang, M. Hada, M. Ehara, K. Toyota, R. Fukuda, 
+ J. Hasegawa, M. Ishida, T. Nakajima, Y. Honda, O. Kitao, H. Nakai, 
+ T. Vreven, K. Throssell, J. A. Montgomery, Jr., J. E. Peralta, 
+ F. Ogliaro, M. J. Bearpark, J. J. Heyd, E. N. Brothers, K. N. Kudin, 
+ V. N. Staroverov, T. A. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. P. Rendell, J. C. Burant, S. S. Iyengar, 
+ J. Tomasi, M. Cossi, J. M. Millam, M. Klene, C. Adamo, R. Cammi, 
+ J. W. Ochterski, R. L. Martin, K. Morokuma, O. Farkas, 
+ J. B. Foresman, and D. J. Fox, Gaussian, Inc., Wallingford CT, 2019.
+ 
+ ******************************************
+ Gaussian 16:  ES64L-G16RevC.01  3-Jul-2019
+                31-Dec-2022 
+ ******************************************
+ %oldchk=../GS_NEW/geometry.chk
+ %chk=geometry.chk
+ %nprocshared=1
+ Will use up to    1 processors via shared memory.
+ %mem=5GB
+ Copying data from "../GS_NEW/geometry.chk" to current chk file "geometry.chk"
+ IOpt=  2 FromEx=T IUOpen= 4 IOptOp= 5 NList=   0 IFRang= 0 IUIn= 4 IUOut= 2.
+ ----------------------------------------------------------------------
+ # BLYP/STO-3G SCF=XQC TD=(singlets,nstates=2,root=1) FORCE nosym pop=f
+ ull guess=read
+ ----------------------------------------------------------------------
+ 1/10=7,30=1,38=1/1,3;
+ 2/12=2,15=1,17=6,18=5,40=1/2;
+ 3/6=3,11=9,25=1,30=1,71=1,74=402,116=-2/1,2,3,8;
+ 4/5=1/1;
+ 5/5=2,8=3,13=1,38=6/2,8;
+ 8/6=1,10=1,107=1,108=2/1;
+ 9/8=1,15=2,41=2,42=1,48=1,70=2/14;
+ 10/5=4,28=1,31=1/2;
+ 6/7=3,18=1/1;
+ 7/12=6,13=5,14=1,29=1,30=1/1,2,3,16;
+ 1/10=7,30=1/3;
+ 99//99;
+ ---------
+ MD Step 0
+ ---------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1
+ C                    -0.3833    0.73227   0. 
+ H                     0.14987  -0.19544   0. 
+ H                    -1.4533    0.73227   0. 
+ C                     0.29198   1.90724   0. 
+ H                    -0.24118   2.83495   0. 
+ H                     1.36198   1.90724   0. 
+ 
+
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+ Berny optimization.
+ Initialization pass.
+ Trust Radius=3.00D-01 FncErr=1.00D-07 GrdErr=1.00D-07 EigMax=2.50D+02 EigMin=1.00D-04
+ Number of steps in this run=      2 maximum allowed number of steps=      2.
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          6           0       -0.383295    0.732265    0.000000
+      2          1           0        0.149869   -0.195439    0.000000
+      3          1           0       -1.453295    0.732265    0.000000
+      4          6           0        0.291979    1.907243    0.000000
+      5          1           0       -0.241185    2.834948    0.000000
+      6          1           0        1.361979    1.907243    0.000000
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4          5
+     1  C    0.000000
+     2  H    1.070000   0.000000
+     3  H    1.070000   1.852234   0.000000
+     4  C    1.355200   2.107479   2.103938   0.000000
+     5  H    2.107479   3.055514   2.427032   1.070000   0.000000
+     6  H    2.103938   2.427032   3.050630   1.070000   1.852234
+                    6
+     6  H    0.000000
+ Symmetry turned off by external request.
+ Stoichiometry    C2H4
+ Framework group  C2H[SGH(C2H4)]
+ Deg. of freedom     5
+ Full point group                 C2H     NOp   4
+ Rotational constants (GHZ):         146.1648702          29.8053190          24.7569808
+ Standard basis: STO-3G (5D, 7F)
+    14 basis functions,    42 primitive gaussians,    14 cartesian basis functions
+     8 alpha electrons        8 beta electrons
+       nuclear repulsion energy        33.3121056435 Hartrees.
+ NAtoms=    6 NActive=    6 NUniq=    6 SFac= 1.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Regular integral format.
+ Two-electron integral symmetry is turned off.
+ One-electron integrals computed using PRISM.
+ NBasis=    14 RedAO= T EigKep=  1.95D-01  NBF=    14
+ NBsUse=    14 1.00D-06 EigRej= -1.00D+00 NBFU=    14
+ Initial guess from the checkpoint file:  "geometry.chk"
+ B after Tr=     0.000000    0.000000    0.000000
+         Rot=    1.000000    0.000000    0.000000    0.000000 Ang=   0.00 deg.
+ Keep J ints in memory in canonical form, NReq=868756.
+ Requested convergence on RMS density matrix=1.00D-08 within  32 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ SCF Done:  E(RB-LYP) =  -77.5620598843     A.U. after    1 cycles
+            NFock=  1  Conv=0.14D-08     -V/T= 2.0141
+ QCSCF skips out because SCF is already converged.
+ DoSCS=F DFT=T ScalE2(SS,OS)=  1.000000  1.000000
+ ExpMin= 1.69D-01 ExpMax= 7.16D+01 ExpMxC= 7.16D+01 IAcc=3 IRadAn=         5 AccDes= 0.00D+00
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         5 IDoV=-2 UseB2=F ITyADJ=14
+ ICtDFT= 12500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Range of M.O.s used for correlation:     3    14
+ NBasis=    14 NAE=     8 NBE=     8 NFC=     2 NFV=     0
+ NROrb=     12 NOA=     6 NOB=     6 NVA=     6 NVB=     6
+ Keep J ints in memory in canonical form, NReq=885599.
+     8 initial guesses have been made.
+ Convergence on wavefunction:    0.000001000000000
+ Iteration     1 Dimension     8 NMult     0 NNew      8
+ CISAX will form     8 AO SS matrices at one time.
+ New state      1 was old state      2
+ New state      2 was old state      3
+ Iteration     2 Dimension    12 NMult     8 NNew      4
+ New state      2 was old state      3
+ Iteration     3 Dimension    13 NMult    12 NNew      1
+ Iteration     4 Dimension    14 NMult    13 NNew      1
+ Iteration     5 Dimension    15 NMult    14 NNew      1
+ Iteration     6 Dimension    16 NMult    15 NNew      1
+ Iteration     7 Dimension    17 NMult    16 NNew      1
+ ***********************************************************************
+ Excited states from <AA,BB:AA,BB> singles matrix:
+ ***********************************************************************
+ 
+ Ground to excited state transition densities written to RWF  633
+ Ground to excited state transition electric dipole moments (Au):
+       state          X           Y           Z        Dip. S.      Osc.
+         1         0.0000      0.0000      0.0000      0.0000      0.0000
+         2         0.5986      1.0384      0.0000      1.4366      0.3602
+ Ground to excited state transition velocity dipole moments (Au):
+       state          X           Y           Z        Dip. S.      Osc.
+         1        -0.0000     -0.0000     -0.0000      0.0000      0.0000
+         2        -0.1504     -0.2608      0.0000      0.0906      0.1607
+ Ground to excited state transition magnetic dipole moments (Au):
+       state          X           Y           Z
+         1         0.6068      1.1048      0.0000
+         2        -0.0000      0.0000      0.3976
+ Ground to excited state transition velocity quadrupole moments (Au):
+       state          XX          YY          ZZ          XY          XZ          YZ
+         1        -0.0000     -0.0000     -0.0000     -0.0000     -0.0174      0.0111
+         2         0.0260     -1.3009     -0.0000     -0.3526     -0.0000     -0.0000
+ <0|del|b> * <b|rxdel|0> + <0|del|b> * <b|delr+rdel|0>
+ Rotatory Strengths (R) in cgs (10**-40 erg-esu-cm/Gauss)
+       state          XX          YY          ZZ    R(velocity)    E-M Angle
+         1        -0.0000     -0.0000     -0.0000     -0.0000       90.00
+         2        -0.0000      0.0000     -0.0000     -0.0000       90.00
+ 1/2[<0|r|b>*<b|rxdel|0> + (<0|rxdel|b>*<b|r|0>)*]
+ Rotatory Strengths (R) in cgs (10**-40 erg-esu-cm/Gauss)
+       state          XX          YY          ZZ     R(length)
+         1        -0.0000     -0.0000     -0.0000     -0.0000
+         2         0.0000     -0.0000     -0.0000     -0.0000
+  1/2[<0|del|b>*<b|r|0> + (<0|r|b>*<b|del|0>)*] (Au)
+       state          X           Y           Z        Dip. S.   Osc.(frdel)
+         1        -0.0000     -0.0000     -0.0000      0.0000      0.0000
+         2        -0.0900     -0.2708      0.0000      0.3609      0.2406
+
+ Excitation energies and oscillator strengths:
+ 
+ Excited state symmetry could not be determined.
+ Excited State   1:      Singlet-?Sym    9.8417 eV  125.98 nm  f=0.0000  <S**2>=0.000
+       7 ->  9         0.70689
+ This state for optimization and/or second-order correction.
+ Total Energy, E(TD-HF/TD-DFT) =  -77.2003849196    
+ Copying the excited state density for this state as the 1-particle RhoCI density.
+ 
+ Excited state symmetry could not be determined.
+ Excited State   2:      Singlet-?Sym   10.2336 eV  121.15 nm  f=0.3602  <S**2>=0.000
+       6 -> 13        -0.12153
+       8 ->  9         0.71001
+       8 <-  9        -0.15116
+ SavETr:  write IOETrn=   770 NScale= 10 NData=  16 NLR=1 NState=    2 LETran=      46.
+          IDoAtm=111111
+          Differentiating once with respect to electric field.
+                with respect to dipole field.
+          Differentiating once with respect to nuclear coordinates.
+ Keep J ints in memory in canonical form, NReq=872492.
+          There are     1 degrees of freedom in the 1st order CPHF.  IDoFFX=0 NUNeed=     1.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=7.36D-02 Max=2.89D-01 NDo=     1
+ AX will form     1 AO Fock derivatives at one time.
+ LinEq1:  Iter=  1 NonCon=     1 RMS=1.74D-03 Max=6.00D-03 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=1.29D-04 Max=5.66D-04 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=8.74D-06 Max=3.14D-05 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=1.65D-07 Max=5.65D-07 NDo=     1

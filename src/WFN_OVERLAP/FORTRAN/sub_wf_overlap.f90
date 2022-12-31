@@ -79,10 +79,9 @@
 
       do i = 1, n_state
          do j= 1, n_state
-
             !write (*,*)  "Overlap between state:", i, j
-
-            if ( i .ne. j) then
+            
+!            if ( i .ne. j) then ! Is this the issue with diagonals ? ~BMW
 
 !        Pick up the CI vector for state i at Geom 1 and state j at Geom 2
                  do k = 1, n_csf
@@ -125,7 +124,7 @@
                   
                       s_wf_overlap(i,j) = s_state_overlap
                       s_ci_overlap(i,j) = s_ci_state_overlap
-            endif
+!            endif
          enddo
       enddo       
 

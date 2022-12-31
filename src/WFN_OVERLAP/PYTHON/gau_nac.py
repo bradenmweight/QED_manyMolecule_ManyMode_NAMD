@@ -254,7 +254,7 @@ class gau_nac:
         # Recall, we compute one additional state in TD-DFT. Do not save it here.
         if ( self.DYN_PROPERTIES["MD_STEP"] >= 2 ):
             self.DYN_PROPERTIES["OVERLAP_OLD"] = (self.DYN_PROPERTIES["OVERLAP_NEW"])
-        self.DYN_PROPERTIES["OVERLAP_NEW"] = (CI_overlap[:,:])[:-1,:-1] + np.identity(self.DYN_PROPERTIES["NStates"]) # TODO NEED TO FXI DIAGONAL
+        self.DYN_PROPERTIES["OVERLAP_NEW"] = (CI_overlap[:,:])[:-1,:-1]
 
 
     def check_phase():
@@ -271,8 +271,8 @@ class gau_nac:
 
         S_Ortho = U @ VT
 
-        print("Check orthogonalization. S.T @ S.")
-        print("Saving to ortho_check.dat")
+        print("Check orthogonalization. S.T @ S")
+        #print("Saving to ortho_check.dat")
         np.savetxt("ortho_check.dat", S_Ortho.T @ S_Ortho, fmt="%1.8f" )
 
         return S_Ortho
@@ -289,17 +289,19 @@ class gau_nac:
         
         print("Original Overlap")
         print(OVERLAP)
+        #print("Forcing overlap to be symmetric: ( abs(S) + abs(S.T) ) / 2:")
+        #OVERLAP = (np.abs(OVERLAP) + np.abs(OVERLAP).T ) / 2
+        #print(OVERLAP)
         print("Performing Lowdin Orthogonalization.")
         OVERLAP = self.get_Lowdin_SVD()
         print("Orthogonalized Overlap")
+
         print(OVERLAP)
 
-        OVERLAP = np.abs(OVERLAP)
-
         """
-        NOTE HERE THAT THE OVERLAP IS ANTI-SYMMETRIC. NEED TO FIGURE OUT WHAT IS WRONG.
-            -> FOR THIS, I WILL SIMPLY TAKE ABSOLUTE VALUE. DO NOT KEEP THIS. PHASE IS WRONG.
-        ALSO, THE IS NO DIAGONAL ELEMENTS TO THE ORIGINAL OVERLAP. ADDED ONES BEFORE ORTHO.
+        NOTE HERE THAT THE ORIGINAL OVERLAP IS NOT SYMMETRIC. NEED TO FIGURE OUT WHAT IS WRONG.
+            -> FOR THIS, I WILL SIMPLY TAKE ABSOLUTE VALUE. DO NOT KEEP THIS PROCEDURE. 
+        TODO PHASE TRACKING.
         """
     
         self.DYN_PROPERTIES["OVERLAP_NEW"] = OVERLAP
