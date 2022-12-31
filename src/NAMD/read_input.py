@@ -52,12 +52,12 @@ def read():
 
             # Look for FUNCTIONAL
             if ( t[0].lower() == "FUNCTIONAL".lower() ):
-                DYN_PROPERTIES["FUNCTIONAL"] = t[1]
+                DYN_PROPERTIES["FUNCTIONAL"] = t[1].upper()
                 # The accuracy of input is up to the user...scary!
 
             # Look for BASIS
             if ( t[0].lower() == "BASIS".lower() ):
-                DYN_PROPERTIES["BASIS_SET"] = t[1]
+                DYN_PROPERTIES["BASIS_SET"] = t[1].upper()
                 # The accuracy of input is up to the user...scary!
 
             # Look for ISTATE
@@ -115,13 +115,43 @@ def read():
 
             # Look for RUN_ELEC_STRUC
             if ( t[0].lower() == "RUN_ELEC_STRUC".lower() ):
-                DYN_PROPERTIES["RUN_ELEC_STRUC"] = t[1]
+                DYN_PROPERTIES["RUN_ELEC_STRUC"] = t[1].upper()
                 # The accuracy of input is up to the user...scary!
 
             # Look for SBATCH_G16
             if ( t[0].lower() == "SBATCH_G16".lower() ):
-                DYN_PROPERTIES["SBATCH_G16"] = t[1]
+                DYN_PROPERTIES["SBATCH_G16"] = t[1].lower()
                 # The accuracy of input is up to the user...scary!
+
+            # Look for PARALLEL_FORCES
+            if ( t[0].lower() == "PARALLEL_FORCES".lower() ):
+                try:
+                    DYN_PROPERTIES["PARALLEL_FORCES"] = bool( t[1] )
+                except ValueError:
+                    print("Input for 'PARALLEL_FORCES' must be a boolean. (True or False)")
+                    exit()
+
+            # Look for EL_PROP
+            if ( t[0].lower() == "EL_PROP".lower() ):
+                DYN_PROPERTIES["EL_PROP"] = t[1].upper()
+                if ( DYN_PROPERTIES["EL_PROP"] not in ["VV","RK"] ):
+                    print("Input for 'EL_PROP' must be either 'VV' or 'RK'.")
+                    exit()
+
+            # Look for NAMD_METHOD
+            if ( t[0].lower() == "NAMD_METHOD".lower() ):
+                DYN_PROPERTIES["NAMD_METHOD"] = t[1].upper()
+                if ( DYN_PROPERTIES["NAMD_METHOD"] not in ["EH","sLSC"] ):
+                    print("Input for 'NAMD_METHOD' must be either 'EH' or 'sLSC'.")
+                    exit()
+
+            # Look for CPA
+            if ( t[0].lower() == "CPA".lower() ):
+                try:
+                    DYN_PROPERTIES["CPA"] = bool( t[1] )
+                except ValueError:
+                    print("Input for 'CPA' must be a boolean. (True or False)")
+                    exit()
 
         else:
             print( f"Error: Input is wrong at line {count+1}: {line}" )
@@ -140,12 +170,17 @@ def read():
         print( "\tCHARGE =", DYN_PROPERTIES["CHARGE"] )
         print( "\tMULTIPLICITY =", DYN_PROPERTIES["MULTIPLICITY"] )
         print( "\tMEMORY =", DYN_PROPERTIES["MEMORY"], "(GB)" )
+        print( "\tPARALLEL_FORCES =", DYN_PROPERTIES["PARALLEL_FORCES"] )
+        print( "\tNAMD_METHOD =", DYN_PROPERTIES["NAMD_METHOD"] )
+        print( "\tEL_PROP =", DYN_PROPERTIES["EL_PROP"] )
     except KeyError:
         print("Input file is missing mandatory entries. Check it.")
+        exit()
 
     assert( DYN_PROPERTIES["ISTATE"] <= DYN_PROPERTIES["NStates"]-1 ), "ISTATE must be less than the total number of states."
 
 
+    print("Input looks good.")
     return DYN_PROPERTIES
 
 
@@ -220,5 +255,22 @@ def initialize_MD_variables(DYN_PROPERTIES):
     DYN_PROPERTIES["dtE"] = DYN_PROPERTIES["dtI"] / DYN_PROPERTIES["ESTEPS"]
 
     DYN_PROPERTIES["Atom_velocs_new"] = get_initial_velocs(DYN_PROPERTIES)
+
+
+    try:
+        tmp = DYN_PROPERTIES["RUN_ELEC_STRUC"]
+    except KeyError:
+        DYN_PROPERTIES["RUN_ELEC_STRUC"] = "use_current_node".upper()
+
+    try:
+        tmp = DYN_PROPERTIES["EL_PROP"]
+    except KeyError:
+        DYN_PROPERTIES["EL_PROP"] = "VV"
+
+    try:
+        tmp = DYN_PROPERTIES["CPA"]
+    except KeyError:
+        DYN_PROPERTIES["CPA"] = False # Default is not to do classical path approximation
+
 
     return DYN_PROPERTIES

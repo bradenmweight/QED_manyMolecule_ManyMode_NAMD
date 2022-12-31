@@ -1,8 +1,14 @@
 import numpy as np
 
-def get_density_matrix( DYN_PROPERTIES ):
+import Eh
 
-    return np.outer( np.conjugate(DYN_PROPERTIES["MAPPING_VARS"]), DYN_PROPERTIES["MAPPING_VARS"] ) #- DYN_PROPERTIES["ZPE"] * np.identity(DYN_PROPERTIES["NStates"])
+def get_density_matrix( DYN_PROPERTIES ):
+    if ( DYN_PROPERTIES["NAMD_METHOD"] == "EH" ):
+        return Eh.get_density_matrix(DYN_PROPERTIES)
+    else:
+        print("NAMD_METHOD not recognized. Quitting.")
+        exit()
+
 
 def compute_KE(DYN_PROPERTIES):
     KE = 0.0

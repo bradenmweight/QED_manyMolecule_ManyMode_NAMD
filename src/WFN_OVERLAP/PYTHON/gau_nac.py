@@ -267,9 +267,15 @@ class gau_nac:
         S_Ortho = U @ V.T
         """
         OVERLAP = self.DYN_PROPERTIES["OVERLAP_NEW"]
-        U, vals, V = svd(OVERLAP)
+        U, vals, VT = svd(OVERLAP)
 
-        return U @ V
+        S_Ortho = U @ VT
+
+        print("Check orthogonalization. S.T @ S.")
+        print("Saving to ortho_check.dat")
+        np.savetxt("ortho_check.dat", S_Ortho.T @ S_Ortho, fmt="%1.8f" )
+
+        return S_Ortho
 
 
     def calc_NAC(self):

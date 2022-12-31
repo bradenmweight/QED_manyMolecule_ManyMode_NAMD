@@ -51,8 +51,8 @@ def main(DYN_PROPERTIES):
     DIAG_GRADIENTS = np.zeros(( NStates, NAtoms, 3)) # Diagonal gradients
     read_Gradients(DIAG_GRADIENTS,DYN_PROPERTIES)
 
-    for state in range( NStates ):
-        np.savetxt(f"DIAG_GRADIENT_S{state}.dat", DIAG_GRADIENTS[state,:,:], header=f"Diagonal Gradients (S{state}) (NAtoms x 3)", fmt="%2.8f" )
+    #for state in range( NStates ):
+    #    np.savetxt(f"DIAG_GRADIENT_S{state}.dat", DIAG_GRADIENTS[state,:,:], header=f"Diagonal Gradients (S{state}) (NAtoms x 3)", fmt="%2.8f" )
 
     DYN_PROPERTIES["DIAG_GRADIENTS"] = DIAG_GRADIENTS
 

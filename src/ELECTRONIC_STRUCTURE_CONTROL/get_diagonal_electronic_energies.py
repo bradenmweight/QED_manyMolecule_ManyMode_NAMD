@@ -7,7 +7,7 @@ def read_Energies(DIAG_ENERGIES,NStates):
     if ( NStates == 1 ):
         os.chdir("GS_NEW/")
         DIAG_ENERGIES = float( sp.check_output( "grep 'SCF Done' geometry.out | tail -n 1" ,shell=True).split()[4] )
-        np.savetxt(f"../DIAG_ENERGIES.dat", np.array([DIAG_ENERGIES]), header=f"Diagonal Energies (a.u.)", fmt="%2.8f" )
+        #np.savetxt(f"../DIAG_ENERGIES.dat", np.array([DIAG_ENERGIES]), header=f"Diagonal Energies (a.u.)", fmt="%2.8f" )
 
     else:
         os.chdir("TD_NEW_S1/")
@@ -19,7 +19,7 @@ def read_Energies(DIAG_ENERGIES,NStates):
             if ( count+1 >= NStates ):
                 break
             DIAG_ENERGIES[count+1] = float( line.split()[4] )/27.2114 + DIAG_ENERGIES[0]
-        np.savetxt(f"../DIAG_ENERGIES.dat", DIAG_ENERGIES, header=f"Diagonal Energies (a.u.)", fmt="%2.8f" )
+        #np.savetxt(f"../DIAG_ENERGIES.dat", DIAG_ENERGIES, header=f"Diagonal Energies (a.u.)", fmt="%2.8f" )
     
     os.chdir("../")
 

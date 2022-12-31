@@ -1,12 +1,14 @@
 import numpy as np
 import sys
 import subprocess as sp
+from time import time
 
 import read_input
-import Eh
 import nuclear_propagation
 import output
 import rotation
+
+import Eh # Add other NAMD methods here
 
 sys.path.append("/scratch/bweight/software/many_molecule_many_mode_NAMD/src/ELECTRONIC_STRUCTURE_CONTROL/")
 sys.path.append("/scratch/bweight/software/many_molecule_many_mode_NAMD/src/WFN_OVERLAP/PYTHON/")
@@ -22,6 +24,14 @@ import G16_TD
 #   dynamics will be handled elsewhere
 
 
+def propagage_Mapping(DYN_PROPERTIES):
+    """
+    Wrapper for electronic propagation
+    """
+    if ( DYN_PROPERTIES["NAMD_METHOD"] == "EH" ):
+        Eh.propagage_Mapping(DYN_PROPERTIES)
+
+
 def main( ):
     DYN_PROPERTIES = read_input.read()
     DYN_PROPERTIES = read_input.initialize_MD_variables(DYN_PROPERTIES)
@@ -32,9 +42,6 @@ def main( ):
     # Perform first electronic structure calculation
         # Get diagonal energies and gradients
     DYN_PROPERTIES = G16_TD.main(DYN_PROPERTIES)
-
-    print("R(Li-H) =", 0.529 * np.linalg.norm(DYN_PROPERTIES["Atom_coords_new"][0,:] - DYN_PROPERTIES["Atom_coords_new"][1,:]) )
-
     output.save_data(DYN_PROPERTIES)
 
     # Start main MD loop
@@ -43,19 +50,20 @@ def main( ):
 
         # Propagate nuclear coordinates
         DYN_PROPERTIES = nuclear_propagation.Nuclear_X_Step(DYN_PROPERTIES)
-        print("R(Li-H) =", 0.529 * np.linalg.norm(DYN_PROPERTIES["Atom_coords_new"][0,:] - DYN_PROPERTIES["Atom_coords_new"][1,:]) )
-        #print("F(Li-H) =", DYN_PROPERTIES["FORCE_NEW"][1,:] - DYN_PROPERTIES["FORCE_NEW"][1,:] )
-
 
         # Perform jth electronic structure calculation
             # Get diagonal energies and grad
             # Get overlap and NACT
         DYN_PROPERTIES["MD_STEP"] += 1 # This needs to be exactly here for technical reasons.
+        T0 = time()
         DYN_PROPERTIES = G16_TD.main(DYN_PROPERTIES)
+        print( "Total QM took %2.2f s." % (time() - T0) )
 
         if ( DYN_PROPERTIES["NStates"] >= 2 ):
             # Propagate electronic DOFs (Interpolated Hamiltonian)
+            T0 = time()
             DYN_PROPERTIES = Eh.propagage_Mapping(DYN_PROPERTIES)
+            print( "Electronic propagation took %2.2f s." % (time() - T0) )
 
             # Rotate electronic DOFs from t0 basis to t1 basis
             DYN_PROPERTIES = Eh.rotate_Mapping(DYN_PROPERTIES)

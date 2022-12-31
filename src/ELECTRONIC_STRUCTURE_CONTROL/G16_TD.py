@@ -2,6 +2,7 @@ import numpy as np
 import subprocess as sp
 import os, sys
 import time
+import multiprocessing as mp
 
 import get_cartesian_gradients
 import get_diagonal_electronic_energies
@@ -62,7 +63,8 @@ def generate_inputs(DYN_PROPERTIES):
 
     def write_header(file01,MEM,NCPUS):
         file01.write(f"%chk=geometry.chk\n")
-        file01.write(f"%nprocshared={NCPUS}\n")
+        #file01.write(f"%nprocshared={NCPUS}\n")
+        file01.write(f"%nprocshared=1\n")
         file01.write(f"%mem={MEM}GB\n\n")
 
     def write_geom(file01, Atom_labels, Atom_coords_new, MD_STEP, CHARGE, MULTIPLICITY, method=[None,None]):
@@ -124,55 +126,70 @@ def generate_inputs(DYN_PROPERTIES):
         os.chdir("../")
 
 
+def submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP, directory=None):
+    if ( RUN_ELEC_STRUC == "SUBMIT_SBATCH" ):
+        sp.call(f"cp {SBATCH_G16} .", shell=True)
+        sp.call(f"sbatch {SBATCH_G16.split('/')[-1]}", shell=True)
+        t0 = time.time()
+        sleep_time = 0
+        sleep_limit = 60 * 20 # 20 minutes, if electronic structure takes longer, we should not do NAMD
+        sleep_check = 1 # Check gaussian output every {} seconds
+        while ( True ):
+            time.sleep(sleep_check)
+            sleep_time += sleep_check # Add 5 seconds to sleep timer
+            if ( sleep_limit > sleep_limit ):
+                print(f"\tWARNING! Gaussian did not finish normally in the following directory:\n{os.getcwd()}", )
+                exit()
+            try:
+                check1 = open("geometry.out","r").readlines()[-1]
+                check2 = open("geometry.out","r").readlines()[-4]
+            except (FileNotFoundError, IndexError) as errors:
+                continue
+            if ( check1.split()[:4] == "Normal termination of Gaussian".split() ):
+                print("\tGaussian terminated normally in %2.2f s. (%s)" % (time.time() - t0, os.getcwd().split("/")[-1]) )
+                sp.call(f"formchk geometry.chk > /dev/null 2>&1", shell=True) # For dipole matrix calculations
+                break
+            elif ( check2.split()[:2] == "Error termination".split() ):
+                print("\tGaussian crashed after %2.2f s. (%s)" % (time.time() - t0, os.getcwd().split("/")[-1]) )
+                error = open("geometry.out","r").readlines()[-5] # Is this where all errors can be found ?
+                print("Looking for possible error:\n", error)
+
+
+    elif( RUN_ELEC_STRUC == "USE_CURRENT_NODE" ):
+        t0 = time.time()
+        sp.call(f"g16 < geometry.com > geometry.out", shell=True, stdout=True)
+        check = open("geometry.out","r").readlines()[-1]
+        if ( check.split()[:4] == "Normal termination of Gaussian".split() ):
+            print("\tGaussian terminated normally in %2.2f s. (%s)" % (time.time() - t0, os.getcwd().split("/")[-1]) )
+            sp.call(f"formchk geometry.chk > /dev/null 2>&1", shell=True) # For dipole matrix calculations
+        else:
+            print(f"\tWARNING! Gaussian did not finish normally in the following directory:\n{os.getcwd()}", )
+    elif ( RUN_ELEC_STRUC == "TEST" ):
+        # This is a test. Do nothing 
+        print(f"Testing. I will not submit/run electronic structure calculations for step {MD_STEP}.")
+    else:
+        print(f"Error: 'RUN_ELEC_STRUC' was set to '{RUN_ELEC_STRUC}'. Not sure what to do.")
+
+
+def run_ES_FORCE_parallel( inputs ):
+    state, RUN_ELEC_STRUC, SBATCH_G16, MD_STEP = inputs
+    print(f"Starting forces for state {state}")
+    #for state in range( 2, NStates ):
+    os.chdir(f"TD_NEW_S{state}/")
+    submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP)
+    os.chdir("../")
+
+def run_ES_FORCE_serial( RUN_ELEC_STRUC, SBATCH_G16, MD_STEP ):
+    for state in range( 2, NStates ):
+        os.chdir(f"TD_NEW_S{state}/")
+        submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP)
+        os.chdir("../")
 
 def submit_jobs(DYN_PROPERTIES):
     NStates         = DYN_PROPERTIES["NStates"]
     RUN_ELEC_STRUC  = DYN_PROPERTIES["RUN_ELEC_STRUC"]
     SBATCH_G16      = DYN_PROPERTIES["SBATCH_G16"]
     MD_STEP      = DYN_PROPERTIES["MD_STEP"]
-
-    def submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP):
-        if ( RUN_ELEC_STRUC == "SUBMIT_SBATCH" ):
-            sp.call(f"cp {SBATCH_G16} .", shell=True)
-            sp.call(f"sbatch {SBATCH_G16.split('/')[-1]}", shell=True)
-            t0 = time.time()
-            sleep_time = 0
-            sleep_limit = 60 * 20 # 20 minutes, if electronic structure takes longer, we should not do NAMD
-            sleep_check = 1 # Check gaussian output every {} seconds
-            while ( True ):
-                time.sleep(sleep_check)
-                sleep_time += sleep_check # Add 5 seconds to sleep timer
-                if ( sleep_limit > sleep_limit ):
-                    print(f"\tWARNING! Gaussian did not finish normally in the following directory:\n{os.getcwd()}", )
-                    exit()
-                try:
-                    check1 = open("geometry.out","r").readlines()[-1]
-                    check2 = open("geometry.out","r").readlines()[-4]
-                except (FileNotFoundError, IndexError) as errors:
-                    continue
-                if ( check1.split()[:4] == "Normal termination of Gaussian".split() ):
-                    print("\tGaussian terminated normally in %2.2f s. (%s)" % (time.time() - t0, os.getcwd().split("/")[-1]) )
-                    sp.call(f"formchk geometry.chk > /dev/null 2>&1", shell=True) # For dipole matrix calculations
-                    break
-                elif ( check2.split()[:2] == "Error termination".split() ):
-                    print("\tGaussian crashed after %2.2f s. (%s)" % (time.time() - t0, os.getcwd().split("/")[-1]) )
-                    error = open("geometry.out","r").readlines()[-5] # Is this where all errors can be found ?
-                    print("Looking for possible error:\n", error)
-
-
-        elif( RUN_ELEC_STRUC == "USE_CURRENT_NODE" ):
-            t0 = time.time()
-            sp.call(f"g16 < geometry.com > geometry.out", shell=True, stdout=True)
-            check = open("geometry.out","r").readlines()[-1]
-            if ( check.split()[:4] == "Normal termination of Gaussian".split() ):
-                print("\tGaussian terminated normally in %2.2f s. (%s)" % (time.time() - t0, os.getcwd().split("/")[-1]) )
-                sp.call(f"formchk geometry.chk > /dev/null 2>&1", shell=True) # For dipole matrix calculations
-            else:
-                print(f"\tWARNING! Gaussian did not finish normally in the following directory:\n{os.getcwd()}", )
-        else:
-            # This is a test. Do nothing 
-            print(f"Testing. I will not submit/run electronic structure calculations for step {MD_STEP}.")
-
 
     print(f"Submitting electronic structure for step {MD_STEP}.")
 
@@ -187,12 +204,17 @@ def submit_jobs(DYN_PROPERTIES):
         os.chdir("../")
 
     ### ADD PARALLELIZATION HERE FOR COMPUTING ALL THE EXCITED STATE FORCES IF NSTATES >= 3 ###
-
     if ( NStates >= 3 ):
-        for state in range( 2, NStates ):
-            os.chdir(f"TD_NEW_S{state}/")
-            submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP)
-            os.chdir("../")
+        if ( DYN_PROPERTIES["PARALLEL_FORCES"] == True ):
+            state_List = [] 
+            for state in range( 2, NStates ): # Skip force for final excited state. We don't include in NAMD.
+                state_List.append([ state, RUN_ELEC_STRUC, SBATCH_G16, MD_STEP ])
+            with mp.Pool(processes=DYN_PROPERTIES["NCPUS"]) as pool:
+                pool.map(run_ES_FORCE_parallel,state_List)
+        else:
+            run_ES_FORCE_serial( RUN_ELEC_STRUC, SBATCH_G16, MD_STEP )
+
+
 
     if ( MD_STEP >= 1 and NStates >= 2 ):
         os.chdir("DIMER/")
