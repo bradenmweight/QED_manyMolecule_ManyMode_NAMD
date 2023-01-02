@@ -256,6 +256,7 @@ def initialize_MD_variables(DYN_PROPERTIES):
 
     DYN_PROPERTIES["Atom_velocs_new"] = get_initial_velocs(DYN_PROPERTIES)
 
+    
 
     try:
         tmp = DYN_PROPERTIES["RUN_ELEC_STRUC"]
@@ -268,9 +269,22 @@ def initialize_MD_variables(DYN_PROPERTIES):
         DYN_PROPERTIES["EL_PROP"] = "VV"
 
     try:
+        tmp = DYN_PROPERTIES["REMOVE_COM_MOTION"]
+    except KeyError:
+        DYN_PROPERTIES["REMOVE_COM_MOTION"] = True # Default is to remove COM motion
+
+    try:
+        tmp = DYN_PROPERTIES["REMOVE_ANGULAR_VELOCITY"]
+    except KeyError:
+        DYN_PROPERTIES["REMOVE_ANGULAR_VELOCITY"] = True # Default is to remove angular velocity
+
+    """
+    CPA IS NOT YET IMPLEMENTED. DP NOT USE
+    """
+    try:
         tmp = DYN_PROPERTIES["CPA"]
     except KeyError:
         DYN_PROPERTIES["CPA"] = False # Default is not to do classical path approximation
-
+    assert( DYN_PROPERTIES["CPA"] == False ), "CPA is not yet implemented. Do not use."
 
     return DYN_PROPERTIES

@@ -70,12 +70,12 @@ def main( ):
 
         # Propagate nuclear momenta
         DYN_PROPERTIES = nuclear_propagation.Nuclear_V_Step(DYN_PROPERTIES)
-        
-        """
-        # NOT TESTED YET
-        DYN_PROPERTIES = rotation.shift_COM(DYN_PROPERTIES)
-        DYN_PROPERTIES = rotation.remove_rotations(DYN_PROPERTIES)
-        """
+
+        # Remove COM motion and angular velocity
+        if ( DYN_PROPERTIES["REMOVE_COM_MOTION"] == True ):
+            DYN_PROPERTIES = rotation.shift_COM(DYN_PROPERTIES)
+        if ( DYN_PROPERTIES["REMOVE_ANGULAR_VELOCITY"] == True ):
+            DYN_PROPERTIES = rotation.remove_rotations(DYN_PROPERTIES)
 
         output.save_data(DYN_PROPERTIES)
 

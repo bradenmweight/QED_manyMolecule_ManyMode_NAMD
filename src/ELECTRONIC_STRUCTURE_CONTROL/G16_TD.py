@@ -278,8 +278,8 @@ def main(DYN_PROPERTIES):
     DYN_PROPERTIES = get_diagonal_electronic_energies.main(DYN_PROPERTIES)
     if ( MD_STEP >= 1 ):
         if ( NStates >= 2 ):
-            DYN_PROPERTIES = G16_NAC.main(DYN_PROPERTIES)
-            DYN_PROPERTIES = get_approx_NACR(DYN_PROPERTIES)
+            DYN_PROPERTIES = G16_NAC.main(DYN_PROPERTIES) # Provides NACT and OVERLAP
+            DYN_PROPERTIES = get_approx_NACR(DYN_PROPERTIES) # Provides NACR from NACT and OVERLAP
         else:
             DYN_PROPERTIES["OVERLAP_OLD"] = 0
             DYN_PROPERTIES["OVERLAP_NEW"] = 0

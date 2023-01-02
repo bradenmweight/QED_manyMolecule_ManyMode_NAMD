@@ -79,7 +79,7 @@
             ( i_occ_b  .eq.  0 ) &
           ) then
 
-               write (*,*) "Overlap between two closed configurations"         
+!               write (*,*) "Overlap between two closed configurations"         
 !        Alpha part
                total_matrix (:,:) = 0.d0
                temp_matrix (:,:) = 0.d0

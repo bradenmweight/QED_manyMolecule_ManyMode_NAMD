@@ -63,10 +63,15 @@ def get_Force(DYN_PROPERTIES):
     for j in range( NStates ):
         for k in range( j, NStates ):
             if ( j == k ):
-                F[:,:] -= 0.5 * dEad[j,:,:] * rho[j,j]
+                """
+                TEST
+                """
+                #F[:,:] -= 0.5 * dEad[j,:,:] * rho[j,j] # Maybe this is half the force
+                F[:,:] -= dEad[j,:,:] * rho[j,j]
             else:
                 Ejk = Ead[j] - Ead[k]
-                F[:,:] -= 2 * 0.5 * rho[j,k] * NACR[j,k,:,:] * Ejk  # Double count upper triangle
+                #F[:,:] -= 2 * 0.5 * rho[j,k] * NACR[j,k,:,:] * Ejk  # Double count upper triangle
+                F[:,:] -= 2 * rho[j,k] * NACR[j,k,:,:] * Ejk  # Double count upper triangle
 
 
     # FOR DEBUGGING CALCULATIONS, RHO = [1/2], equal super-position of ground and excited
@@ -84,25 +89,24 @@ def get_Force(DYN_PROPERTIES):
     #print( NACR[0,1,:,:] * (Ead[0] - Ead[1]) )
     return F
 
-
 def rotate_t0_to_t1(S, A): # Recall, we perform TD-DFT with one additional state. Already removed from overlap.
     if ( len(A.shape) == 1 ):
-        #return S.T @ A
-        return S @ A
+        return S.T @ A
+        #return S @ A
     elif( len(A.shape) == 2 ):
-        #return S.T @ A @ S
-        return S @ A @ S.T
+        return S.T @ A @ S
+        #return S @ A @ S.T
     else:
         print("Shape of rotating object not correct." )
         print(f"Needs to be either 1D or 2D numo array. Received {len(A.shape)}D array.")
 
 def rotate_t1_to_t0(S, A): # Recall, we perform TD-DFT with one additional state. Already removed from overlap.
     if ( len(A.shape) == 1 ):
-        #return S @ A
-        return S.T @ A
+        return S @ A
+        #return S.T @ A
     elif( len(A.shape) == 2 ):
-        #return S @ A @ S.T
-        return S.T @ A @ S
+        return S @ A @ S.T
+        #return S.T @ A @ S
     else:
         print("Shape of rotating object not correct." )
         print(f"Needs to be either 1D or 2D numo array. Received {len(A.shape)}D array.")
@@ -123,30 +127,26 @@ def propagage_Mapping(DYN_PROPERTIES):
     #### t0 Ham ####
     # ADD NACT = dR/dt.NACR TO OFF-DIAGONALS
     if ( DYN_PROPERTIES["MD_STEP"] >= 2 ): 
-        NACR_OLD = DYN_PROPERTIES["NACR_APPROX_OLD"]
+        NACR_OLD  = DYN_PROPERTIES["NACR_APPROX_OLD"]
         VELOC_OLD = DYN_PROPERTIES["Atom_velocs_old"]
-    Ead_old   = DYN_PROPERTIES["DIAG_ENERGIES_OLD"]
-    E_GS_t0   = Ead_old[0] * 1.0
-    for j in range(NStates):
-        for k in range(NStates):
-            if ( j == k ):
-                Hamt0[j,j] = Ead_old[j] - E_GS_t0
-            #else:
-            #    if ( DYN_PROPERTIES["MD_STEP"] >= 2 ):
-            #        Ejk = Ead_old[j] - Ead_old[k]
-            #        Hamt0[j,k] = np.einsum("ad,ad->",NACR_OLD[j,k,:,:], VELOC_OLD[:,:] ) * Ejk
+    Ead_old    = DYN_PROPERTIES["DIAG_ENERGIES_OLD"]
+    E_GS_t0    = Ead_old[0] * 1.0
+    Hamt0[:,:] = np.diag(Ead_old) 
+    Hamt0     -= np.identity(NStates) * E_GS_t0
+    #for j in range(NStates):
+    #    for k in range(NStates):
+    #        if ( j == k ):
+    #            Hamt0[j,j] = Ead_old[j] - E_GS_t0
 
     #### t1 Ham in t0 basis ####
-    NACR_NEW  = DYN_PROPERTIES["NACR_APPROX_NEW"]
-    VELOC_NEW = DYN_PROPERTIES["Atom_velocs_new"]
-    Ead_new   = DYN_PROPERTIES["DIAG_ENERGIES_NEW"]
-    for j in range(NStates):
-        for k in range(NStates):
-            if ( j == k ):
-                Hamt1[j,j] = Ead_new[j] #- E_GS_t0 # Is it okay to subtract this here ? Identity will also rotate, no ? Maybe bad.
-            #else:
-            #    Ejk = Ead_new[j] - Ead_new[k]
-            #    Hamt1[j,k] = np.einsum("ad,ad->",NACR_NEW[j,k,:,:], VELOC_NEW[:,:] ) * Ejk
+    NACR_NEW   = DYN_PROPERTIES["NACR_APPROX_NEW"]
+    VELOC_NEW  = DYN_PROPERTIES["Atom_velocs_new"]
+    Ead_new    = DYN_PROPERTIES["DIAG_ENERGIES_NEW"]
+    Hamt1[:,:] = np.diag(Ead_new) #- np.identity(NStates) * E_GS_t0 # Is it okay to subtract this here ? Identity will also rotate, no ? Maybe bad.
+    #for j in range(NStates):
+    #    for k in range(NStates):
+    #        if ( j == k ):
+    #            Hamt1[j,j] = Ead_new[j] #- E_GS_t0 # Is it okay to subtract this here ? Identity will also rotate, no ? Maybe bad.
         
     # TODO Check the direction of this rotation
     Hamt1 = rotate_t1_to_t0( DYN_PROPERTIES["OVERLAP_NEW"] , Hamt1 ) # Rotate to t0 basis
@@ -162,6 +162,10 @@ def propagage_Mapping(DYN_PROPERTIES):
         """
 
         for step in range( ESTEPS ):
+            """
+            ARK: Do we need linear interpolation ? 
+            # If we ignore it, we can analytically evolve the MVs in the diagonal basis.
+            """
 
             # Linear interpolation betwen t0 and t1
             H = Hamt0 + (step)/(ESTEPS) * ( Hamt1 - Hamt0 )
@@ -213,7 +217,7 @@ def rotate_Mapping(DYN_PROPERTIES):
 
     DYN_PROPERTIES["MAPPING_VARS"] = z
     
-    DYN_PROPERTIES = normalize_Mapping(DYN_PROPERTIES)
+    DYN_PROPERTIES = check_Mapping_Normalization(DYN_PROPERTIES)
 
     return DYN_PROPERTIES
 
@@ -221,8 +225,7 @@ def get_density_matrix( DYN_PROPERTIES ):
     z = DYN_PROPERTIES["MAPPING_VARS"]
     return 0.500000 * np.outer( np.conjugate(z), z )
 
-
-def normalize_Mapping(DYN_PROPERTIES): # Be careful with this. Ehrenfest it is okay I guess.
+def check_Mapping_Normalization(DYN_PROPERTIES):
     z = DYN_PROPERTIES["MAPPING_VARS"]
     POP = np.real(properties.get_density_matrix( DYN_PROPERTIES )[np.diag_indices(DYN_PROPERTIES["NStates"])])
     norm = np.sum( POP )
