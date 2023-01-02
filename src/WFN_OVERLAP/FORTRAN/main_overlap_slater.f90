@@ -139,6 +139,7 @@
         read (*,*) n_ele_beta
         read (*,*) 
         read (*,*) n_state
+        read (*,*) n_csf
         read (*,*) 
         read (*,*) type_input
         read (*,*) filename_input1
@@ -158,7 +159,7 @@
         n_ele_half = n_ele/ 2
         n_mo = n_ao
         
-        n_csf =20
+        !n_csf =18 
 
         allocate (s_ao_overlap       (n_ao, n_ao))
         allocate (s1_ao_to_mo_alpha  (n_ao, n_ao))
@@ -189,33 +190,33 @@
         ci_2(:,:,:)              = 0.d0
 
         
-        write (*,*) "---------------------------------------"
-        write (*,*) "INPUT INFORMATION:" 
-        write (*,*) "The number of atoms are:", n_atom
-        write (*,*) "The number of atomic orbitals are:", n_ao
-        write (*,*) "The number of alpha electrons are:", n_ele_alpha
-        write (*,*) "The number of beta electrons are:",  n_ele_beta
-        write (*,*) "---------------------------------------"
-        write (*,*) "Check the input file format: "
-        write (*,*) "1: Default"
-        write (*,*) "Input format:", type_input
-        write (*,*) "Input file are:"
-        write (*,*) filename_input1, filename_input2, filename_input3 
-        write (*,*) "---------------------------------------"
-        write (*,*) "Onput file is:", filename_output
-        write (*,*) "Check the The level of screen output: "
-        write (*,*) "1: Normal"
-        write (*,*) "2: Debug"
-        write (*,*)  "The level of screen output is:", output_level
+        !write (*,*) "---------------------------------------"
+        !write (*,*) "INPUT INFORMATION:" 
+        !write (*,*) "The number of atoms are:", n_atom
+        !write (*,*) "The number of atomic orbitals are:", n_ao
+        !write (*,*) "The number of alpha electrons are:", n_ele_alpha
+        !write (*,*) "The number of beta electrons are:",  n_ele_beta
+        !write (*,*) "---------------------------------------"
+        !write (*,*) "Check the input file format: "
+        !write (*,*) "1: Default"
+        !write (*,*) "Input format:", type_input
+        !write (*,*) "Input file are:"
+        !write (*,*) filename_input1, filename_input2, filename_input3 
+        !write (*,*) "---------------------------------------"
+        !write (*,*) "Onput file is:", filename_output
+        !write (*,*) "Check the The level of screen output: "
+        !write (*,*) "1: Normal"
+        !write (*,*) "2: Debug"
+        !write (*,*)  "The level of screen output is:", output_level
   
 
 !!!  Read all fock matrix and overlap matrix            
-        write (*,*) "---------------------------------------"
-        write (*,*) 
-        write (*,*)
-        write (*,*) "---------------------------------------"
-        write (*,*) "Read CI vectors and MOs of two geometries!"
-        write (*,*) "Read AO overlap between two geometries!"
+        !write (*,*) "---------------------------------------"
+        !write (*,*) 
+        !write (*,*)
+        !write (*,*) "---------------------------------------"
+        !write (*,*) "Read CI vectors and MOs of two geometries!"
+        !write (*,*) "Read AO overlap between two geometries!"
 
  
         call sub_read_all (        n_ao, &
@@ -238,16 +239,16 @@
 
 
 
-        write (*,*) "Finish to read CI vectors and MOs!"
-        write (*,*) "Finish to read AO overlap between two geometries!"
-        write (*,*) "---------------------------------------"
-        write (*,*)
-        write (*,*)
+        !write (*,*) "Finish to read CI vectors and MOs!"
+        !write (*,*) "Finish to read AO overlap between two geometries!"
+        !write (*,*) "---------------------------------------"
+        !write (*,*)
+        !write (*,*)
   
         if (output_level .ge. 1 )  then
-             write (*,*)  "Print CI vectors of Geom 1"
+             !write (*,*)  "Print CI vectors of Geom 1"
              do i=1, n_state
-                write (*,*)  "State, ", i
+                !write (*,*)  "State, ", i
                 do j= 1, n_csf
                   if (ci_1(i,j,1)  .ne. 0) then
                       write (*,9999)     ci_1(i,j,1), &
@@ -262,27 +263,27 @@
 
 !  Print the CI vectors and MOs in debug option
         if (output_level .eq. 2 )  then
-            write (*,*)  "--------------------"
-            write (*,*)  "MOs for Geom 1"
-            write (*,*)  "Alpha Spin" 
+            !write (*,*)  "--------------------"
+            !write (*,*)  "MOs for Geom 1"
+            !write (*,*)  "Alpha Spin" 
             do i=1, n_ao
                do j=1, n_ao
-                  write (*,*) i, j, s1_ao_to_mo_alpha(i,j)
+                  !write (*,*) i, j, s1_ao_to_mo_alpha(i,j)
                enddo
             enddo
-            write (*,*)  "Beta Spin"    
+            !write (*,*)  "Beta Spin"    
             do i=1, n_ao
                do j=1, n_ao
-                  write (*,*) i, j, s1_ao_to_mo_beta(i,j)
+                  !write (*,*) i, j, s1_ao_to_mo_beta(i,j)
                enddo
             enddo
         endif
 
 
         if (output_level .ge. 1 )  then  
-             write (*,*)  "Print CI vectors of Geom 2"
+             !write (*,*)  "Print CI vectors of Geom 2"
              do i=1, n_state
-                write (*,*)  "State, ", i
+                !write (*,*)  "State, ", i
                 do j= 1, n_csf
                    if (ci_2(i,j,1)  .ne. 0) then
                      write (*,9999)      ci_2(i,j,1), &
@@ -295,28 +296,28 @@
 
  
         if (output_level .eq. 2 )  then    
-            write (*,*)  "--------------------"
-            write (*,*)  "MO2 for Geom 2" 
-            write (*,*)  "Alpha Spin"
+            !write (*,*)  "--------------------"
+            !write (*,*)  "MO2 for Geom 2" 
+            !write (*,*)  "Alpha Spin"
             do i=1, n_ao
                do j=1, n_ao
-                  write (*,*) i, j, s2_ao_to_mo_alpha(i,j)
+                  !write (*,*) i, j, s2_ao_to_mo_alpha(i,j)
                enddo
             enddo
-            write (*,*)  "Beta Spin" 
+            !write (*,*)  "Beta Spin" 
             do i=1, n_ao
                do j=1, n_ao
-                  write (*,*) i, j, s1_ao_to_mo_beta(i,j)
+                  !write (*,*) i, j, s1_ao_to_mo_beta(i,j)
                enddo
             enddo
-            write (*,*) "-------------------------------"
+            !write (*,*) "-------------------------------"
 !       stop
        endif 
 
 
 
-        write (*,*) "Begin to construct the overlap of orbitals!"    
-        write (*,*) "---------------------------------------"
+        !write (*,*) "Begin to construct the overlap of orbitals!"    
+        !write (*,*) "---------------------------------------"
         call  sub_orbital_overlap ( n_ao, &
                                     s1_ao_to_mo_alpha, &
                                     s2_ao_to_mo_alpha, &
@@ -330,15 +331,15 @@
 
 
 !        if (output_level .eq. 2 )  then
-!            write (*,*)  "--------------------"
-!            write (*,*)  "AO overlap between Geom1 and Geom 2"
-!            write (*,*)  "AO overlap does not count different spins"
+!            !write (*,*)  "--------------------"
+!            !write (*,*)  "AO overlap between Geom1 and Geom 2"
+!            !write (*,*)  "AO overlap does not count different spins"
 !            do i=1, n_ao
 !               do j=1, n_ao
-!                  write (*,*) i, j, s_ao_overlap(i,j)
+!                  !write (*,*) i, j, s_ao_overlap(i,j)
 !               enddo
 !            enddo
-!            write (*,*) "-------------------------------"
+!            !write (*,*) "-------------------------------"
 !       stop
 !       endif
 
@@ -356,8 +357,8 @@
 !       stop
 !       endif
 
-        write (*,*) "Finish to construct the the overlap of orbitals!"  
-        write (*,*) "---------------------------------------"
+        !write (*,*) "Finish to construct the the overlap of orbitals!"  
+        !write (*,*) "---------------------------------------"
 
 
 !!     Build the overlap of two electronic wavefunctions
@@ -394,6 +395,6 @@
 
               
 
-       write (*,*)  "Finish to compute the overlap between R and R+dR"
+       !write (*,*)  "Finish to compute the overlap between R and R+dR"
   
        end program main

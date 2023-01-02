@@ -57,10 +57,10 @@
        i_vir_b = int(ci_b_orb(3))
 
        
-!       write (*,*) "For R, Contribution for transition"
-!       write (*,*) i_occ_a, i_vir_a
-!       write (*,*) "For R+dR, Contribution for transition"
-!       write (*,*) i_occ_b, i_vir_b
+!       !write (*,*) "For R, Contribution for transition"
+!       !write (*,*) i_occ_a, i_vir_a
+!       !write (*,*) "For R+dR, Contribution for transition"
+!       !write (*,*) i_occ_b, i_vir_b
       
 
 !     -- Calculate the overlap of relavant configurations
@@ -79,7 +79,7 @@
             ( i_occ_b  .eq.  0 ) &
           ) then
 
-               write (*,*) "Overlap between two closed configurations"         
+!               write (*,*) "Overlap between two closed configurations"         
 !        Alpha part
                total_matrix (:,:) = 0.d0
                temp_matrix (:,:) = 0.d0
@@ -142,7 +142,7 @@
                 enddo
  
 
-!                write (*,*) "Compute the determinant"
+!                !write (*,*) "Compute the determinant"
                 call sub_determinant (total_matrix, n_ele, &
                                       s_det, output_level)
                 csf_overlap = s_det
@@ -163,7 +163,7 @@
             ( i_occ_b  .eq.  0 ) &
           ) then
  
-!                 write (*,*) "Overlap <close | single >"
+!                 !write (*,*) "Overlap <close | single >"
 
 !      Alpha part
                  total_matrix (:,:) = 0.d0
@@ -217,7 +217,7 @@
              ( i_occ_b  .ne.  0 ) &
            ) then
 
-!                  write (*,*) "Overlap <single | single >"
+!                  !write (*,*) "Overlap <single | single >"
 !      Alpha part of the first component
 !      For CSF 1 alpha electron remain on occupied orbitals
 !      For CSF 2 alpha electron remain on occupied orbitals
@@ -278,13 +278,13 @@
                        enddo
                   enddo
 
-                  if ( output_level .eq. 2 ) then 
-                       do i=1, n_ele
-                              write (*,*)  "MO_overlap", &
-                                      i, &
-                                      total_matrix (i,i)
-                       enddo
-                  endif
+                  !if ( output_level .eq. 2 ) then 
+                  !     do i=1, n_ele
+                  !           write (*,*)  "MO_overlap", &
+                  !                    i, &
+                  !                    total_matrix (i,i)
+                  !     enddo
+                  !endif
 
                   call sub_determinant (total_matrix, n_ele, &
                                         s_det, output_level)
@@ -341,13 +341,13 @@
           
 
        if (output_level  .eq.  2) then
-!           write (*,*) "CSF ovelap matrix"
+!           !write (*,*) "CSF ovelap matrix"
 !           do i=1,n_ele
 !              do j=1, n_ele
-!                 write (*,*) total_matrix(i,j)
+!                 !write (*,*) total_matrix(i,j)
 !              enddo
 !           enddo
-           write (*,*) "Deterimant of CSF ovelap matrix:", s_det
+           !write (*,*) "Deterimant of CSF ovelap matrix:", s_det
        endif
        
 

@@ -1,0 +1,5521 @@
+ Overlap between two closed configurations
+ Overlap between two closed configurations
+ Overlap between two closed configurations
+MANDATORY INPUT VARIABLES:
+	NStates = 2
+	NSteps = 1000
+	dtI = 0.25 (fs)
+	ESTEPS = 50
+	ISTATE = 1
+	FUNCTIONAL = BLYP
+	BASIS_SET = 3-21G
+	CHARGE = 0
+	MULTIPLICITY = 1
+	MEMORY = 5 (GB)
+	PARALLEL_FORCES = True
+	NAMD_METHOD = EH
+	EL_PROP = VV
+Input looks good.
+Submitting electronic structure for step 0.
+	Gaussian terminated normally in 9.34 s. (GS_NEW)
+	Gaussian terminated normally in 29.67 s. (TD_NEW_S1)
+Submitting electronic structure for step 1.
+	Gaussian terminated normally in 9.96 s. (GS_NEW)
+	Gaussian terminated normally in 31.78 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.03 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.99110378e-01  3.07924039e-06]
+ [-3.16008199e-06  9.99026955e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 1.00000000e+00  3.12256934e-06]
+ [-3.12256934e-06  1.00000000e+00]]
+NAC with Orthogonalized Overlap
+[[ 0.0000000e+00  3.0212809e-07]
+ [-3.0212809e-07  0.0000000e+00]]
+Total QM took 54.11 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-7.21524461e-01  1.38730866e+00  2.99261054e-03]
+ [ 2.93682917e-01 -3.60401340e-01  1.03405376e-02]
+ [-2.73807024e+00  1.39399857e+00  1.03474635e-02]
+ [ 5.54891300e-01  3.60829551e+00  2.99309828e-03]
+ [-4.45630182e-01  5.37068910e+00  1.03430866e-02]
+ [ 2.58613291e+00  3.61629719e+00  1.03266089e-02]]
+COM Shift:
+[-0.08226177  2.49885666  0.00404783]
+Shifted:
+[[-6.39262690e-01 -1.11154800e+00 -1.05521652e-03]
+ [ 3.75944689e-01 -2.85925800e+00  6.29271056e-03]
+ [-2.65580847e+00 -1.10485809e+00  6.29963647e-03]
+ [ 6.37153071e-01  1.10943885e+00 -1.05472878e-03]
+ [-3.63368411e-01  2.87183244e+00  6.29525952e-03]
+ [ 2.66839468e+00  1.11744053e+00  6.27878183e-03]]
+Submitting electronic structure for step 2.
+	Gaussian terminated normally in 10.27 s. (GS_NEW)
+	Gaussian terminated normally in 31.49 s. (TD_NEW_S1)
+	Gaussian terminated normally in 4.93 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.99119757e-01  4.90438945e-06]
+ [-6.70567233e-06  9.99049511e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 1.00000000e+00  5.81034949e-06]
+ [-5.81034949e-06  1.00000000e+00]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  5.62187609e-07]
+ [-5.62187609e-07  0.00000000e+00]]
+Total QM took 53.72 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-6.36120606e-01 -1.10834317e+00  1.93349656e-03]
+ [ 3.86420870e-01 -2.85278237e+00  1.66318137e-02]
+ [-2.64905387e+00 -1.09627765e+00  1.66838539e-02]
+ [ 6.40013295e-01  1.11222350e+00  1.93599849e-03]
+ [-3.53104744e-01  2.88597282e+00  1.66275947e-02]
+ [ 2.68207403e+00  1.12954564e+00  1.66555897e-02]]
+COM Shift:
+[0.00404833 0.00404742 0.00404783]
+Shifted:
+[[-6.40168939e-01 -1.11239060e+00 -2.11433050e-03]
+ [ 3.82372537e-01 -2.85682980e+00  1.25839866e-02]
+ [-2.65310220e+00 -1.10032508e+00  1.26360268e-02]
+ [ 6.35964962e-01  1.10817607e+00 -2.11182857e-03]
+ [-3.57153077e-01  2.88192539e+00  1.25797676e-02]
+ [ 2.67802570e+00  1.12549822e+00  1.26077627e-02]]
+Submitting electronic structure for step 3.
+	Gaussian terminated normally in 9.85 s. (GS_NEW)
+	Gaussian terminated normally in 33.06 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.35 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.99077963e-01  2.10476705e-05]
+ [-2.04225617e-05  9.99025272e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 1.00000000e+00  2.07547995e-05]
+ [-2.07547995e-05  1.00000000e+00]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  2.00815651e-06]
+ [-2.00815651e-06  0.00000000e+00]]
+Total QM took 55.35 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-6.36922924e-01 -1.10905143e+00  8.68156107e-04]
+ [ 3.92941771e-01 -2.85287537e+00  2.29314061e-02]
+ [-2.64880952e+00 -1.09290576e+00  2.30871946e-02]
+ [ 6.38751111e-01  1.11083398e+00  8.72851863e-04]
+ [-3.46852263e-01  2.89848158e+00  2.29197064e-02]
+ [ 2.69368066e+00  1.13877918e+00  2.30480861e-02]]
+COM Shift:
+[0.00404833 0.00404742 0.00404783]
+Shifted:
+[[-0.64097126 -1.11309885 -0.00317967]
+ [ 0.38889344 -2.85692279  0.01888358]
+ [-2.65285786 -1.09695319  0.01903937]
+ [ 0.63470278  1.10678656 -0.00317498]
+ [-0.3509006   2.89443415  0.01887188]
+ [ 2.68963233  1.13473176  0.01900026]]
+Submitting electronic structure for step 4.
+	Gaussian terminated normally in 9.13 s. (GS_NEW)
+	Gaussian terminated normally in 32.24 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.15 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.99026261e-01  1.79693514e-05]
+ [-2.54659349e-05  9.98966960e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 1.00000000e+00  2.17394563e-05]
+ [-2.17394563e-05  1.00000000e+00]]
+NAC with Orthogonalized Overlap
+[[ 0.0000000e+00  2.1034282e-06]
+ [-2.1034282e-06  0.0000000e+00]]
+Total QM took 54.32 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-6.37621613e-01 -1.10963709e+00 -2.06276264e-04]
+ [ 3.99524543e-01 -2.85538688e+00  2.92570940e-02]
+ [-2.65100205e+00 -1.09067885e+00  2.95752665e-02]
+ [ 6.37428511e-01  1.10933336e+00 -1.99074197e-04]
+ [-3.40475264e-01  2.91325375e+00  2.92365336e-02]
+ [ 2.70702235e+00  1.14917568e+00  2.95181801e-02]]
+COM Shift:
+[0.00404833 0.00404742 0.00404783]
+Shifted:
+[[-0.64166995 -1.11368451 -0.0042541 ]
+ [ 0.39547621 -2.8594343   0.02520927]
+ [-2.65505038 -1.09472627  0.02552744]
+ [ 0.63338018  1.10528594 -0.0042469 ]
+ [-0.3445236   2.90920633  0.02518871]
+ [ 2.70297402  1.14512826  0.02547035]]
+Submitting electronic structure for step 5.
+	Gaussian terminated normally in 9.31 s. (GS_NEW)
+	Gaussian terminated normally in 33.74 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.22 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.99075197e-01  2.57235267e-05]
+ [-2.13537870e-05  9.99010919e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 1.00000000e+00  2.35612035e-05]
+ [-2.35612035e-05  1.00000000e+00]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  2.27969362e-06]
+ [-2.27969362e-06  0.00000000e+00]]
+Total QM took 55.55 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-6.38220382e-01 -1.11011654e+00 -1.29238318e-03]
+ [ 4.06114048e-01 -2.86016893e+00  3.56254095e-02]
+ [-2.65554542e+00 -1.08957737e+00  3.61642690e-02]
+ [ 6.36060834e-01  1.10774202e+00 -1.28222931e-03]
+ [-3.33872280e-01  2.93009500e+00  3.55938318e-02]
+ [ 2.72182795e+00  1.16071442e+00  3.60773947e-02]]
+COM Shift:
+[0.00404833 0.00404742 0.00404782]
+Shifted:
+[[-0.64226871 -1.11416396 -0.00534021]
+ [ 0.40206572 -2.86421635  0.03157759]
+ [-2.65959375 -1.09362479  0.03211645]
+ [ 0.6320125   1.1036946  -0.00533005]
+ [-0.33792061  2.92604758  0.03154601]
+ [ 2.71777962  1.156667    0.03202957]]
+Submitting electronic structure for step 6.
+	Gaussian terminated normally in 9.59 s. (GS_NEW)
+	Gaussian terminated normally in 32.17 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.16 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.99077941e-01  3.91381822e-05]
+ [-3.25297986e-05  9.99034152e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999999e-01  3.58678479e-05]
+ [-3.58678479e-05  9.99999999e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  3.47043835e-06]
+ [-3.47043835e-06  0.00000000e+00]]
+Total QM took 54.07 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-6.38726231e-01 -1.11051019e+00 -2.39238483e-03]
+ [ 4.12634204e-01 -2.86703452e+00  4.20506952e-02]
+ [-2.66229632e+00 -1.08957884e+00  4.28687818e-02]
+ [ 6.34664667e-01  1.10608441e+00 -2.37873832e-03]
+ [-3.26932791e-01  2.94877613e+00  4.20051105e-02]
+ [ 2.73780544e+00  1.17336657e+00  4.27351157e-02]]
+COM Shift:
+[0.00404833 0.00404742 0.00404782]
+Shifted:
+[[-0.64277456 -1.1145576  -0.00644021]
+ [ 0.40858588 -2.87108194  0.03800287]
+ [-2.66634465 -1.09362625  0.03882096]
+ [ 0.63061634  1.10203699 -0.00642656]
+ [-0.33098112  2.94472871  0.03795729]
+ [ 2.73375711  1.16931916  0.0386873 ]]
+Submitting electronic structure for step 7.
+	Gaussian terminated normally in 9.69 s. (GS_NEW)
+	Gaussian terminated normally in 33.42 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.30 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.99016458e-01  2.48107423e-05]
+ [-2.28372138e-05  9.98982535e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 1.00000000e+00  2.38478379e-05]
+ [-2.38478379e-05  1.00000000e+00]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  2.30742729e-06]
+ [-2.30742729e-06  0.00000000e+00]]
+Total QM took 55.28 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.63914921 -1.11084164 -0.00350808]
+ [ 0.41899188 -2.87576497  0.04854482]
+ [-2.6710604  -1.09065812  0.04970133]
+ [ 0.63325741  1.10438829 -0.00349038]
+ [-0.31954232  2.96904096  0.04848142]
+ [ 2.75465126  1.18709524  0.0494986 ]]
+COM Shift:
+[0.00404832 0.00404741 0.00404781]
+Shifted:
+[[-0.64319753 -1.11488905 -0.0075559 ]
+ [ 0.41494356 -2.87981238  0.04449701]
+ [-2.67510872 -1.09470553  0.04565352]
+ [ 0.62920909  1.10034087 -0.0075382 ]
+ [-0.32359064  2.96499355  0.0444336 ]
+ [ 2.75060294  1.18304783  0.04545079]]
+Submitting electronic structure for step 8.
+	Gaussian terminated normally in 9.35 s. (GS_NEW)
+	Gaussian terminated normally in 32.49 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.23 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98972704e-01  4.50548043e-05]
+ [-3.31760198e-05  9.98954284e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999999e-01  3.91559974e-05]
+ [-3.91559974e-05  9.99999999e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  3.78858735e-06]
+ [-3.78858735e-06  0.00000000e+00]]
+Total QM took 54.05 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.639502   -1.11113693 -0.00464083]
+ [ 0.42508131 -2.88611772  0.05511712]
+ [-2.68160031 -1.09278749  0.05667203]
+ [ 0.63185691  1.10268383 -0.00461859]
+ [-0.31158718  2.99061448  0.05503134]
+ [ 2.77205892  1.20185574  0.05637304]]
+COM Shift:
+[0.00404831 0.0040474  0.00404781]
+Shifted:
+[[-0.64355031 -1.11518434 -0.00868864]
+ [ 0.42103299 -2.89016513  0.05106931]
+ [-2.68564862 -1.0968349   0.05262422]
+ [ 0.62780859  1.09863642 -0.0086664 ]
+ [-0.3156355   2.98656707  0.05098353]
+ [ 2.76801061  1.19780833  0.05232523]]
+Submitting electronic structure for step 9.
+	Gaussian terminated normally in 10.29 s. (GS_NEW)
+	Gaussian terminated normally in 33.81 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.29 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98896032e-01  3.75603030e-05]
+ [-3.73944267e-05  9.98899623e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999999e-01  3.75187169e-05]
+ [-3.75187169e-05  9.99999999e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  3.63017023e-06]
+ [-3.63017023e-06  0.00000000e+00]]
+Total QM took 56.26 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.63979949 -1.11142372 -0.00579152]
+ [ 0.4307887  -2.89783418  0.06177445]
+ [-2.69364508 -1.09593664  0.06378839]
+ [ 0.63048106  1.10100278 -0.00576448]
+ [-0.30295875  3.01321077  0.06166113]
+ [ 2.78972641  1.21759617  0.06336171]]
+COM Shift:
+[0.00404831 0.0040474  0.0040478 ]
+Shifted:
+[[-0.6438478  -1.11547112 -0.00983931]
+ [ 0.42674039 -2.90188157  0.05772665]
+ [-2.69769338 -1.09998403  0.05974059]
+ [ 0.62643275  1.09695539 -0.00981228]
+ [-0.30700705  3.00916337  0.05761334]
+ [ 2.78567811  1.21354877  0.05931391]]
+Submitting electronic structure for step 10.
+	Gaussian terminated normally in 9.75 s. (GS_NEW)
+	Gaussian terminated normally in 33.84 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.37 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98907156e-01  3.44018982e-05]
+ [-3.25801786e-05  9.98908900e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999999e-01  3.35276496e-05]
+ [-3.35276496e-05  9.99999999e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  3.24400954e-06]
+ [-3.24400954e-06  0.00000000e+00]]
+Total QM took 56.04 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.64005817 -1.11173048 -0.0069606 ]
+ [ 0.43599665 -2.9106471   0.06852139]
+ [-2.70689995 -1.10007255  0.07105528]
+ [ 0.62914752  1.09937762 -0.00692886]
+ [-0.29355681  3.03654031  0.06837493]
+ [ 2.80736233  1.23425816  0.07046619]]
+COM Shift:
+[0.0040483  0.00404739 0.00404779]
+Shifted:
+[[-0.64410647 -1.11577786 -0.01100838]
+ [ 0.43194835 -2.91469449  0.0644736 ]
+ [-2.71094824 -1.10411994  0.06700749]
+ [ 0.62509923  1.09533023 -0.01097665]
+ [-0.29760511  3.03249293  0.06432714]
+ [ 2.80331403  1.23021077  0.06641841]]
+Submitting electronic structure for step 11.
+	Gaussian terminated normally in 9.86 s. (GS_NEW)
+	Gaussian terminated normally in 34.54 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.29 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98904231e-01  4.08964938e-05]
+ [-4.26712398e-05  9.98905316e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999999e-01  4.18296798e-05]
+ [-4.18296798e-05  9.99999999e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  4.04728282e-06]
+ [-4.04728282e-06  0.00000000e+00]]
+Total QM took 56.60 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.64029561 -1.11208578 -0.00814812]
+ [ 0.4405882  -2.92428734  0.07536044]
+ [-2.72105612 -1.10515947  0.07847503]
+ [ 0.62787345  1.09784075 -0.00811231]
+ [-0.28329228  3.0603164   0.07517503]
+ [ 2.82469061  1.25177776  0.07768666]]
+COM Shift:
+[0.00404828 0.00404737 0.00404777]
+Shifted:
+[[-0.6443439  -1.11613315 -0.01219589]
+ [ 0.43653991 -2.92833471  0.07131266]
+ [-2.7251044  -1.10920684  0.07442726]
+ [ 0.62382517  1.09379337 -0.01216009]
+ [-0.28734056  3.05626903  0.07112725]
+ [ 2.82064232  1.24773038  0.07363889]]
+Submitting electronic structure for step 12.
+	Gaussian terminated normally in 9.31 s. (GS_NEW)
+	Gaussian terminated normally in 33.14 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.21 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98895782e-01  4.99689451e-05]
+ [-5.23205825e-05  9.98908898e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999999e-01  5.12009650e-05]
+ [-5.12009650e-05  9.99999999e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  4.95401321e-06]
+ [-4.95401321e-06  0.00000000e+00]]
+Total QM took 54.52 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.64052985 -1.11251765 -0.00935376]
+ [ 0.44445033 -2.93848955  0.08229236]
+ [-2.7357998  -1.11115881  0.08604768]
+ [ 0.62667524  1.09642382 -0.00931519]
+ [-0.27208891  3.08426052  0.0820622 ]
+ [ 2.84145407  1.27008639  0.08502215]]
+COM Shift:
+[0.00404827 0.00404736 0.00404776]
+Shifted:
+[[-0.64457812 -1.11656501 -0.01340151]
+ [ 0.44040206 -2.94253691  0.0782446 ]
+ [-2.73984807 -1.11520616  0.08199992]
+ [ 0.62262697  1.09237646 -0.01336295]
+ [-0.27613718  3.08021317  0.07801444]
+ [ 2.8374058   1.26603903  0.08097439]]
+Submitting electronic structure for step 13.
+	Gaussian terminated normally in 9.61 s. (GS_NEW)
+	Gaussian terminated normally in 32.92 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.23 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98861156e-01  4.16996502e-05]
+ [-2.97345989e-05  9.98876657e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999999e-01  3.57575697e-05]
+ [-3.57575697e-05  9.99999999e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  3.45976824e-06]
+ [-3.45976824e-06  0.00000000e+00]]
+Total QM took 55.00 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.64077891 -1.113053   -0.01057689]
+ [ 0.44747682 -2.95299707  0.08931645]
+ [-2.75082024 -1.11802918  0.09377126]
+ [ 0.6255683   1.0951571  -0.01053773]
+ [-0.25988439  3.10810664  0.08903604]
+ [ 2.85741675  1.28911187  0.09247088]]
+COM Shift:
+[0.00404826 0.00404734 0.00404774]
+Shifted:
+[[-0.64482717 -1.11710034 -0.01462463]
+ [ 0.44342856 -2.95704441  0.08526871]
+ [-2.7548685  -1.12207652  0.08972352]
+ [ 0.62152004  1.09110975 -0.01458547]
+ [-0.26393265  3.1040593   0.0849883 ]
+ [ 2.85336849  1.28506452  0.08842314]]
+Submitting electronic structure for step 14.
+	Gaussian terminated normally in 9.38 s. (GS_NEW)
+	Gaussian terminated normally in 34.68 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.33 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98816242e-01  5.70676659e-05]
+ [-4.13331754e-05  9.98833037e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999999e-01  4.92583168e-05]
+ [-4.92583168e-05  9.99999999e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  4.76604986e-06]
+ [-4.76604986e-06  0.00000000e+00]]
+Total QM took 56.52 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.64106029 -1.11371711 -0.01181664]
+ [ 0.44957049 -2.96756559  0.09643089]
+ [-2.7658165  -1.12572653  0.10164215]
+ [ 0.62456693  1.09406896 -0.01178003]
+ [-0.24663076  3.13160448  0.09609525]
+ [ 2.87236535  1.30877932  0.10003051]]
+COM Shift:
+[0.00404824 0.00404733 0.00404772]
+Shifted:
+[[-0.64510854 -1.11776443 -0.01586436]
+ [ 0.44552225 -2.97161292  0.09238317]
+ [-2.76986474 -1.12977385  0.09759443]
+ [ 0.62051869  1.09002164 -0.01582775]
+ [-0.250679    3.12755715  0.09204753]
+ [ 2.86831711  1.30473199  0.09598279]]
+Submitting electronic structure for step 15.
+	Gaussian terminated normally in 9.90 s. (GS_NEW)
+	Gaussian terminated normally in 34.92 s. (TD_NEW_S1)
+	Gaussian terminated normally in 6.16 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98879353e-01  4.54165787e-05]
+ [-3.97124985e-05  9.98891103e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999999e-01  4.26120413e-05]
+ [-4.26120413e-05  9.99999999e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  4.12298118e-06]
+ [-4.12298118e-06  0.00000000e+00]]
+Total QM took 58.42 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.64139059 -1.11453325 -0.01307193]
+ [ 0.45064482 -2.98196612  0.10363297]
+ [-2.78050283 -1.13420426  0.10965545]
+ [ 0.62368411  1.09318546 -0.01304217]
+ [-0.23229431  3.15452189  0.10323793]
+ [ 2.88610984  1.32901212  0.10769843]]
+COM Shift:
+[0.00404822 0.00404731 0.0040477 ]
+Shifted:
+[[-0.64543881 -1.11858055 -0.01711963]
+ [ 0.4465966  -2.98601342  0.09958527]
+ [-2.78455106 -1.13825157  0.10560776]
+ [ 0.61963588  1.08913816 -0.01708987]
+ [-0.23634253  3.15047458  0.09919023]
+ [ 2.88206162  1.32496481  0.10365074]]
+Submitting electronic structure for step 16.
+	Gaussian terminated normally in 9.49 s. (GS_NEW)
+	Gaussian terminated normally in 33.62 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.34 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98856430e-01  5.14625405e-05]
+ [-4.88748651e-05  9.98860321e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999999e-01  5.02260420e-05]
+ [-5.02260420e-05  9.99999999e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  4.85968332e-06]
+ [-4.85968332e-06  0.00000000e+00]]
+Total QM took 55.49 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.64178513 -1.11552234 -0.01434153]
+ [ 0.45062506 -2.99598695  0.11091939]
+ [-2.79461279 -1.14341352  0.11780532]
+ [ 0.62293142  1.09252999 -0.01432418]
+ [-0.21685515  3.1766464   0.11046185]
+ [ 2.89848355  1.34973271  0.11547195]]
+COM Shift:
+[0.00404821 0.00404729 0.00404767]
+Shifted:
+[[-0.64583334 -1.11956963 -0.0183892 ]
+ [ 0.44657686 -3.00003423  0.10687172]
+ [-2.798661   -1.1474608   0.11375765]
+ [ 0.61888321  1.08848271 -0.01837186]
+ [-0.22090336  3.17259911  0.10641417]
+ [ 2.89443535  1.34568542  0.11142428]]
+Submitting electronic structure for step 17.
+	Gaussian terminated normally in 10.03 s. (GS_NEW)
+	Gaussian terminated normally in 33.89 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.19 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98829971e-01  3.88413480e-05]
+ [-3.89200362e-05  9.98825343e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999999e-01  3.89263271e-05]
+ [-3.89263271e-05  9.99999999e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  3.76636531e-06]
+ [-3.76636531e-06  0.00000000e+00]]
+Total QM took 55.96 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.64225778 -1.1167027  -0.01562412]
+ [ 0.44944891 -3.00943506  0.11828645]
+ [-2.80790208 -1.15330342  0.12608529]
+ [ 0.62231894  1.09212301 -0.01562614]
+ [-0.20030649  3.19778613  0.11776465]
+ [ 2.9093427   1.37086332  0.12334852]]
+COM Shift:
+[0.00404819 0.00404726 0.00404765]
+Shifted:
+[[-0.64630597 -1.12074996 -0.01967176]
+ [ 0.44540073 -3.01348233  0.1142388 ]
+ [-2.81195027 -1.15735069  0.12203764]
+ [ 0.61827075  1.08807575 -0.01967379]
+ [-0.20435468  3.19373886  0.113717  ]
+ [ 2.90529451  1.36681606  0.11930087]]
+Submitting electronic structure for step 18.
+	Gaussian terminated normally in 9.40 s. (GS_NEW)
+	Gaussian terminated normally in 33.60 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.37 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98893789e-01  4.80207798e-05]
+ [-4.14189972e-05  9.98885012e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999999e-01  4.47696096e-05]
+ [-4.47696096e-05  9.99999999e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.0000000e+00  4.3317394e-06]
+ [-4.3317394e-06  0.0000000e+00]]
+Total QM took 55.35 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.64282069 -1.11808981 -0.01691828]
+ [ 0.44706687 -3.02213696  0.12573019]
+ [-2.82015045 -1.16382139  0.13448854]
+ [ 0.62185515  1.09198188 -0.01694817]
+ [-0.18265374  3.2177702   0.12514405]
+ [ 2.91856573  1.39232662  0.13132586]]
+COM Shift:
+[0.00404817 0.00404724 0.00404762]
+Shifted:
+[[-0.64686886 -1.12213705 -0.02096589]
+ [ 0.4430187  -3.0261842   0.12168257]
+ [-2.82419862 -1.16786863  0.13044093]
+ [ 0.61780698  1.08793464 -0.02099578]
+ [-0.18670191  3.21372296  0.12109643]
+ [ 2.91451756  1.38827938  0.12727825]]
+Submitting electronic structure for step 19.
+	Gaussian terminated normally in 9.59 s. (GS_NEW)
+	Gaussian terminated normally in 33.70 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.24 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98919859e-01  4.07954173e-05]
+ [-3.51073599e-05  9.98898722e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999999e-01  3.79928277e-05]
+ [-3.79928277e-05  9.99999999e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  3.67604342e-06]
+ [-3.67604342e-06  0.00000000e+00]]
+Total QM took 55.73 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.64348422 -1.11969624 -0.01822257]
+ [ 0.44344233 -3.03393906  0.13324655]
+ [-2.83116268 -1.17491339  0.14300814]
+ [ 0.62154692  1.09212071 -0.01829045]
+ [-0.16391358  3.23644879  0.13259796]
+ [ 2.92605242  1.41404625  0.13940218]]
+COM Shift:
+[0.00404814 0.00404721 0.00404758]
+Shifted:
+[[-0.64753236 -1.12374346 -0.02227015]
+ [ 0.43939419 -3.03798627  0.12919896]
+ [-2.83521083 -1.1789606   0.13896056]
+ [ 0.61749877  1.0880735  -0.02233804]
+ [-0.16796172  3.23240158  0.12855038]
+ [ 2.92200428  1.40999903  0.1353546 ]]
+Submitting electronic structure for step 20.
+	Gaussian terminated normally in 9.86 s. (GS_NEW)
+	Gaussian terminated normally in 35.75 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.73 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98881932e-01  3.67028032e-05]
+ [-3.94075534e-05  9.98839963e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999999e-01  3.80985746e-05]
+ [-3.80985746e-05  9.99999999e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  3.68627508e-06]
+ [-3.68627508e-06  0.00000000e+00]]
+Total QM took 58.21 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.64425686 -1.12153152 -0.01953551]
+ [ 0.43855158 -3.0447079   0.1408314 ]
+ [-2.84076906 -1.18652424  0.15163723]
+ [ 0.62139944  1.09255032 -0.0196533 ]
+ [-0.14411295  3.25369285  0.14012461]
+ [ 2.93172298  1.43594728  0.14757623]]
+COM Shift:
+[0.00404812 0.00404719 0.00404755]
+Shifted:
+[[-0.64830498 -1.12557871 -0.02358306]
+ [ 0.43450345 -3.04875509  0.13678386]
+ [-2.84481718 -1.19057143  0.14758968]
+ [ 0.61735132  1.08850313 -0.02370085]
+ [-0.14816107  3.24964566  0.13607706]
+ [ 2.92767486  1.43190009  0.14352868]]
+Submitting electronic structure for step 21.
+	Gaussian terminated normally in 9.97 s. (GS_NEW)
+	Gaussian terminated normally in 33.95 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.41 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98871379e-01  2.66482710e-05]
+ [-3.03394614e-05  9.98842850e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 1.00000000e+00  2.85264687e-05]
+ [-2.85264687e-05  1.00000000e+00]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  2.76011405e-06]
+ [-2.76011405e-06  0.00000000e+00]]
+Total QM took 56.39 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.6451452  -1.12360207 -0.02085563]
+ [ 0.43238362 -3.0543301   0.14848067]
+ [-2.84882529 -1.19859787  0.16036917]
+ [ 0.62141623  1.09327816 -0.02103714]
+ [-0.12328811  3.26939375  0.1477226 ]
+ [ 2.93551712  1.45795661  0.15584746]]
+COM Shift:
+[0.0040481  0.00404716 0.00404751]
+Shifted:
+[[-0.6491933  -1.12764923 -0.02490314]
+ [ 0.42833552 -3.05837726  0.14443316]
+ [-2.85287339 -1.20264503  0.15632166]
+ [ 0.61736813  1.089231   -0.02508466]
+ [-0.12733621  3.26534659  0.14367509]
+ [ 2.93146902  1.45390945  0.15179995]]
+Submitting electronic structure for step 22.
+	Gaussian terminated normally in 9.14 s. (GS_NEW)
+	Gaussian terminated normally in 34.10 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.60 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98860630e-01  2.50576903e-05]
+ [-2.74747374e-05  9.98841701e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 1.00000000e+00  2.62964241e-05]
+ [-2.62964241e-05  1.00000000e+00]]
+NAC with Orthogonalized Overlap
+[[ 0.0000000e+00  2.5443433e-06]
+ [-2.5443433e-06  0.0000000e+00]]
+Total QM took 55.85 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.64615397 -1.12591125 -0.02218143]
+ [ 0.42494007 -3.06271234  0.15619031]
+ [-2.85521227 -1.21107753  0.16919767]
+ [ 0.62159913  1.0943084  -0.02244253]
+ [-0.1014838   3.28346285  0.15539099]
+ [ 2.93739319  1.48000325  0.16421613]]
+COM Shift:
+[0.00404807 0.00404713 0.00404747]
+Shifted:
+[[-0.65020204 -1.12995839 -0.0262289 ]
+ [ 0.420892   -3.06675947  0.15214284]
+ [-2.85926034 -1.21512466  0.1651502 ]
+ [ 0.61755105  1.09026127 -0.02649001]
+ [-0.10553187  3.27941572  0.15134352]
+ [ 2.93334511  1.47595612  0.16016865]]
+Submitting electronic structure for step 23.
+	Gaussian terminated normally in 9.56 s. (GS_NEW)
+	Gaussian terminated normally in 32.80 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.07 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98823951e-01  2.10244246e-05]
+ [-2.07779701e-05  9.98787060e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 1.00000000e+00  2.09261935e-05]
+ [-2.09261935e-05  1.00000000e+00]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  2.02473995e-06]
+ [-2.02473995e-06  0.00000000e+00]]
+Total QM took 54.26 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.64728603 -1.12845932 -0.02351143]
+ [ 0.416235   -3.06978127  0.16395638]
+ [-2.85983563 -1.22390596  0.17811692]
+ [ 0.6219483   1.09564188 -0.02387019]
+ [-0.0787524   3.29583101  0.16312933]
+ [ 2.93732751  1.50201865  0.17268337]]
+COM Shift:
+[0.00404805 0.0040471  0.00404744]
+Shifted:
+[[-0.65133408 -1.13250643 -0.02755887]
+ [ 0.41218695 -3.07382837  0.15990894]
+ [-2.86388368 -1.22795307  0.17406949]
+ [ 0.61790025  1.09159478 -0.02791762]
+ [-0.08280045  3.29178391  0.1590819 ]
+ [ 2.93327946  1.49797155  0.16863594]]
+Submitting electronic structure for step 24.
+	Gaussian terminated normally in 8.86 s. (GS_NEW)
+	Gaussian terminated normally in 33.89 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.16 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98764912e-01  1.11686069e-05]
+ [-1.08094196e-05  9.98728152e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 1.00000000e+00  1.10028049e-05]
+ [-1.10028049e-05  1.00000000e+00]]
+NAC with Orthogonalized Overlap
+[[ 0.0000000e+00  1.0645901e-06]
+ [-1.0645901e-06  0.0000000e+00]]
+Total QM took 54.79 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.64854251 -1.1312435  -0.02484419]
+ [ 0.40629488 -3.07548355  0.17177508]
+ [-2.86262535 -1.23702566  0.18712168]
+ [ 0.62246227  1.09727625 -0.025321  ]
+ [-0.05515331  3.30644824  0.17093772]
+ [ 2.93531382  1.52393687  0.18125137]]
+COM Shift:
+[0.00404802 0.00404708 0.00404739]
+Shifted:
+[[-0.65259054 -1.13529057 -0.02889158]
+ [ 0.40224685 -3.07953063  0.16772769]
+ [-2.86667338 -1.24107274  0.18307428]
+ [ 0.61841425  1.09322918 -0.02936839]
+ [-0.05920133  3.30240116  0.16689032]
+ [ 2.93126579  1.51988979  0.17720398]]
+Submitting electronic structure for step 25.
+	Gaussian terminated normally in 9.24 s. (GS_NEW)
+	Gaussian terminated normally in 33.88 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.25 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[9.98700800e-01 9.17957667e-06]
+ [9.45228467e-06 9.98675201e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 1.00000000e+00 -1.36533132e-07]
+ [ 1.36533132e-07  1.00000000e+00]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00 -1.32104334e-08]
+ [ 1.32104334e-08  0.00000000e+00]]
+Total QM took 55.40 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.64992281 -1.13425798 -0.02617826]
+ [ 0.39515853 -3.079786    0.17964286]
+ [-2.86353538 -1.25037895  0.19620739]
+ [ 0.62313796  1.09920602 -0.02679604]
+ [-0.03075236  3.31528336  0.17881685]
+ [ 2.93136282  1.54569477  0.18992343]]
+COM Shift:
+[0.004048   0.00404705 0.00404735]
+Shifted:
+[[-0.65397081 -1.13830503 -0.03022562]
+ [ 0.39111052 -3.08383305  0.17559551]
+ [-2.86758338 -1.254426    0.19216003]
+ [ 0.61908996  1.09515897 -0.0308434 ]
+ [-0.03480036  3.31123631  0.1747695 ]
+ [ 2.92731482  1.54164772  0.18587607]]
+Submitting electronic structure for step 26.
+	Gaussian terminated normally in 9.28 s. (GS_NEW)
+	Gaussian terminated normally in 34.48 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.34 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98691531e-01 -6.18713147e-06]
+ [ 2.07477745e-05  9.98682056e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 1.00000000e+00 -1.34851618e-05]
+ [ 1.34851618e-05  1.00000000e+00]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00 -1.30477364e-06]
+ [ 1.30477364e-06  0.00000000e+00]]
+Total QM took 56.09 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.65142472 -1.13749406 -0.02751229]
+ [ 0.38287723 -3.08267581  0.1875565 ]
+ [-2.8625434  -1.26390815  0.20537032]
+ [ 0.62397071  1.10142263 -0.02829661]
+ [-0.00562134  3.32232385  0.18676813]
+ [ 2.92550198  1.56723226  0.19870412]]
+COM Shift:
+[0.00404798 0.00404702 0.00404731]
+Shifted:
+[[-0.6554727  -1.14154108 -0.0315596 ]
+ [ 0.37882925 -3.08672283  0.18350918]
+ [-2.86659138 -1.26795517  0.20132301]
+ [ 0.61992273  1.09737561 -0.03234393]
+ [-0.00966932  3.31827683  0.18272082]
+ [ 2.921454    1.56318524  0.1946568 ]]
+Submitting electronic structure for step 27.
+	Gaussian terminated normally in 9.10 s. (GS_NEW)
+	Gaussian terminated normally in 34.14 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.15 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98668405e-01 -4.26566515e-05]
+ [ 3.48420578e-05  9.98664828e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999999e-01 -3.88010914e-05]
+ [ 3.88010914e-05  9.99999999e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00 -3.75424798e-06]
+ [ 3.75424798e-06  0.00000000e+00]]
+Total QM took 55.28 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.65304452 -1.14094014 -0.02884497]
+ [ 0.36951483 -3.08416092  0.19551328]
+ [-2.85965082 -1.27755572  0.21460778]
+ [ 0.62495434  1.10391461 -0.02982423]
+ [ 0.02016235  3.32757573  0.19479374]
+ [ 2.91777538  1.58849239  0.20759945]]
+COM Shift:
+[0.00404795 0.004047   0.00404728]
+Shifted:
+[[-0.65709248 -1.14498714 -0.03289225]
+ [ 0.36546687 -3.08820791  0.191466  ]
+ [-2.86369877 -1.28160272  0.2105605 ]
+ [ 0.62090638  1.09986761 -0.0338715 ]
+ [ 0.01611439  3.32352873  0.19074646]
+ [ 2.91372742  1.58444539  0.20355217]]
+Submitting electronic structure for step 28.
+	Gaussian terminated normally in 9.33 s. (GS_NEW)
+	Gaussian terminated normally in 33.42 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.16 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98601086e-01 -5.48165178e-05]
+ [ 5.50338067e-05  9.98587337e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999998e-01 -5.50024840e-05]
+ [ 5.50024840e-05  9.99999998e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00 -5.32183392e-06]
+ [ 5.32183392e-06  0.00000000e+00]]
+Total QM took 54.90 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.65477703 -1.14458184 -0.03017514]
+ [ 0.35514791 -3.08427044  0.2035112 ]
+ [-2.85488279 -1.29126437  0.22391825]
+ [ 0.62608121  1.10666766 -0.03138067]
+ [ 0.04651604  3.33106355  0.20289677]
+ [ 2.90824371  1.6094215   0.21661704]]
+COM Shift:
+[0.00404793 0.00404697 0.00404724]
+Shifted:
+[[-0.65882496 -1.14862882 -0.03422238]
+ [ 0.35109998 -3.08831742  0.19946396]
+ [-2.85893072 -1.29531135  0.21987101]
+ [ 0.62203327  1.10262068 -0.03542791]
+ [ 0.0424681   3.32701658  0.19884953]
+ [ 2.90419577  1.60537453  0.2125698 ]]
+Submitting electronic structure for step 29.
+	Gaussian terminated normally in 9.91 s. (GS_NEW)
+	Gaussian terminated normally in 33.55 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.17 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98506273e-01 -7.00042860e-05]
+ [ 7.62438980e-05  9.98493531e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999997e-01 -7.32339499e-05]
+ [ 7.32339499e-05  9.99999997e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00 -7.08584214e-06]
+ [ 7.08584214e-06  0.00000000e+00]]
+Total QM took 55.63 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.6566157  -1.14840208 -0.03150178]
+ [ 0.339866   -3.08305524  0.21154925]
+ [-2.84828853 -1.3049772   0.23330175]
+ [ 0.62734227  1.10966476 -0.032968  ]
+ [ 0.07335207  3.33283055  0.21108145]
+ [ 2.89698433  1.62996947  0.22576633]]
+COM Shift:
+[0.00404792 0.00404696 0.00404721]
+Shifted:
+[[-0.66066362 -1.15244903 -0.03554899]
+ [ 0.33581809 -3.08710219  0.20750204]
+ [-2.85233644 -1.30902415  0.22925454]
+ [ 0.62329435  1.10561781 -0.03701521]
+ [ 0.06930416  3.32878359  0.20703424]
+ [ 2.89293641  1.62592252  0.22171912]]
+Submitting electronic structure for step 30.
+	Gaussian terminated normally in 9.47 s. (GS_NEW)
+	Gaussian terminated normally in 33.00 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.10 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98384514e-01 -1.07352603e-04]
+ [ 1.06819753e-04  9.98383814e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999994e-01 -1.07259491e-04]
+ [ 1.07259491e-04  9.99999994e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00 -1.03780258e-05]
+ [ 1.03780258e-05  0.00000000e+00]]
+Total QM took 54.54 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.65855273 -1.15238115 -0.03282409]
+ [ 0.32377176 -3.08058836  0.2196277 ]
+ [-2.83994164 -1.31863783  0.24276008]
+ [ 0.62872711  1.11288633 -0.03458863]
+ [ 0.10057808  3.3329387   0.21935328]
+ [ 2.88409137  1.65008983  0.23505884]]
+COM Shift:
+[0.0040479  0.00404694 0.00404718]
+Shifted:
+[[-0.66260063 -1.15642809 -0.03687127]
+ [ 0.31972386 -3.0846353   0.21558052]
+ [-2.84398954 -1.32268477  0.2387129 ]
+ [ 0.62467921  1.10883939 -0.03863581]
+ [ 0.09653018  3.32889176  0.2153061 ]
+ [ 2.88004347  1.64604289  0.23101166]]
+Submitting electronic structure for step 31.
+	Gaussian terminated normally in 9.74 s. (GS_NEW)
+	Gaussian terminated normally in 34.76 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.80 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98334638e-01 -1.20514203e-04]
+ [ 1.27653116e-04  9.98334902e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999992e-01 -1.24290631e-04]
+ [ 1.24290631e-04  9.99999992e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.0000000e+00 -1.2025895e-05]
+ [ 1.2025895e-05  0.0000000e+00]]
+Total QM took 57.65 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.66057905 -1.15649689 -0.03414154]
+ [ 0.30698105 -3.07696552  0.22774848]
+ [-2.82994057 -1.33219056  0.25229727]
+ [ 0.63022405  1.11631032 -0.03624532]
+ [ 0.12809729  3.33146889  0.22771933]
+ [ 2.86967578  1.66973994  0.24450845]]
+COM Shift:
+[0.00404789 0.00404693 0.00404716]
+Shifted:
+[[-0.66462694 -1.16054381 -0.0381887 ]
+ [ 0.30293316 -3.08101244  0.22370132]
+ [-2.83398846 -1.33623749  0.24825011]
+ [ 0.62617616  1.11226339 -0.04029248]
+ [ 0.12404941  3.32742196  0.22367217]
+ [ 2.86562789  1.66569302  0.24046129]]
+Submitting electronic structure for step 32.
+	Gaussian terminated normally in 9.85 s. (GS_NEW)
+	Gaussian terminated normally in 36.08 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.51 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98368846e-01 -1.52218065e-04]
+ [ 1.64946732e-04  9.98365460e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999987e-01 -1.58841761e-04]
+ [ 1.58841761e-04  9.99999987e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00 -1.53689326e-05]
+ [ 1.53689326e-05  0.00000000e+00]]
+Total QM took 58.57 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.66268448 -1.16072471 -0.03545397]
+ [ 0.28962298 -3.07230529  0.23591555]
+ [-2.818409   -1.34558059  0.26191997]
+ [ 0.63182015  1.11991237 -0.03794129]
+ [ 0.15580887  3.32852095  0.2361885 ]
+ [ 2.85386539  1.68888128  0.25413173]]
+COM Shift:
+[0.00404788 0.00404692 0.00404714]
+Shifted:
+[[-0.66673236 -1.16477162 -0.03950112]
+ [ 0.2855751  -3.07635221  0.23186841]
+ [-2.82245688 -1.34962751  0.25787283]
+ [ 0.62777227  1.11586546 -0.04198843]
+ [ 0.15176099  3.32447404  0.23214135]
+ [ 2.84981751  1.68483436  0.25008459]]
+Submitting electronic structure for step 33.
+	Gaussian terminated normally in 9.47 s. (GS_NEW)
+	Gaussian terminated normally in 33.67 s. (TD_NEW_S1)
+	Gaussian terminated normally in 4.93 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98335272e-01 -1.91103225e-04]
+ [ 1.95321837e-04  9.98344700e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999981e-01 -1.93533796e-04]
+ [ 1.93533796e-04  9.99999981e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00 -1.87256038e-05]
+ [ 1.87256038e-05  0.00000000e+00]]
+Total QM took 55.08 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.66485768 -1.16503783 -0.03676163]
+ [ 0.27183958 -3.06674912  0.24413531]
+ [-2.80549619 -1.35875419  0.27163799]
+ [ 0.63350135  1.12366597 -0.03968019]
+ [ 0.18360836  3.32421364  0.24477179]
+ [ 2.83680479  1.70747955  0.26394828]]
+COM Shift:
+[0.00404788 0.00404691 0.00404713]
+Shifted:
+[[-0.66890555 -1.16908474 -0.04080876]
+ [ 0.26779171 -3.07079603  0.24008818]
+ [-2.80954406 -1.36280111  0.26759085]
+ [ 0.62945347  1.11961906 -0.04372733]
+ [ 0.17956048  3.32016673  0.24072465]
+ [ 2.83275691  1.70343264  0.25990115]]
+Submitting electronic structure for step 34.
+	Gaussian terminated normally in 8.67 s. (GS_NEW)
+	Gaussian terminated normally in 33.82 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.20 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98254487e-01 -2.21235083e-04]
+ [ 2.21813821e-04  9.98268011e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999975e-01 -2.21910293e-04]
+ [ 2.21910293e-04  9.99999975e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00 -2.14712071e-05]
+ [ 2.14712071e-05  0.00000000e+00]]
+Total QM took 54.56 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.66708625 -1.1694074  -0.03806525]
+ [ 0.25378536 -3.06046073  0.2524169 ]
+ [-2.79137704 -1.37165901  0.28146472]
+ [ 0.63525245  1.1275426  -0.04146624]
+ [ 0.21138816  3.31868433  0.25348263]
+ [ 2.81865502  1.72550497  0.27398108]]
+COM Shift:
+[0.00404788 0.00404691 0.00404713]
+Shifted:
+[[-0.67113413 -1.17345431 -0.04211238]
+ [ 0.24973748 -3.06450764  0.24836977]
+ [-2.79542491 -1.37570592  0.27741759]
+ [ 0.63120458  1.12349568 -0.04551337]
+ [ 0.20734028  3.31463742  0.24943549]
+ [ 2.81460714  1.72145806  0.26993395]]
+Submitting electronic structure for step 35.
+	Gaussian terminated normally in 9.50 s. (GS_NEW)
+	Gaussian terminated normally in 33.64 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.18 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98244490e-01 -2.43737454e-04]
+ [ 2.58394777e-04  9.98251336e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999968e-01 -2.51506769e-04]
+ [ 2.51506769e-04  9.99999968e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.0000000e+00 -2.4334851e-05]
+ [ 2.4334851e-05  0.0000000e+00]]
+Total QM took 55.21 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.66935675 -1.17380278 -0.03936613]
+ [ 0.23562633 -3.05362499  0.26077257]
+ [-2.77625182 -1.38424432  0.29141776]
+ [ 0.6370573   1.13151192 -0.04330421]
+ [ 0.23903823  3.31208843  0.26233716]
+ [ 2.79959304  1.74293239  0.28425688]]
+COM Shift:
+[0.00404788 0.00404692 0.00404714]
+Shifted:
+[[-0.67340464 -1.1778497  -0.04341328]
+ [ 0.23157844 -3.0576719   0.25672542]
+ [-2.7802997  -1.38829124  0.28737061]
+ [ 0.63300942  1.127465   -0.04735135]
+ [ 0.23499035  3.30804151  0.25829002]
+ [ 2.79554516  1.73888548  0.28020974]]
+Submitting electronic structure for step 36.
+	Gaussian terminated normally in 9.42 s. (GS_NEW)
+	Gaussian terminated normally in 34.27 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.65 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98245364e-01 -2.85595294e-04]
+ [ 2.92131695e-04  9.98254929e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999958e-01 -2.89369837e-04]
+ [ 2.89369837e-04  9.99999958e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00 -2.79983394e-05]
+ [ 2.79983394e-05  0.00000000e+00]]
+Total QM took 56.75 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.67165474 -1.1781918  -0.04066621]
+ [ 0.21753862 -3.04644595  0.26921777]
+ [-2.7603453  -1.39646138  0.30151927]
+ [ 0.63889879  1.13554203 -0.04519953]
+ [ 0.26644677  3.30459842  0.27135448]
+ [ 2.77981082  1.75974148  0.29480651]]
+COM Shift:
+[0.00404789 0.00404693 0.00404717]
+Shifted:
+[[-0.67570263 -1.18223872 -0.04471337]
+ [ 0.21349072 -3.05049288  0.2651706 ]
+ [-2.76439319 -1.4005083   0.29747211]
+ [ 0.6348509   1.13149511 -0.04924669]
+ [ 0.26239888  3.30055149  0.26730732]
+ [ 2.77576292  1.75569455  0.29075935]]
+Submitting electronic structure for step 37.
+	Gaussian terminated normally in 10.26 s. (GS_NEW)
+	Gaussian terminated normally in 35.28 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.19 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98224444e-01 -3.24652923e-04]
+ [ 3.21345498e-04  9.98232336e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999948e-01 -3.23572438e-04]
+ [ 3.23572438e-04  9.99999948e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00 -3.13076547e-05]
+ [ 3.13076547e-05  0.00000000e+00]]
+Total QM took 57.55 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.6739648  -1.1825411  -0.04196804]
+ [ 0.19970651 -3.03914383  0.27777125]
+ [-2.74390518 -1.40826373  0.31179646]
+ [ 0.64075904  1.13959971 -0.04715829]
+ [ 0.29350112  3.29640235  0.28055687]
+ [ 2.75951402  1.77591671  0.30566518]]
+COM Shift:
+[0.00404791 0.00404694 0.0040472 ]
+Shifted:
+[[-0.67801271 -1.18658805 -0.04601524]
+ [ 0.1956586  -3.04319077  0.27372405]
+ [-2.74795309 -1.41231067  0.30774926]
+ [ 0.63671113  1.13555276 -0.05120549]
+ [ 0.28945321  3.2923554   0.27650966]
+ [ 2.75546611  1.77186976  0.30161798]]
+Submitting electronic structure for step 38.
+	Gaussian terminated normally in 9.92 s. (GS_NEW)
+	Gaussian terminated normally in 32.90 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.20 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98217376e-01 -3.65776035e-04]
+ [ 3.65907223e-04  9.98215380e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999933e-01 -3.66495293e-04]
+ [ 3.66495293e-04  9.99999933e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00 -3.54607091e-05]
+ [ 3.54607091e-05  0.00000000e+00]]
+Total QM took 54.81 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.67627062 -1.18681667 -0.04327485]
+ [ 0.18231984 -3.03195081  0.28645477]
+ [-2.72719948 -1.41960753  0.32228177]
+ [ 0.64261951  1.14365071 -0.04918728]
+ [ 0.32008874  3.28770175  0.28996985]
+ [ 2.73892017  1.79144732  0.31687267]]
+COM Shift:
+[0.00404794 0.00404697 0.00404725]
+Shifted:
+[[-0.68031856 -1.19086364 -0.0473221 ]
+ [ 0.1782719  -3.03599778  0.28240752]
+ [-2.73124742 -1.4236545   0.31823452]
+ [ 0.63857157  1.13960374 -0.05323454]
+ [ 0.3160408   3.28365478  0.2859226 ]
+ [ 2.73487224  1.78740035  0.31282542]]
+Submitting electronic structure for step 39.
+	Gaussian terminated normally in 9.74 s. (GS_NEW)
+	Gaussian terminated normally in 33.82 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.13 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98211279e-01  3.96120817e-04]
+ [ 3.85845346e-04 -9.98205834e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999923e-01  3.91684733e-04]
+ [ 3.91684733e-04 -9.99999923e-01]]
+NAC with Orthogonalized Overlap
+[[0. 0.]
+ [0. 0.]]
+Total QM took 55.65 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.67855513 -1.19098432 -0.04459048]
+ [ 0.16557072 -3.02510569  0.29529267]
+ [-2.71051284 -1.43045183  0.33301295]
+ [ 0.64446116  1.14766018 -0.05129401]
+ [ 0.34609819  3.27870888  0.29962225]
+ [ 2.71825626  1.80632707  0.32847343]]
+COM Shift:
+[0.00404797 0.004047   0.00404733]
+Shifted:
+[[-0.6826031  -1.19503133 -0.0486378 ]
+ [ 0.16152275 -3.02915269  0.29124534]
+ [-2.71456082 -1.43449883  0.32896562]
+ [ 0.64041319  1.14361317 -0.05534134]
+ [ 0.34205022  3.27466188  0.29557492]
+ [ 2.71420829  1.80228007  0.3244261 ]]
+Submitting electronic structure for step 40.
+	Gaussian terminated normally in 10.59 s. (GS_NEW)
+	Gaussian terminated normally in 36.28 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.26 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98224398e-01  4.32844033e-04]
+ [-4.39979542e-04  9.98214344e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999904e-01  4.37190219e-04]
+ [-4.37190219e-04  9.99999904e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  4.23008848e-05]
+ [-4.23008848e-05  0.00000000e+00]]
+Total QM took 59.24 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.68080071 -1.19501062 -0.04591947]
+ [ 0.14965013 -3.01884865  0.30431105]
+ [-2.69414319 -1.44075887  0.34403315]
+ [ 0.64626454  1.15159286 -0.05348699]
+ [ 0.37142175  3.26964567  0.30954666]
+ [ 2.69775737  1.8205563   0.34051736]]
+COM Shift:
+[0.00404795 0.00404698 0.00404728]
+Shifted:
+[[-0.68484865 -1.1990576  -0.04996675]
+ [ 0.14560218 -3.02289563  0.30026378]
+ [-2.69819113 -1.44480585  0.33998587]
+ [ 0.64221659  1.14754587 -0.05753426]
+ [ 0.3673738   3.26559869  0.30549939]
+ [ 2.69370942  1.81650931  0.33647008]]
+Submitting electronic structure for step 41.
+	Gaussian terminated normally in 10.19 s. (GS_NEW)
+	Gaussian terminated normally in 34.96 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.25 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98298024e-01  4.64034338e-04]
+ [-4.78838951e-04  9.98273811e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999888e-01  4.72246061e-04]
+ [-4.72246061e-04  9.99999888e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  4.56927564e-05]
+ [-4.56927564e-05  0.00000000e+00]]
+Total QM took 57.56 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.68298919 -1.19886314 -0.04726648]
+ [ 0.13474288 -3.01341101  0.31353671]
+ [-2.67839224 -1.45049387  0.3553899 ]
+ [ 0.64801037  1.15541403 -0.05577498]
+ [ 0.39595432  3.26073541  0.3197782 ]
+ [ 2.67766007  1.83413709  0.35305821]]
+COM Shift:
+[0.00404792 0.00404696 0.00404721]
+Shifted:
+[[-0.68703711 -1.2029101  -0.05131369]
+ [ 0.13069496 -3.01745796  0.3094895 ]
+ [-2.68244016 -1.45454082  0.35134268]
+ [ 0.64396245  1.15136707 -0.0598222 ]
+ [ 0.3919064   3.25668845  0.31573098]
+ [ 2.67361215  1.83009014  0.349011  ]]
+Submitting electronic structure for step 42.
+	Gaussian terminated normally in 9.77 s. (GS_NEW)
+	Gaussian terminated normally in 33.08 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.66 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98395562e-01  4.97322657e-04]
+ [-4.99444779e-04  9.98358953e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999875e-01  4.99193719e-04]
+ [-4.99193719e-04  9.99999875e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  4.83001107e-05]
+ [-4.83001107e-05  0.00000000e+00]]
+Total QM took 55.56 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.68510237 -1.20251157 -0.04863643]
+ [ 0.12102323 -3.00900805  0.3229953 ]
+ [-2.66355934 -1.45962509  0.36713396]
+ [ 0.64967966  1.15908982 -0.05816742]
+ [ 0.41959507  3.25219955  0.33035396]
+ [ 2.65819934  1.84707386  0.36615333]]
+COM Shift:
+[0.00404788 0.00404692 0.00404713]
+Shifted:
+[[-0.68915025 -1.20655849 -0.05268356]
+ [ 0.11697535 -3.01305497  0.31894818]
+ [-2.66760722 -1.46367201  0.36308683]
+ [ 0.64563179  1.1550429  -0.06221455]
+ [ 0.41554719  3.24815263  0.32630683]
+ [ 2.65415147  1.84302694  0.3621062 ]]
+Submitting electronic structure for step 43.
+	Gaussian terminated normally in 9.75 s. (GS_NEW)
+	Gaussian terminated normally in 33.83 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.26 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98413733e-01  5.38512211e-04]
+ [-5.39492585e-04  9.98359994e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999854e-01  5.39873208e-04]
+ [-5.39873208e-04  9.99999854e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  5.22361054e-05]
+ [-5.22361054e-05  0.00000000e+00]]
+Total QM took 55.72 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.68712229 -1.20592847 -0.05003416]
+ [ 0.10865013 -3.0058301   0.33270977]
+ [-2.64993237 -1.4681235   0.37931803]
+ [ 0.65125411  1.1625879  -0.06067411]
+ [ 0.44224856  3.24425226  0.34131243]
+ [ 2.63960386  1.8593721   0.37986294]]
+COM Shift:
+[0.00404782 0.00404688 0.00404701]
+Shifted:
+[[-0.69117011 -1.20997534 -0.05408117]
+ [ 0.10460231 -3.00987698  0.32866276]
+ [-2.65398019 -1.47217037  0.37527102]
+ [ 0.64720628  1.15854102 -0.06472112]
+ [ 0.43820073  3.24020539  0.33726543]
+ [ 2.63555603  1.85532523  0.37581594]]
+Submitting electronic structure for step 44.
+	Gaussian terminated normally in 9.95 s. (GS_NEW)
+	Gaussian terminated normally in 33.09 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.29 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98409435e-01  5.82626864e-04]
+ [-5.76261268e-04  9.98346007e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999832e-01  5.80385516e-04]
+ [-5.80385516e-04  9.99999832e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  5.61559242e-05]
+ [-5.61559242e-05  0.00000000e+00]]
+Total QM took 55.53 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.68903172 -1.20909012 -0.05146405]
+ [ 0.09776268 -3.004034    0.34269834]
+ [-2.63777813 -1.47596231  0.39199484]
+ [ 0.65271646  1.16587815 -0.06330508]
+ [ 0.46382553  3.23709465  0.35269239]
+ [ 2.62209069  1.87103695  0.39424908]]
+COM Shift:
+[0.00404775 0.00404682 0.00404685]
+Shifted:
+[[-0.69307948 -1.21313694 -0.0555109 ]
+ [ 0.09371493 -3.00808082  0.33865149]
+ [-2.64182589 -1.48000913  0.38794799]
+ [ 0.64866871  1.16183133 -0.06735193]
+ [ 0.45977777  3.23304783  0.34864555]
+ [ 2.61804294  1.86699013  0.39020224]]
+Submitting electronic structure for step 45.
+	Gaussian terminated normally in 9.75 s. (GS_NEW)
+	Gaussian terminated normally in 34.54 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.30 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98507296e-01  6.08351372e-04]
+ [-5.97744610e-04  9.98435382e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999818e-01  6.03971148e-04]
+ [-6.03971148e-04  9.99999818e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  5.84379815e-05]
+ [-5.84379815e-05  0.00000000e+00]]
+Total QM took 56.66 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69081469 -1.21197725 -0.05292972]
+ [ 0.08847604 -3.00373552  0.35297258]
+ [-2.62733243 -1.4831164   0.4052148 ]
+ [ 0.65405099  1.16893338 -0.06607033]
+ [ 0.4842435   3.23090885  0.36453161]
+ [ 2.60585999  1.88207138  0.40937419]]
+COM Shift:
+[0.00404766 0.00404675 0.00404664]
+Shifted:
+[[-0.69486236 -1.216024   -0.05697636]
+ [ 0.08442838 -3.00778227  0.34892594]
+ [-2.6313801  -1.48716315  0.40116816]
+ [ 0.65000332  1.16488663 -0.07011697]
+ [ 0.48019583  3.22686211  0.36048497]
+ [ 2.60181233  1.87802463  0.40532756]]
+Submitting electronic structure for step 46.
+	Gaussian terminated normally in 10.02 s. (GS_NEW)
+	Gaussian terminated normally in 34.31 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.24 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98617390e-01  7.34093223e-04]
+ [-6.40572940e-04  9.88418060e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999761e-01  6.91817468e-04]
+ [-6.91817468e-04  9.99999761e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  6.69376617e-05]
+ [-6.69376617e-05  0.00000000e+00]]
+Total QM took 56.51 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69245699 -1.21457559 -0.05443364]
+ [ 0.08087817 -3.00500329  0.36353545]
+ [-2.61879053 -1.48956161  0.41902346]
+ [ 0.65524387  1.17172991 -0.06897957]
+ [ 0.50342716  3.22585234  0.37686535]
+ [ 2.59108953  1.89247441  0.42529944]]
+COM Shift:
+[0.00404755 0.00404666 0.00404637]
+Shifted:
+[[-0.69650454 -1.21862225 -0.05848001]
+ [ 0.07683062 -3.00904995  0.35948908]
+ [-2.62283808 -1.49360827  0.41497709]
+ [ 0.65119632  1.16768325 -0.07302594]
+ [ 0.4993796   3.22180568  0.37281898]
+ [ 2.58704198  1.88842775  0.42125306]]
+Submitting electronic structure for step 47.
+	Gaussian terminated normally in 9.91 s. (GS_NEW)
+	Gaussian terminated normally in 32.91 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.12 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98656035e-01  7.43263522e-04]
+ [-7.37622924e-04  9.98571689e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999725e-01  7.41470800e-04]
+ [-7.41470800e-04  9.99999725e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  7.17419317e-05]
+ [-7.17419317e-05  0.00000000e+00]]
+Total QM took 54.71 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69394671 -1.21687631 -0.05597678]
+ [ 0.07502763 -3.00785501  0.37437985]
+ [-2.6122987  -1.49527408  0.43345885]
+ [ 0.65628364  1.17424827 -0.07204192]
+ [ 0.52130876  3.22205284  0.38972489]
+ [ 2.57792968  1.90223941  0.44208295]]
+COM Shift:
+[0.00404742 0.00404656 0.00404604]
+Shifted:
+[[-0.69799412 -1.22092287 -0.06002282]
+ [ 0.07098021 -3.01190156  0.37033381]
+ [-2.61634612 -1.49932063  0.42941281]
+ [ 0.65223622  1.17020172 -0.07608796]
+ [ 0.51726134  3.21800628  0.38567886]
+ [ 2.57388227  1.89819285  0.43803691]]
+Submitting electronic structure for step 48.
+	Gaussian terminated normally in 9.68 s. (GS_NEW)
+	Gaussian terminated normally in 33.97 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.74 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98681256e-01  7.58992849e-04]
+ [-7.56608130e-04  9.98589137e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999712e-01  7.58835934e-04]
+ [-7.58835934e-04  9.99999712e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  7.34221169e-05]
+ [-7.34221169e-05  0.00000000e+00]]
+Total QM took 56.38 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.6952747  -1.21887619 -0.05755833]
+ [ 0.07095259 -3.01225605  0.38548748]
+ [-2.60794781 -1.50022967  0.44854881]
+ [ 0.65716149  1.17647358 -0.07526565]
+ [ 0.53782808  3.21960411  0.40313582]
+ [ 2.56649906  1.91135242  0.4597778 ]]
+COM Shift:
+[0.00404725 0.00404643 0.00404563]
+Shifted:
+[[-0.69932195 -1.22292262 -0.06160395]
+ [ 0.06690534 -3.01630249  0.38144186]
+ [-2.61199506 -1.50427611  0.44450318]
+ [ 0.65311424  1.17242715 -0.07931127]
+ [ 0.53378083  3.21555768  0.39909019]
+ [ 2.5624518   1.90730599  0.45573217]]
+Submitting electronic structure for step 49.
+	Gaussian terminated normally in 10.08 s. (GS_NEW)
+	Gaussian terminated normally in 34.46 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.24 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98717056e-01  7.74107407e-04]
+ [-7.65139608e-04  9.98623688e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999703e-01  7.70647954e-04]
+ [-7.70647954e-04  9.99999703e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  7.45650036e-05]
+ [-7.45650036e-05  0.00000000e+00]]
+Total QM took 56.90 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69643495 -1.22057745 -0.05917542]
+ [ 0.06865116 -3.0181209   0.39682835]
+ [-2.60576917 -1.5044036   0.46430877]
+ [ 0.65787161  1.17839596 -0.07865779]
+ [ 0.55293241  3.21856302  0.41711654]
+ [ 2.55688103  1.91979093  0.47843004]]
+COM Shift:
+[0.00404706 0.00404629 0.00404513]
+Shifted:
+[[-0.70048201 -1.22462374 -0.06322055]
+ [ 0.06460409 -3.02216719  0.39278322]
+ [-2.60981623 -1.50844989  0.46026364]
+ [ 0.65382455  1.17434967 -0.08270292]
+ [ 0.54888535  3.21451673  0.41307141]
+ [ 2.55283397  1.91574464  0.47438491]]
+Submitting electronic structure for step 50.
+	Gaussian terminated normally in 10.49 s. (GS_NEW)
+	Gaussian terminated normally in 34.68 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.99 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98757897e-01  7.81356136e-04]
+ [-7.74001337e-04  9.98654863e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999697e-01  7.78685824e-04]
+ [-7.78685824e-04  9.99999697e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  7.53427178e-05]
+ [-7.53427178e-05  0.00000000e+00]]
+Total QM took 57.99 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69742472 -1.22198748 -0.06082307]
+ [ 0.06809284 -3.02531699  0.40836098]
+ [-2.60573345 -1.5077703   0.48074004]
+ [ 0.65841132  1.18001066 -0.08222392]
+ [ 0.56657656  3.21894798  0.43167704]
+ [ 2.54912149  1.92752313  0.49807693]]
+COM Shift:
+[0.00404684 0.00404613 0.00404455]
+Shifted:
+[[-0.70147156 -1.22603361 -0.06486762]
+ [ 0.06404599 -3.02936311  0.40431643]
+ [-2.6097803  -1.51181642  0.47669549]
+ [ 0.65436448  1.17596453 -0.08626847]
+ [ 0.56252972  3.21490185  0.42763249]
+ [ 2.54507465  1.923477    0.49403238]]
+Submitting electronic structure for step 51.
+	Gaussian terminated normally in 10.53 s. (GS_NEW)
+	Gaussian terminated normally in 32.31 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.39 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98847312e-01  7.89710811e-04]
+ [-7.75189767e-04  9.98726719e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999693e-01  7.83400301e-04]
+ [-7.83400301e-04  9.99999693e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  7.57988729e-05]
+ [-7.57988729e-05  0.00000000e+00]]
+Total QM took 55.18 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69824465 -1.22311825 -0.06249414]
+ [ 0.06922108 -3.03367075  0.42003321]
+ [-2.6077525  -1.51030368  0.49782878]
+ [ 0.65878116  1.18131802 -0.08596795]
+ [ 0.57872276  3.22073905  0.44681787]
+ [ 2.54322799  1.93450782  0.51874538]]
+COM Shift:
+[0.0040466  0.00404595 0.00404389]
+Shifted:
+[[-0.70229126 -1.2271642  -0.06653803]
+ [ 0.06517447 -3.0377167   0.41598932]
+ [-2.6117991  -1.51434963  0.49378489]
+ [ 0.65473456  1.17727208 -0.09001184]
+ [ 0.57467615  3.2166931   0.44277398]
+ [ 2.53918139  1.93046187  0.51470149]]
+Submitting electronic structure for step 52.
+	Gaussian terminated normally in 10.35 s. (GS_NEW)
+	Gaussian terminated normally in 32.10 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.76 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98857356e-01  7.81609560e-04]
+ [-7.69087514e-04  9.98734636e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999699e-01  7.76282951e-04]
+ [-7.76282951e-04  9.99999699e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  7.51102248e-05]
+ [-7.51102248e-05  0.00000000e+00]]
+Total QM took 55.05 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69889858 -1.22398556 -0.06417942]
+ [ 0.07195659 -3.04297524  0.43178353]
+ [-2.61168403 -1.51197764  0.51554578]
+ [ 0.65898476  1.18232328 -0.08989191]
+ [ 0.58934065  3.22387957  0.46252955]
+ [ 2.53917029  1.94069494  0.54045073]]
+COM Shift:
+[0.00404635 0.00404575 0.00404317]
+Shifted:
+[[-0.70294493 -1.22803131 -0.06822259]
+ [ 0.06791024 -3.04702099  0.42774036]
+ [-2.61573037 -1.51602339  0.51150261]
+ [ 0.65493841  1.17827753 -0.09393508]
+ [ 0.5852943   3.21983382  0.45848638]
+ [ 2.53512394  1.93664918  0.53640756]]
+Submitting electronic structure for step 53.
+	Gaussian terminated normally in 10.26 s. (GS_NEW)
+	Gaussian terminated normally in 32.75 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.63 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98840665e-01  7.66171864e-04]
+ [-7.57566592e-04  9.98719547e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999709e-01  7.62799541e-04]
+ [-7.62799541e-04  9.99999709e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  7.38056207e-05]
+ [-7.38056207e-05  0.00000000e+00]]
+Total QM took 55.63 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69939323 -1.22460822 -0.06586789]
+ [ 0.07620114 -3.05299856  0.44354276]
+ [-2.61733864 -1.51276682  0.53384702]
+ [ 0.65902868  1.18303612 -0.09399592]
+ [ 0.59840727  3.22827912  0.47879234]
+ [ 2.53688235  1.94602663  0.56319593]]
+COM Shift:
+[0.00404608 0.00404555 0.0040424 ]
+Shifted:
+[[-0.70343931 -1.22865377 -0.0699103 ]
+ [ 0.07215506 -3.0570441   0.43950036]
+ [-2.62138472 -1.51681237  0.52980461]
+ [ 0.6549826   1.17899057 -0.09803833]
+ [ 0.59436119  3.22423357  0.47474993]
+ [ 2.53283626  1.94198108  0.55915352]]
+Submitting electronic structure for step 54.
+	Gaussian terminated normally in 101.50 s. (GS_NEW)
+	Gaussian terminated normally in 32.64 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.17 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98847630e-01  7.49630490e-04]
+ [-7.55948912e-04  9.98712108e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999716e-01  7.53709111e-04]
+ [-7.53709111e-04  9.99999716e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  7.29260648e-05]
+ [-7.29260648e-05  0.00000000e+00]]
+Total QM took 146.13 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69973778 -1.2250072  -0.06754693]
+ [ 0.08184159 -3.06349255  0.455236  ]
+ [-2.62448851 -1.51264754  0.55267483]
+ [ 0.6589221   1.18347014 -0.0982781 ]
+ [ 0.60590704  3.23381763  0.49557639]
+ [ 2.53626551  1.95043895  0.58697116]]
+COM Shift:
+[0.00404581 0.00404534 0.00404161]
+Shifted:
+[[-0.7037836  -1.22905254 -0.07158854]
+ [ 0.07779578 -3.06753789  0.45119439]
+ [-2.62853432 -1.51669288  0.54863322]
+ [ 0.65487628  1.17942481 -0.10231971]
+ [ 0.60186123  3.22977229  0.49153478]
+ [ 2.5322197   1.94639362  0.58292955]]
+Submitting electronic structure for step 55.
+	Gaussian terminated normally in 9.71 s. (GS_NEW)
+	Gaussian terminated normally in 34.08 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.33 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98805414e-01  7.17862909e-04]
+ [-7.21450278e-04  9.98657207e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999740e-01  7.20570587e-04]
+ [-7.20570587e-04  9.99999740e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  6.97197056e-05]
+ [-6.97197056e-05  0.00000000e+00]]
+Total QM took 56.35 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69994339 -1.22520475 -0.0692027 ]
+ [ 0.08875387 -3.07420116  0.46678461]
+ [-2.63287696 -1.51159882  0.57195979]
+ [ 0.65867637  1.18364222 -0.10273468]
+ [ 0.61183188  3.24035035  0.51284238]
+ [ 2.53719268  1.95386392  0.61175406]]
+COM Shift:
+[0.00404555 0.00404512 0.0040408 ]
+Shifted:
+[[-0.70398894 -1.22924988 -0.07324349]
+ [ 0.08470832 -3.07824628  0.46274381]
+ [-2.63692251 -1.51564394  0.56791899]
+ [ 0.65463082  1.1795971  -0.10677548]
+ [ 0.60778633  3.23630523  0.50880158]
+ [ 2.53314713  1.9498188   0.60771326]]
+Submitting electronic structure for step 56.
+	Gaussian terminated normally in 10.08 s. (GS_NEW)
+	Gaussian terminated normally in 34.88 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.15 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98743998e-01  6.81819281e-04]
+ [-6.87599143e-04  9.98599270e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999765e-01  6.85619805e-04]
+ [-6.85619805e-04  9.99999765e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  6.63379991e-05]
+ [-6.63379991e-05  0.00000000e+00]]
+Total QM took 57.24 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.70002258 -1.22522364 -0.07082047]
+ [ 0.09680668 -3.08486792  0.47810817]
+ [-2.64222823 -1.50960328  0.59162276]
+ [ 0.65830462  1.18357177 -0.10736006]
+ [ 0.61618117  3.24771315  0.53054228]
+ [ 2.5395131   1.95623179  0.63751012]]
+COM Shift:
+[0.00404528 0.0040449  0.00403998]
+Shifted:
+[[-0.70406787 -1.22926854 -0.07486045]
+ [ 0.09276139 -3.08891282  0.47406819]
+ [-2.64627351 -1.51364818  0.58758278]
+ [ 0.65425934  1.17952687 -0.11140004]
+ [ 0.61213589  3.24366825  0.5265023 ]
+ [ 2.53546782  1.95218688  0.63347014]]
+Submitting electronic structure for step 57.
+	Gaussian terminated normally in 79.03 s. (GS_NEW)
+	Gaussian terminated normally in 33.03 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.54 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98712933e-01  6.23176911e-04]
+ [-6.50248369e-04  9.98572094e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999797e-01  6.37578014e-04]
+ [-6.37578014e-04  9.99999797e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  6.16896557e-05]
+ [-6.16896557e-05  0.00000000e+00]]
+Total QM took 124.47 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69998876 -1.22508644 -0.072385  ]
+ [ 0.10586491 -3.09524245  0.48912621]
+ [-2.65225675 -1.50664801  0.61157738]
+ [ 0.65782124  1.18328002 -0.112147  ]
+ [ 0.6189618   3.25572797  0.54862051]
+ [ 2.54305756  1.95747339  0.66419374]]
+COM Shift:
+[0.00404502 0.00404468 0.00403917]
+Shifted:
+[[-0.70403378 -1.22913112 -0.07642417]
+ [ 0.10181988 -3.09928713  0.48508705]
+ [-2.65630178 -1.51069269  0.60753821]
+ [ 0.65377622  1.17923534 -0.11618616]
+ [ 0.61491678  3.25168329  0.54458135]
+ [ 2.53901254  1.95342871  0.66015457]]
+Submitting electronic structure for step 58.
+	Gaussian terminated normally in 9.78 s. (GS_NEW)
+	Gaussian terminated normally in 32.98 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.61 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98675273e-01  5.77193608e-04]
+ [-6.03242253e-04  9.98541660e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999825e-01  5.91040280e-04]
+ [-5.91040280e-04  9.99999825e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  5.71868392e-05]
+ [-5.71868392e-05  0.00000000e+00]]
+Total QM took 55.46 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69985564 -1.22481499 -0.07388087]
+ [ 0.11579252 -3.10508571  0.49975978]
+ [-2.66267558 -1.50272515  0.63173235]
+ [ 0.65724142  1.18278934 -0.11708679]
+ [ 0.62018812  3.26420805  0.56701521]
+ [ 2.54764356  1.95752241  0.6917494 ]]
+COM Shift:
+[0.00404477 0.00404446 0.00403836]
+Shifted:
+[[-0.70390042 -1.22885945 -0.07791923]
+ [ 0.11174775 -3.10913016  0.49572142]
+ [-2.66672035 -1.50676961  0.62769399]
+ [ 0.65319665  1.17874489 -0.12112515]
+ [ 0.61614335  3.2601636   0.56297685]
+ [ 2.54359879  1.95347795  0.68771104]]
+Submitting electronic structure for step 59.
+	Gaussian terminated normally in 10.15 s. (GS_NEW)
+	Gaussian terminated normally in 35.52 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.07 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98673322e-01  5.18425020e-04]
+ [-5.33416832e-04  9.98532191e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999861e-01  5.26656721e-04]
+ [-5.26656721e-04  9.99999861e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  5.09573277e-05]
+ [-5.09573277e-05  0.00000000e+00]]
+Total QM took 57.88 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69963689 -1.22442997 -0.07529276]
+ [ 0.12645501 -3.11417406  0.50993268]
+ [-2.67320351 -1.49783231  0.6519938 ]
+ [ 0.65658069  1.1821226  -0.1221695 ]
+ [ 0.61988177  3.27296277  0.5856595 ]
+ [ 2.55308021  1.95631733  0.72011309]]
+COM Shift:
+[0.00404452 0.00404424 0.00403756]
+Shifted:
+[[-0.70368142 -1.22847421 -0.07933033]
+ [ 0.12241049 -3.1182183   0.50589511]
+ [-2.67724804 -1.50187654  0.64795624]
+ [ 0.65253616  1.17807836 -0.12620707]
+ [ 0.61583724  3.26891853  0.58162193]
+ [ 2.54903568  1.9522731   0.71607553]]
+Submitting electronic structure for step 60.
+	Gaussian terminated normally in 10.21 s. (GS_NEW)
+	Gaussian terminated normally in 35.70 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.19 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98720341e-01  4.43504779e-04]
+ [-4.41261697e-04  9.98578763e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999902e-01  4.42981418e-04]
+ [-4.42981418e-04  9.99999902e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  4.28612194e-05]
+ [-4.28612194e-05  0.00000000e+00]]
+Total QM took 58.35 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.6993457  -1.22395058 -0.07660575]
+ [ 0.13772133 -3.12230218  0.5195724 ]
+ [-2.68357091 -1.49197272  0.67226726]
+ [ 0.65585455  1.18130262 -0.1273842 ]
+ [ 0.61807139  3.28180174  0.60448279]
+ [ 2.55917277  1.95380311  0.74921378]]
+COM Shift:
+[0.00404428 0.00404401 0.00403678]
+Shifted:
+[[-0.70338998 -1.2279946  -0.08064254]
+ [ 0.13367705 -3.12634619  0.51553562]
+ [-2.6876152  -1.49601673  0.66823048]
+ [ 0.65181026  1.17725861 -0.13142098]
+ [ 0.6140271   3.27775773  0.60044601]
+ [ 2.55512848  1.9497591   0.745177  ]]
+Submitting electronic structure for step 61.
+	Gaussian terminated normally in 10.16 s. (GS_NEW)
+	Gaussian terminated normally in 34.17 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.23 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98693553e-01  3.66036135e-04]
+ [-3.72341121e-04  9.98571029e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999932e-01  3.69694237e-04]
+ [-3.69694237e-04  9.99999932e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  3.57702268e-05]
+ [-3.57702268e-05  0.00000000e+00]]
+Total QM took 56.82 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69899452 -1.22339434 -0.07780551]
+ [ 0.14946542 -3.12928491  0.52861088]
+ [-2.69352411 -1.48515521  0.69245943]
+ [ 0.65507813  1.18035174 -0.13271912]
+ [ 0.61479225  3.2905384   0.62341201]
+ [ 2.56572653  1.94993237  0.77897486]]
+COM Shift:
+[0.00404405 0.00404379 0.00403601]
+Shifted:
+[[-0.70303857 -1.22743813 -0.08184152]
+ [ 0.14542137 -3.13332869  0.52457487]
+ [-2.69756816 -1.48919899  0.68842342]
+ [ 0.65103408  1.17630795 -0.13675513]
+ [ 0.6107482   3.28649461  0.619376  ]
+ [ 2.56168248  1.94588858  0.77493886]]
+Submitting electronic structure for step 62.
+	Gaussian terminated normally in 10.67 s. (GS_NEW)
+	Gaussian terminated normally in 37.10 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.25 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98659530e-01  2.62048029e-04]
+ [-2.71564428e-04  9.98538037e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999964e-01  2.67180597e-04]
+ [-2.67180597e-04  9.99999964e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  2.58513917e-05]
+ [-2.58513917e-05  0.00000000e+00]]
+Total QM took 60.52 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69859491 -1.22277695 -0.07887847]
+ [ 0.16156738 -3.13495845  0.53698502]
+ [-2.70282857 -1.47739393  0.71247967]
+ [ 0.65426594  1.1792915  -0.13816194]
+ [ 0.61008579  3.29899275  0.64237269]
+ [ 2.57255012  1.94466626  0.80931574]]
+COM Shift:
+[0.00404382 0.00404356 0.00403525]
+Shifted:
+[[-0.70263873 -1.22682052 -0.08291372]
+ [ 0.15752356 -3.13900201  0.53294977]
+ [-2.70687239 -1.48143749  0.70844442]
+ [ 0.65022212  1.17524793 -0.14219719]
+ [ 0.60604197  3.29494918  0.63833744]
+ [ 2.5685063   1.9406227   0.80528048]]
+Submitting electronic structure for step 63.
+	Gaussian terminated normally in 10.05 s. (GS_NEW)
+	Gaussian terminated normally in 34.52 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.20 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98626328e-01  1.73936957e-04]
+ [-1.64938614e-04  9.98510130e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999986e-01  1.69680727e-04]
+ [-1.69680727e-04  9.99999986e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  1.64176703e-05]
+ [-1.64176703e-05  0.00000000e+00]]
+Total QM took 56.61 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69815735 -1.22211231 -0.07981193]
+ [ 0.17391429 -3.13918083  0.54463696]
+ [-2.71127086 -1.46870807  0.73224115]
+ [ 0.65343165  1.17814234 -0.14369995]
+ [ 0.60399902  3.3069935   0.66128992]
+ [ 2.57945812  1.93797491  0.84015298]]
+COM Shift:
+[0.0040436  0.00404334 0.00403451]
+Shifted:
+[[-0.70220095 -1.22615565 -0.08384644]
+ [ 0.1698707  -3.14322417  0.54060245]
+ [-2.71531445 -1.47275141  0.72820664]
+ [ 0.64938805  1.17409899 -0.14773446]
+ [ 0.59995543  3.30295016  0.65725541]
+ [ 2.57541453  1.93393157  0.83611847]]
+Submitting electronic structure for step 64.
+	Gaussian terminated normally in 10.30 s. (GS_NEW)
+	Gaussian terminated normally in 35.36 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.30 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98559416e-01  5.18373799e-05]
+ [-5.04637002e-05  9.98449679e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999999e-01  5.12271477e-05]
+ [-5.12271477e-05  9.99999999e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  4.95654655e-06]
+ [-4.95654655e-06  0.00000000e+00]]
+Total QM took 58.07 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69769124 -1.22141247 -0.08059419]
+ [ 0.1864008  -3.14183198  0.55151433]
+ [-2.71865981 -1.45912139  0.75166172]
+ [ 0.65258797  1.1769235  -0.1493202 ]
+ [ 0.59658391  3.31437959  0.68008916]
+ [ 2.5862731   1.92983747  0.87140167]]
+COM Shift:
+[0.00404338 0.00404312 0.00403379]
+Shifted:
+[[-0.70173462 -1.22545559 -0.08462798]
+ [ 0.18235742 -3.1458751   0.54748054]
+ [-2.72270319 -1.46316451  0.74762794]
+ [ 0.64854459  1.17288038 -0.15335399]
+ [ 0.59254054  3.31033647  0.67605537]
+ [ 2.58222972  1.92579436  0.86736788]]
+Submitting electronic structure for step 65.
+	Gaussian terminated normally in 10.08 s. (GS_NEW)
+	Gaussian terminated normally in 35.72 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.21 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98553873e-01 -7.17085336e-05]
+ [ 7.25811983e-05  9.98446145e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999997e-01 -7.22532450e-05]
+ [ 7.22532450e-05  9.99999997e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00 -6.99095281e-06]
+ [ 6.99095281e-06  0.00000000e+00]]
+Total QM took 57.82 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69720484 -1.22068771 -0.08121458]
+ [ 0.19892951 -3.14281353  0.55757034]
+ [-2.72482691 -1.44866177  0.7706646 ]
+ [ 0.65174657  1.17565293 -0.15500967]
+ [ 0.58789671  3.32100106  0.69869684]
+ [ 2.59282695  1.92024196  0.90297627]]
+COM Shift:
+[0.00404316 0.0040429  0.00403308]
+Shifted:
+[[-0.70124801 -1.22473061 -0.08524766]
+ [ 0.19488635 -3.14685643  0.55353726]
+ [-2.72887007 -1.45270467  0.76663151]
+ [ 0.64770341  1.17161003 -0.15904275]
+ [ 0.58385355  3.31695816  0.69466376]
+ [ 2.58878378  1.91619906  0.89894318]]
+Submitting electronic structure for step 66.
+	Gaussian terminated normally in 9.93 s. (GS_NEW)
+	Gaussian terminated normally in 34.85 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.08 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98561853e-01  1.97591552e-04]
+ [ 2.07304700e-04 -9.98472099e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999979e-01  2.02748803e-04]
+ [ 2.02748803e-04 -9.99999979e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  3.35690666e-19]
+ [-3.35690666e-19  0.00000000e+00]]
+Total QM took 56.68 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69670529 -1.21994659 -0.08166351]
+ [ 0.2114113  -3.14204842  0.56276387]
+ [-2.7296262  -1.43736074  0.78917885]
+ [ 0.65091806  1.17434725 -0.16075533]
+ [ 0.5779973   3.32671968  0.71704092]
+ [ 2.59896183  1.90918476  0.93479152]]
+COM Shift:
+[0.00404296 0.00404268 0.0040324 ]
+Shifted:
+[[-0.70074825 -1.22398926 -0.08569591]
+ [ 0.20736834 -3.14609109  0.55873147]
+ [-2.73366916 -1.44140342  0.78514645]
+ [ 0.6468751   1.17030457 -0.16478774]
+ [ 0.57395434  3.322677    0.71300852]
+ [ 2.59491888  1.90514208  0.93075911]]
+Submitting electronic structure for step 67.
+	Gaussian terminated normally in 10.17 s. (GS_NEW)
+	Gaussian terminated normally in 35.42 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.41 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98519731e-01  3.33396467e-04]
+ [-3.51098179e-04  9.98450305e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999941e-01  3.42766588e-04]
+ [-3.42766588e-04  9.99999941e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  3.31648086e-05]
+ [-3.31648086e-05  0.00000000e+00]]
+Total QM took 58.27 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69619767 -1.21919416 -0.08193095]
+ [ 0.22377494 -3.13947638  0.56705724]
+ [-2.73293636 -1.4252443   0.80713355]
+ [ 0.65011284  1.17302257 -0.1665401 ]
+ [ 0.56691708  3.33140624  0.73503921]
+ [ 2.60454332  1.89664081  0.96674998]]
+COM Shift:
+[0.00404315 0.00404288 0.00403302]
+Shifted:
+[[-0.70024081 -1.22323704 -0.08596396]
+ [ 0.21973179 -3.14351926  0.56302423]
+ [-2.73697951 -1.42928717  0.80310053]
+ [ 0.6460697   1.16897969 -0.17057311]
+ [ 0.56287393  3.32736336  0.73100619]
+ [ 2.60050017  1.89259793  0.96271697]]
+Submitting electronic structure for step 68.
+	Gaussian terminated normally in 10.98 s. (GS_NEW)
+	Gaussian terminated normally in 37.30 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.59 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98505242e-01  4.78399838e-04]
+ [-5.03962411e-04  9.98442701e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999879e-01  4.91931767e-04]
+ [-4.91931767e-04  9.99999879e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  4.75974715e-05]
+ [-4.75974715e-05  0.00000000e+00]]
+Total QM took 61.26 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69568749 -1.21843624 -0.08201069]
+ [ 0.23594684 -3.13506187  0.57041959]
+ [-2.73465493 -1.412351    0.82446873]
+ [ 0.64933897  1.17169251 -0.17235285]
+ [ 0.5547222   3.33494534  0.75262116]
+ [ 2.60943397  1.88262251  0.99876618]]
+COM Shift:
+[0.00404329 0.00404303 0.00403348]
+Shifted:
+[[-0.69973077 -1.22247928 -0.08604417]
+ [ 0.23190356 -3.1391049   0.56638611]
+ [-2.73869822 -1.41639403  0.82043525]
+ [ 0.64529568  1.16764947 -0.17638633]
+ [ 0.55067891  3.33090231  0.74858768]
+ [ 2.60539068  1.87857948  0.9947327 ]]
+Submitting electronic structure for step 69.
+	Gaussian terminated normally in 10.20 s. (GS_NEW)
+	Gaussian terminated normally in 35.94 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.28 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98518285e-01  6.44092124e-04]
+ [-6.59166383e-04  9.98457634e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999787e-01  6.52615897e-04]
+ [-6.52615897e-04  9.99999787e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  6.31446648e-05]
+ [-6.31446648e-05  0.00000000e+00]]
+Total QM took 58.27 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.6951789  -1.21767664 -0.08189647]
+ [ 0.24786278 -3.1287893   0.57282704]
+ [-2.73469993 -1.39872136  0.84113287]
+ [ 0.64860395  1.17037002 -0.17818113]
+ [ 0.54148126  3.33723382  0.76972112]
+ [ 2.61350781  1.86714912  1.03075913]]
+COM Shift:
+[0.0040434  0.00404316 0.00403384]
+Shifted:
+[[-0.6992223  -1.2217198  -0.08593031]
+ [ 0.24381938 -3.13283246  0.5687932 ]
+ [-2.73874332 -1.40276452  0.83709902]
+ [ 0.64456055  1.16632686 -0.18221497]
+ [ 0.53743787  3.33319066  0.76568728]
+ [ 2.60946441  1.86310597  1.02672529]]
+Submitting electronic structure for step 70.
+	Gaussian terminated normally in 10.14 s. (GS_NEW)
+	Gaussian terminated normally in 34.32 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.27 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98494194e-01  8.09918915e-04]
+ [-8.26447929e-04  9.98446831e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999664e-01  8.19436465e-04]
+ [-8.19436465e-04  9.99999664e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  7.92855969e-05]
+ [-7.92855969e-05  0.00000000e+00]]
+Total QM took 56.69 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69467521 -1.2169177  -0.08158324]
+ [ 0.25946736 -3.12066338  0.57426174]
+ [-2.73300957 -1.3843981   0.85708161]
+ [ 0.64791434  1.169067   -0.18401285]
+ [ 0.52726446  3.33817999  0.78627595]
+ [ 2.61664946  1.85024584  1.0626502 ]]
+COM Shift:
+[0.00404348 0.00404325 0.00403411]
+Shifted:
+[[-0.69871869 -1.22096095 -0.08561735]
+ [ 0.25542388 -3.12470663  0.57022764]
+ [-2.73705304 -1.38844135  0.8530475 ]
+ [ 0.64387087  1.16502375 -0.18804696]
+ [ 0.52322098  3.33413674  0.78224184]
+ [ 2.61260598  1.84620259  1.05861609]]
+Submitting electronic structure for step 71.
+	Gaussian terminated normally in 10.02 s. (GS_NEW)
+	Gaussian terminated normally in 34.66 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.34 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.98471310e-01 -9.62727308e-04]
+ [-9.97366619e-04 -9.98425832e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999518e-01 -9.81569327e-04]
+ [-9.81569327e-04 -9.99999518e-01]]
+NAC with Orthogonalized Overlap
+[[0. 0.]
+ [0. 0.]]
+Total QM took 57.40 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69417893 -1.21616033 -0.0810672 ]
+ [ 0.27071437 -3.11070907  0.57471205]
+ [-2.72954165 -1.3694258   0.87227807]
+ [ 0.64727584  1.16779441 -0.18983631]
+ [ 0.51214303  3.33770333  0.80222522]
+ [ 2.61875389  1.83194297  1.09436347]]
+COM Shift:
+[0.00404353 0.00404331 0.00403429]
+Shifted:
+[[-0.69822247 -1.22020365 -0.08510149]
+ [ 0.26667083 -3.11475238  0.57067776]
+ [-2.73358518 -1.37346911  0.86824378]
+ [ 0.64323231  1.1637511  -0.1938706 ]
+ [ 0.5080995   3.33366001  0.79819093]
+ [ 2.61471035  1.82789965  1.09032918]]
+Submitting electronic structure for step 72.
+	Gaussian terminated normally in 10.63 s. (GS_NEW)
+	Gaussian terminated normally in 37.03 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.92 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99846246 -0.00114639]
+ [ 0.00117829  0.99840905]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99999932 -0.00116416]
+ [ 0.00116416  0.99999932]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00011264]
+ [ 0.00011264  0.        ]]
+Total QM took 60.45 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69369259 -1.2154055  -0.08034685]
+ [ 0.28156266 -3.09897566  0.57417645]
+ [-2.72427209 -1.35385507  0.88670272]
+ [ 0.64669273  1.16656194 -0.19564389]
+ [ 0.49621259  3.33573915  0.81752529]
+ [ 2.61971783  1.81229672  1.12584312]]
+COM Shift:
+[0.00404343 0.0040432  0.00403396]
+Shifted:
+[[-0.69773602 -1.21944869 -0.08438081]
+ [ 0.27751923 -3.10301886  0.57014249]
+ [-2.72831552 -1.35789827  0.88266876]
+ [ 0.6426493   1.16251875 -0.19967785]
+ [ 0.49216915  3.33169595  0.81349133]
+ [ 2.6156744   1.80825353  1.12180916]]
+Submitting electronic structure for step 73.
+	Gaussian terminated normally in 10.57 s. (GS_NEW)
+	Gaussian terminated normally in 35.73 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.04 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99842239 -0.00135404]
+ [ 0.00138104  0.9983829 ]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99999906 -0.00136973]
+ [ 0.00136973  0.99999906]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00013253]
+ [ 0.00013253  0.        ]]
+Total QM took 58.34 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69321712 -1.21465098 -0.07942049]
+ [ 0.29198545 -3.08552978  0.57265585]
+ [-2.71719693 -1.33773384  0.9003331 ]
+ [ 0.64616934  1.16537916 -0.20142383]
+ [ 0.47954338  3.33222804  0.83211987]
+ [ 2.61945649  1.7913439   1.15701666]]
+COM Shift:
+[0.00404328 0.00404302 0.00403348]
+Shifted:
+[[-0.6972604  -1.218694   -0.08345398]
+ [ 0.28794217 -3.0895728   0.56862237]
+ [-2.72124021 -1.34177686  0.89629962]
+ [ 0.64212606  1.16133614 -0.20545731]
+ [ 0.4755001   3.32818502  0.82808639]
+ [ 2.61541321  1.78730088  1.15298318]]
+Submitting electronic structure for step 74.
+	Gaussian terminated normally in 10.57 s. (GS_NEW)
+	Gaussian terminated normally in 35.17 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.21 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99836202 -0.00154798]
+ [ 0.00157365  0.99832342]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99999878 -0.00156341]
+ [ 0.00156341  0.99999878]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00015127]
+ [ 0.00015127  0.        ]]
+Total QM took 57.94 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69275296 -1.21389321 -0.07828796]
+ [ 0.30196734 -3.07045827  0.5701582 ]
+ [-2.70833019 -1.32110992  0.91315613]
+ [ 0.64570925  1.16425485 -0.20716524]
+ [ 0.46220446  3.32712105  0.84595579]
+ [ 2.61789456  1.76912314  1.18781625]]
+COM Shift:
+[0.00404315 0.00404287 0.00403307]
+Shifted:
+[[-0.69679611 -1.21793608 -0.08232103]
+ [ 0.29792419 -3.07450113  0.56612513]
+ [-2.71237334 -1.32515279  0.90912306]
+ [ 0.64166611  1.16021199 -0.21119831]
+ [ 0.45816131  3.32307818  0.84192272]
+ [ 2.61385141  1.76508028  1.18378318]]
+Submitting electronic structure for step 75.
+	Gaussian terminated normally in 10.12 s. (GS_NEW)
+	Gaussian terminated normally in 36.24 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.68 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99827919 -0.00175077]
+ [ 0.0017728   0.99822806]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99999844 -0.00176487]
+ [ 0.00176487  0.99999844]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00017076]
+ [ 0.00017076  0.        ]]
+Total QM took 58.93 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69230006 -1.21312724 -0.0769506 ]
+ [ 0.31150392 -3.05386962  0.56669832]
+ [-2.69770424 -1.30403211  0.92516741]
+ [ 0.64531536  1.16319708 -0.21285788]
+ [ 0.44426413  3.3203792   0.85898201]
+ [ 2.6149654   1.74567529  1.21817664]]
+COM Shift:
+[0.00404304 0.00404274 0.00403272]
+Shifted:
+[[-0.69634309 -1.21716997 -0.08098332]
+ [ 0.30746088 -3.05791236  0.5626656 ]
+ [-2.70174728 -1.30807484  0.92113469]
+ [ 0.64127232  1.15915435 -0.21689061]
+ [ 0.44022109  3.31633646  0.85494929]
+ [ 2.61092237  1.74163256  1.21414391]]
+Submitting electronic structure for step 76.
+	Gaussian terminated normally in 10.36 s. (GS_NEW)
+	Gaussian terminated normally in 34.93 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.00 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99828144 -0.0019838 ]
+ [ 0.0020122   0.99822989]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.999998   -0.00200149]
+ [ 0.00200149  0.999998  ]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00019366]
+ [ 0.00019366  0.        ]]
+Total QM took 57.13 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69185784 -1.2123466  -0.07541118]
+ [ 0.3206024  -3.0358945   0.56229829]
+ [-2.6853698  -1.28654997  0.93637186]
+ [ 0.64498998  1.16221338 -0.21849194]
+ [ 0.42578976  3.31197348  0.8711499 ]
+ [ 2.61061066  1.72104292  1.24803541]]
+COM Shift:
+[0.00404295 0.00404263 0.00403245]
+Shifted:
+[[-0.69590079 -1.21638924 -0.07944363]
+ [ 0.31655945 -3.03993714  0.55826584]
+ [-2.68941274 -1.2905926   0.93233942]
+ [ 0.64094704  1.15817075 -0.22252438]
+ [ 0.42174682  3.30793085  0.86711746]
+ [ 2.60656771  1.71700029  1.24400297]]
+Submitting electronic structure for step 77.
+	Gaussian terminated normally in 9.99 s. (GS_NEW)
+	Gaussian terminated normally in 34.59 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.37 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99824453 -0.00222007]
+ [ 0.00224648  0.99818423]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.9999975  -0.00223727]
+ [ 0.00223727  0.9999975 ]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00021647]
+ [ 0.00021647  0.        ]]
+Total QM took 56.78 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69142528 -1.21154336 -0.07367398]
+ [ 0.32928231 -3.01668627  0.55698762]
+ [-2.6713962  -1.26871366  0.94678442]
+ [ 0.64473497  1.16131078 -0.22405798]
+ [ 0.4068476   3.30188488  0.88241322]
+ [ 2.60477982  1.69526984  1.27733302]]
+COM Shift:
+[0.00404288 0.00404255 0.00403224]
+Shifted:
+[[-0.69546816 -1.21558591 -0.07770622]
+ [ 0.32523943 -3.02072882  0.55295538]
+ [-2.67543908 -1.27275622  0.94275218]
+ [ 0.64069209  1.15726823 -0.22809022]
+ [ 0.40280472  3.29784232  0.87838098]
+ [ 2.60073695  1.69122729  1.27330078]]
+Submitting electronic structure for step 78.
+	Gaussian terminated normally in 11.06 s. (GS_NEW)
+	Gaussian terminated normally in 36.42 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.55 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99811418 -0.00245039]
+ [ 0.00248839  0.9980594 ]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99999694 -0.00247411]
+ [ 0.00247411  0.99999694]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00023939]
+ [ 0.00023939  0.        ]]
+Total QM took 60.29 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69100091 -1.21070804 -0.07174484]
+ [ 0.33757605 -2.99642127  0.55080338]
+ [-2.65587164 -1.25057373  0.95643075]
+ [ 0.64455168  1.16049585 -0.22954699]
+ [ 0.38750251  3.29010441  0.89272815]
+ [ 2.59742989  1.66840073  1.30601276]]
+COM Shift:
+[0.00404284 0.0040425  0.00403211]
+Shifted:
+[[-0.69504374 -1.21475054 -0.07577695]
+ [ 0.33353321 -3.00046377  0.54677127]
+ [-2.65991447 -1.25461624  0.95239864]
+ [ 0.64050884  1.15645335 -0.2335791 ]
+ [ 0.38345967  3.28606191  0.88869604]
+ [ 2.59338706  1.66435823  1.30198065]]
+Submitting electronic structure for step 79.
+	Gaussian terminated normally in 10.46 s. (GS_NEW)
+	Gaussian terminated normally in 36.59 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.05 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99805832 -0.00271265]
+ [ 0.00276923  0.99800348]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99999623 -0.00274634]
+ [ 0.00274634  0.99999623]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00026573]
+ [ 0.00026573  0.        ]]
+Total QM took 59.09 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69058282 -1.20982973 -0.06963122]
+ [ 0.34552943 -2.97529884  0.54379016]
+ [-2.63890352 -1.23218082  0.96534802]
+ [ 0.64444108  1.15977476 -0.23495038]
+ [ 0.36781781  3.27663341  0.90205337]
+ [ 2.58852494  1.6404807   1.33402081]]
+COM Shift:
+[0.00404282 0.00404248 0.00403206]
+Shifted:
+[[-0.69462564 -1.21387221 -0.07366328]
+ [ 0.34148661 -2.97934132  0.5397581 ]
+ [-2.64294634 -1.2362233   0.96131596]
+ [ 0.64039826  1.15573228 -0.23898244]
+ [ 0.36377499  3.27259092  0.89802131]
+ [ 2.58448213  1.63643821  1.32998875]]
+Submitting electronic structure for step 80.
+	Gaussian terminated normally in 10.70 s. (GS_NEW)
+	Gaussian terminated normally in 37.55 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.80 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99794371 -0.00299469]
+ [ 0.00303701  0.99788019]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99999543 -0.00302215]
+ [ 0.00302215  0.99999543]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00029241]
+ [ 0.00029241  0.        ]]
+Total QM took 61.61 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.69016868 -1.20889614 -0.06734229]
+ [ 0.35320191 -2.95354087  0.53599984]
+ [-2.62061874 -1.21358538  0.97358576]
+ [ 0.6444038   1.15915325 -0.24025994]
+ [ 0.34785502  3.26148375  0.91035009]
+ [ 2.57803582  1.61155496  1.36130611]]
+COM Shift:
+[0.00404283 0.00404249 0.00403209]
+Shifted:
+[[-0.69421151 -1.21293864 -0.07137438]
+ [ 0.34915908 -2.95758336  0.53196775]
+ [-2.62466157 -1.21762787  0.96955367]
+ [ 0.64036097  1.15511076 -0.24429203]
+ [ 0.34381219  3.25744125  0.906318  ]
+ [ 2.57399299  1.60751247  1.35727402]]
+Submitting electronic structure for step 81.
+	Gaussian terminated normally in 10.87 s. (GS_NEW)
+	Gaussian terminated normally in 37.89 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.11 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.9978746  -0.00328894]
+ [ 0.00333554  0.99779866]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99999449 -0.0033194 ]
+ [ 0.0033194   0.99999449]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00032117]
+ [ 0.00032117  0.        ]]
+Total QM took 60.68 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.6897557  -1.20789375 -0.06488891]
+ [ 0.36066652 -2.93139058  0.5274911 ]
+ [-2.60116385 -1.19483733  0.98120657]
+ [ 0.64444012  1.15863669 -0.24546791]
+ [ 0.32767364  3.24467828  0.91758224]
+ [ 2.56593979  1.58166851  1.38782044]]
+COM Shift:
+[0.00404287 0.00404254 0.00403221]
+Shifted:
+[[-0.69379857 -1.21193629 -0.06892111]
+ [ 0.35662365 -2.93543311  0.5234589 ]
+ [-2.60520672 -1.19887987  0.97717437]
+ [ 0.64039725  1.15459415 -0.24950011]
+ [ 0.32363078  3.24063575  0.91355004]
+ [ 2.56189692  1.57762597  1.38378824]]
+Submitting electronic structure for step 82.
+	Gaussian terminated normally in 10.59 s. (GS_NEW)
+	Gaussian terminated normally in 35.15 s. (TD_NEW_S1)
+	Gaussian terminated normally in 4.97 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99788865 -0.00358436]
+ [ 0.00364098  0.99779457]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99999345 -0.00362046]
+ [ 0.00362046  0.99999345]]
+NAC with Orthogonalized Overlap
+[[ 0.        -0.0003503]
+ [ 0.0003503  0.       ]]
+Total QM took 57.59 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.68934063 -1.20680801 -0.06228365]
+ [ 0.36800926 -2.90911053  0.51832859]
+ [-2.58070495 -1.17598564  0.98828688]
+ [ 0.64455011  1.15823004 -0.25056692]
+ [ 0.30733089  3.22625134  0.9237166 ]
+ [ 2.55222023  1.55086579  1.4135183 ]]
+COM Shift:
+[0.00404294 0.00404261 0.00403241]
+Shifted:
+[[-0.69338357 -1.21085062 -0.06631606]
+ [ 0.36396632 -2.91315314  0.51429618]
+ [-2.58474789 -1.18002825  0.98425447]
+ [ 0.64050717  1.15418744 -0.25459933]
+ [ 0.30328795  3.22220873  0.91968419]
+ [ 2.54817729  1.54682318  1.40948589]]
+Submitting electronic structure for step 83.
+	Gaussian terminated normally in 10.71 s. (GS_NEW)
+	Gaussian terminated normally in 35.89 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.16 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99782485 -0.00394173]
+ [ 0.00399099  0.99773964]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.9999921  -0.00397514]
+ [ 0.00397514  0.9999921 ]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00038462]
+ [ 0.00038462  0.        ]]
+Total QM took 58.71 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.68891964 -1.20562368 -0.05954075]
+ [ 0.37532788 -2.88697953  0.50858173]
+ [-2.55942726 -1.15707785  0.99491745]
+ [ 0.64473361  1.15793789 -0.25555006]
+ [ 0.28688134  3.20624929  0.92872307]
+ [ 2.53686636  1.51919047  1.4383569 ]]
+COM Shift:
+[0.00404305 0.00404271 0.00403271]
+Shifted:
+[[-0.69296268 -1.20966639 -0.06357346]
+ [ 0.37128484 -2.89102224  0.50454903]
+ [-2.5634703  -1.16112055  0.99088474]
+ [ 0.64069056  1.15389518 -0.25958277]
+ [ 0.2828383   3.20220658  0.92469037]
+ [ 2.53282332  1.51514776  1.4343242 ]]
+Submitting electronic structure for step 84.
+	Gaussian terminated normally in 10.54 s. (GS_NEW)
+	Gaussian terminated normally in 37.19 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.34 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99773485 -0.00428357]
+ [ 0.00433379  0.997643  ]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99999067 -0.00431862]
+ [ 0.00431862  0.99999067]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00041785]
+ [ 0.00041785  0.        ]]
+Total QM took 59.93 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.68848827 -1.20432524 -0.056676  ]
+ [ 0.38272981 -2.86528829  0.49832311]
+ [-2.53753409 -1.13815953  1.00120366]
+ [ 0.64499033  1.15776435 -0.26041085]
+ [ 0.26637656  3.18473124  0.93257498]
+ [ 2.51987294  1.48668513  1.46229616]]
+COM Shift:
+[0.00404319 0.00404284 0.00403311]
+Shifted:
+[[-0.69253147 -1.20836807 -0.0607091 ]
+ [ 0.37868662 -2.86933112  0.49429   ]
+ [-2.54157728 -1.14220237  0.99717056]
+ [ 0.64094714  1.15372152 -0.26444395]
+ [ 0.26233337  3.18068841  0.92854188]
+ [ 2.51582975  1.48264229  1.45826305]]
+Submitting electronic structure for step 85.
+	Gaussian terminated normally in 10.54 s. (GS_NEW)
+	Gaussian terminated normally in 35.46 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.64 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99770152 -0.00467108]
+ [ 0.00471101  0.99758909]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99998895 -0.00470206]
+ [ 0.00470206  0.99998895]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00045495]
+ [ 0.00045495  0.        ]]
+Total QM took 58.85 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.68804134 -1.20289738 -0.05370655]
+ [ 0.39032913 -2.8443339   0.48762643]
+ [-2.51524532 -1.11927389  1.00726544]
+ [ 0.64531991  1.1577131  -0.26514326]
+ [ 0.24586465  3.16176979  0.93524947]
+ [ 2.50124002  1.45339107  1.4852985 ]]
+COM Shift:
+[0.00404338 0.00404298 0.00403361]
+Shifted:
+[[-0.69208472 -1.20694036 -0.05774016]
+ [ 0.38628575 -2.84837688  0.48359282]
+ [-2.51928869 -1.12331687  1.00323182]
+ [ 0.64127654  1.15367012 -0.26917688]
+ [ 0.24182128  3.15772681  0.93121586]
+ [ 2.49719664  1.4493481   1.48126489]]
+Submitting electronic structure for step 86.
+	Gaussian terminated normally in 10.71 s. (GS_NEW)
+	Gaussian terminated normally in 38.54 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.23 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99761362 -0.00506462]
+ [ 0.00510512  0.99749478]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99998701 -0.00509727]
+ [ 0.00509727  0.99998701]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00049319]
+ [ 0.00049319  0.        ]]
+Total QM took 61.48 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.68757277 -1.20132566 -0.05065072]
+ [ 0.39824266 -2.82441301  0.47656421]
+ [-2.49279483 -1.10046114  1.01323665]
+ [ 0.64572199  1.15778727 -0.26974177]
+ [ 0.22538975  3.13745184  0.93672797]
+ [ 2.48097262  1.41934813  1.50732892]]
+COM Shift:
+[0.00404361 0.00404313 0.00403424]
+Shifted:
+[[-0.69161638 -1.20536878 -0.05468496]
+ [ 0.39419906 -2.82845614  0.47252997]
+ [-2.49683844 -1.10450427  1.0092024 ]
+ [ 0.64167839  1.15374414 -0.27377601]
+ [ 0.22134614  3.13340872  0.93269372]
+ [ 2.47692902  1.415305    1.50329468]]
+Submitting electronic structure for step 87.
+	Gaussian terminated normally in 10.28 s. (GS_NEW)
+	Gaussian terminated normally in 35.13 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.06 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99752133 -0.00545918]
+ [ 0.00551695  0.99739111]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99998486 -0.00550198]
+ [ 0.00550198  0.99998486]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00053235]
+ [ 0.00053235  0.        ]]
+Total QM took 57.42 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.68707552 -1.19959713 -0.04752767]
+ [ 0.40658501 -2.80581389  0.46520513]
+ [-2.47042717 -1.08175823  1.01926388]
+ [ 0.64619629  1.15798939 -0.27420136]
+ [ 0.20499136  3.1118795   0.93699675]
+ [ 2.45908055  1.38459448  1.52835479]]
+COM Shift:
+[0.00404388 0.00404327 0.00403501]
+Shifted:
+[[-0.6911194  -1.20364039 -0.05156267]
+ [ 0.40254112 -2.80985715  0.46117012]
+ [-2.47447105 -1.0858015   1.01522887]
+ [ 0.64215241  1.15394612 -0.27823637]
+ [ 0.20094748  3.10783623  0.93296175]
+ [ 2.45503667  1.38055122  1.52431978]]
+Submitting electronic structure for step 88.
+	Gaussian terminated normally in 10.20 s. (GS_NEW)
+	Gaussian terminated normally in 35.47 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.23 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99747031 -0.005917  ]
+ [ 0.00595975  0.99732742]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99998228 -0.00595376]
+ [ 0.00595376  0.99998228]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00057606]
+ [ 0.00057606  0.        ]]
+Total QM took 57.79 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.68654146 -1.19770114 -0.04435697]
+ [ 0.4154628  -2.78880784  0.45361134]
+ [-2.44839302 -1.06319853  1.02550446]
+ [ 0.64674268  1.15832133 -0.27851758]
+ [ 0.18470376  3.08517096  0.93604765]
+ [ 2.4355781   1.34916662  1.54834573]]
+COM Shift:
+[0.0040442  0.00404337 0.00403592]
+Shifted:
+[[-0.69058566 -1.20174451 -0.04839289]
+ [ 0.4114186  -2.79285122  0.44957542]
+ [-2.45243722 -1.0672419   1.02146854]
+ [ 0.64269847  1.15427796 -0.2825535 ]
+ [ 0.18065955  3.08112758  0.93201174]
+ [ 2.43153389  1.34512325  1.54430982]]
+Submitting electronic structure for step 89.
+	Gaussian terminated normally in 10.34 s. (GS_NEW)
+	Gaussian terminated normally in 35.28 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.08 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99738523 -0.0060372 ]
+ [ 0.00639992  0.99572542]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99998053 -0.00623993]
+ [ 0.00623993  0.99998053]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00060375]
+ [ 0.00060375  0.        ]]
+Total QM took 57.55 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.68596133 -1.19563003 -0.04115823]
+ [ 0.42496858 -2.77364013  0.44183585]
+ [-2.42694356 -1.04481169  1.0321237 ]
+ [ 0.64736131  1.15878418 -0.28268658]
+ [ 0.16455505  3.0574613   0.93387878]
+ [ 2.41048371  1.31309907  1.56727367]]
+COM Shift:
+[0.00404458 0.00404342 0.004037  ]
+Shifted:
+[[-0.69000591 -1.19967344 -0.04519522]
+ [ 0.420924   -2.77768355  0.43779885]
+ [-2.43098813 -1.04885511  1.0280867 ]
+ [ 0.64331674  1.15474076 -0.28672358]
+ [ 0.16051047  3.05341788  0.92984178]
+ [ 2.40643913  1.30905566  1.56323667]]
+Submitting electronic structure for step 90.
+	Gaussian terminated normally in 10.28 s. (GS_NEW)
+	Gaussian terminated normally in 37.69 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.75 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99740039 -0.00650886]
+ [ 0.00655543  0.99726255]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99997855 -0.00654948]
+ [ 0.00654948  0.99997855]]
+NAC with Orthogonalized Overlap
+[[ 0.        -0.0006337]
+ [ 0.0006337  0.       ]]
+Total QM took 61.31 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.68532482 -1.19337982 -0.03795056]
+ [ 0.43517395 -2.76052208  0.42992052]
+ [-2.40632476 -1.02662467  1.03929097]
+ [ 0.6480527   1.15937815 -0.28670523]
+ [ 0.14456701  3.02890411  0.93049549]
+ [ 2.38382027  1.27642556  1.58511206]]
+COM Shift:
+[0.00404498 0.00404336 0.00403822]
+Shifted:
+[[-0.6893698  -1.19742318 -0.04198878]
+ [ 0.43112897 -2.76456544  0.4258823 ]
+ [-2.41036974 -1.03066803  1.03525275]
+ [ 0.64400772  1.15533479 -0.29074345]
+ [ 0.14052203  3.02486075  0.92645726]
+ [ 2.37977529  1.2723822   1.58107384]]
+Submitting electronic structure for step 91.
+	Gaussian terminated normally in 11.11 s. (GS_NEW)
+	Gaussian terminated normally in 38.67 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.16 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99734408 -0.00700013]
+ [ 0.00706815  0.99718363]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99997513 -0.00705326]
+ [ 0.00705326  0.99997513]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00068245]
+ [ 0.00068245  0.        ]]
+Total QM took 61.98 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.6846206  -1.1909508  -0.03475208]
+ [ 0.44612398 -2.74962289  0.41789429]
+ [-2.3867695  -1.0086618   1.0471755 ]
+ [ 0.64881782  1.16010248 -0.29057107]
+ [ 0.12475387  2.99967181  0.92591153]
+ [ 2.3556145   1.23917841  1.60183644]]
+COM Shift:
+[0.00404541 0.00404315 0.00403961]
+Shifted:
+[[-0.68866601 -1.19499395 -0.03879169]
+ [ 0.44207857 -2.75366604  0.41385468]
+ [-2.39081491 -1.01270495  1.04313589]
+ [ 0.64477241  1.15605933 -0.29461069]
+ [ 0.12070846  2.99562866  0.92187192]
+ [ 2.35156909  1.23513526  1.59779682]]
+Submitting electronic structure for step 92.
+	Gaussian terminated normally in 10.20 s. (GS_NEW)
+	Gaussian terminated normally in 35.22 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.22 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99729531 -0.00749931]
+ [ 0.00756528  0.99712373]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99997147 -0.00755316]
+ [ 0.00755316  0.99997147]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00073082]
+ [ 0.00073082  0.        ]]
+Total QM took 57.55 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.68383665 -1.18834784 -0.03157934]
+ [ 0.45783274 -2.74106301  0.40577207]
+ [-2.36848898 -0.99094489  1.05594153]
+ [ 0.64965827  1.1609553  -0.29428253]
+ [ 0.10512057  2.96995529  0.9201498 ]
+ [ 2.32589603  1.20138759  1.61742476]]
+COM Shift:
+[0.00404586 0.00404272 0.00404122]
+Shifted:
+[[-0.68788251 -1.19239057 -0.03562056]
+ [ 0.45378688 -2.74510574  0.40173084]
+ [-2.37253484 -0.99498761  1.05190031]
+ [ 0.64561241  1.15691257 -0.29832375]
+ [ 0.10107471  2.96591257  0.91610858]
+ [ 2.32185017  1.19734486  1.61338354]]
+Submitting electronic structure for step 93.
+	Gaussian terminated normally in 10.16 s. (GS_NEW)
+	Gaussian terminated normally in 35.44 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.26 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99730151 -0.0080377 ]
+ [ 0.0081063   0.9971134 ]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99996724 -0.00809434]
+ [ 0.00809434  0.99996724]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00078318]
+ [ 0.00078318  0.        ]]
+Total QM took 58.04 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.68296064 -1.18558057 -0.02844689]
+ [ 0.47027948 -2.73491097  0.3935549 ]
+ [-2.35166573 -0.97349513  1.06574239]
+ [ 0.65057632  1.16193352 -0.29783899]
+ [ 0.08566239  2.93996496  0.91324317]
+ [ 2.29469776  1.16308192  1.63185661]]
+COM Shift:
+[0.0040463  0.00404201 0.00404307]
+Shifted:
+[[-0.68700694 -1.18962258 -0.03248996]
+ [ 0.46623318 -2.73895299  0.38951183]
+ [-2.35571203 -0.97753715  1.06169932]
+ [ 0.64653002  1.1578915  -0.30188206]
+ [ 0.08161609  2.93592294  0.9092001 ]
+ [ 2.29065146  1.1590399   1.62781354]]
+Submitting electronic structure for step 94.
+	Gaussian terminated normally in 10.66 s. (GS_NEW)
+	Gaussian terminated normally in 37.29 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.15 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99719077 -0.00857285]
+ [ 0.00864883  0.99698575]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99996271 -0.00863566]
+ [ 0.00863566  0.99996271]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00083555]
+ [ 0.00083555  0.        ]]
+Total QM took 60.24 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.68198038 -1.18266324 -0.02536683]
+ [ 0.48340728 -2.73118199  0.38123084]
+ [-2.3364462  -0.95633447  1.07671492]
+ [ 0.6515751   1.16303275 -0.30124086]
+ [ 0.06636384  2.90993032  0.90523539]
+ [ 2.26205533  1.12428911  1.64511337]]
+COM Shift:
+[0.0040467  0.00404093 0.00404519]
+Shifted:
+[[-0.68602709 -1.18670417 -0.02941203]
+ [ 0.47936058 -2.73522292  0.37718565]
+ [-2.3404929  -0.9603754   1.07266973]
+ [ 0.64752839  1.15899182 -0.30528605]
+ [ 0.06231714  2.90588938  0.9011902 ]
+ [ 2.25800863  1.12024818  1.64106818]]
+Submitting electronic structure for step 95.
+	Gaussian terminated normally in 10.51 s. (GS_NEW)
+	Gaussian terminated normally in 37.94 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.24 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99710543 -0.00911603]
+ [ 0.00919386  0.99689232]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99995784 -0.00918211]
+ [ 0.00918211  0.99995784]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00088843]
+ [ 0.00088843  0.        ]]
+Total QM took 60.86 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.68088446 -1.17961443 -0.0223485 ]
+ [ 0.49712349 -2.72983949  0.36877663]
+ [-2.32293492 -0.93948746  1.08897399]
+ [ 0.65265861  1.16424726 -0.30448965]
+ [ 0.04719805  2.88009957  0.89618178]
+ [ 2.22800714  1.08503652  1.65717811]]
+COM Shift:
+[0.00404702 0.00403939 0.0040476 ]
+Shifted:
+[[-0.68493148 -1.18365381 -0.02639611]
+ [ 0.49307648 -2.73387888  0.36472903]
+ [-2.32698194 -0.94352685  1.08492639]
+ [ 0.64861159  1.16020788 -0.30853725]
+ [ 0.04315104  2.87606018  0.89213417]
+ [ 2.22396012  1.08099714  1.65313051]]
+Submitting electronic structure for step 96.
+	Gaussian terminated normally in 13.34 s. (GS_NEW)
+	Gaussian terminated normally in 35.66 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.15 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99703504 -0.00968878]
+ [ 0.00977111  0.99680636]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99995237 -0.00975953]
+ [ 0.00975953  0.99995237]]
+NAC with Orthogonalized Overlap
+[[ 0.        -0.0009443]
+ [ 0.0009443  0.       ]]
+Total QM took 61.24 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.67966278 -1.17645647 -0.01939822]
+ [ 0.51130232 -2.73079895  0.35615998]
+ [-2.31119007 -0.92298301  1.10260782]
+ [ 0.65383186  1.16556993 -0.30758803]
+ [ 0.02812624  2.85073828  0.88614951]
+ [ 2.19259402  1.04535165  1.66803574]]
+COM Shift:
+[0.00404717 0.00403729 0.00405033]
+Shifted:
+[[-0.68370995 -1.18049376 -0.02344856]
+ [ 0.50725515 -2.73483624  0.35210965]
+ [-2.31523724 -0.9270203   1.09855749]
+ [ 0.64978469  1.16153265 -0.31163836]
+ [ 0.02407907  2.84670099  0.88209917]
+ [ 2.18854685  1.04131436  1.66398541]]
+Submitting electronic structure for step 97.
+	Gaussian terminated normally in 10.73 s. (GS_NEW)
+	Gaussian terminated normally in 38.18 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.09 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.9969784  -0.01024384]
+ [ 0.01033788  0.99672885]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99994672 -0.01032279]
+ [ 0.01032279  0.99994672]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00099879]
+ [ 0.00099879  0.        ]]
+Total QM took 61.70 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.67830713 -1.17321472 -0.0165192 ]
+ [ 0.5257893  -2.73393355  0.3433421 ]
+ [-2.30122111 -0.90685578  1.11767454]
+ [ 0.65510089  1.16699233 -0.31053989]
+ [ 0.00909732  2.82212698  0.87521736]
+ [ 2.1558588   1.00526235  1.67767338]]
+COM Shift:
+[0.00404709 0.00403455 0.00405341]
+Shifted:
+[[-0.68235422 -1.17724927 -0.02057261]
+ [ 0.52174221 -2.73796809  0.33928869]
+ [-2.3052682  -0.91089033  1.11362113]
+ [ 0.6510538   1.16295778 -0.31459329]
+ [ 0.00505023  2.81809244  0.87116396]
+ [ 2.15181171  1.0012278   1.67361997]]
+Submitting electronic structure for step 98.
+	Gaussian terminated normally in 11.10 s. (GS_NEW)
+	Gaussian terminated normally in 36.24 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.21 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99687013 -0.01083222]
+ [ 0.01093955  0.99661444]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99994037 -0.01092081]
+ [ 0.01092081  0.99994037]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00105666]
+ [ 0.00105666  0.        ]]
+Total QM took 59.74 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.67681168 -1.16991677 -0.01371154]
+ [ 0.54040676 -2.73908145  0.33028045]
+ [-2.2929891  -0.89114775  1.13419984]
+ [ 0.65647279  1.16850482 -0.31335032]
+ [-0.00995165  2.79455841  0.86347499]
+ [ 2.11784636  0.96479788  1.68608061]]
+COM Shift:
+[0.00404667 0.00403109 0.00405683]
+Shifted:
+[[-0.68085835 -1.17394786 -0.01776837]
+ [ 0.53636009 -2.74311254  0.32622361]
+ [-2.29703577 -0.89517884  1.130143  ]
+ [ 0.65242612  1.16447373 -0.31740715]
+ [-0.01399832  2.79052732  0.85941815]
+ [ 2.11379969  0.96076679  1.68202378]]
+Submitting electronic structure for step 99.
+	Gaussian terminated normally in 10.43 s. (GS_NEW)
+	Gaussian terminated normally in 36.28 s. (TD_NEW_S1)
+	Gaussian terminated normally in 4.97 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99677702 -0.01142165]
+ [ 0.01154206  0.99651707]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99993365 -0.01151972]
+ [ 0.01151972  0.99993365]]
+NAC with Orthogonalized Overlap
+[[ 0.        -0.0011146]
+ [ 0.0011146  0.       ]]
+Total QM took 58.68 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.67517325 -1.16659155 -0.01097232]
+ [ 0.5549605  -2.74605365  0.31693111]
+ [-2.28640895 -0.8759087   1.15217679]
+ [ 0.65795558  1.17009679 -0.31602558]
+ [-0.0290949   2.76833272  0.85102101]
+ [ 2.07860282  0.92398868  1.69325032]]
+COM Shift:
+[0.00404579 0.00402685 0.00406064]
+Shifted:
+[[-0.67921904 -1.1706184  -0.01503297]
+ [ 0.55091471 -2.75008049  0.31287046]
+ [-2.29045474 -0.87993555  1.14811615]
+ [ 0.65390979  1.16606994 -0.32008623]
+ [-0.03314069  2.76430588  0.84696037]
+ [ 2.07455703  0.91996184  1.68918968]]
+Submitting electronic structure for step 100.
+	Gaussian terminated normally in 9.77 s. (GS_NEW)
+	Gaussian terminated normally in 35.61 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.04 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99677352 -0.01203808]
+ [ 0.01217979  0.99649537]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.9999262  -0.01214893]
+ [ 0.01214893  0.9999262 ]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00117548]
+ [ 0.00117548  0.        ]]
+Total QM took 57.29 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.67339147 -1.16326855 -0.00829589]
+ [ 0.56924629 -2.75464197  0.303251  ]
+ [-2.28135415 -0.8611967   1.17156681]
+ [ 0.65955816  1.17175699 -0.31857299]
+ [-0.04841622  2.74375222  0.83796042]
+ [ 2.03817545  0.88286709  1.69917928]]
+COM Shift:
+[0.00404431 0.00402177 0.00406485]
+Shifted:
+[[-0.67743578 -1.16729033 -0.01236074]
+ [ 0.56520197 -2.75866375  0.29918615]
+ [-2.28539846 -0.86521847  1.16750196]
+ [ 0.65551384  1.16773522 -0.32263784]
+ [-0.05246054  2.73973045  0.83389557]
+ [ 2.03413113  0.87884532  1.69511443]]
+Submitting electronic structure for step 101.
+	Gaussian terminated normally in 10.51 s. (GS_NEW)
+	Gaussian terminated normally in 37.08 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.31 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.9967187  -0.01267601]
+ [ 0.01282255  0.99643389]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99991818 -0.01279203]
+ [ 0.01279203  0.99991818]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00123771]
+ [ 0.00123771  0.        ]]
+Total QM took 60.02 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.67146871 -1.15997706 -0.00567411]
+ [ 0.58305646 -2.76462671  0.28919942]
+ [-2.277663   -0.84707763  1.19230252]
+ [ 0.66129004  1.17347397 -0.32100072]
+ [-0.06800676  2.72111421  0.82440061]
+ [ 1.99661166  0.84146696  1.70386919]]
+COM Shift:
+[0.00404208 0.00401584 0.00406947]
+Shifted:
+[[-0.67551079 -1.1639929  -0.00974358]
+ [ 0.57901438 -2.76864255  0.28512994]
+ [-2.28170509 -0.85109347  1.18823305]
+ [ 0.65724796  1.16945813 -0.3250702 ]
+ [-0.07204885  2.71709837  0.82033114]
+ [ 1.99256958  0.83745112  1.69979972]]
+Submitting electronic structure for step 102.
+	Gaussian terminated normally in 10.34 s. (GS_NEW)
+	Gaussian terminated normally in 37.93 s. (TD_NEW_S1)
+	Gaussian terminated normally in 6.10 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99664112 -0.01333382]
+ [ 0.01349729  0.99635064]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99990939 -0.01346151]
+ [ 0.01346151  0.99990939]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00130249]
+ [ 0.00130249  0.        ]]
+Total QM took 61.49 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.66940986 -1.1567455  -0.00309675]
+ [ 0.59618554 -2.77578342  0.27473921]
+ [-2.27514619 -0.83362452  1.2142916 ]
+ [ 0.66316108  1.17523661 -0.32331758]
+ [-0.08796155  2.70070335  0.81044672]
+ [ 1.95395865  0.79982375  1.70732771]]
+COM Shift:
+[0.00403892 0.00400904 0.00407452]
+Shifted:
+[[-0.67344878 -1.16075455 -0.00717127]
+ [ 0.59214662 -2.77979247  0.27066469]
+ [-2.27918511 -0.83763356  1.21021708]
+ [ 0.65912216  1.17122756 -0.3273921 ]
+ [-0.09200047  2.69669431  0.8063722 ]
+ [ 1.94991973  0.79581471  1.70325319]]
+Submitting electronic structure for step 103.
+	Gaussian terminated normally in 10.11 s. (GS_NEW)
+	Gaussian terminated normally in 36.90 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.65 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99661961 -0.01403079]
+ [ 0.01421149  0.99631998]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.9998996  -0.01416974]
+ [ 0.01416974  0.9998996 ]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00137101]
+ [ 0.00137101  0.        ]]
+Total QM took 59.53 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-6.67222000e-01 -1.15360091e+00 -5.51874805e-04]
+ [ 6.08435135e-01 -2.78788873e+00  2.59837392e-01]
+ [-2.27359470e+00 -8.20916362e-01  1.23742157e+00]
+ [ 6.65181093e-01  1.17703474e+00 -3.25532687e-01]
+ [-1.08375369e-01  2.68278312e+00  7.96196186e-01]
+ [ 1.91026245e+00  7.57974014e-01  1.70956961e+00]]
+COM Shift:
+[0.00403463 0.00400141 0.00408001]
+Shifted:
+[[-0.67125663 -1.15760232 -0.00463188]
+ [ 0.60440051 -2.79189013  0.25575738]
+ [-2.27762932 -0.82491777  1.23334156]
+ [ 0.66114647  1.17303333 -0.3296127 ]
+ [-0.11241     2.67878172  0.79211618]
+ [ 1.90622783  0.75397261  1.7054896 ]]
+Submitting electronic structure for step 104.
+	Gaussian terminated normally in 12.95 s. (GS_NEW)
+	Gaussian terminated normally in 38.50 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.37 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99653987 -0.01476492]
+ [ 0.01495578  0.99623604]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.9998888  -0.01491256]
+ [ 0.01491256  0.9998888 ]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00144288]
+ [ 0.00144288  0.        ]]
+Total QM took 63.84 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-6.64913920e-01 -1.15056853e+00  1.97377149e-03]
+ [ 6.19617790e-01 -2.80072502e+00  2.44465289e-01]
+ [-2.27278775e+00 -8.09036664e-01  1.26156503e+00]
+ [ 6.67359391e-01  1.17885979e+00 -3.27655191e-01]
+ [-1.29337883e-01  2.66758713e+00  7.81732917e-01]
+ [ 1.86556700e+00  7.15954598e-01  1.71061806e+00]]
+COM Shift:
+[0.00402899 0.00399297 0.00408593]
+Shifted:
+[[-6.68942908e-01 -1.15456150e+00 -2.11216216e-03]
+ [ 6.15588801e-01 -2.80471799e+00  2.40379355e-01]
+ [-2.27681674e+00 -8.13029634e-01  1.25747909e+00]
+ [ 6.63330403e-01  1.17486682e+00 -3.31741124e-01]
+ [-1.33366872e-01  2.66359416e+00  7.77646984e-01]
+ [ 1.86153801e+00  7.11961628e-01  1.70653213e+00]]
+Submitting electronic structure for step 105.
+	Gaussian terminated normally in 13.87 s. (GS_NEW)
+	Gaussian terminated normally in 37.73 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.43 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99646007 -0.01554443]
+ [ 0.01576212  0.99614154]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.9998766  -0.01570945]
+ [ 0.01570945  0.9998766 ]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00151999]
+ [ 0.00151999  0.        ]]
+Total QM took 64.11 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.66249562 -1.14767151  0.00449439]
+ [ 0.62955962 -2.81408401  0.22859843]
+ [-2.27250022 -0.7980721   1.28658465]
+ [ 0.66970431  1.18070542 -0.32969393]
+ [-0.15092806  2.65531089  0.76712173]
+ [ 1.81991347  0.67380209  1.71050582]]
+COM Shift:
+[0.00402177 0.00398381 0.00409229]
+Shifted:
+[[-6.66517389e-01 -1.15165532e+00  4.02106466e-04]
+ [ 6.25537844e-01 -2.81806782e+00  2.24506144e-01]
+ [-2.27652200e+00 -8.02055909e-01  1.28249237e+00]
+ [ 6.65682537e-01  1.17672161e+00 -3.33786219e-01]
+ [-1.54949835e-01  2.65132707e+00  7.63029446e-01]
+ [ 1.81589170e+00  6.69818275e-01  1.70641353e+00]]
+Submitting electronic structure for step 106.
+	Gaussian terminated normally in 10.65 s. (GS_NEW)
+	Gaussian terminated normally in 37.57 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.12 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99648297 -0.01638961]
+ [ 0.01663497  0.99614553]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99986269 -0.0165711 ]
+ [ 0.0165711   0.99986269]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00160336]
+ [ 0.00160336  0.        ]]
+Total QM took 60.15 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.65997778 -1.14493062  0.00702482]
+ [ 0.63810206 -2.82776922  0.21221609]
+ [-2.27250902 -0.78811105  1.31233807]
+ [ 0.67222268  1.18256806 -0.3316572 ]
+ [-0.17320867  2.64610445  0.75240339]
+ [ 1.77333934  0.63155167  1.70927649]]
+COM Shift:
+[0.00401274 0.00397403 0.00409904]
+Shifted:
+[[-0.66399052 -1.14890465  0.00292577]
+ [ 0.63408933 -2.83174326  0.20811704]
+ [-2.27652176 -0.79208509  1.30823903]
+ [ 0.66820994  1.17859403 -0.33575624]
+ [-0.1772214   2.64213041  0.74830435]
+ [ 1.76932661  0.62757764  1.70517744]]
+Submitting electronic structure for step 107.
+	Gaussian terminated normally in 10.42 s. (GS_NEW)
+	Gaussian terminated normally in 36.42 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.25 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99644062 -0.01730213]
+ [ 0.01757925  0.99610332]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99984681 -0.01750327]
+ [ 0.01750327  0.99984681]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00169355]
+ [ 0.00169355  0.        ]]
+Total QM took 59.18 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.6573713  -1.14236416  0.00958023]
+ [ 0.64510269 -2.84159756  0.19530072]
+ [-2.27259841 -0.77924241  1.33868199]
+ [ 0.67491934  1.18444735 -0.33355253]
+ [-0.19622097  2.6400667   0.73759095]
+ [ 1.72587765  0.58923614  1.70698567]]
+COM Shift:
+[0.00400162 0.00396376 0.00410617]
+Shifted:
+[[-0.66137293 -1.14632791  0.00547406]
+ [ 0.64110107 -2.84556131  0.19119455]
+ [-2.27660003 -0.78320617  1.33457582]
+ [ 0.67091771  1.1804836  -0.3376587 ]
+ [-0.20022259  2.63610294  0.73348478]
+ [ 1.72187602  0.58527238  1.7028795 ]]
+Submitting electronic structure for step 108.
+	Gaussian terminated normally in 9.93 s. (GS_NEW)
+	Gaussian terminated normally in 36.49 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.43 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99631575 -0.01832525]
+ [ 0.01861708  0.99596976]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99982813 -0.0185395 ]
+ [ 0.0185395   0.99982813]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00179381]
+ [ 0.00179381  0.        ]]
+Total QM took 58.63 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.65468678 -1.13998782  0.01217594]
+ [ 0.6504352  -2.85539999  0.17783736]
+ [-2.27256416 -0.7715546   1.36547535]
+ [ 0.67779671  1.18634642 -0.33538667]
+ [-0.21998012  2.6372418   0.72266791]
+ [ 1.6775565   0.54688498  1.70370196]]
+COM Shift:
+[0.00398819 0.00395314 0.00411359]
+Shifted:
+[[-0.65867498 -1.14394096  0.00806235]
+ [ 0.64644701 -2.85935312  0.17372377]
+ [-2.27655235 -0.77550773  1.36136176]
+ [ 0.67380851  1.18239328 -0.33950027]
+ [-0.22396831  2.63328866  0.71855432]
+ [ 1.67356831  0.54293184  1.69958836]]
+Submitting electronic structure for step 109.
+	Gaussian terminated normally in 10.57 s. (GS_NEW)
+	Gaussian terminated normally in 37.52 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.52 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99624472 -0.01946421]
+ [ 0.01976347  0.99585956]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99980618 -0.01968776]
+ [ 0.01968776  0.99980618]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00190491]
+ [ 0.00190491  0.        ]]
+Total QM took 60.59 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.65193417 -1.13781464  0.01482723]
+ [ 0.65398909 -2.86902184  0.15981287]
+ [-2.27221643 -0.76513463  1.39258219]
+ [ 0.68085447  1.18827188 -0.33716565]
+ [-0.24447213  2.63761794  0.70758823]
+ [ 1.62839814  0.50452287  1.6995078 ]]
+COM Shift:
+[0.0039722  0.00394232 0.00412124]
+Shifted:
+[[-0.65590637 -1.14175696  0.01070599]
+ [ 0.65001689 -2.87296417  0.15569163]
+ [-2.27618863 -0.76907695  1.38846095]
+ [ 0.67688227  1.18432956 -0.34128689]
+ [-0.24844433  2.63367562  0.70346699]
+ [ 1.62442594  0.50058055  1.69538657]]
+Submitting electronic structure for step 110.
+	Gaussian terminated normally in 10.53 s. (GS_NEW)
+	Gaussian terminated normally in 36.18 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.41 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99613413 -0.0207025 ]
+ [ 0.02103158  0.99571198]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99978057 -0.02094787]
+ [ 0.02094787  0.99978057]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00202684]
+ [ 0.00202684  0.        ]]
+Total QM took 59.21 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.6491224  -1.13585489  0.01754922]
+ [ 0.65566884 -2.88232249  0.14121533]
+ [-2.27138172 -0.76006759  1.41987305]
+ [ 0.68408939  1.19023372 -0.33889495]
+ [-0.26965216  2.64112863  0.69227842]
+ [ 1.57841862  0.46216886  1.69450007]]
+COM Shift:
+[0.00395342 0.00393147 0.004129  ]
+Shifted:
+[[-0.65307582 -1.13978637  0.01342022]
+ [ 0.65171542 -2.88625396  0.13708633]
+ [-2.27533514 -0.76399906  1.41574405]
+ [ 0.68013597  1.18630224 -0.34302395]
+ [-0.27360558  2.63719716  0.68814942]
+ [ 1.5744652   0.45823738  1.69037107]]
+Submitting electronic structure for step 111.
+	Gaussian terminated normally in 10.54 s. (GS_NEW)
+	Gaussian terminated normally in 37.45 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.70 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99596199 -0.02207805]
+ [ 0.02245173  0.99549888]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.9997501  -0.02235477]
+ [ 0.02235477  0.9997501 ]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00216296]
+ [ 0.00216296  0.        ]]
+Total QM took 60.62 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.64625916 -1.13411613  0.02035681]
+ [ 0.6553929  -2.89517471  0.1220336 ]
+ [-2.26990382 -0.75643626  1.4472255 ]
+ [ 0.68749527  1.1922449  -0.3405798 ]
+ [-0.29544439  2.64765624  0.67664161]
+ [ 1.52762822  0.4198359   1.68879024]]
+COM Shift:
+[0.00393168 0.00392075 0.00413674]
+Shifted:
+[[-0.65019084 -1.13803688  0.01622008]
+ [ 0.65146122 -2.89909546  0.11789686]
+ [-2.2738355  -0.76035701  1.44308877]
+ [ 0.68356359  1.18832415 -0.34471654]
+ [-0.29937607  2.64373549  0.67250488]
+ [ 1.52369654  0.41591516  1.6846535 ]]
+Submitting electronic structure for step 112.
+	Gaussian terminated normally in 10.60 s. (GS_NEW)
+	Gaussian terminated normally in 36.17 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.55 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99584386 -0.02328754]
+ [ 0.02404015  0.97913229]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99971299 -0.0239568 ]
+ [ 0.0239568   0.99971299]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00231797]
+ [ 0.00231797  0.        ]]
+Total QM took 59.10 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.64335074 -1.13260314  0.0232646 ]
+ [ 0.65309278 -2.90746413  0.10225676]
+ [-2.26764417 -0.75432063  1.47452452]
+ [ 0.69106304  1.1943208  -0.34222551]
+ [-0.32174411  2.65703742  0.66056272]
+ [ 1.47603107  0.37753002  1.68250424]]
+COM Shift:
+[0.00390681 0.00391027 0.0041443 ]
+Shifted:
+[[-0.64725755 -1.13651341  0.0191203 ]
+ [ 0.64918596 -2.9113744   0.09811246]
+ [-2.27155099 -0.7582309   1.47038022]
+ [ 0.68715623  1.19041053 -0.34636981]
+ [-0.32565092  2.65312715  0.65641842]
+ [ 1.47212425  0.37361975  1.67835994]]
+Submitting electronic structure for step 113.
+	Gaussian terminated normally in 10.48 s. (GS_NEW)
+	Gaussian terminated normally in 36.26 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.17 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99572332 -0.02509262]
+ [ 0.02539807  0.99535485]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99967863 -0.02535031]
+ [ 0.02535031  0.99967863]]
+NAC with Orthogonalized Overlap
+[[ 0.        -0.0024528]
+ [ 0.0024528  0.       ]]
+Total QM took 58.84 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.64040198 -1.13131792  0.02628682]
+ [ 0.64871228 -2.91908868  0.08187347]
+ [-2.2644815  -0.75379735  1.50166245]
+ [ 0.69478098  1.19647858 -0.34383773]
+ [-0.34842163  2.66907031  0.64391411]
+ [ 1.4236252   0.3352494   1.67578171]]
+COM Shift:
+[0.00387867 0.00390012 0.00415153]
+Shifted:
+[[-0.64428064 -1.13521804  0.02213529]
+ [ 0.64483361 -2.9229888   0.07772194]
+ [-2.26836017 -0.75769747  1.49751092]
+ [ 0.69090232  1.19257846 -0.34798926]
+ [-0.3523003   2.66517018  0.63976257]
+ [ 1.41974653  0.33134928  1.67163018]]
+Submitting electronic structure for step 114.
+	Gaussian terminated normally in 11.21 s. (GS_NEW)
+	Gaussian terminated normally in 39.55 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.72 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99559192 -0.02710578]
+ [ 0.02744701  0.99515508]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99962474 -0.0273929 ]
+ [ 0.0273929   0.99962474]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00265043]
+ [ 0.00265043  0.        ]]
+Total QM took 63.55 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.63741641 -1.13026001  0.02943701]
+ [ 0.64220645 -2.92995562  0.06087592]
+ [-2.26031262 -0.75494078  1.52852973]
+ [ 0.69863494  1.19873635 -0.3454227 ]
+ [-0.37531997  2.68351857  0.62656565]
+ [ 1.37041661  0.29299567  1.66877586]]
+COM Shift:
+[0.0038476  0.0038905  0.00415815]
+Shifted:
+[[-0.64126401 -1.13415051  0.02527885]
+ [ 0.63835884 -2.93384612  0.05671777]
+ [-2.26416022 -0.75883128  1.52437158]
+ [ 0.69478734  1.19484585 -0.34958086]
+ [-0.37916757  2.67962807  0.6224075 ]
+ [ 1.36656901  0.28910517  1.66461771]]
+Submitting electronic structure for step 115.
+	Gaussian terminated normally in 10.91 s. (GS_NEW)
+	Gaussian terminated normally in 38.13 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.57 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99544079 -0.02925732]
+ [ 0.02965533  0.99494195]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99956225 -0.02958569]
+ [ 0.02958569  0.99956225]]
+NAC with Orthogonalized Overlap
+[[ 0.        -0.0028626]
+ [ 0.0028626  0.       ]]
+Total QM took 61.65 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.63439665 -1.12942633  0.03272833]
+ [ 0.63354149 -2.93998548  0.0392518 ]
+ [-2.2550491  -0.75781923  1.55502934]
+ [ 0.70260848  1.20111235 -0.34698708]
+ [-0.40227363  2.70012645  0.60838337]
+ [ 1.31639738  0.25075459  1.66165001]]
+COM Shift:
+[0.00381307 0.00388124 0.0041641 ]
+Shifted:
+[[-0.63820972 -1.13330757  0.02856424]
+ [ 0.62972842 -2.94386672  0.03508771]
+ [-2.25886217 -0.76170047  1.55086524]
+ [ 0.6987954   1.19723112 -0.35115118]
+ [-0.4060867   2.69624521  0.60421927]
+ [ 1.31258431  0.24687336  1.65748591]]
+Submitting electronic structure for step 116.
+	Gaussian terminated normally in 11.21 s. (GS_NEW)
+	Gaussian terminated normally in 35.39 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.19 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99523386 -0.03148779]
+ [ 0.03196953  0.99465035]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.9994919  -0.03187375]
+ [ 0.03187375  0.9994919 ]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00308398]
+ [ 0.00308398  0.        ]]
+Total QM took 58.67 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.63134406 -1.1288112   0.03617308]
+ [ 0.62269494 -2.94910839  0.01698992]
+ [-2.24861738 -0.76249564  1.5810636 ]
+ [ 0.70668394  1.20362423 -0.34853797]
+ [-0.429106    2.71862269  0.58923753]
+ [ 1.26156769  0.20851213  1.65457563]]
+COM Shift:
+[0.00377513 0.00387233 0.00416916]
+Shifted:
+[[-0.63511919 -1.13268353  0.03200392]
+ [ 0.61891981 -2.95298071  0.01282075]
+ [-2.2523925  -0.76636797  1.57689444]
+ [ 0.70290881  1.1997519  -0.35270713]
+ [-0.43288112  2.71475037  0.58506837]
+ [ 1.25779257  0.2046398   1.65040647]]
+Submitting electronic structure for step 117.
+	Gaussian terminated normally in 10.82 s. (GS_NEW)
+	Gaussian terminated normally in 35.47 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.38 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99502092 -0.03366275]
+ [ 0.03423466  0.99434153]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99941807 -0.03411038]
+ [ 0.03411038  0.99941807]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00330039]
+ [ 0.00330039  0.        ]]
+Total QM took 58.60 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.62825991 -1.12840687  0.03978227]
+ [ 0.60965583 -2.95726369 -0.00591837]
+ [-2.24095866 -0.76902664  1.60652939]
+ [ 0.71084213  1.206288   -0.35008223]
+ [-0.45563451  2.73872637  0.56900732]
+ [ 1.20594611  0.16626006  1.64772983]]
+COM Shift:
+[0.00373393 0.00386372 0.00417315]
+Shifted:
+[[-0.63199384 -1.13227059  0.03560912]
+ [ 0.6059219  -2.96112741 -0.01009152]
+ [-2.24469259 -0.77289036  1.60235624]
+ [ 0.70710819  1.20242429 -0.35425537]
+ [-0.45936845  2.73486265  0.56483417]
+ [ 1.20221217  0.16239634  1.64355668]]
+Submitting electronic structure for step 118.
+	Gaussian terminated normally in 10.64 s. (GS_NEW)
+	Gaussian terminated normally in 38.27 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.08 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99477768 -0.03552909]
+ [ 0.03621547  0.99398358]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99934993 -0.03605155]
+ [ 0.03605155  0.99934993]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00348821]
+ [ 0.00348821  0.        ]]
+Total QM took 60.99 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.62514637 -1.12820391  0.04356518]
+ [ 0.59442644 -2.96439962 -0.02947626]
+ [-2.23202923 -0.77746058  1.63131138]
+ [ 0.71506236  1.20911737 -0.35162562]
+ [-0.48167418  2.76015086  0.54758439]
+ [ 1.14958535  0.12400427  1.64129223]]
+COM Shift:
+[0.00368989 0.00385535 0.00417586]
+Shifted:
+[[-0.62883626 -1.13205926  0.03938932]
+ [ 0.59073654 -2.96825497 -0.03365212]
+ [-2.23571912 -0.78131593  1.62713552]
+ [ 0.71137247  1.20526202 -0.35580147]
+ [-0.48536407  2.75629551  0.54340853]
+ [ 1.14589545  0.12014892  1.63711637]]
+Submitting electronic structure for step 119.
+	Gaussian terminated normally in 10.75 s. (GS_NEW)
+	Gaussian terminated normally in 36.90 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.11 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99455992 -0.03670204]
+ [ 0.03755109  0.99364866]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99930334 -0.03732073]
+ [ 0.03732073  0.99930334]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00361101]
+ [ 0.00361101  0.        ]]
+Total QM took 59.81 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.62200777 -1.12819172  0.04752883]
+ [ 0.5770252  -2.97047364 -0.05367754]
+ [-2.22180233 -0.78783484  1.65527411]
+ [ 0.71932239  1.21212306 -0.35317192]
+ [-0.50704012  2.78260549  0.52487612]
+ [ 1.09259208  0.08177427  1.63544149]]
+COM Shift:
+[0.00364371 0.00384717 0.00417713]
+Shifted:
+[[-0.62565148 -1.13203889  0.0433517 ]
+ [ 0.57338149 -2.97432081 -0.05785467]
+ [-2.22544604 -0.79168201  1.65109698]
+ [ 0.71567868  1.20827589 -0.35734905]
+ [-0.51068383  2.77875832  0.52069899]
+ [ 1.08894837  0.0779271   1.63126436]]
+Submitting electronic structure for step 120.
+	Gaussian terminated normally in 10.23 s. (GS_NEW)
+	Gaussian terminated normally in 36.48 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.41 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99448804 -0.03670941]
+ [ 0.03777788  0.99344866]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99929875 -0.03744337]
+ [ 0.03744337  0.99929875]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00362288]
+ [ 0.00362288  0.        ]]
+Total QM took 58.97 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.61885181 -1.12835896  0.05167758]
+ [ 0.557491   -2.97545397 -0.07850189]
+ [-2.21027263 -0.80017263  1.67825418]
+ [ 0.72359831  1.21531261 -0.3547222 ]
+ [-0.53154905  2.80579467  0.50080961]
+ [ 1.03514761  0.03963143  1.63035158]]
+COM Shift:
+[0.00359654 0.00383916 0.00417686]
+Shifted:
+[[-0.62244835 -1.13219812  0.04750072]
+ [ 0.55389446 -2.97929313 -0.08267875]
+ [-2.21386916 -0.80401179  1.67407732]
+ [ 0.72000178  1.21147345 -0.35889906]
+ [-0.53514559  2.80195551  0.49663275]
+ [ 1.03155107  0.03579228  1.62617472]]
+Submitting electronic structure for step 121.
+	Gaussian terminated normally in 10.89 s. (GS_NEW)
+	Gaussian terminated normally in 39.23 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.27 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99441448 -0.03517179]
+ [ 0.03646932  0.99324066]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99935108 -0.03601964]
+ [ 0.03601964  0.99935108]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00348513]
+ [ 0.00348513  0.        ]]
+Total QM took 62.46 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-6.15690404e-01 -1.12869380e+00  5.60131741e-02]
+ [ 5.35887926e-01 -2.97932271e+00 -1.03910925e-01]
+ [-2.19746385e+00 -8.14479779e-01  1.70005584e+00]
+ [ 7.27864718e-01  1.21869069e+00 -3.56274906e-01]
+ [-5.55020534e-01  2.82941565e+00  4.75337242e-01]
+ [ 9.77521081e-01 -2.32884973e-03  1.62618834e+00]]
+COM Shift:
+[0.00354997 0.00383137 0.00417506]
+Shifted:
+[[-0.61924038 -1.13252517  0.05183811]
+ [ 0.53233795 -2.98315408 -0.10808599]
+ [-2.20101382 -0.81831115  1.69588077]
+ [ 0.72431474  1.21485932 -0.36044997]
+ [-0.55857051  2.82558428  0.47116218]
+ [ 0.97397111 -0.00616022  1.62201328]]
+Submitting electronic structure for step 122.
+	Gaussian terminated normally in 10.55 s. (GS_NEW)
+	Gaussian terminated normally in 36.58 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.35 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99440631 -0.03193121]
+ [ 0.03343857  0.99310907]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99945956 -0.03287243]
+ [ 0.03287243  0.99945956]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00318061]
+ [ 0.00318061  0.        ]]
+Total QM took 59.45 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.6125395  -1.12918388  0.06053545]
+ [ 0.51230889 -2.98208055 -0.12984738]
+ [-2.18343839 -0.8307427   1.72045445]
+ [ 0.73209526  1.22226004 -0.35782725]
+ [-0.57727885  2.85315779  0.44844351]
+ [ 0.92006539 -0.04398531  1.62310797]]
+COM Shift:
+[0.00350599 0.00382394 0.0041719 ]
+Shifted:
+[[-0.61604548 -1.13300782  0.05636355]
+ [ 0.5088029  -2.98590448 -0.13401928]
+ [-2.18694438 -0.83456664  1.71628254]
+ [ 0.72858928  1.2184361  -0.36199915]
+ [-0.58078484  2.84933385  0.44427161]
+ [ 0.9165594  -0.04780925  1.61893606]]
+Submitting electronic structure for step 123.
+	Gaussian terminated normally in 10.80 s. (GS_NEW)
+	Gaussian terminated normally in 36.24 s. (TD_NEW_S1)
+	Gaussian terminated normally in 6.05 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99453468  0.02723424]
+ [ 0.02892509 -0.99310675]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99960109  0.02824298]
+ [ 0.02824298 -0.99960109]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00 -2.68552533e-18]
+ [ 2.68552533e-18  0.00000000e+00]]
+Total QM took 59.93 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.60941794 -1.1298163   0.06524323]
+ [ 0.48687664 -2.9837519  -0.15623859]
+ [-2.16830609 -0.84892783  1.73920902]
+ [ 0.73626364  1.22602286 -0.35937757]
+ [-0.59815531  2.87670537  0.42015213]
+ [ 0.86319415 -0.08520614  1.62125912]]
+COM Shift:
+[0.00346661 0.00381705 0.00416773]
+Shifted:
+[[-0.61288455 -1.13363335  0.0610755 ]
+ [ 0.48341003 -2.98756895 -0.16040631]
+ [-2.1717727  -0.85274488  1.73504129]
+ [ 0.73279703  1.22220581 -0.3635453 ]
+ [-0.60162192  2.87288832  0.4159844 ]
+ [ 0.85972755 -0.08902319  1.61709139]]
+Submitting electronic structure for step 124.
+	Gaussian terminated normally in 9.78 s. (GS_NEW)
+	Gaussian terminated normally in 34.79 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.12 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99483184  0.02147558]
+ [-0.02319763  0.99333839]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99974766  0.02246384]
+ [-0.02246384  0.99974766]]
+NAC with Orthogonalized Overlap
+[[ 0.          0.00217352]
+ [-0.00217352  0.        ]]
+Total QM took 56.45 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.60639833 -1.13069754  0.07002865]
+ [ 0.4600006  -2.98437678 -0.18271028]
+ [-2.1521515  -0.86863737  1.75601135]
+ [ 0.7403159   1.22998925 -0.36086196]
+ [-0.61682847  2.89958782  0.39074725]
+ [ 0.80813626 -0.12457123  1.6209457 ]]
+COM Shift:
+[0.00346292 0.00381637 0.00416721]
+Shifted:
+[[-0.60986125 -1.13451391  0.06586145]
+ [ 0.45653767 -2.98819315 -0.18687749]
+ [-2.15561442 -0.87245373  1.75184414]
+ [ 0.73685298  1.22617288 -0.36502916]
+ [-0.62029139  2.89577145  0.38658004]
+ [ 0.80467334 -0.1283876   1.61677849]]
+Submitting electronic structure for step 125.
+	Gaussian terminated normally in 10.63 s. (GS_NEW)
+	Gaussian terminated normally in 37.86 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.53 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99507528  0.01616066]
+ [-0.01783434  0.99351454]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99985391  0.01709253]
+ [-0.01709253  0.99985391]]
+NAC with Orthogonalized Overlap
+[[ 0.          0.00165381]
+ [-0.00165381  0.        ]]
+Total QM took 61.36 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.60352318 -1.13181852  0.07489573]
+ [ 0.43145192 -2.98400609 -0.2095588 ]
+ [-2.13487333 -0.89002644  1.77101657]
+ [ 0.74420274  1.23416697 -0.36227643]
+ [-0.63348613  2.9219884   0.35985509]
+ [ 0.75447367 -0.16259217  1.62233361]]
+COM Shift:
+[0.00342928 0.00380993 0.00416123]
+Shifted:
+[[-0.60695246 -1.13562845  0.0707345 ]
+ [ 0.42802264 -2.98781602 -0.21372003]
+ [-2.13830261 -0.89383637  1.76685534]
+ [ 0.74077346  1.23035704 -0.36643766]
+ [-0.63691541  2.91817847  0.35569386]
+ [ 0.75104439 -0.16640209  1.61817238]]
+Submitting electronic structure for step 126.
+	Gaussian terminated normally in 10.00 s. (GS_NEW)
+	Gaussian terminated normally in 34.66 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.31 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99524509  0.01137519]
+ [-0.01289838  0.99369323]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99992554  0.01220337]
+ [-0.01220337  0.99992554]]
+NAC with Orthogonalized Overlap
+[[ 0.          0.00118075]
+ [-0.00118075  0.        ]]
+Total QM took 56.82 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.60077055 -1.13316155  0.07985363]
+ [ 0.40144123 -2.98273693 -0.23669535]
+ [-2.11665254 -0.91299814  1.78402773]
+ [ 0.74793084  1.23856771 -0.36362524]
+ [-0.6479713   2.94366517  0.32751508]
+ [ 0.70270311 -0.19918236  1.62558989]]
+COM Shift:
+[0.00340247 0.00380472 0.00415542]
+Shifted:
+[[-0.60417302 -1.13696627  0.0756982 ]
+ [ 0.39803876 -2.98654165 -0.24085077]
+ [-2.12005501 -0.91680287  1.77987231]
+ [ 0.74452836  1.23476299 -0.36778066]
+ [-0.65137377  2.93986045  0.32335966]
+ [ 0.69930064 -0.20298708  1.62143447]]
+Submitting electronic structure for step 127.
+	Gaussian terminated normally in 9.98 s. (GS_NEW)
+	Gaussian terminated normally in 34.37 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.07 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99531095  0.00744319]
+ [-0.00877586  0.99383694]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99996676  0.0081535 ]
+ [-0.0081535   0.99996676]]
+NAC with Orthogonalized Overlap
+[[ 0.         0.0007889]
+ [-0.0007889  0.       ]]
+Total QM took 56.16 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.59815423 -1.13471204  0.08489913]
+ [ 0.37015111 -2.9807036  -0.26406957]
+ [-2.09775016 -0.9374543   1.79487637]
+ [ 0.7514761   1.24319776 -0.36491691]
+ [-0.66017145  2.96438827  0.29381926]
+ [ 0.6532511  -0.23432541  1.63089407]]
+COM Shift:
+[0.00338281 0.00380073 0.00415027]
+Shifted:
+[[-0.60153704 -1.13851276  0.08074886]
+ [ 0.3667683  -2.98450432 -0.26821984]
+ [-2.10113298 -0.94125503  1.7907261 ]
+ [ 0.74809328  1.23939704 -0.36906719]
+ [-0.66355426  2.96058754  0.28966898]
+ [ 0.64986829 -0.23812614  1.6267438 ]]
+Submitting electronic structure for step 128.
+	Gaussian terminated normally in 10.31 s. (GS_NEW)
+	Gaussian terminated normally in 35.76 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.06 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.9954143   0.00437354]
+ [-0.00549936  0.99407445]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99998769  0.00496247]
+ [-0.00496247  0.99998769]]
+NAC with Orthogonalized Overlap
+[[ 0.          0.00048015]
+ [-0.00048015  0.        ]]
+Total QM took 58.03 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.59568472 -1.13645279  0.09002783]
+ [ 0.33777236 -2.97806531 -0.29164746]
+ [-2.07845701 -0.9632861   1.80343834]
+ [ 0.75481663  1.24806306 -0.36616497]
+ [-0.66999792  2.98395996  0.25887938]
+ [ 0.60649685 -0.26805215  1.63844851]]
+COM Shift:
+[0.00336964 0.00379783 0.00414614]
+Shifted:
+[[-0.59905436 -1.14025063  0.08588168]
+ [ 0.33440272 -2.98186314 -0.2957936 ]
+ [-2.08182665 -0.96708394  1.79929219]
+ [ 0.75144699  1.24426523 -0.37031112]
+ [-0.67336756  2.98016213  0.25473324]
+ [ 0.60312721 -0.27184998  1.63430236]]
+Submitting electronic structure for step 129.
+	Gaussian terminated normally in 10.07 s. (GS_NEW)
+	Gaussian terminated normally in 34.64 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.25 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99551448  0.00214014]
+ [-0.00306852  0.99434896]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99999657  0.00261759]
+ [-0.00261759  0.99999657]]
+NAC with Orthogonalized Overlap
+[[ 0.          0.00025327]
+ [-0.00025327  0.        ]]
+Total QM took 56.78 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.59336915 -1.13836407  0.09523301]
+ [ 0.30450083 -2.97499981 -0.31941044]
+ [-2.05908215 -0.99037587  1.8096346 ]
+ [ 0.75793301  1.25316778 -0.36738583]
+ [-0.67738654  3.00221783  0.22281779]
+ [ 0.56277668 -0.30042843  1.64847349]]
+COM Shift:
+[0.00336189 0.00379593 0.00414326]
+Shifted:
+[[-0.59673104 -1.14216001  0.09108974]
+ [ 0.30113895 -2.97879574 -0.32355371]
+ [-2.06244403 -0.9941718   1.80549134]
+ [ 0.75457112  1.24937185 -0.37152909]
+ [-0.68074843  2.99842189  0.21867453]
+ [ 0.55941479 -0.30422437  1.64433023]]
+Submitting electronic structure for step 130.
+	Gaussian terminated normally in 9.85 s. (GS_NEW)
+	Gaussian terminated normally in 34.99 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.34 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.95575733e-01  6.17977835e-04]
+ [-1.33966493e-03  9.94587245e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999516e-01  9.83659049e-04]
+ [-9.83659049e-04  9.99999516e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00  9.51751577e-05]
+ [-9.51751577e-05  0.00000000e+00]]
+Total QM took 57.25 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.5912114  -1.14042387  0.10050526]
+ [ 0.27053174 -2.97169561 -0.34735487]
+ [-2.0399421  -1.01860108  1.81343015]
+ [ 0.76080821  1.25851338 -0.36859682]
+ [-0.6822971   3.01903619  0.18575847]
+ [ 0.52238399 -0.33154615  1.66119633]]
+COM Shift:
+[0.00335824 0.00379489 0.00414166]
+Shifted:
+[[-0.59456964 -1.14421876  0.0963636 ]
+ [ 0.2671735  -2.9754905  -0.35149653]
+ [-2.04330034 -1.02239598  1.80928849]
+ [ 0.75744998  1.25471848 -0.37273848]
+ [-0.68565534  3.01524129  0.18161681]
+ [ 0.51902575 -0.33534105  1.65705467]]
+Submitting electronic structure for step 131.
+	Gaussian terminated normally in 9.84 s. (GS_NEW)
+	Gaussian terminated normally in 35.99 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.39 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.95686536e-01 -3.57094318e-04]
+ [-1.82778708e-04  9.94864957e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999996e-01 -8.75715146e-05]
+ [ 8.75715146e-05  9.99999996e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00 -8.47309108e-06]
+ [ 8.47309108e-06  0.00000000e+00]]
+Total QM took 58.32 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.5892117  -1.14260817  0.10583301]
+ [ 0.23605527 -2.9683438  -0.3754894 ]
+ [-2.02135343 -1.04783745  1.81483029]
+ [ 0.76342764  1.26409812 -0.36981466]
+ [-0.68471109  3.03432406  0.14782182]
+ [ 0.48556856 -0.36151599  1.67683475]]
+COM Shift:
+[0.00335743 0.00379462 0.00414124]
+Shifted:
+[[-0.59256913 -1.14640279  0.10169177]
+ [ 0.23269784 -2.97213842 -0.37963065]
+ [-2.02471086 -1.05163207  1.81068905]
+ [ 0.76007021  1.2603035  -0.3739559 ]
+ [-0.68806852  3.03052944  0.14368058]
+ [ 0.48221114 -0.36531061  1.67269351]]
+Submitting electronic structure for step 132.
+	Gaussian terminated normally in 10.35 s. (GS_NEW)
+	Gaussian terminated normally in 37.77 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.26 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.95823831e-01 -9.38361223e-04]
+ [ 5.19593172e-04  9.95138449e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 9.99999732e-01 -7.32286100e-04]
+ [ 7.32286100e-04  9.99999732e-01]]
+NAC with Orthogonalized Overlap
+[[ 0.00000000e+00 -7.08532547e-05]
+ [ 7.08532547e-05  0.00000000e+00]]
+Total QM took 60.56 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.58736624 -1.14489132  0.11120362]
+ [ 0.20125255 -2.96513    -0.40383216]
+ [-2.00362797 -1.07796147  1.81387599]
+ [ 0.76577889  1.26991697 -0.37105441]
+ [-0.68462892  3.04802172  0.10912156]
+ [ 0.45253308 -0.39046456  1.69557692]]
+COM Shift:
+[0.00335836 0.00379501 0.00414181]
+Shifted:
+[[-0.59072459 -1.14868633  0.10706181]
+ [ 0.1978942  -2.96892501 -0.40797397]
+ [-2.00698632 -1.08175648  1.80973419]
+ [ 0.76242054  1.26612196 -0.37519621]
+ [-0.68798728  3.04422671  0.10497975]
+ [ 0.44917473 -0.39425957  1.69143512]]
+Submitting electronic structure for step 133.
+	Gaussian terminated normally in 10.97 s. (GS_NEW)
+	Gaussian terminated normally in 36.88 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.08 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 9.95855022e-01 -1.24314605e-03]
+ [ 9.25466807e-04  9.95286921e-01]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99999941 -0.00108913]
+ [ 0.00108913  0.99999941]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00010538]
+ [ 0.00010538  0.        ]]
+Total QM took 59.88 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.58566654 -1.14724635  0.11660503]
+ [ 0.16629209 -2.96222658 -0.43240758]
+ [-1.98706993 -1.10885224  1.8106388 ]
+ [ 0.76785163  1.27596175 -0.37232902]
+ [-0.68206738  3.06009697  0.06976328]
+ [ 0.42342837 -0.41853497  1.71756136]]
+COM Shift:
+[0.00336015 0.00379598 0.0041431 ]
+Shifted:
+[[-0.5890267  -1.15104233  0.11246193]
+ [ 0.16293193 -2.96602256 -0.43655068]
+ [-1.99043008 -1.11264822  1.8064957 ]
+ [ 0.76449147  1.27216577 -0.37647212]
+ [-0.68542753  3.05630099  0.06562018]
+ [ 0.42006821 -0.42233095  1.71341826]]
+Submitting electronic structure for step 134.
+	Gaussian terminated normally in 10.62 s. (GS_NEW)
+	Gaussian terminated normally in 35.10 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.05 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99584236 -0.00138124]
+ [ 0.00113145  0.99538486]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.9999992  -0.00126188]
+ [ 0.00126188  0.9999992 ]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00012209]
+ [ 0.00012209  0.        ]]
+Total QM took 57.72 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.58409903 -1.14964537  0.12202736]
+ [ 0.13132766 -2.95978567 -0.46124271]
+ [-1.97197471 -1.14039197  1.80521576]
+ [ 0.76963731  1.28222148 -0.37364915]
+ [-0.67705757  3.07054144  0.02984488]
+ [ 0.39834987 -0.44588827  1.7428587 ]]
+COM Shift:
+[0.00336221 0.00379745 0.00414489]
+Shifted:
+[[-0.58746125 -1.15344282  0.11788247]
+ [ 0.12796545 -2.96358312 -0.4653876 ]
+ [-1.97533692 -1.14418942  1.80107088]
+ [ 0.7662751   1.27842402 -0.37779404]
+ [-0.68041978  3.06674399  0.0257    ]
+ [ 0.39498766 -0.44968572  1.73871382]]
+Submitting electronic structure for step 135.
+	Gaussian terminated normally in 10.11 s. (GS_NEW)
+	Gaussian terminated normally in 34.20 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.03 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99589747 -0.00144678]
+ [ 0.00122412  0.99552383]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.9999991 -0.0013412]
+ [ 0.0013412  0.9999991]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00012977]
+ [ 0.00012977  0.        ]]
+Total QM took 56.15 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.58264482 -1.1520601   0.12746425]
+ [ 0.09649683 -2.9579327  -0.49036365]
+ [-1.95862799 -1.17246593  1.79772457]
+ [ 0.77112907  1.28868266 -0.37502334]
+ [-0.66964375  3.07936771 -0.01054274]
+ [ 0.37733577 -0.47270478  1.77145802]]
+COM Shift:
+[0.00336414 0.00379935 0.00414695]
+Shifted:
+[[-0.58600896 -1.15585945  0.12331731]
+ [ 0.09313269 -2.96173205 -0.4945106 ]
+ [-1.96199213 -1.17626528  1.79357762]
+ [ 0.76776493  1.28488331 -0.37917029]
+ [-0.67300789  3.07556836 -0.01468969]
+ [ 0.37397163 -0.47650412  1.76731107]]
+Submitting electronic structure for step 136.
+	Gaussian terminated normally in 10.04 s. (GS_NEW)
+	Gaussian terminated normally in 35.18 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.40 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99588556 -0.00153322]
+ [ 0.00133736  0.99556453]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99999896 -0.00144145]
+ [ 0.00144145  0.99999896]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00013947]
+ [ 0.00013947  0.        ]]
+Total QM took 57.62 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.58127984 -1.15446256  0.13291378]
+ [ 0.06192064 -2.95676112 -0.51979159]
+ [-1.9473049  -1.20496183  1.78829893]
+ [ 0.77232152  1.29532961 -0.37645821]
+ [-0.65988288  3.08660741 -0.05131435]
+ [ 0.36036806 -0.49918327  1.80325916]]
+COM Shift:
+[0.00336571 0.00380161 0.00414913]
+Shifted:
+[[-0.58464556 -1.15826417  0.12876465]
+ [ 0.05855492 -2.96056273 -0.52394072]
+ [-1.95067061 -1.20876344  1.7841498 ]
+ [ 0.76895581  1.291528   -0.38060734]
+ [-0.66324859  3.0828058  -0.05546348]
+ [ 0.35700235 -0.50298488  1.79911003]]
+Submitting electronic structure for step 137.
+	Gaussian terminated normally in 10.05 s. (GS_NEW)
+	Gaussian terminated normally in 37.66 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.23 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99581866 -0.00166532]
+ [ 0.00148581  0.9955376 ]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99999875 -0.0015824 ]
+ [ 0.0015824   0.99999875]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00015311]
+ [ 0.00015311  0.        ]]
+Total QM took 60.43 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.57997543 -1.15682586  0.13837869]
+ [ 0.02770515 -2.95632831 -0.54953825]
+ [-1.93826899 -1.23776779  1.77708409]
+ [ 0.77321077  1.30214457 -0.37795872]
+ [-0.64784518  3.09230984 -0.09238788]
+ [ 0.34737682 -0.52553721  1.83807096]]
+COM Shift:
+[0.00336686 0.00380422 0.00415136]
+Shifted:
+[[-0.58334228 -1.16063008  0.13422732]
+ [ 0.0243383  -2.96013253 -0.55368962]
+ [-1.94163585 -1.241572    1.77293272]
+ [ 0.76984392  1.29834035 -0.38211008]
+ [-0.65121203  3.08850562 -0.09653925]
+ [ 0.34400996 -0.52934142  1.83391959]]
+Submitting electronic structure for step 138.
+	Gaussian terminated normally in 10.31 s. (GS_NEW)
+	Gaussian terminated normally in 35.86 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.10 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99580999 -0.00191661]
+ [ 0.00174856  0.99556576]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99999831 -0.00184052]
+ [ 0.00184052  0.99999831]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00017808]
+ [ 0.00017808  0.        ]]
+Total QM took 58.16 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.57869917 -1.15912509  0.14386618]
+ [-0.00605819 -2.95665272 -0.57960318]
+ [-1.93176918 -1.27077219  1.76423212]
+ [ 0.77379438  1.30910791 -0.37952851]
+ [-0.63361474  3.09654242 -0.13368475]
+ [ 0.33824541 -0.55199035  1.87561819]]
+COM Shift:
+[0.00336754 0.00380715 0.00415359]
+Shifted:
+[[-0.58206671 -1.16293225  0.13971259]
+ [-0.00942573 -2.96045988 -0.58375676]
+ [-1.93513672 -1.27457934  1.76007854]
+ [ 0.77042684  1.30530076 -0.38368209]
+ [-0.63698228  3.09273527 -0.13783834]
+ [ 0.33487787 -0.5557975   1.8714646 ]]
+Submitting electronic structure for step 139.
+	Gaussian terminated normally in 10.25 s. (GS_NEW)
+	Gaussian terminated normally in 36.84 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.00 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99578095 -0.00232567]
+ [ 0.00216213  0.99556165]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99999746 -0.00225365]
+ [ 0.00225365  0.99999746]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00021805]
+ [ 0.00021805  0.        ]]
+Total QM took 59.03 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.57741603 -1.16133817  0.14938727]
+ [-0.0392901  -2.95771287 -0.60997022]
+ [-1.92803634 -1.30386203  1.7498972 ]
+ [ 0.77407143  1.31619814 -0.38117007]
+ [-0.61729087  3.09939125 -0.1751287 ]
+ [ 0.33281806 -0.5787697   1.91555273]]
+COM Shift:
+[0.00336778 0.00381045 0.0041558 ]
+Shifted:
+[[-0.58078381 -1.16514862  0.14523147]
+ [-0.04265788 -2.96152332 -0.61412603]
+ [-1.93140411 -1.30767248  1.74574139]
+ [ 0.77070365  1.31238769 -0.38532587]
+ [-0.62065864  3.09558081 -0.1792845 ]
+ [ 0.32945028 -0.58258015  1.91139693]]
+Submitting electronic structure for step 140.
+	Gaussian terminated normally in 11.49 s. (GS_NEW)
+	Gaussian terminated normally in 36.53 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.21 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99568178 -0.0029125 ]
+ [ 0.00275923  0.99547637]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99999594 -0.00284845]
+ [ 0.00284845  0.99999594]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00027561]
+ [ 0.00027561  0.        ]]
+Total QM took 60.00 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.57608963 -1.16344652  0.15495585]
+ [-0.07192136 -2.95944813 -0.64060569]
+ [-1.92727848 -1.33692218  1.73423036]
+ [ 0.77404262  1.32339189 -0.38288491]
+ [-0.5989892   3.10096253 -0.21664632]
+ [ 0.3309074  -0.60609864  1.95746942]]
+COM Shift:
+[0.00336758 0.00381415 0.00415804]
+Shifted:
+[[-0.57945721 -1.16726067  0.15079781]
+ [-0.07528895 -2.96326228 -0.64476373]
+ [-1.93064606 -1.34073633  1.73007232]
+ [ 0.77067503  1.31957774 -0.38704295]
+ [-0.60235679  3.09714838 -0.22080436]
+ [ 0.32753982 -0.60991279  1.95331139]]
+Submitting electronic structure for step 141.
+	Gaussian terminated normally in 10.12 s. (GS_NEW)
+	Gaussian terminated normally in 35.98 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.36 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99556359 -0.00370296]
+ [ 0.00354592  0.99536906]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99999337 -0.00364092]
+ [ 0.00364092  0.99999337]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00035228]
+ [ 0.00035228  0.        ]]
+Total QM took 59.05 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.57468354 -1.16543559  0.16058774]
+ [-0.10389075 -2.96176141 -0.67145751]
+ [-1.92967501 -1.36983475  1.71737412]
+ [ 0.77371033  1.33066388 -0.38467365]
+ [-0.57884261  3.10138424 -0.25816834]
+ [ 0.33230191 -0.63419036  2.00092404]]
+COM Shift:
+[0.00336697 0.00381832 0.00416032]
+Shifted:
+[[-0.57805051 -1.16925391  0.15642741]
+ [-0.10725772 -2.96557973 -0.67561784]
+ [-1.93304198 -1.37365308  1.7132138 ]
+ [ 0.77034336  1.32684556 -0.38883398]
+ [-0.58220959  3.09756592 -0.26232867]
+ [ 0.32893494 -0.63800868  1.99676372]]
+Submitting electronic structure for step 142.
+	Gaussian terminated normally in 10.71 s. (GS_NEW)
+	Gaussian terminated normally in 37.97 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.13 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99549727 -0.00467096]
+ [ 0.00450435  0.99531736]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99998938 -0.00460878]
+ [ 0.00460878  0.99998938]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00044593]
+ [ 0.00044593  0.        ]]
+Total QM took 60.96 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.5731625  -1.16729507  0.16629979]
+ [-0.13514295 -2.96452352 -0.70245563]
+ [-1.93537058 -1.40247873  1.69945704]
+ [ 0.77307867  1.33798683 -0.38653599]
+ [-0.55700161  3.10080791 -0.29963163]
+ [ 0.33677255 -0.66324243  2.04545142]]
+COM Shift:
+[0.00336596 0.00382302 0.00416271]
+Shifted:
+[[-0.57652847 -1.1711181   0.16213708]
+ [-0.13850891 -2.96834654 -0.70661833]
+ [-1.93873655 -1.40630176  1.69529433]
+ [ 0.7697127   1.3341638  -0.3906987 ]
+ [-0.56036757  3.09698488 -0.30379434]
+ [ 0.33340659 -0.66706545  2.04128872]]
+Submitting electronic structure for step 143.
+	Gaussian terminated normally in 10.17 s. (GS_NEW)
+	Gaussian terminated normally in 35.10 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.14 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99542804 -0.00582925]
+ [ 0.00566421  0.995264  ]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99998333 -0.0057735 ]
+ [ 0.0057735   0.99998333]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00055862]
+ [ 0.00055862  0.        ]]
+Total QM took 57.25 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.57149361 -1.16901892  0.17210921]
+ [-0.16562715 -2.96757902 -0.73351384]
+ [-1.94446884 -1.43473     1.68058846]
+ [ 0.77215341  1.34533145 -0.38847066]
+ [-0.53363377  3.09940991 -0.34098223]
+ [ 0.34407856 -0.6934329   2.09058253]]
+COM Shift:
+[0.00336457 0.00382829 0.00416521]
+Shifted:
+[[-0.57485818 -1.17284721  0.167944  ]
+ [-0.16899172 -2.97140731 -0.73767905]
+ [-1.94783341 -1.43855828  1.67642324]
+ [ 0.76878884  1.34150316 -0.39263588]
+ [-0.53699834  3.09558162 -0.34514745]
+ [ 0.34071399 -0.69726119  2.08641732]]
+Submitting electronic structure for step 144.
+	Gaussian terminated normally in 10.99 s. (GS_NEW)
+	Gaussian terminated normally in 34.97 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.19 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99538186 -0.00714978]
+ [ 0.00697718  0.99521865]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99997482 -0.00709666]
+ [ 0.00709666  0.99997482]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00068665]
+ [ 0.00068665  0.        ]]
+Total QM took 58.18 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.56964721 -1.17060508  0.17803308]
+ [-0.19529518 -2.97075289 -0.7645318 ]
+ [-1.95702667 -1.46646047  1.66085463]
+ [ 0.77094194  1.35266645 -0.39047526]
+ [-0.50892298  3.09739222 -0.38217773]
+ [ 0.35397185 -0.72491731  2.1358573 ]]
+COM Shift:
+[0.00336282 0.00383413 0.00416789]
+Shifted:
+[[-0.57301003 -1.17443922  0.17386518]
+ [-0.198658   -2.97458702 -0.76869969]
+ [-1.96038949 -1.4702946   1.65668674]
+ [ 0.76757912  1.34883231 -0.39464315]
+ [-0.5122858   3.09355809 -0.38634562]
+ [ 0.35060903 -0.72875144  2.13168941]]
+Submitting electronic structure for step 145.
+	Gaussian terminated normally in 10.69 s. (GS_NEW)
+	Gaussian terminated normally in 37.88 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.12 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99533481 -0.00863122]
+ [ 0.00844646  0.99517662]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.9999632  -0.00857922]
+ [ 0.00857922  0.9999632 ]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00083009]
+ [ 0.00083009  0.        ]]
+Total QM took 60.85 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.56759769 -1.17205517  0.18408799]
+ [-0.22410082 -2.97385758 -0.79539841]
+ [-1.97304947 -1.49753809  1.6403158 ]
+ [ 0.76945302  1.35995854 -0.39254608]
+ [-0.48306715  3.09498227 -0.42319065]
+ [ 0.36620039 -0.75782765  2.18083528]]
+COM Shift:
+[0.00336075 0.00384052 0.00417076]
+Shifted:
+[[-0.57095844 -1.17589569  0.17991723]
+ [-0.22746157 -2.9776981  -0.79956918]
+ [-1.97641022 -1.50137861  1.63614504]
+ [ 0.76609226  1.35611802 -0.39671684]
+ [-0.4864279   3.09114175 -0.42736141]
+ [ 0.36283964 -0.76166817  2.17666452]]
+Submitting electronic structure for step 146.
+	Gaussian terminated normally in 11.05 s. (GS_NEW)
+	Gaussian terminated normally in 36.82 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.31 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99517063 -0.01022077]
+ [ 0.010039    0.99503042]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99994819 -0.01017923]
+ [ 0.01017923  0.99994819]]
+NAC with Orthogonalized Overlap
+[[ 0.        -0.0009849]
+ [ 0.0009849  0.       ]]
+Total QM took 60.27 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.56532394 -1.17337398  0.19028998]
+ [-0.25199913 -2.97670006 -0.82599506]
+ [-1.99248763 -1.52782615  1.61900544]
+ [ 0.76769652  1.36717268 -0.39467787]
+ [-0.45627515  3.09243165 -0.46401115]
+ [ 0.38051054 -0.79227186  2.22510183]]
+COM Shift:
+[0.00335843 0.00384739 0.00417386]
+Shifted:
+[[-0.56868237 -1.17722137  0.18611612]
+ [-0.25535756 -2.98054745 -0.83016892]
+ [-1.99584606 -1.53167354  1.61483158]
+ [ 0.76433809  1.36332529 -0.39885173]
+ [-0.45963358  3.08858426 -0.46818501]
+ [ 0.37715211 -0.79611925  2.22092797]]
+Submitting electronic structure for step 147.
+	Gaussian terminated normally in 10.49 s. (GS_NEW)
+	Gaussian terminated normally in 36.31 s. (TD_NEW_S1)
+	Gaussian terminated normally in 4.98 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99503414 -0.01188668]
+ [ 0.01171881  0.99490564]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99992965 -0.01186158]
+ [ 0.01186158  0.99992965]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00114768]
+ [ 0.00114768  0.        ]]
+Total QM took 58.58 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.5628096  -1.17456898  0.19665436]
+ [-0.27894665 -2.97908815 -0.85619941]
+ [-2.01523513 -1.55718335  1.59693116]
+ [ 0.76568303  1.37427238 -0.39686362]
+ [-0.42876206  3.09001308 -0.50465016]
+ [ 0.39664867 -0.8283346   2.26827197]]
+COM Shift:
+[0.00335592 0.00385463 0.0041772 ]
+Shifted:
+[[-0.56616552 -1.17842361  0.19247716]
+ [-0.28230257 -2.98294277 -0.86037662]
+ [-2.01859105 -1.56103798  1.59275396]
+ [ 0.76232711  1.37041775 -0.40104083]
+ [-0.43211797  3.08615845 -0.50882737]
+ [ 0.39329275 -0.83218923  2.26409477]]
+Submitting electronic structure for step 148.
+	Gaussian terminated normally in 10.96 s. (GS_NEW)
+	Gaussian terminated normally in 35.28 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.60 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99499555 -0.01365283]
+ [ 0.01348529  0.9948681 ]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99990701 -0.01363691]
+ [ 0.01363691  0.99990701]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00131946]
+ [ 0.00131946  0.        ]]
+Total QM took 58.85 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.56004304 -1.17564988  0.20319571]
+ [-0.30490189 -2.98083615 -0.88588891]
+ [-2.04113009 -1.58546407  1.57407761]
+ [ 0.7634232   1.38122018 -0.39909432]
+ [-0.40074286  3.08801542 -0.54514183]
+ [ 0.41436248 -0.86607848  2.30999162]]
+COM Shift:
+[0.00335329 0.00386207 0.00418081]
+Shifted:
+[[-0.56339633 -1.17951195  0.19901491]
+ [-0.30825518 -2.98469821 -0.89006972]
+ [-2.04448339 -1.58932614  1.56989681]
+ [ 0.76006991  1.37735811 -0.40327512]
+ [-0.40409616  3.08415335 -0.54932264]
+ [ 0.41100918 -0.86994055  2.30581082]]
+Submitting electronic structure for step 149.
+	Gaussian terminated normally in 11.08 s. (GS_NEW)
+	Gaussian terminated normally in 37.33 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.22 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99487457 -0.01543729]
+ [ 0.01530225  0.9947428 ]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99988067 -0.01544814]
+ [ 0.01544814  0.99988067]]
+NAC with Orthogonalized Overlap
+[[ 0.        -0.0014947]
+ [ 0.0014947  0.       ]]
+Total QM took 60.65 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.55701705 -1.17662807  0.20992772]
+ [-0.32982578 -2.98176939 -0.9149435 ]
+ [-2.06995726 -1.6125185   1.55041143]
+ [ 0.7609271   1.38797842 -0.40135875]
+ [-0.37242495  3.0867365  -0.5855449 ]
+ [ 0.43340155 -0.90554525  2.34993631]]
+COM Shift:
+[0.00335064 0.00386955 0.00418468]
+Shifted:
+[[-0.56036769 -1.18049762  0.20574304]
+ [-0.33317642 -2.98563893 -0.91912818]
+ [-2.0733079  -1.61638804  1.54622675]
+ [ 0.75757646  1.38410888 -0.40554343]
+ [-0.37577559  3.08286695 -0.58972958]
+ [ 0.43005091 -0.9094148   2.34575163]]
+Submitting electronic structure for step 150.
+	Gaussian terminated normally in 10.83 s. (GS_NEW)
+	Gaussian terminated normally in 35.78 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.47 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99472638 -0.01725009]
+ [ 0.01714056  0.9946043 ]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.9998506  -0.01728496]
+ [ 0.01728496  0.9998506 ]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00167243]
+ [ 0.00167243  0.        ]]
+Total QM took 59.20 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.55372838 -1.17751626  0.21686298]
+ [-0.35368291 -2.98172779 -0.94324845]
+ [-2.10145281 -1.63819391  1.52588695]
+ [ 0.75820319  1.39451013 -0.4036434 ]
+ [-0.34399799  3.0864735  -0.62594394]
+ [ 0.45351831 -0.94675798  2.38780992]]
+COM Shift:
+[0.00334803 0.00387685 0.00418882]
+Shifted:
+[[-0.55707641 -1.18139311  0.21267416]
+ [-0.35703094 -2.98560464 -0.94743727]
+ [-2.10480084 -1.64207076  1.52169814]
+ [ 0.75485516  1.39063327 -0.40783222]
+ [-0.34734602  3.08259665 -0.63013276]
+ [ 0.45017028 -0.95063484  2.3836211 ]]
+Submitting electronic structure for step 151.
+	Gaussian terminated normally in 10.58 s. (GS_NEW)
+	Gaussian terminated normally in 36.60 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.73 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.9946861  -0.01912679]
+ [ 0.01903309  0.99455759]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99981605 -0.01917958]
+ [ 0.01917958  0.99981605]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00185574]
+ [ 0.00185574  0.        ]]
+Total QM took 59.71 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.55017693 -1.17832805  0.2240127 ]
+ [-0.37644256 -2.98056856 -0.9706963 ]
+ [-2.13531044 -1.66233575  1.50045303]
+ [ 0.75525725  1.40078015 -0.40593239]
+ [-0.31562272  3.08751122 -0.66644905]
+ [ 0.47446859 -0.98972286  2.42334228]]
+COM Shift:
+[0.00334553 0.00388379 0.0041932 ]
+Shifted:
+[[-0.55352247 -1.18221184  0.21981951]
+ [-0.37978809 -2.98445235 -0.9748895 ]
+ [-2.13865598 -1.66621954  1.49625984]
+ [ 0.75191172  1.39689636 -0.41012559]
+ [-0.31896825  3.08362743 -0.67064225]
+ [ 0.47112306 -0.99360665  2.41914908]]
+Submitting electronic structure for step 152.
+	Gaussian terminated normally in 11.00 s. (GS_NEW)
+	Gaussian terminated normally in 35.18 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.18 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99461484 -0.02098918]
+ [ 0.02093301  0.99446759]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99977797 -0.02107147]
+ [ 0.02107147  0.99977797]]
+NAC with Orthogonalized Overlap
+[[ 0.        -0.0020388]
+ [ 0.0020388  0.       ]]
+Total QM took 58.23 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.5463649  -1.17907764  0.23138635]
+ [-0.3980799  -2.97816829 -0.99718808]
+ [-2.17118818 -1.6847886   1.47406018]
+ [ 0.75209095  1.40675642 -0.40820744]
+ [-0.28741808  3.0901086  -0.70719421]
+ [ 0.49601194 -1.03443091  2.45628635]]
+COM Shift:
+[0.00334319 0.00389018 0.00419779]
+Shifted:
+[[-0.54970809 -1.18296783  0.22718856]
+ [-0.4014231  -2.98205847 -1.00138587]
+ [-2.17453137 -1.68867878  1.46986239]
+ [ 0.74874775  1.40286624 -0.41240522]
+ [-0.29076128  3.08621842 -0.711392  ]
+ [ 0.49266874 -1.03832109  2.45208857]]
+Submitting electronic structure for step 153.
+	Gaussian terminated normally in 11.31 s. (GS_NEW)
+	Gaussian terminated normally in 35.37 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.06 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99452463 -0.02291086]
+ [ 0.02287262  0.99435012]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99973515 -0.0230137 ]
+ [ 0.0230137   0.99973515]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00222672]
+ [ 0.00222672  0.        ]]
+Total QM took 58.73 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.5422955  -1.17977955  0.23899113]
+ [-0.41857792 -2.97442453 -1.02263459]
+ [-2.20871591 -1.70539736  1.44666712]
+ [ 0.74870013  1.41241136 -0.4104479 ]
+ [-0.25944598  3.09448434 -0.74833553]
+ [ 0.51791218 -1.08086072  2.4864165 ]]
+COM Shift:
+[0.00334105 0.00389586 0.00420253]
+Shifted:
+[[-0.54563656 -1.18367541  0.2347886 ]
+ [-0.42191897 -2.97832039 -1.02683712]
+ [-2.21205696 -1.70929323  1.44246459]
+ [ 0.74535908  1.40851549 -0.41465043]
+ [-0.26278703  3.09058848 -0.75253806]
+ [ 0.51457113 -1.08475658  2.48221397]]
+Submitting electronic structure for step 154.
+	Gaussian terminated normally in 11.82 s. (GS_NEW)
+	Gaussian terminated normally in 36.07 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.10 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99442393 -0.02485321]
+ [ 0.02484054  0.99420622]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99968792 -0.02498113]
+ [ 0.02498113  0.99968792]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00241708]
+ [ 0.00241708  0.        ]]
+Total QM took 59.97 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.53797151 -1.18044844  0.2468314 ]
+ [-0.43792952 -2.96925762 -1.0469567 ]
+ [-2.24750144 -1.724007    1.41824748]
+ [ 0.74507252  1.41772326 -0.41263071]
+ [-0.23169345  3.10080258 -0.79004876]
+ [ 0.53993704 -1.12898081  2.51352602]]
+COM Shift:
+[0.00333913 0.00390071 0.00420734]
+Shifted:
+[[-0.54131064 -1.18434915  0.24262406]
+ [-0.44126865 -2.97315833 -1.05116404]
+ [-2.25084057 -1.72790771  1.41404015]
+ [ 0.74173339  1.41382255 -0.41683805]
+ [-0.23503258  3.09690187 -0.7942561 ]
+ [ 0.53659792 -1.13288152  2.50931868]]
+Submitting electronic structure for step 155.
+	Gaussian terminated normally in 11.92 s. (GS_NEW)
+	Gaussian terminated normally in 37.67 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.65 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99432217 -0.02683544]
+ [ 0.02685559  0.99406875]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99963564 -0.02699241]
+ [ 0.02699241  0.99963564]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00261168]
+ [ 0.00261168  0.        ]]
+Total QM took 62.27 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.53339305 -1.1810991   0.2549079 ]
+ [-0.45614153 -2.96261345 -1.07008582]
+ [-2.28713456 -1.74046038  1.38879626]
+ [ 0.74118426  1.42267779 -0.41472997]
+ [-0.20404799  3.10915994 -0.83252911]
+ [ 0.56185711 -1.17875373  2.5374254 ]]
+COM Shift:
+[0.00333743 0.00390465 0.00421209]
+Shifted:
+[[-0.53673048 -1.18500375  0.25069581]
+ [-0.45947896 -2.9665181  -1.07429791]
+ [-2.29047199 -1.74436503  1.38458417]
+ [ 0.73784683  1.41877314 -0.41894206]
+ [-0.20738542  3.10525529 -0.8367412 ]
+ [ 0.55851968 -1.18265838  2.53321331]]
+Submitting electronic structure for step 156.
+	Gaussian terminated normally in 12.53 s. (GS_NEW)
+	Gaussian terminated normally in 37.07 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.75 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99417807 -0.02889574]
+ [ 0.02891588  0.99388019]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99957746 -0.02906715]
+ [ 0.02906715  0.99957746]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00281243]
+ [ 0.00281243  0.        ]]
+Total QM took 62.28 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.52855398 -1.18174668  0.26321631]
+ [-0.47324221 -2.95446906 -1.09196388]
+ [-2.32718519 -1.75459102  1.35833823]
+ [ 0.73699353  1.42726956 -0.41671553]
+ [-0.17625577  3.11957463 -0.87599736]
+ [ 0.58344222 -1.23014297  2.55793996]]
+COM Shift:
+[0.00333596 0.00390765 0.00421661]
+Shifted:
+[[-0.53188994 -1.18565433  0.25899969]
+ [-0.47657817 -2.95837671 -1.09618049]
+ [-2.33052115 -1.75849867  1.35412162]
+ [ 0.73365756  1.42336192 -0.42093215]
+ [-0.17959174  3.11566698 -0.88021397]
+ [ 0.58010626 -1.23405061  2.55372335]]
+Submitting electronic structure for step 157.
+	Gaussian terminated normally in 14.04 s. (GS_NEW)
+	Gaussian terminated normally in 36.37 s. (TD_NEW_S1)
+	Gaussian terminated normally in 5.75 s. (DIMER)
+OVERLAP Extracted.
+Original Overlap
+[[ 0.99395267 -0.03105929]
+ [ 0.03110799  0.99359098]]
+Performing Lowdin Orthogonalization.
+Check orthogonalization. S.T @ S
+Orthogonalized Overlap
+[[ 0.99951119 -0.03126316]
+ [ 0.03126316  0.99951119]]
+NAC with Orthogonalized Overlap
+[[ 0.         -0.00302491]
+ [ 0.00302491  0.        ]]
+Total QM took 63.33 s.
+Electronic propagation took 0.00 s.
+Electronic Norm.: 1.0 1.0
+Original:
+[[-0.52343363 -1.18240764  0.27174407]
+ [-0.48930025 -2.94484717 -1.11254346]
+ [-2.36718668 -1.76620173  1.32694438]
+ [ 0.73242526  1.43150469 -0.41854864]
+ [-0.14782422  3.13197691 -0.92072753]
+ [ 0.604451   -1.28312909  2.57490615]]
+COM Shift:
+[0.00333473 0.00390974 0.00422067]
+Shifted:
+[[-0.52676837 -1.18631738  0.2675234 ]
+ [-0.49263499 -2.94875691 -1.11676413]
+ [-2.37052141 -1.77011147  1.32272371]
+ [ 0.72909053  1.42759495 -0.42276932]
+ [-0.15115895  3.12806717 -0.9249482 ]
+ [ 0.60111626 -1.28703883  2.57068548]]
+Submitting electronic structure for step 158.
+	Gaussian terminated normally in 18.32 s. (GS_NEW)
+	WARNING! Gaussian did not finish normally in the following directory:
+/gpfs/fs2/scratch/bweight/software/many_molecule_many_mode_NAMD/src/NAMD/TEST_ETHYLENE/G16/TD_NEW_S1
+	Gaussian terminated normally in 5.64 s. (DIMER)
