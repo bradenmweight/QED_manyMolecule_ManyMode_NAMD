@@ -74,7 +74,34 @@ def save_data(DYN_PROPERTIES):
         file01.write(f"{DYN_PROPERTIES['MD_STEP']}  " + "%2.6f  %2.6f  %2.6f\n" % (KE,PE,TE))
 
 
+        with open("MD_OUTPUT/Overlap.dat","a") as file01:
+            if ( DYN_PROPERTIES['MD_STEP'] == 0 ): 
+                file01.write(f"# Step " + " ".join([f'{j}-{k}' for j in range(NStates) for k in range(j,NStates)]) + "\n" )
+            if ( DYN_PROPERTIES['MD_STEP'] >= 1 ): 
+                OVERLAP = DYN_PROPERTIES['OVERLAP_NEW'] * 1.0
+                OVERLAP = np.array([OVERLAP[j,k] for j in range(NStates) for k in range(j,NStates)])
+                file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,OVERLAP )) + "\n" )
 
+        with open("MD_OUTPUT/NACT.dat","a") as file01:
+            if ( DYN_PROPERTIES['MD_STEP'] == 0 ): 
+                file01.write(f"# Step " + " ".join([f'{j}-{k}' for j in range(NStates) for k in range(j,NStates)]) + "\n" )
+            if ( DYN_PROPERTIES['MD_STEP'] >= 1 ): 
+                NACT = DYN_PROPERTIES['NACT_NEW'] * 1.0
+                NACT = np.array([NACT[j,k] for j in range(NStates) for k in range(j,NStates)])
+                file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,NACT )) + "\n" )
 
+        with open("MD_OUTPUT/Overlap_uncorrected.dat","a") as file01:
+            if ( DYN_PROPERTIES['MD_STEP'] == 0 ): 
+                file01.write(f"# Step " + " ".join([f'{j}-{k}' for j in range(NStates) for k in range(j,NStates)]) + "\n" )
+            if ( DYN_PROPERTIES['MD_STEP'] >= 1 ): 
+                OVERLAP = DYN_PROPERTIES['OVERLAP_NEW_uncorrected'] * 1.0
+                OVERLAP = np.array([OVERLAP[j,k] for j in range(NStates) for k in range(j,NStates)])
+                file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,OVERLAP )) + "\n" )
 
-
+        with open("MD_OUTPUT/NACT_uncorrected.dat","a") as file01:
+            if ( DYN_PROPERTIES['MD_STEP'] == 0 ): 
+                file01.write(f"# Step " + " ".join([f'{j}-{k}' for j in range(NStates) for k in range(j,NStates)]) + "\n" )
+            if ( DYN_PROPERTIES['MD_STEP'] >= 1 ): 
+                NACT = DYN_PROPERTIES['NACT_NEW_uncorrected'] * 1.0
+                NACT = np.array([NACT[j,k] for j in range(NStates) for k in range(j,NStates)])
+                file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,NACT )) + "\n" )

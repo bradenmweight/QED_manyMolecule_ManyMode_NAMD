@@ -1,7 +1,7 @@
  Entering Gaussian System, Link 0=g16
  Initial command:
- /software/gaussian/g16-c01/sse4/g16/l1.exe "/gpfs/fs2/scratch/bweight/software/many_molecule_many_mode_NAMD/src/NAMD/TEST_ETHYLENE/G16/TD_NEW_S1/Gau-20657.inp" -scrdir="/gpfs/fs2/scratch/bweight/software/many_molecule_many_mode_NAMD/src/NAMD/TEST_ETHYLENE/G16/TD_NEW_S1/"
- Entering Link 1 = /software/gaussian/g16-c01/sse4/g16/l1.exe PID=     20658.
+ /software/gaussian/g16-c01/sse4/g16/l1.exe "/gpfs/fs2/scratch/bweight/software/many_molecule_many_mode_NAMD/src/NAMD/TEST_ETHYLENE/G16/TD_NEW_S1/Gau-2601.inp" -scrdir="/gpfs/fs2/scratch/bweight/software/many_molecule_many_mode_NAMD/src/NAMD/TEST_ETHYLENE/G16/TD_NEW_S1/"
+ Entering Link 1 = /software/gaussian/g16-c01/sse4/g16/l1.exe PID=      2602.
   
  Copyright (c) 1988-2019, Gaussian, Inc.  All Rights Reserved.
   
@@ -74,7 +74,7 @@
  
  ******************************************
  Gaussian 16:  ES64L-G16RevC.01  3-Jul-2019
-                 1-Jan-2023 
+                 3-Jan-2023 
  ******************************************
  %oldchk=../GS_NEW/geometry.chk
  %chk=geometry.chk
@@ -84,15 +84,15 @@
  Copying data from "../GS_NEW/geometry.chk" to current chk file "geometry.chk"
  IOpt=  2 FromEx=T IUOpen= 4 IOptOp= 5 NList=   0 IFRang= 0 IUIn= 4 IUOut= 2.
  ----------------------------------------------------------------------
- # BLYP/3-21G SCF=XQC TD=(singlets,nstates=2,root=1) FORCE nosym pop=fu
- ll guess=read
+ # WB97XD/6-311+G* SCF=XQC TD=(singlets,nstates=2,root=1) FORCE nosym p
+ op=full guess=read
  ----------------------------------------------------------------------
  1/10=7,30=1,38=1/1,3;
  2/12=2,15=1,17=6,18=5,40=1/2;
- 3/5=5,11=9,25=1,30=1,71=1,74=402,116=-2/1,2,3,8;
+ 3/5=4,6=6,7=11,11=9,25=1,30=1,71=1,74=-58,116=-2/1,2,3,8;
  4/5=1/1;
  5/5=2,8=3,13=1,38=6/2,8;
- 8/6=1,10=1,107=1,108=2/1;
+ 8/6=1,10=2,107=1,108=2/1;
  9/8=1,15=2,41=2,42=1,48=1,70=2/14;
  10/5=4,28=1,31=1/2;
  6/7=3,18=1/1;
@@ -100,16 +100,16 @@
  1/10=7,30=1/3;
  99//99;
  -----------
- MD Step 158
+ MD Step 571
  -----------
  Symbolic Z-matrix:
  Charge =  0 Multiplicity = 1
- C                    -0.27401  -0.62586   0.14836 
- H                    -0.26688  -1.55202  -0.59872 
- H                    -1.27307  -0.93897   0.68494 
- C                     0.38475   0.75933  -0.22227 
- H                    -0.06225   1.66433  -0.51163 
- H                     0.33041  -0.70768   1.36914 
+ C                    -0.14366  -0.65356   0.10339 
+ H                     0.47764  -1.6033   -0.51562 
+ H                    -1.07007  -1.30485   0.29286 
+ C                     0.08729   0.8641   -0.12461 
+ H                     0.9716    0.7368   -0.60248 
+ H                     0.36486  -0.28562   1.14012 
  
 
  GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
@@ -124,21 +124,21 @@
  Center     Atomic      Atomic             Coordinates (Angstroms)
  Number     Number       Type             X           Y           Z
  ---------------------------------------------------------------------
-      1          6           0       -0.274005   -0.625862    0.148363
-      2          1           0       -0.266878   -1.552017   -0.598716
-      3          1           0       -1.273069   -0.938967    0.684943
-      4          6           0        0.384750    0.759331   -0.222267
-      5          1           0       -0.062247    1.664335   -0.511634
-      6          1           0        0.330408   -0.707679    1.369137
+      1          6           0       -0.143660   -0.653563    0.103388
+      2          1           0        0.477638   -1.603300   -0.515618
+      3          1           0       -1.070068   -1.304848    0.292859
+      4          6           0        0.087285    0.864101   -0.124611
+      5          1           0        0.971600    0.736802   -0.602480
+      6          1           0        0.364861   -0.285616    1.140120
  ---------------------------------------------------------------------
                     Distance matrix (angstroms):
                     1          2          3          4          5
      1  C    0.000000
-     2  H    1.189934   0.000000
-     3  H    1.176470   1.742421   0.000000
-     4  C    1.578000   2.430774   2.540789   0.000000
-     5  H    2.392788   3.224031   3.110476   1.050034   0.000000
-     6  H    1.364661   2.223084   1.758622   2.165095   3.052528
+     2  H    1.292742   0.000000
+     3  H    1.148174   1.771469   0.000000
+     4  C    1.551974   2.528504   2.493609   0.000000
+     5  H    1.917073   2.393245   3.022974   1.013201   0.000000
+     6  H    1.211938   2.119076   1.953384   1.731601   2.109532
                     6
      6  H    0.000000
  Symmetry turned off by external request.
@@ -146,41 +146,103 @@
  Framework group  C1[X(C2H4)]
  Deg. of freedom    12
  Full point group                 C1      NOp   1
- Rotational constants (GHZ):         121.3126448          21.0231003          20.2644171
- Standard basis: 3-21G (6D, 7F)
-    26 basis functions,    42 primitive gaussians,    26 cartesian basis functions
+ Rotational constants (GHZ):         122.2124480          23.4576036          22.2929520
+ Standard basis: 6-311+G(d) (5D, 7F)
+    56 basis functions,    92 primitive gaussians,    58 cartesian basis functions
      8 alpha electrons        8 beta electrons
-       nuclear repulsion energy        29.4894658711 Hartrees.
+       nuclear repulsion energy        30.7349945017 Hartrees.
  NAtoms=    6 NActive=    6 NUniq=    6 SFac= 1.00D+00 NAtFMM=   60 NAOKFM=F Big=F
  Integral buffers will be    131072 words long.
- Regular integral format.
+ Raffenetti 1 integral format.
  Two-electron integral symmetry is turned off.
+ Nuclear repulsion after empirical dispersion term =       30.7339673154 Hartrees.
  One-electron integrals computed using PRISM.
- NBasis=    26 RedAO= T EigKep=  3.30D-02  NBF=    26
- NBsUse=    26 1.00D-06 EigRej= -1.00D+00 NBFU=    26
+ NBasis=    56 RedAO= T EigKep=  3.99D-04  NBF=    56
+ NBsUse=    56 1.00D-06 EigRej= -1.00D+00 NBFU=    56
  Initial guess from the checkpoint file:  "geometry.chk"
  B after Tr=     0.000000    0.000000    0.000000
          Rot=    1.000000    0.000000    0.000000    0.000000 Ang=   0.00 deg.
- Keep J ints in memory in canonical form, NReq=925759.
+ Keep R1 ints in memory in canonical form, NReq=3523003.
  Requested convergence on RMS density matrix=1.00D-08 within  32 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Skip diagonalization as Alpha Fock matrix is already diagonal.
- SCF Done:  E(RB-LYP) =  -77.8981265397     A.U. after    1 cycles
-            NFock=  1  Conv=0.00D+00     -V/T= 2.0137
+ SCF Done:  E(RwB97XD) =  -78.4032582214     A.U. after    1 cycles
+            NFock=  1  Conv=0.73D-09     -V/T= 2.0081
  QCSCF skips out because SCF is already converged.
  DoSCS=F DFT=T ScalE2(SS,OS)=  1.000000  1.000000
- ExpMin= 1.83D-01 ExpMax= 1.72D+02 ExpMxC= 1.72D+02 IAcc=3 IRadAn=         5 AccDes= 0.00D+00
+ ExpMin= 4.38D-02 ExpMax= 4.56D+03 ExpMxC= 6.82D+02 IAcc=3 IRadAn=         5 AccDes= 0.00D+00
  HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         5 IDoV=-2 UseB2=F ITyADJ=14
  ICtDFT= 12500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
- Range of M.O.s used for correlation:     3    26
- NBasis=    26 NAE=     8 NBE=     8 NFC=     2 NFV=     0
- NROrb=     24 NOA=     6 NOB=     6 NVA=    18 NVB=    18
+ Range of M.O.s used for correlation:     3    56
+ NBasis=    56 NAE=     8 NBE=     8 NFC=     2 NFV=     0
+ NROrb=     54 NOA=     6 NOB=     6 NVA=    48 NVB=    48
 
- **** Fatal Problem: The smallest alpha delta epsilon is  0.35144260D-03
+ **** Warning!!: The largest alpha MO coefficient is  0.23915985D+02
 
- Error termination via Lnk1e in /software/gaussian/g16-c01/sse4/g16/l801.exe at Sun Jan  1 19:27:53 2023.
- Job cpu time:       0 days  0 hours  0 minutes  1.9 seconds.
- Elapsed time:       0 days  0 hours  0 minutes  4.2 seconds.
- File lengths (MBytes):  RWF=    272 Int=      0 D2E=      0 Chk=     32 Scr=     32
+ Keep R1, R2, and R3 ints in memory in canonical form, NReq=8841846.
+     8 initial guesses have been made.
+ Convergence on wavefunction:    0.000001000000000
+ Iteration     1 Dimension     8 NMult     0 NNew      8
+ CISAX will form     8 AO SS matrices at one time.
+ New state      2 was old state      4
+ Iteration     2 Dimension    12 NMult     8 NNew      4
+ Iteration     3 Dimension    16 NMult    12 NNew      4
+ Iteration     4 Dimension    20 NMult    16 NNew      4
+ Iteration     5 Dimension    24 NMult    20 NNew      4
+ Iteration     6 Dimension    28 NMult    24 NNew      4
+ Iteration     7 Dimension    32 NMult    28 NNew      4
+ Iteration     8 Dimension    36 NMult    32 NNew      4
+ Iteration     9 Dimension    38 NMult    36 NNew      2
+ Iteration    10 Dimension    40 NMult    38 NNew      2
+ Iteration    11 Dimension    42 NMult    40 NNew      2
+ ***********************************************************************
+ Excited states from <AA,BB:AA,BB> singles matrix:
+ ***********************************************************************
+ 
+ Ground to excited state transition densities written to RWF  633
+ Ground to excited state transition electric dipole moments (Au):
+       state          X           Y           Z        Dip. S.      Osc.
+         1         0.2323     -0.0189      0.2756      0.1303      0.0090
+         2        -0.0280      0.2805     -0.0640      0.0836      0.0120
+ Ground to excited state transition velocity dipole moments (Au):
+       state          X           Y           Z        Dip. S.      Osc.
+         1        -0.0363      0.0040     -0.0590      0.0048      0.0310
+         2         0.0085     -0.0544      0.0109      0.0032      0.0098
+ Ground to excited state transition magnetic dipole moments (Au):
+       state          X           Y           Z
+         1        -1.0348     -0.8680      0.4829
+         2        -0.7189      0.8811      0.4154
+ Ground to excited state transition velocity quadrupole moments (Au):
+       state          XX          YY          ZZ          XY          XZ          YZ
+         1         0.0321      0.0119     -0.0123     -0.0813      0.0358     -0.2011
+         2        -0.1082     -0.0070      0.0828     -0.0613     -0.0657     -0.1352
+ <0|del|b> * <b|rxdel|0> + <0|del|b> * <b|delr+rdel|0>
+ Rotatory Strengths (R) in cgs (10**-40 erg-esu-cm/Gauss)
+       state          XX          YY          ZZ    R(velocity)    E-M Angle
+         1       -93.1536     39.3838     91.8282     12.6862       86.79
+         2       -78.5756     -3.4399    -81.3481    -54.4545      136.79
+ 1/2[<0|r|b>*<b|rxdel|0> + (<0|rxdel|b>*<b|r|0>)*]
+ Rotatory Strengths (R) in cgs (10**-40 erg-esu-cm/Gauss)
+       state          XX          YY          ZZ     R(length)
+         1       170.0107    -11.6163    -94.1137     21.4269
+         2       -14.2303   -174.7614     18.8154    -56.7254
+  1/2[<0|del|b>*<b|r|0> + (<0|r|b>*<b|del|0>)*] (Au)
+       state          X           Y           Z        Dip. S.   Osc.(frdel)
+         1        -0.0084     -0.0001     -0.0163      0.0248      0.0165
+         2        -0.0002     -0.0153     -0.0007      0.0162      0.0108
+
+ Excitation energies and oscillator strengths:
+ 
+ Excited state symmetry could not be determined.
+ Excited State   1:      Singlet-?Sym    2.8217 eV  439.40 nm  f=0.0090  <S**2>=0.000
+       8 ->  9         0.70729
+ This state for optimization and/or second-order correction.
+ Total Energy, E(TD-HF/TD-DFT) =  -78.2995632578    
+ Copying the excited state density for this state as the 1-particle RhoCI density.
+ 
+ Excited state symmetry could not be determined.
+ Excited State   2:      Singlet-?Sym    5.8393 eV  212.33 nm  f=0.0120  <S**2>=0.000
+       5 ->  9        -0.11779
+       7 ->  9         0.68280
+ SavETr:  write IOETrn=   770 NScale= 10 NData=  16 NLR=1 NState=    2 LETran=      46.

@@ -1,6 +1,5 @@
 #!/usr/bin/python
 import numpy as np
-from scipy.linalg import svd
 from matplotlib import pyplot as plt
 import os
 import sys
@@ -257,63 +256,6 @@ class gau_nac:
         self.DYN_PROPERTIES["OVERLAP_NEW"] = (CI_overlap[:,:])[:-1,:-1]
 
 
-    def check_phase():
-        # NOT IMPLEMENTED YET
-        return
-
-    def get_Lowdin_SVD(self):
-        """
-        S = U @ diag(\lambda_i) @ V.T
-        S_Ortho = U @ V.T
-        """
-        OVERLAP = self.DYN_PROPERTIES["OVERLAP_NEW"]
-        U, vals, VT = svd(OVERLAP)
-
-        S_Ortho = U @ VT
-
-        print("Check orthogonalization. S.T @ S")
-        #print("Saving to ortho_check.dat")
-        np.savetxt("ortho_check.dat", S_Ortho.T @ S_Ortho, fmt="%1.8f" )
-
-        return S_Ortho
-
-
-    def calc_NAC(self):
-        """
-        NACT_{jk} \\approx (<j(t0)|k(t1)> - <j(t1)|k(t0)>) / (2*dt)
-        NEED TO CHECK IF THIS IS CORRECT IMPLEMENTATION OF THIS EXPRESSION
-        """
-        # TODO CHECK OVERLAP PHASE. STEAL SHARC VERSION.
-        OVERLAP = self.DYN_PROPERTIES["OVERLAP_NEW"]
-        dtI     = self.DYN_PROPERTIES["dtI"]
-        
-        print("Original Overlap")
-        print(OVERLAP)
-        #print("Forcing overlap to be symmetric: ( abs(S) + abs(S.T) ) / 2:")
-        #OVERLAP = (np.abs(OVERLAP) + np.abs(OVERLAP).T ) / 2
-        #print(OVERLAP)
-        print("Performing Lowdin Orthogonalization.")
-        OVERLAP = self.get_Lowdin_SVD()
-        print("Orthogonalized Overlap")
-
-        print(OVERLAP)
-
-        """
-        NOTE HERE THAT THE ORIGINAL OVERLAP IS NOT SYMMETRIC. NEED TO FIGURE OUT WHAT IS WRONG.
-            -> FOR THIS, I WILL SIMPLY TAKE ABSOLUTE VALUE. DO NOT KEEP THIS PROCEDURE. 
-        TODO PHASE TRACKING.
-        """
-    
-        self.DYN_PROPERTIES["OVERLAP_NEW"] = OVERLAP
-
-        NACT    = (OVERLAP - OVERLAP.T) / 2 / dtI # Check this, TODO
-
-        print("NAC with Orthogonalized Overlap")
-        print(NACT)
-
-        if ( self.DYN_PROPERTIES["MD_STEP"] >= 2 ):
-            self.DYN_PROPERTIES["NACT_OLD"] = self.DYN_PROPERTIES["NACT_NEW"] * 1.0
-        self.DYN_PROPERTIES["NACT_NEW"] = NACT
 
 
     def worker(self):
@@ -324,7 +266,6 @@ class gau_nac:
         self.run()
         #self.dump()
         self.dump_braden()
-        self.calc_NAC()
         os.chdir("../")
         
         return self.DYN_PROPERTIES

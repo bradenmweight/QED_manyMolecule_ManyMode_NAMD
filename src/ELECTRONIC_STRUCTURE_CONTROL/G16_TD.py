@@ -3,6 +3,7 @@ import subprocess as sp
 import os, sys
 import time
 import multiprocessing as mp
+from scipy.linalg import svd
 
 import get_cartesian_gradients
 import get_diagonal_electronic_energies
@@ -118,7 +119,7 @@ def generate_inputs(DYN_PROPERTIES):
         file01 = open("geometry.com","w")
         write_header(file01,MEM,NCPUS)
         if ( FUNCTIONAL.upper() in ['AM1', 'PM3', 'PM6', 'PM7'] ): # By default, gaussian does not compute AO overlap for semi-empirical Hamiltonians
-            # THIS GIVES BAD OVERLAPS STILL. DO NOT USE. ASSERT IS FOUND ELSEWHERE
+            # THIS GIVES BAD OVERLAPS STILL. DO NOT USE.
             file01.write(f"# {FUNCTIONAL}/{BASIS_SET} IOp(3/41=2000) nosymm iop(2/12=3,3/33=1) guess=only pop=full\n\n") ### MAIN LINE ###
         else:
             file01.write(f"# {FUNCTIONAL}/{BASIS_SET} nosymm iop(2/12=3,3/33=1) guess=only pop=full\n\n") ### MAIN LINE ###
@@ -136,7 +137,7 @@ def submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP, directory=None):
         sleep_check = 1 # Check gaussian output every {} seconds
         while ( True ):
             time.sleep(sleep_check)
-            sleep_time += sleep_check # Add 5 seconds to sleep timer
+            sleep_time += sleep_check # Add 1 seconds to sleep timer
             if ( sleep_limit > sleep_limit ):
                 print(f"\tWARNING! Gaussian did not finish normally in the following directory:\n{os.getcwd()}", )
                 exit()
@@ -147,7 +148,7 @@ def submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP, directory=None):
                 continue
             if ( check1.split()[:4] == "Normal termination of Gaussian".split() ):
                 print("\tGaussian terminated normally in %2.2f s. (%s)" % (time.time() - t0, os.getcwd().split("/")[-1]) )
-                sp.call(f"formchk geometry.chk > /dev/null 2>&1", shell=True) # For dipole matrix calculations
+                sp.call(f"formchk geometry.chk > /dev/null 2>&1", shell=True)
                 break
             elif ( check2.split()[:2] == "Error termination".split() ):
                 print("\tGaussian crashed after %2.2f s. (%s)" % (time.time() - t0, os.getcwd().split("/")[-1]) )
@@ -161,7 +162,7 @@ def submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP, directory=None):
         check = open("geometry.out","r").readlines()[-1]
         if ( check.split()[:4] == "Normal termination of Gaussian".split() ):
             print("\tGaussian terminated normally in %2.2f s. (%s)" % (time.time() - t0, os.getcwd().split("/")[-1]) )
-            sp.call(f"formchk geometry.chk > /dev/null 2>&1", shell=True) # For dipole matrix calculations
+            sp.call(f"formchk geometry.chk > /dev/null 2>&1", shell=True)
         else:
             print(f"\tWARNING! Gaussian did not finish normally in the following directory:\n{os.getcwd()}", )
     elif ( RUN_ELEC_STRUC == "TEST" ):
@@ -224,6 +225,83 @@ def submit_jobs(DYN_PROPERTIES):
 
 
 
+
+
+
+def correct_phase(OVERLAP_ORTHO):
+    # Alexey Akimov, J. Phys. Chem. Lett. 2018, 9, 20, 6096–6102
+    NStates = len(OVERLAP_ORTHO)
+    f = np.zeros(( NStates ))
+    for state in range( NStates ):
+        f[state] = OVERLAP_ORTHO[state,state] / np.abs(OVERLAP_ORTHO[state,state]) # \pm 1
+        #print("Phase Factor f = %2.6f" % (f[state]))
+
+    OVERLAP_corrected = np.zeros(( NStates, NStates ))
+    for j in range( NStates ):
+        for k in range( NStates ):
+            OVERLAP_corrected[j,k] = OVERLAP_ORTHO[j,k] * f[k] # Here, f* = f since all wavefunctions are real-valued
+            #print("Phase Corrected S_(%d-%d) = %2.8f" % (j,k,OVERLAP_corrected[j,k]))
+            #print("Phase Non-corrected S_(%d-%d) = %2.8f " % (j,k,OVERLAP_ORTHO[j,k]))
+
+    return OVERLAP_corrected
+
+def get_Lowdin_SVD(OVERLAP):
+    """
+    S = U @ diag(\lambda_i) @ V.T
+    S_Ortho = U @ V.T
+    """
+    U, vals, VT = svd(OVERLAP)
+
+    S_Ortho = U @ VT
+
+    #print("Check orthogonalization. S.T @ S")
+    #print("Saving to ortho_check.dat")
+    #np.savetxt("ortho_check.dat", S_Ortho.T @ S_Ortho, fmt="%1.8f" )
+    # It does work. ~BMW
+
+    return S_Ortho
+
+
+def calc_NACT(DYN_PROPERTIES):
+    """
+    Hammes-Schiffer and Tully, J. Chem. Phys., 101, 6, 1994
+    NACT_{jk} \\approx (<j(t0)|k(t1)> - <j(t1)|k(t0)>) / (2*dt)
+    """
+    OVERLAP = DYN_PROPERTIES["OVERLAP_NEW"]
+    dtI     = DYN_PROPERTIES["dtI"]
+
+    print("Original Overlap")
+    print(OVERLAP)
+
+    OVERLAP_ORTHO = get_Lowdin_SVD(OVERLAP) * 1.0
+    DYN_PROPERTIES["OVERLAP_NEW_uncorrected"] = OVERLAP_ORTHO * 1.0
+
+    print("Orthogonalized OVERLAP:")
+    print(OVERLAP_ORTHO)
+
+    # Save uncorrected properties for debugging purposes. Remove later.
+    NACT_uncorrected = (OVERLAP_ORTHO - OVERLAP_ORTHO.T) / 2 / dtI
+    DYN_PROPERTIES["NACT_NEW_uncorrected"] = NACT_uncorrected * 1.0
+    
+    OVERLAP_CORR = correct_phase(OVERLAP_ORTHO) * 1.0
+    NACT = (OVERLAP_CORR - OVERLAP_CORR.T) / 2 / dtI
+
+    print("Phase-corrected OVERLAP:")
+    print(OVERLAP_CORR)
+
+    if ( DYN_PROPERTIES["MD_STEP"] >= 2 ):
+        DYN_PROPERTIES["NACT_OLD"] = DYN_PROPERTIES["NACT_NEW"] * 1.0
+        DYN_PROPERTIES["OVERLAP_OLD"] = DYN_PROPERTIES["OVERLAP_NEW"] * 1.0
+    DYN_PROPERTIES["NACT_NEW"] = NACT * 1.0
+    DYN_PROPERTIES["OVERLAP_NEW"] = OVERLAP_CORR * 1.0
+    
+
+
+
+
+    return DYN_PROPERTIES
+
+
 def get_approx_NACR( DYN_PROPERTIES ):
     """
     Shu, ..., Truhlar, J. Chem. Theory Comput. 2022, 18, 3, 1320-1328
@@ -278,7 +356,8 @@ def main(DYN_PROPERTIES):
     DYN_PROPERTIES = get_diagonal_electronic_energies.main(DYN_PROPERTIES)
     if ( MD_STEP >= 1 ):
         if ( NStates >= 2 ):
-            DYN_PROPERTIES = G16_NAC.main(DYN_PROPERTIES) # Provides NACT and OVERLAP
+            DYN_PROPERTIES = G16_NAC.main(DYN_PROPERTIES) # Provides OVERLAP
+            DYN_PROPERTIES = calc_NACT(DYN_PROPERTIES) # Provides NACT
             DYN_PROPERTIES = get_approx_NACR(DYN_PROPERTIES) # Provides NACR from NACT and OVERLAP
         else:
             DYN_PROPERTIES["OVERLAP_OLD"] = 0

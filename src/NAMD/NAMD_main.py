@@ -23,21 +23,47 @@ import G16_TD
 # Additionally, the mixed-quantum classical or semi-classical
 #   dynamics will be handled elsewhere
 
+def initialize_mapping(DYN_PROPERTIES):
+    """
+    Wrapper for initializing mapping variables
+    """
+    if ( DYN_PROPERTIES["NAMD_METHOD"] == "EH" ):
+        return Eh.initialize_mapping(DYN_PROPERTIES)
+
 
 def propagage_Mapping(DYN_PROPERTIES):
     """
     Wrapper for electronic propagation
     """
     if ( DYN_PROPERTIES["NAMD_METHOD"] == "EH" ):
-        Eh.propagage_Mapping(DYN_PROPERTIES)
+        return Eh.propagage_Mapping(DYN_PROPERTIES)
+
+
+def rotate_Mapping(DYN_PROPERTIES):
+    """
+    Wrapper for the transformation of mapping variables
+    """
+    if ( DYN_PROPERTIES["NAMD_METHOD"] == "EH" ):
+        return Eh.rotate_Mapping(DYN_PROPERTIES)
+
+
+
 
 
 def main( ):
     DYN_PROPERTIES = read_input.read()
     DYN_PROPERTIES = read_input.initialize_MD_variables(DYN_PROPERTIES)
 
+    # Remove COM motion and angular velocity
+    # Do we need to do this at every step. Probably not.
+    # With Wigner-sampled geometries and velocities, this is already done.
+    if ( DYN_PROPERTIES["REMOVE_COM_MOTION"] == True ):
+        DYN_PROPERTIES = rotation.shift_COM(DYN_PROPERTIES)
+    if ( DYN_PROPERTIES["REMOVE_ANGULAR_VELOCITY"] == True ):
+        DYN_PROPERTIES = rotation.remove_rotations(DYN_PROPERTIES)
+
     # Initialize electronic DOFs
-    DYN_PROPERTIES = Eh.initialize_mapping(DYN_PROPERTIES)
+    DYN_PROPERTIES = initialize_mapping(DYN_PROPERTIES)
 
     # Perform first electronic structure calculation
         # Get diagonal energies and gradients
@@ -62,20 +88,14 @@ def main( ):
         if ( DYN_PROPERTIES["NStates"] >= 2 ):
             # Propagate electronic DOFs (Interpolated Hamiltonian)
             T0 = time()
-            DYN_PROPERTIES = Eh.propagage_Mapping(DYN_PROPERTIES)
+            DYN_PROPERTIES = propagage_Mapping(DYN_PROPERTIES)
             print( "Electronic propagation took %2.2f s." % (time() - T0) )
 
             # Rotate electronic DOFs from t0 basis to t1 basis
-            DYN_PROPERTIES = Eh.rotate_Mapping(DYN_PROPERTIES)
+            DYN_PROPERTIES = rotate_Mapping(DYN_PROPERTIES)
 
         # Propagate nuclear momenta
         DYN_PROPERTIES = nuclear_propagation.Nuclear_V_Step(DYN_PROPERTIES)
-
-        # Remove COM motion and angular velocity
-        if ( DYN_PROPERTIES["REMOVE_COM_MOTION"] == True ):
-            DYN_PROPERTIES = rotation.shift_COM(DYN_PROPERTIES)
-        if ( DYN_PROPERTIES["REMOVE_ANGULAR_VELOCITY"] == True ):
-            DYN_PROPERTIES = rotation.remove_rotations(DYN_PROPERTIES)
 
         output.save_data(DYN_PROPERTIES)
 

@@ -1,6 +1,6 @@
                         read (*,*)  
 6               read (*,*) n_atom 
-26                 read (*,*) n_ao 
+56                 read (*,*) n_ao 
 8               read (*,*) n_ele_alpha 
 8               read (*,*) n_ele_beta 
                         read (*,*)  
