@@ -228,20 +228,56 @@ def submit_jobs(DYN_PROPERTIES):
 
 
 
-def correct_phase(OVERLAP_ORTHO):
+def correct_phase(OVERLAP_ORTHO,MD_STEP,S_OLD=None):
     # Alexey Akimov, J. Phys. Chem. Lett. 2018, 9, 20, 6096–6102
     NStates = len(OVERLAP_ORTHO)
     f = np.zeros(( NStates ))
     for state in range( NStates ):
         f[state] = OVERLAP_ORTHO[state,state] / np.abs(OVERLAP_ORTHO[state,state]) # \pm 1
-        #print("Phase Factor f = %2.6f" % (f[state]))
+        print("Phase Factor f(S%d) = %2.6f" % (state,f[state]))
 
     OVERLAP_corrected = np.zeros(( NStates, NStates ))
     for j in range( NStates ):
         for k in range( NStates ):
-            OVERLAP_corrected[j,k] = OVERLAP_ORTHO[j,k] * f[k] # Here, f* = f since all wavefunctions are real-valued
+            OVERLAP_corrected[j,k] = OVERLAP_ORTHO[j,k] * f[k] # or f[j] ? # Here, f* = f since all wavefunctions are real-valued
+
+    if ( MD_STEP >= 3 ):
+        for j in range( NStates ):
+            for k in range( j+1, NStates ):
+                if ( int( S_OLD[j,k]/np.abs(S_OLD[j,k]) ) != int(OVERLAP_corrected[j,k]/np.abs(OVERLAP_corrected[j,k])) ):
+                    if ( abs(OVERLAP_corrected[j,k] - S_OLD[j,k]) > 1e-3 ): # This is arbitrary threshold.
+                        OVERLAP_corrected[j,k] *= -1
+                        OVERLAP_corrected[k,j] *= -1
+                        print("I found a sign error upon phase correcting.")
+                        print(f"Index Flip: {j} <--> {k}")
+
+                
+
+    #if ( MD_STEP >= 3 ):
+    #    print("S(t)")
+    #    print(S_OLD)
+    #    print("S(t+dt)")
+    #    print(OVERLAP_corrected)
+    #    print("S(t)^-1 @ S(t+dt):")
+    #    print( np.linalg.inv(S_OLD) @ OVERLAP_corrected )
+
+
+    """
+    if ( MD_STEP >= 3 ):
+        for j in range( NStates ):
+            for k in range( NStates ):
+                if ( int(f[k]) == -1 and j != k  ):
+                    sign_old = S_OLD[j,k] / np.abs(S_OLD[j,k])
+                    sign_new = OVERLAP_corrected[j,k] / np.abs(OVERLAP_corrected[j,k])
+                    if ( sign_old != sign_new and abs(OVERLAP_corrected[j,k]-S_OLD[j,k]) > 1e-5 ):
+                        print(f"I found a sign issue in OVERLAP.") 
+                        print(f"The sign changed from {sign_old} to {sign_new} with a large magnitude of {abs(OVERLAP_corrected[j,k]-S_OLD[j,k])}")
+                        print(f"I changed the sign of index {j}-{k} to fix at MD step {MD_STEP}.")
+                        OVERLAP_corrected[j,k] *= -1
+            
             #print("Phase Corrected S_(%d-%d) = %2.8f" % (j,k,OVERLAP_corrected[j,k]))
             #print("Phase Non-corrected S_(%d-%d) = %2.8f " % (j,k,OVERLAP_ORTHO[j,k]))
+    """
 
     return OVERLAP_corrected
 
@@ -260,7 +296,6 @@ def get_Lowdin_SVD(OVERLAP):
     # It does work. ~BMW
 
     return S_Ortho
-
 
 def calc_NACT(DYN_PROPERTIES):
     """
@@ -283,11 +318,19 @@ def calc_NACT(DYN_PROPERTIES):
     NACT_uncorrected = (OVERLAP_ORTHO - OVERLAP_ORTHO.T) / 2 / dtI
     DYN_PROPERTIES["NACT_NEW_uncorrected"] = NACT_uncorrected * 1.0
     
-    OVERLAP_CORR = correct_phase(OVERLAP_ORTHO) * 1.0
+    # Correct the phase of the OVERLAP matrix
+    if ( DYN_PROPERTIES["MD_STEP"] >= 3 ):
+        OVERLAP_CORR = correct_phase(OVERLAP_ORTHO,DYN_PROPERTIES["MD_STEP"],S_OLD=DYN_PROPERTIES["OVERLAP_OLD"]) * 1.0
+    else:
+        OVERLAP_CORR = correct_phase(OVERLAP_ORTHO,DYN_PROPERTIES["MD_STEP"]) * 1.0
     NACT = (OVERLAP_CORR - OVERLAP_CORR.T) / 2 / dtI
 
     print("Phase-corrected OVERLAP:")
     print(OVERLAP_CORR)
+
+
+
+
 
     if ( DYN_PROPERTIES["MD_STEP"] >= 2 ):
         DYN_PROPERTIES["NACT_OLD"] = DYN_PROPERTIES["NACT_NEW"] * 1.0
@@ -295,10 +338,6 @@ def calc_NACT(DYN_PROPERTIES):
     DYN_PROPERTIES["NACT_NEW"] = NACT * 1.0
     DYN_PROPERTIES["OVERLAP_NEW"] = OVERLAP_CORR * 1.0
     
-
-
-
-
     return DYN_PROPERTIES
 
 
