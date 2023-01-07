@@ -8,20 +8,22 @@ import nuclear_propagation
 import output
 import rotation
 
-import Eh # Add other NAMD methods here
+### NAMD METHODS ###
+import Eh
+import spinLSC
 
+# HOW TO HANDLE THESE PATHS BETTER ?
 sys.path.append("/scratch/bweight/software/many_molecule_many_mode_NAMD/src/ELECTRONIC_STRUCTURE_CONTROL/")
 sys.path.append("/scratch/bweight/software/many_molecule_many_mode_NAMD/src/WFN_OVERLAP/PYTHON/")
 
 import G16_TD
 
 
-# This code with be the main control code for the NAMD
+# This code with be the main control code for the NAMD.
 # We will make calls to electronic structure and
-#   wavefunction overlaps here, which are taken care
-#   of elsewhere
+#   wavefunction overlaps here, which are hanfled elsewhere.
 # Additionally, the mixed-quantum classical or semi-classical
-#   dynamics will be handled elsewhere
+#   dynamics will be handled elsewhere.
 
 def initialize_mapping(DYN_PROPERTIES):
     """
@@ -29,7 +31,8 @@ def initialize_mapping(DYN_PROPERTIES):
     """
     if ( DYN_PROPERTIES["NAMD_METHOD"] == "EH" ):
         return Eh.initialize_mapping(DYN_PROPERTIES)
-
+    elif ( DYN_PROPERTIES["NAMD_METHOD"] == "SPINLSC" ):
+        return spinLSC.initialize_mapping(DYN_PROPERTIES)
 
 def propagage_Mapping(DYN_PROPERTIES):
     """
@@ -37,7 +40,8 @@ def propagage_Mapping(DYN_PROPERTIES):
     """
     if ( DYN_PROPERTIES["NAMD_METHOD"] == "EH" ):
         return Eh.propagage_Mapping(DYN_PROPERTIES)
-
+    elif ( DYN_PROPERTIES["NAMD_METHOD"] == "SPINLSC" ):
+        return spinLSC.propagage_Mapping(DYN_PROPERTIES)
 
 def rotate_Mapping(DYN_PROPERTIES):
     """
@@ -45,7 +49,8 @@ def rotate_Mapping(DYN_PROPERTIES):
     """
     if ( DYN_PROPERTIES["NAMD_METHOD"] == "EH" ):
         return Eh.rotate_Mapping(DYN_PROPERTIES)
-
+    if ( DYN_PROPERTIES["NAMD_METHOD"] == "SPINLSC" ):
+        return spinLSC.rotate_Mapping(DYN_PROPERTIES)
 
 
 
@@ -53,14 +58,6 @@ def rotate_Mapping(DYN_PROPERTIES):
 def main( ):
     DYN_PROPERTIES = read_input.read()
     DYN_PROPERTIES = read_input.initialize_MD_variables(DYN_PROPERTIES)
-
-    # Remove COM motion and angular velocity
-    # Do we need to do this at every step. Probably not.
-    # With Wigner-sampled geometries and velocities, this is already done.
-    if ( DYN_PROPERTIES["REMOVE_COM_MOTION"] == True ):
-        DYN_PROPERTIES = rotation.shift_COM(DYN_PROPERTIES)
-    if ( DYN_PROPERTIES["REMOVE_ANGULAR_VELOCITY"] == True ):
-        DYN_PROPERTIES = rotation.remove_rotations(DYN_PROPERTIES)
 
     # Initialize electronic DOFs
     DYN_PROPERTIES = initialize_mapping(DYN_PROPERTIES)
@@ -96,6 +93,14 @@ def main( ):
 
         # Propagate nuclear momenta
         DYN_PROPERTIES = nuclear_propagation.Nuclear_V_Step(DYN_PROPERTIES)
+
+    # Remove COM motion and angular velocity
+    # Do we need to do this at every step. Probably not.
+    # With Wigner-sampled geometries and velocities, this is already done.
+    if ( DYN_PROPERTIES["REMOVE_COM_MOTION"] == True ):
+        DYN_PROPERTIES = rotation.shift_COM(DYN_PROPERTIES)
+    if ( DYN_PROPERTIES["REMOVE_ANGULAR_VELOCITY"] == True ):
+        DYN_PROPERTIES = rotation.remove_rotations(DYN_PROPERTIES)
 
         output.save_data(DYN_PROPERTIES)
 

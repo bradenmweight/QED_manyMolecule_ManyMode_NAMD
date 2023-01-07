@@ -1,10 +1,14 @@
 import numpy as np
 
+### NAMD METHODS ###
 import Eh
+import spinLSC
 
 def get_density_matrix( DYN_PROPERTIES ):
     if ( DYN_PROPERTIES["NAMD_METHOD"] == "EH" ):
         return Eh.get_density_matrix(DYN_PROPERTIES)
+    elif ( DYN_PROPERTIES["NAMD_METHOD"] == "SPINLSC" ):
+        return spinLSC.get_density_matrix(DYN_PROPERTIES)
     else:
         print("NAMD_METHOD not recognized. Quitting.")
         exit()

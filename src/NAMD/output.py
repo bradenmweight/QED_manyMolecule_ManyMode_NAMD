@@ -74,6 +74,7 @@ def save_data(DYN_PROPERTIES):
         file01.write(f"{DYN_PROPERTIES['MD_STEP']}  " + "%2.6f  %2.6f  %2.6f\n" % (KE,PE,TE))
 
 
+    if ( DYN_PROPERTIES['NStates'] >= 2 ):
         with open("MD_OUTPUT/Overlap.dat","a") as file01:
             if ( DYN_PROPERTIES['MD_STEP'] == 0 ): 
                 file01.write(f"# Step " + " ".join([f'{j}-{k}' for j in range(NStates) for k in range(j,NStates)]) + "\n" )

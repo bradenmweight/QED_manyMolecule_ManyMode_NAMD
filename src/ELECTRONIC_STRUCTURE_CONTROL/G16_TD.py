@@ -65,7 +65,7 @@ def generate_inputs(DYN_PROPERTIES):
     def write_header(file01,MEM,NCPUS):
         file01.write(f"%chk=geometry.chk\n")
         #file01.write(f"%nprocshared={NCPUS}\n")
-        file01.write(f"%nprocshared=1\n")
+        file01.write(f"%nprocshared=24\n")
         file01.write(f"%mem={MEM}GB\n\n")
 
     def write_geom(file01, Atom_labels, Atom_coords_new, MD_STEP, CHARGE, MULTIPLICITY, method=[None,None]):
@@ -85,7 +85,11 @@ def generate_inputs(DYN_PROPERTIES):
     if ( MD_STEP >= 1 ): 
         file01.write(f"%oldchk=../GS_OLD/geometry.chk\n")
     write_header(file01,MEM,NCPUS)
-    file01.write(f"# {FUNCTIONAL}/{BASIS_SET} SCF=XQC FORCE nosym pop=full\n\n") ### MAIN LINE ###
+    file01.write(f"# {FUNCTIONAL}/{BASIS_SET} SCF=XQC FORCE nosym pop=full ") ### MAIN LINE ###
+    if ( MD_STEP >= 1 ):
+        file01.write("guess=read\n\n")
+    else:
+        file01.write("\n\n")
     write_geom(file01,Atom_labels,Atom_coords_new,MD_STEP,CHARGE,MULTIPLICITY)
     os.chdir("../")
 
@@ -119,7 +123,7 @@ def generate_inputs(DYN_PROPERTIES):
         file01 = open("geometry.com","w")
         write_header(file01,MEM,NCPUS)
         if ( FUNCTIONAL.upper() in ['AM1', 'PM3', 'PM6', 'PM7'] ): # By default, gaussian does not compute AO overlap for semi-empirical Hamiltonians
-            # THIS GIVES BAD OVERLAPS STILL. DO NOT USE.
+            # THIS GIVES BAD OVERLAPS STILL. DO NOT USE. NEED TO FIX.
             file01.write(f"# {FUNCTIONAL}/{BASIS_SET} IOp(3/41=2000) nosymm iop(2/12=3,3/33=1) guess=only pop=full\n\n") ### MAIN LINE ###
         else:
             file01.write(f"# {FUNCTIONAL}/{BASIS_SET} nosymm iop(2/12=3,3/33=1) guess=only pop=full\n\n") ### MAIN LINE ###

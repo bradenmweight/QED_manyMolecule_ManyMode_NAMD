@@ -5,12 +5,13 @@ import subprocess as sp
 import os
 
 def get_Globals():
-    global TEMP, NSamples, CM_to_AU
-    TEMP = 10 # K
+    global TEMP, NSamples, AU_to_K, AU_to_CMinv
+    TEMP = 300 # K
     NSamples = 10 # Number of initial conditions
 
-
-    CM_to_AU = 219474.6 # cm-1 / Hartree
+    AU_to_K     = 315777. # K / Hartree
+    #K_to_eV     = 0.025/300 # eV / K
+    AU_to_CMinv = 219474.6 # cm-1 / Hartree
 
 def read_eigenvectors():
 
@@ -108,11 +109,10 @@ def determine_state(mode_freq):
     print("I DONT KNOW WHAT IS HAPPENING HERE!!!!!!!!")
     print("Check the units for all things !!!!!!!!")
     thresh  = 0.9999 # Keep all n below population threshold
-    #AU_to_K = 315777 # K / Hartree
-    eV_to_K  = 0.025/300 # eV / K
-    print(mode_freq*CM_to_AU / (TEMP * eV_to_K / 27.2114))
-    exit()
-    exponent   = mode_freq*CM_to_AU/(TEMP) # TEMP is global
+
+    #print( mode_freq/AU_to_CMinv*AU_to_K / TEMP )
+    #exit()
+    exponent   = mode_freq/AU_to_CMinv*AU_to_K / TEMP # TEMP is global
   
     if ( exponent > 800 ):
         exponent = 600
@@ -237,19 +237,19 @@ def get_one_initial_condition(atom_labels, GEOM, masses, NM_FREQ, NM_EIGV):
             elif( prob > random() ):
                 #print(prob,n)
                 break
-        # Convert from unitless Q,P to real units
-        factor = np.sqrt( NM_FREQ[mode] * CM_to_AU ) # QM outputs in units of 2\pi (i.e., angular frequency)
-        random_Q /= factor
-        random_P *= factor
+        
+        # Convert from unitless Q,P to atomic units (AU) X:Bohr and V:Bohr/a.u.
+        random_Q *= 0.529 / np.sqrt( NM_FREQ[mode] / AU_to_CMinv ) # X ~ sqrt[h/w]
+        random_P *= np.sqrt( NM_FREQ[mode] / AU_to_CMinv ) # V ~ sqrt[ hw ] 
 
         # Compute QHO energy for this mode and add to total for this sample
-        E_sample += 0.50000000 * (NM_FREQ[mode]*CM_to_AU)**2 * random_Q**2 # (AU)**2 / SQRT(cm^-1)
+        E_sample += 0.50000000 * (NM_FREQ[mode] / AU_to_CMinv)**2 * random_Q**2
 
         # Get new coordinates and velocities
         for count, atom in enumerate(atom_labels):
             for d in range(3):
-                W_GEOM[count,d]  = GEOM[count,d] + random_Q * NM_EIGV[mode,count,d] * 1/np.sqrt(masses[count])
-                W_VELOC[count,d] = random_Q * NM_EIGV[mode,count,d] * 1/np.sqrt(masses[count])
+                W_GEOM[count,d]  += GEOM[count,d] + 0.529 * random_Q * NM_EIGV[mode,count,d] * 1/np.sqrt(masses[count]) 
+                W_VELOC[count,d] += 0.529 * 41.341 * random_P * NM_EIGV[mode,count,d] * 1/np.sqrt(masses[count]) # P ~ sqrt[ hwm / 2 ] -> v ~ sqrt[ hw / (2m) ] 
 
         W_GEOM  = shift_COM(W_GEOM,masses)
         W_VELOC = remove_rotations(W_GEOM,W_VELOC,masses)

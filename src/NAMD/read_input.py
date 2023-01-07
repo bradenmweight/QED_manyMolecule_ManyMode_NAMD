@@ -89,7 +89,7 @@ def read():
                 try:
                     DYN_PROPERTIES["MEMORY"] = int( t[1] )
                 except ValueError:
-                    print(f"\t'MEMORY' must be an integer: '{t[1]}'")
+                    print(f"\t'MEMORY' must be an integer (units of GB): '{t[1]}'")
                     exit()
 
             # Look for CHARGE
@@ -110,8 +110,8 @@ def read():
 
             # Look for VELOC
             if ( t[0].lower() == "VELOC".lower() ):
-                DYN_PROPERTIES["VELOC"] = t[1]
-                # Later, we will check this. We will automatically generate Wigner is VELOC != read
+                DYN_PROPERTIES["VELOC"] = t[1].upper()
+                # Later, we will check this input.
 
             # Look for RUN_ELEC_STRUC
             if ( t[0].lower() == "RUN_ELEC_STRUC".lower() ):
@@ -135,14 +135,14 @@ def read():
             if ( t[0].lower() == "EL_PROP".lower() ):
                 DYN_PROPERTIES["EL_PROP"] = t[1].upper()
                 if ( DYN_PROPERTIES["EL_PROP"] not in ["VV","RK"] ):
-                    print("Input for 'EL_PROP' must be either 'VV' or 'RK'.")
+                    print("Input for 'EL_PROP' must be either 'VV' (Velocity-Verlet) or 'RK' (Runge-Kutta).")
                     exit()
 
             # Look for NAMD_METHOD
             if ( t[0].lower() == "NAMD_METHOD".lower() ):
                 DYN_PROPERTIES["NAMD_METHOD"] = t[1].upper()
-                if ( DYN_PROPERTIES["NAMD_METHOD"] not in ["EH","sLSC"] ):
-                    print("Input for 'NAMD_METHOD' must be either 'EH' or 'sLSC'.")
+                if ( DYN_PROPERTIES["NAMD_METHOD"] not in ["EH","SPINLSC"] ):
+                    print("Input for 'NAMD_METHOD' must be either 'EH' or 'SPINLSC'.")
                     exit()
 
             # Look for CPA
@@ -200,21 +200,105 @@ def read_geom():
 
     return Atom_labels, Atom_coords_new
 
+def read_veloc():
+    """
+    TODO Add checks for XYZ user input
+    """
+    XYZ_File = open("velocity_input.xyz","r").readlines()
+    NAtoms = int(XYZ_File[0])
+    Atom_velocs_new = np.zeros(( NAtoms, 3 ))
+    for count, line in enumerate(XYZ_File[2:]):
+        t = line.split()
+        Atom_velocs_new[count,:] = np.array([ float(t[1]), float(t[2]), float(t[3]) ]) / 0.529 # Ang -> a.u.
+
+    return Atom_velocs_new
+
 def set_masses(Atom_labels):
     mass_amu_to_au = 1837/1.007 # au / amu
-    masses_amu = { "H":1.007, 
-                   "He":4.00260,
-                   "Li":6.941,
-                   "Be":9.01218,
-                   "B":10.81,
-                   "C":12.011,
-                   "N":14.0067,
-                   "O":15.9994,
-                   "F":18.998403,
-                   "Ne":20.179,
-                   "Cl":35.453,
-                   "Fe":55.845,
-                   "Cu":63.546}
+    masses_amu = \
+{"H":    1.00797,
+"He":	4.00260,
+"Li":	6.941,
+"Be":	9.01218,
+"B":    10.81,
+"C":    12.011,
+"N":    14.0067,
+"O":    15.9994,
+"F":    18.998403,
+"Ne":	20.179,
+"Na":	22.98977,
+"Mg":	24.305,
+"Al":	26.98154,
+"Si":	28.0855,
+"P":    30.97376,
+"S":    32.06,
+"Cl":	35.453,
+"K":    39.0983,
+"Ar":	39.948,
+"Ca":	40.08,
+"Sc":	44.9559,
+"Ti":	47.90,
+"V":    50.9415,
+"Cr":	51.996,
+"Mn":	54.9380,
+"Fe":	55.847,
+"Ni":	58.70,
+"Co":	58.9332,
+"Cu":	63.546,
+"Zn":	65.38,
+"Ga":	69.72,
+"Ge":	72.59,
+"As":	74.9216,
+"Se":	78.96,
+"Br":	79.904,
+"Kr":	83.80,
+"Rb":	85.4678,
+"Sr":	87.62,
+"Y":    88.9059,
+"Zr":	91.22,
+"Nb":	92.9064,
+"Mo":	95.94,
+"Ru":	101.07,
+"Rh":	102.9055,
+"Pd":	106.4,
+"Ag":	107.868,
+"Cd":	112.41,
+"In":	114.82,
+"Sn":	18.69,
+"Sb":	121.75,
+"I":    126.9045,
+"Te":	127.60,
+"Xe":	131.30,
+"Cs":	132.9054,
+"Ba":	137.33,
+"La":	138.9055,
+"Ce":	140.12,
+"Pr":	140.9077,
+"Nd":	144.24,
+"Sm":	150.4,
+"Eu":	151.96,
+"Gd":	157.25,
+"Tb":	158.9254,
+"Dy":	162.50,
+"Ho":	164.9304,
+"Er":	167.26,
+"Tm":	168.9342,
+"Yb":	173.04,
+"Lu":	174.967,
+"Hf":	178.49,
+"Ta":	180.9479,
+"W":    183.85,
+"Re":	186.207,
+"Os":	190.2,
+"Ir":	192.22,
+"Pt":	195.09,
+"Au":	196.9665,
+"Hg":	200.59,
+"Tl":	204.37,
+"Pb":	207.2,
+"Bi":	208.9804,
+"Ra":	226.0254}
+
 
     masses = []
     for at in Atom_labels:
@@ -228,32 +312,32 @@ def get_initial_velocs(DYN_PROPERTIES):
 
     # TODO Get Wigner distribution for initial velocities
 
-    # For now, choose Maxwell-Boltzmann Distribution
-    if (True):
+    if ( DYN_PROPERTIES["VELOC"] == "MB" ):
         import random
         velocs = np.zeros(( len(Atom_labels), 3 ))
         T = 300 # K
         kT  = T * (0.025/300) / 27.2114 # K -> eV -> au
-        V0  = np.sqrt( 2 * kT / masses ) # Average zero velocity
+        V0  = np.sqrt( 2 * kT / masses )
         SIG = kT / masses
         for at,atom in enumerate(Atom_labels):
             for d in range(3):
                 velocs[at,d] = random.gauss( V0[at], SIG[at] )
-    else:
+    
+    elif (DYN_PROPERTIES["VELOC"] == "ZERO"):
         velocs = np.zeros(( len(Atom_labels), 3 ))
+    
+    elif ( DYN_PROPERTIES["VELOC"] == "READ" ): # This will be usual way to perform with Wigner for now.
+        velocs = read_veloc() # Reads "velocity_input.xyz"
 
     return velocs
 
 def initialize_MD_variables(DYN_PROPERTIES):
     
+    DYN_PROPERTIES["MD_STEP"] = 0    
     DYN_PROPERTIES["Atom_labels"], DYN_PROPERTIES["Atom_coords_new"] = read_geom()
-    DYN_PROPERTIES["MD_STEP"] = 0
     DYN_PROPERTIES["NAtoms"] = len( DYN_PROPERTIES["Atom_labels"] )
-
     DYN_PROPERTIES["MASSES"] = set_masses(DYN_PROPERTIES["Atom_labels"])
-
-    DYN_PROPERTIES["dtE"] = DYN_PROPERTIES["dtI"] / DYN_PROPERTIES["ESTEPS"]
-
+    DYN_PROPERTIES["dtE"]    = DYN_PROPERTIES["dtI"] / DYN_PROPERTIES["ESTEPS"]
     DYN_PROPERTIES["Atom_velocs_new"] = get_initial_velocs(DYN_PROPERTIES)
 
     
@@ -278,9 +362,7 @@ def initialize_MD_variables(DYN_PROPERTIES):
     except KeyError:
         DYN_PROPERTIES["REMOVE_ANGULAR_VELOCITY"] = True # Default is to remove angular velocity
 
-    """
-    CPA IS NOT YET IMPLEMENTED. DP NOT USE
-    """
+    # TODO
     try:
         tmp = DYN_PROPERTIES["CPA"]
     except KeyError:

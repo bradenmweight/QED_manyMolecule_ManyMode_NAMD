@@ -17,6 +17,13 @@ def Nuclear_X_Step(DYN_PROPERTIES):
     # Propagate nuclear coordinates
     DYN_PROPERTIES["FORCE_NEW"] = Eh.get_Force(DYN_PROPERTIES)
     a = DYN_PROPERTIES["FORCE_NEW"] / masses
+
+    """
+    TODO
+    ADD FUNCTIONALITY FOR LANGEVIN DYNAMICS
+    if ( DYN_PROPERTIES["ENSEMBLE_TYPE"] == "NVT" ): # ADD TO read_input.py
+    """
+
     DYN_PROPERTIES["Atom_coords_new"] += V[:,:] * dtI + 0.5000000 * a[:,:] * dtI*dtI
 
     return DYN_PROPERTIES
@@ -40,6 +47,13 @@ def Nuclear_V_Step(DYN_PROPERTIES):
     aold = DYN_PROPERTIES["FORCE_OLD"] / masses
 
     DYN_PROPERTIES["Atom_velocs_old"] += DYN_PROPERTIES["Atom_velocs_new"]
+
+    """
+    TODO
+    ADD FUNCTIONALITY FOR LANGEVIN DYNAMICS
+    if ( DYN_PROPERTIES["ENSEMBLE_TYPE"] == "NVT" ): # ADD TO read_input.py
+    """
+
     DYN_PROPERTIES["Atom_velocs_new"] += 0.5000000 * (aold[:,:] + anew[:,:]) * dtI
     
     return DYN_PROPERTIES
