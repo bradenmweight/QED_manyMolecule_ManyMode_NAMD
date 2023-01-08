@@ -81,7 +81,7 @@
          do j= 1, n_state
             !write (*,*)  "Overlap between state:", i, j
             
-!            if ( i .ne. j) then ! Is this the issue with diagonals ? ~BMW
+!            if ( i .ne. j) then ! Is this the issue with diagonals ? ~BMW YES ! ~ BMW
 
 !        Pick up the CI vector for state i at Geom 1 and state j at Geom 2
                  do k = 1, n_csf
