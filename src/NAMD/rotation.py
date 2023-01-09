@@ -55,14 +55,7 @@ def shift_COM(DYN_PROPERTIES):
 
     M_Total = np.sum( DYN_PROPERTIES["MASSES"] )
 
-    print("Original:")
-    print(DYN_PROPERTIES["Atom_coords_new"]) 
-
     DYN_PROPERTIES["COM"] = COM / M_Total
     DYN_PROPERTIES["Atom_coords_new"] -= DYN_PROPERTIES["COM"]
 
-    print("COM Shift:")
-    print( COM / M_Total )
-    print("Shifted:")
-    print(DYN_PROPERTIES["Atom_coords_new"]) 
     return DYN_PROPERTIES

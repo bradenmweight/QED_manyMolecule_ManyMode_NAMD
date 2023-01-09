@@ -53,7 +53,7 @@ def generate_inputs(DYN_PROPERTIES):
     FUNCTIONAL      = DYN_PROPERTIES["FUNCTIONAL"]
     BASIS_SET       = DYN_PROPERTIES["BASIS_SET"]
     MEM             = DYN_PROPERTIES["MEMORY"]
-    NCPUS           = DYN_PROPERTIES["NCPUS"]
+    NCPUS_G16       = DYN_PROPERTIES["NCPUS_G16"]
     CHARGE          = DYN_PROPERTIES["CHARGE"]
     MULTIPLICITY    = DYN_PROPERTIES["MULTIPLICITY"]
     MD_STEP         = DYN_PROPERTIES["MD_STEP"]
@@ -61,11 +61,12 @@ def generate_inputs(DYN_PROPERTIES):
     SBATCH_G16      = DYN_PROPERTIES["SBATCH_G16"]
 
     #assert(FUNCTIONAL.upper() not in ['AM1', 'PM3', 'PM6', 'PM7'] ), "CI Overlap code does not work with semi-empirical Hamiltonians."
+    # Let's keep semi-empirical for BOMD where we don't need to overlaps of electronic wavefunctions.
+    # Does the overlap work if we orthogonalize the overlap ??? Can test empirically first...
 
-    def write_header(file01,MEM,NCPUS):
+    def write_header(file01,MEM,NCPUS_G16):
         file01.write(f"%chk=geometry.chk\n")
-        #file01.write(f"%nprocshared={NCPUS}\n")
-        file01.write(f"%nprocshared=24\n")
+        file01.write(f"%nprocshared={NCPUS_G16}\n")#file01.write(f"%nprocshared=1\n")
         file01.write(f"%mem={MEM}GB\n\n")
 
     def write_geom(file01, Atom_labels, Atom_coords_new, MD_STEP, CHARGE, MULTIPLICITY, method=[None,None]):
@@ -84,7 +85,7 @@ def generate_inputs(DYN_PROPERTIES):
     file01 = open("geometry.com","w")
     if ( MD_STEP >= 1 ): 
         file01.write(f"%oldchk=../GS_OLD/geometry.chk\n")
-    write_header(file01,MEM,NCPUS)
+    write_header(file01,MEM,NCPUS_G16)
     file01.write(f"# {FUNCTIONAL}/{BASIS_SET} SCF=XQC FORCE nosym pop=full ") ### MAIN LINE ###
     if ( MD_STEP >= 1 ):
         file01.write("guess=read\n\n")
@@ -98,7 +99,7 @@ def generate_inputs(DYN_PROPERTIES):
         os.chdir("TD_NEW_S1/")
         file01 = open("geometry.com","w")
         file01.write(f"%oldchk=../GS_NEW/geometry.chk\n")
-        write_header(file01,MEM,NCPUS)
+        write_header(file01,MEM,NCPUS_G16)
         # Include one additional excited state even though we only perform NAMD on NStates-1 excied states to converge TD-DFT
         file01.write(f"# {FUNCTIONAL}/{BASIS_SET} SCF=XQC TD=(singlets,nstates={NStates},root=1) FORCE nosym pop=full guess=read\n\n") ### MAIN LINE ###
         write_geom(file01,Atom_labels,Atom_coords_new,MD_STEP,CHARGE,MULTIPLICITY)
@@ -110,7 +111,7 @@ def generate_inputs(DYN_PROPERTIES):
             os.chdir(f"TD_NEW_S{state}/")
             file01 = open("geometry.com","w")
             file01.write(f"%oldchk=../TD_NEW_S1/geometry.chk\n")
-            write_header(file01,MEM,NCPUS)
+            write_header(file01,MEM,NCPUS_G16)
             # Include one additional excited state even though we only perform NAMD on NStates-1 excied states to converge TD-DFT
             file01.write(f"# {FUNCTIONAL}/{BASIS_SET} SCF=XQC TD=(read,singlets,nstates={NStates},root={state}) FORCE nosym pop=full guess=read\n\n") ### MAIN LINE ###
             write_geom(file01,Atom_labels,Atom_coords_new,MD_STEP,CHARGE,MULTIPLICITY)
@@ -121,7 +122,7 @@ def generate_inputs(DYN_PROPERTIES):
         Atom_coords_old = DYN_PROPERTIES["Atom_coords_old"]
         os.chdir("DIMER/")
         file01 = open("geometry.com","w")
-        write_header(file01,MEM,NCPUS)
+        write_header(file01,MEM,NCPUS_G16)
         if ( FUNCTIONAL.upper() in ['AM1', 'PM3', 'PM6', 'PM7'] ): # By default, gaussian does not compute AO overlap for semi-empirical Hamiltonians
             # THIS GIVES BAD OVERLAPS STILL. DO NOT USE. NEED TO FIX.
             file01.write(f"# {FUNCTIONAL}/{BASIS_SET} IOp(3/41=2000) nosymm iop(2/12=3,3/33=1) guess=only pop=full\n\n") ### MAIN LINE ###
@@ -163,6 +164,7 @@ def submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP, directory=None):
     elif( RUN_ELEC_STRUC == "USE_CURRENT_NODE" ):
         t0 = time.time()
         sp.call(f"g16 < geometry.com > geometry.out", shell=True, stdout=True)
+        #sp.call(f"g16 < geometry.com | tee geometry.out", shell=True, stdout=True)
         check = open("geometry.out","r").readlines()[-1]
         if ( check.split()[:4] == "Normal termination of Gaussian".split() ):
             print("\tGaussian terminated normally in %2.2f s. (%s)" % (time.time() - t0, os.getcwd().split("/")[-1]) )
@@ -214,7 +216,7 @@ def submit_jobs(DYN_PROPERTIES):
             state_List = [] 
             for state in range( 2, NStates ): # Skip force for final excited state. We don't include in NAMD.
                 state_List.append([ state, RUN_ELEC_STRUC, SBATCH_G16, MD_STEP ])
-            with mp.Pool(processes=DYN_PROPERTIES["NCPUS"]) as pool:
+            with mp.Pool(processes=DYN_PROPERTIES["NCPUS_NAMD"]) as pool:
                 pool.map(run_ES_FORCE_parallel,state_List)
         else:
             run_ES_FORCE_serial( RUN_ELEC_STRUC, SBATCH_G16, MD_STEP )
@@ -361,7 +363,13 @@ def get_approx_NACR( DYN_PROPERTIES ):
     g = np.zeros(( NStates, NStates, NAtoms, 3 ))
     G = np.zeros(( NStates, NStates, NAtoms, 3 ))
     
-    #print( G.shape, g.shape, V.shape, alpha.shape )
+    if ( np.allclose(V, np.zeros((NAtoms,3))) ):
+        print("\t Velocities are ZERO. Skipping approximate NACR calculation.")
+        print("\t Setting NACR to zero. If this happens at time-steps later than 0, something is wrong.")
+        if ( DYN_PROPERTIES["MD_STEP"] >= 2 ):
+            DYN_PROPERTIES["NACR_APPROX_OLD"] = DYN_PROPERTIES["NACR_APPROX_NEW"]
+        DYN_PROPERTIES["NACR_APPROX_NEW"] = np.zeros(( NStates, NStates, NAtoms, 3 ))
+        return DYN_PROPERTIES
 
     for j in range( NStates ):
         for k in range( NStates ):

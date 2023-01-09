@@ -73,8 +73,19 @@ def save_data(DYN_PROPERTIES):
 
         file01.write(f"{DYN_PROPERTIES['MD_STEP']}  " + "%2.6f  %2.6f  %2.6f\n" % (KE,PE,TE))
 
+    with open("MD_OUTPUT/Temperature.dat","a") as file01:
+        
+        DYN_PROPERTIES = properties.compute_KE(DYN_PROPERTIES)
+        NAtoms = DYN_PROPERTIES['NAtoms']
 
-    if ( DYN_PROPERTIES['NStates'] >= 2 ):
+        KE = DYN_PROPERTIES["KE"] * 27.2114 # a.u. --> eV
+
+        T = (2/3) * KE / NAtoms * (300 / 0.025) # eV --> K
+
+        file01.write(f"{DYN_PROPERTIES['MD_STEP']}  " + "%2.4f\n" % (T))
+
+
+    if ( NStates >= 2 ):
         with open("MD_OUTPUT/Overlap.dat","a") as file01:
             if ( DYN_PROPERTIES['MD_STEP'] == 0 ): 
                 file01.write(f"# Step " + " ".join([f'{j}-{k}' for j in range(NStates) for k in range(j,NStates)]) + "\n" )

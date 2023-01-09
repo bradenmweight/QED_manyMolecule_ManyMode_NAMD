@@ -59,6 +59,15 @@ def main( ):
     DYN_PROPERTIES = read_input.read()
     DYN_PROPERTIES = read_input.initialize_MD_variables(DYN_PROPERTIES)
 
+    # Remove COM motion and angular velocity
+    # Do we need to do this at every step. Probably should at least remove COM.
+    # With Wigner-sampled geometries and velocities, this is already done.
+    if ( DYN_PROPERTIES["REMOVE_COM_MOTION"] == True ):
+        DYN_PROPERTIES = rotation.shift_COM(DYN_PROPERTIES)
+    if ( DYN_PROPERTIES["REMOVE_ANGULAR_VELOCITY"] == True ):
+        DYN_PROPERTIES = rotation.remove_rotations(DYN_PROPERTIES)
+
+
     # Initialize electronic DOFs
     DYN_PROPERTIES = initialize_mapping(DYN_PROPERTIES)
 
@@ -94,18 +103,17 @@ def main( ):
         # Propagate nuclear momenta
         DYN_PROPERTIES = nuclear_propagation.Nuclear_V_Step(DYN_PROPERTIES)
 
-    # Remove COM motion and angular velocity
-    # Do we need to do this at every step. Probably not.
-    # With Wigner-sampled geometries and velocities, this is already done.
-    if ( DYN_PROPERTIES["REMOVE_COM_MOTION"] == True ):
-        DYN_PROPERTIES = rotation.shift_COM(DYN_PROPERTIES)
-    if ( DYN_PROPERTIES["REMOVE_ANGULAR_VELOCITY"] == True ):
-        DYN_PROPERTIES = rotation.remove_rotations(DYN_PROPERTIES)
+        # Remove COM motion and angular velocity
+        # Do we need to do this at every step. Probably should at least remove COM.
+        # With Wigner-sampled geometries and velocities, this is already done.
+        if ( DYN_PROPERTIES["REMOVE_COM_MOTION"] == True ):
+            DYN_PROPERTIES = rotation.shift_COM(DYN_PROPERTIES)
+        if ( DYN_PROPERTIES["REMOVE_ANGULAR_VELOCITY"] == True ):
+            DYN_PROPERTIES = rotation.remove_rotations(DYN_PROPERTIES)
 
         output.save_data(DYN_PROPERTIES)
 
-        #if ( DYN_PROPERTIES["MD_STEP"] == 5 ):
-        #    exit()
+
 
 if ( __name__ == "__main__" ):
     main()

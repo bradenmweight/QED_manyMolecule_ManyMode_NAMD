@@ -77,9 +77,17 @@ def read():
                     exit()
 
             # Look for NCPUS
-            if ( t[0].lower() == "NCPUS".lower() ):
+            if ( t[0].lower() == "NCPUS_NAMD".lower() ):
                 try:
-                    DYN_PROPERTIES["NCPUS"] = int( t[1] )
+                    DYN_PROPERTIES["NCPUS_NAMD"] = int( t[1] )
+                except ValueError:
+                    print(f"\t'NCPUS' must be an integer: '{t[1]}'")
+                    exit()
+
+            # Look for NCPUS
+            if ( t[0].lower() == "NCPUS_G16".lower() ):
+                try:
+                    DYN_PROPERTIES["NCPUS_G16"] = int( t[1] )
                 except ValueError:
                     print(f"\t'NCPUS' must be an integer: '{t[1]}'")
                     exit()
@@ -145,6 +153,39 @@ def read():
                     print("Input for 'NAMD_METHOD' must be either 'EH' or 'SPINLSC'.")
                     exit()
 
+            # Look for MD_ENSEMBLE
+            if ( t[0].lower() == "MD_ENSEMBLE".lower() ):
+                DYN_PROPERTIES["MD_ENSEMBLE"] = t[1].upper()
+                if ( DYN_PROPERTIES["MD_ENSEMBLE"] not in ["NVT","NVE"] ):
+                    print("Input for 'MD_ENSEMBLE' must be either 'NVT' or 'NVE'.")
+                    exit()
+
+            # Look for NVT_TYPE
+            if ( t[0].lower() == "NVT_TYPE".lower() ):
+                DYN_PROPERTIES["NVT_TYPE"] = t[1].upper()
+                if ( DYN_PROPERTIES["NVT_TYPE"] not in ["LANGEVIN"] ): # TODO Add simple velocity rescaling as alternative
+                    print("Input for 'NVT_TYPE' must be 'LANGEVIN'.")
+                    exit()
+
+            # Look for LANGEVIN_LAMBDA
+            if ( t[0].lower() == "LANGEVIN_LAMBDA".lower() ):
+                try:
+                    DYN_PROPERTIES["LANGEVIN_LAMBDA"] = float( t[1] )
+                except ValueError:
+                    print(f"\t'LANGEVIN_LAMBDA' must be a float: '{t[1]}'")
+                    exit()
+                assert( DYN_PROPERTIES["LANGEVIN_LAMBDA"] >= 0 ), f"'LANGEVIN_LAMBDA' must be greater than or equal to 0.0: {DYN_PROPERTIES['LANGEVIN_LAMBDA']}"
+
+            # Look for TEMP
+            if ( t[0].lower() == "TEMP".lower() ):
+                try:
+                    DYN_PROPERTIES["TEMP"] = float( t[1] )
+                except ValueError:
+                    print(f"\t'TEMP' must be a float: '{t[1]}'")
+                    exit()
+                assert( DYN_PROPERTIES["TEMP"] > 0 ), f"'TEMP' must be greater than 0.0: {DYN_PROPERTIES['TEMP']}"
+
+
             # Look for CPA
             if ( t[0].lower() == "CPA".lower() ):
                 try:
@@ -173,6 +214,7 @@ def read():
         print( "\tPARALLEL_FORCES =", DYN_PROPERTIES["PARALLEL_FORCES"] )
         print( "\tNAMD_METHOD =", DYN_PROPERTIES["NAMD_METHOD"] )
         print( "\tEL_PROP =", DYN_PROPERTIES["EL_PROP"] )
+        print( "\tMD_ENSEMBLE =", DYN_PROPERTIES["MD_ENSEMBLE"] )
     except KeyError:
         print("Input file is missing mandatory entries. Check it.")
         exit()
@@ -180,7 +222,6 @@ def read():
     assert( DYN_PROPERTIES["ISTATE"] <= DYN_PROPERTIES["NStates"]-1 ), "ISTATE must be less than the total number of states."
 
 
-    print("Input looks good.")
     return DYN_PROPERTIES
 
 
@@ -317,7 +358,7 @@ def get_initial_velocs(DYN_PROPERTIES):
         velocs = np.zeros(( len(Atom_labels), 3 ))
         T = 300 # K
         kT  = T * (0.025/300) / 27.2114 # K -> eV -> au
-        V0  = np.sqrt( 2 * kT / masses )
+        V0  = np.sqrt( kT / masses )
         SIG = kT / masses
         for at,atom in enumerate(Atom_labels):
             for d in range(3):
@@ -353,6 +394,16 @@ def initialize_MD_variables(DYN_PROPERTIES):
         DYN_PROPERTIES["EL_PROP"] = "VV"
 
     try:
+        tmp = DYN_PROPERTIES["NCPUS_NAMD"]
+    except KeyError:
+        DYN_PROPERTIES["NCPUS_NAMD"] = 1
+
+    try:
+        tmp = DYN_PROPERTIES["NCPUS_G16"]
+    except KeyError:
+        DYN_PROPERTIES["NCPUS_G16"] = 1
+
+    try:
         tmp = DYN_PROPERTIES["REMOVE_COM_MOTION"]
     except KeyError:
         DYN_PROPERTIES["REMOVE_COM_MOTION"] = True # Default is to remove COM motion
@@ -362,11 +413,61 @@ def initialize_MD_variables(DYN_PROPERTIES):
     except KeyError:
         DYN_PROPERTIES["REMOVE_ANGULAR_VELOCITY"] = True # Default is to remove angular velocity
 
+
+    if ( DYN_PROPERTIES["MD_ENSEMBLE"] == "NVT" ):
+        try:
+            tmp = DYN_PROPERTIES["NVT_TYPE"]
+        except KeyError:
+            if ( DYN_PROPERTIES["MD_ENSEMBLE"] == "NVE" ):
+                DYN_PROPERTIES["NVT_TYPE"] = None # Do nothing.
+            else:
+                assert(False), f"\t'NVT_TYPE' needs to be defined if 'MD_ENSEMBLE' = {DYN_PROPERTIES['MD_ENSEMBLE']}"
+        try:
+            tmp = DYN_PROPERTIES["LANGEVIN_LAMBDA"]
+        except KeyError:
+            if ( DYN_PROPERTIES["MD_ENSEMBLE"] == "NVE" ):
+                DYN_PROPERTIES["LANGEVIN_LAMBDA"] = None # Do nothing.
+            else:
+                assert(False), f"\t'LANGEVIN_LAMBDA' needs to be defined if 'MD_ENSEMBLE' = {DYN_PROPERTIES['MD_ENSEMBLE']}"
+        try:
+            tmp = DYN_PROPERTIES["TEMP"]
+        except KeyError:
+            if ( DYN_PROPERTIES["MD_ENSEMBLE"] == "NVE" ):
+                DYN_PROPERTIES["TEMP"] = None # Do nothing.
+            else:
+                assert(False), f"\t'TEMP' needs to be defined if 'MD_ENSEMBLE' = {DYN_PROPERTIES['MD_ENSEMBLE']}"
+    elif ( DYN_PROPERTIES["MD_ENSEMBLE"] == "NVE" ):
+        try:
+            tmp = DYN_PROPERTIES["NVT_TYPE"]
+        except KeyError:
+            DYN_PROPERTIES["NVT_TYPE"] = None
+        assert(DYN_PROPERTIES["NVT_TYPE"] == None ), f"\n\t'MD_ENSEMBLE' = {DYN_PROPERTIES['MD_ENSEMBLE']} and 'NVT_TYPE' = {DYN_PROPERTIES['NVT_TYPE']} are not compatible.\n\t 'NVT_TYPE' should not appear as we are trying to do NVE dynamics !"
+        try:
+            tmp = DYN_PROPERTIES["LANGEVIN_LAMBDA"]
+        except KeyError:
+            DYN_PROPERTIES["LANGEVIN_LAMBDA"] = None
+        assert(DYN_PROPERTIES["LANGEVIN_LAMBDA"] == None ), f"\n\t'MD_ENSEMBLE' = {DYN_PROPERTIES['MD_ENSEMBLE']} and 'LANGEVIN_LAMBDA' = {DYN_PROPERTIES['LANGEVIN_LAMBDA']} are not compatible.\n\t'LANGEVIN_LAMBDA' should not appear as we are trying to do NVE dynamics !"
+        try:
+            tmp = DYN_PROPERTIES["TEMP"]
+        except KeyError:
+            DYN_PROPERTIES["TEMP"] = None
+        assert(DYN_PROPERTIES["TEMP"] == None ), f"\n\t'MD_ENSEMBLE' = {DYN_PROPERTIES['MD_ENSEMBLE']} and 'TEMP' = {DYN_PROPERTIES['TEMP']} are not compatible.\n\t'TEMP' should not appear as we are trying to do NVE dynamics !"
+    
+    
+
+
+
+
+
     # TODO
     try:
         tmp = DYN_PROPERTIES["CPA"]
     except KeyError:
         DYN_PROPERTIES["CPA"] = False # Default is not to do classical path approximation
     assert( DYN_PROPERTIES["CPA"] == False ), "CPA is not yet implemented. Do not use."
+
+
+
+    print("Input looks good.")
 
     return DYN_PROPERTIES

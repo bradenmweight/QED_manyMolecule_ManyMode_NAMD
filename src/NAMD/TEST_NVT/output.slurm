@@ -1,0 +1,846 @@
+MANDATORY INPUT VARIABLES:
+	NStates = 1
+	NSteps = 1000
+	dtI = 0.25 (fs)
+	ESTEPS = 50
+	ISTATE = 0
+	FUNCTIONAL = WB97XD
+	BASIS_SET = 6-311G
+	CHARGE = 0
+	MULTIPLICITY = 1
+	MEMORY = 5 (GB)
+	PARALLEL_FORCES = True
+	NAMD_METHOD = EH
+	EL_PROP = VV
+	MD_ENSEMBLE = NVT
+Input looks good.
+Submitting electronic structure for step 0.
+	Gaussian terminated normally in 2.40 s. (GS_NEW)
+Submitting electronic structure for step 1.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 2.
+	Gaussian terminated normally in 2.37 s. (GS_NEW)
+Total QM took 2.47 s.
+Submitting electronic structure for step 3.
+	Gaussian terminated normally in 2.41 s. (GS_NEW)
+Total QM took 2.51 s.
+Submitting electronic structure for step 4.
+	Gaussian terminated normally in 2.33 s. (GS_NEW)
+Total QM took 2.43 s.
+Submitting electronic structure for step 5.
+	Gaussian terminated normally in 2.34 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 6.
+	Gaussian terminated normally in 2.37 s. (GS_NEW)
+Total QM took 2.47 s.
+Submitting electronic structure for step 7.
+	Gaussian terminated normally in 2.31 s. (GS_NEW)
+Total QM took 2.41 s.
+Submitting electronic structure for step 8.
+	Gaussian terminated normally in 2.31 s. (GS_NEW)
+Total QM took 2.41 s.
+Submitting electronic structure for step 9.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 10.
+	Gaussian terminated normally in 2.33 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 11.
+	Gaussian terminated normally in 2.46 s. (GS_NEW)
+Total QM took 2.57 s.
+Submitting electronic structure for step 12.
+	Gaussian terminated normally in 2.34 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 13.
+	Gaussian terminated normally in 2.53 s. (GS_NEW)
+Total QM took 2.63 s.
+Submitting electronic structure for step 14.
+	Gaussian terminated normally in 2.22 s. (GS_NEW)
+Total QM took 2.33 s.
+Submitting electronic structure for step 15.
+	Gaussian terminated normally in 2.45 s. (GS_NEW)
+Total QM took 2.55 s.
+Submitting electronic structure for step 16.
+	Gaussian terminated normally in 2.42 s. (GS_NEW)
+Total QM took 2.52 s.
+Submitting electronic structure for step 17.
+	Gaussian terminated normally in 2.28 s. (GS_NEW)
+Total QM took 2.38 s.
+Submitting electronic structure for step 18.
+	Gaussian terminated normally in 2.29 s. (GS_NEW)
+Total QM took 2.39 s.
+Submitting electronic structure for step 19.
+	Gaussian terminated normally in 2.43 s. (GS_NEW)
+Total QM took 2.54 s.
+Submitting electronic structure for step 20.
+	Gaussian terminated normally in 2.27 s. (GS_NEW)
+Total QM took 2.38 s.
+Submitting electronic structure for step 21.
+	Gaussian terminated normally in 2.56 s. (GS_NEW)
+Total QM took 2.66 s.
+Submitting electronic structure for step 22.
+	Gaussian terminated normally in 2.39 s. (GS_NEW)
+Total QM took 2.49 s.
+Submitting electronic structure for step 23.
+	Gaussian terminated normally in 2.45 s. (GS_NEW)
+Total QM took 2.56 s.
+Submitting electronic structure for step 24.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.46 s.
+Submitting electronic structure for step 25.
+	Gaussian terminated normally in 2.46 s. (GS_NEW)
+Total QM took 2.57 s.
+Submitting electronic structure for step 26.
+	Gaussian terminated normally in 2.28 s. (GS_NEW)
+Total QM took 2.38 s.
+Submitting electronic structure for step 27.
+	Gaussian terminated normally in 2.40 s. (GS_NEW)
+Total QM took 2.51 s.
+Submitting electronic structure for step 28.
+	Gaussian terminated normally in 2.32 s. (GS_NEW)
+Total QM took 2.42 s.
+Submitting electronic structure for step 29.
+	Gaussian terminated normally in 2.42 s. (GS_NEW)
+Total QM took 2.52 s.
+Submitting electronic structure for step 30.
+	Gaussian terminated normally in 2.30 s. (GS_NEW)
+Total QM took 2.40 s.
+Submitting electronic structure for step 31.
+	Gaussian terminated normally in 2.57 s. (GS_NEW)
+Total QM took 2.67 s.
+Submitting electronic structure for step 32.
+	Gaussian terminated normally in 2.31 s. (GS_NEW)
+Total QM took 2.42 s.
+Submitting electronic structure for step 33.
+	Gaussian terminated normally in 2.59 s. (GS_NEW)
+Total QM took 2.69 s.
+Submitting electronic structure for step 34.
+	Gaussian terminated normally in 2.43 s. (GS_NEW)
+Total QM took 2.54 s.
+Submitting electronic structure for step 35.
+	Gaussian terminated normally in 2.43 s. (GS_NEW)
+Total QM took 2.53 s.
+Submitting electronic structure for step 36.
+	Gaussian terminated normally in 2.24 s. (GS_NEW)
+Total QM took 2.35 s.
+Submitting electronic structure for step 37.
+	Gaussian terminated normally in 2.40 s. (GS_NEW)
+Total QM took 2.50 s.
+Submitting electronic structure for step 38.
+	Gaussian terminated normally in 2.32 s. (GS_NEW)
+Total QM took 2.43 s.
+Submitting electronic structure for step 39.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 40.
+	Gaussian terminated normally in 2.43 s. (GS_NEW)
+Total QM took 2.53 s.
+Submitting electronic structure for step 41.
+	Gaussian terminated normally in 2.58 s. (GS_NEW)
+Total QM took 2.68 s.
+Submitting electronic structure for step 42.
+	Gaussian terminated normally in 2.32 s. (GS_NEW)
+Total QM took 2.42 s.
+Submitting electronic structure for step 43.
+	Gaussian terminated normally in 2.46 s. (GS_NEW)
+Total QM took 2.56 s.
+Submitting electronic structure for step 44.
+	Gaussian terminated normally in 2.40 s. (GS_NEW)
+Total QM took 2.50 s.
+Submitting electronic structure for step 45.
+	Gaussian terminated normally in 2.50 s. (GS_NEW)
+Total QM took 2.60 s.
+Submitting electronic structure for step 46.
+	Gaussian terminated normally in 2.36 s. (GS_NEW)
+Total QM took 2.46 s.
+Submitting electronic structure for step 47.
+	Gaussian terminated normally in 2.25 s. (GS_NEW)
+Total QM took 2.35 s.
+Submitting electronic structure for step 48.
+	Gaussian terminated normally in 2.36 s. (GS_NEW)
+Total QM took 2.46 s.
+Submitting electronic structure for step 49.
+	Gaussian terminated normally in 2.61 s. (GS_NEW)
+Total QM took 2.71 s.
+Submitting electronic structure for step 50.
+	Gaussian terminated normally in 2.33 s. (GS_NEW)
+Total QM took 2.43 s.
+Submitting electronic structure for step 51.
+	Gaussian terminated normally in 2.51 s. (GS_NEW)
+Total QM took 2.61 s.
+Submitting electronic structure for step 52.
+	Gaussian terminated normally in 2.48 s. (GS_NEW)
+Total QM took 2.59 s.
+Submitting electronic structure for step 53.
+	Gaussian terminated normally in 2.36 s. (GS_NEW)
+Total QM took 2.47 s.
+Submitting electronic structure for step 54.
+	Gaussian terminated normally in 2.40 s. (GS_NEW)
+Total QM took 2.50 s.
+Submitting electronic structure for step 55.
+	Gaussian terminated normally in 2.51 s. (GS_NEW)
+Total QM took 2.61 s.
+Submitting electronic structure for step 56.
+	Gaussian terminated normally in 2.32 s. (GS_NEW)
+Total QM took 2.43 s.
+Submitting electronic structure for step 57.
+	Gaussian terminated normally in 2.34 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 58.
+	Gaussian terminated normally in 2.30 s. (GS_NEW)
+Total QM took 2.41 s.
+Submitting electronic structure for step 59.
+	Gaussian terminated normally in 2.39 s. (GS_NEW)
+Total QM took 2.49 s.
+Submitting electronic structure for step 60.
+	Gaussian terminated normally in 2.30 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 61.
+	Gaussian terminated normally in 2.45 s. (GS_NEW)
+Total QM took 2.55 s.
+Submitting electronic structure for step 62.
+	Gaussian terminated normally in 2.34 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 63.
+	Gaussian terminated normally in 2.48 s. (GS_NEW)
+Total QM took 2.58 s.
+Submitting electronic structure for step 64.
+	Gaussian terminated normally in 2.37 s. (GS_NEW)
+Total QM took 2.48 s.
+Submitting electronic structure for step 65.
+	Gaussian terminated normally in 2.43 s. (GS_NEW)
+Total QM took 2.54 s.
+Submitting electronic structure for step 66.
+	Gaussian terminated normally in 2.32 s. (GS_NEW)
+Total QM took 2.43 s.
+Submitting electronic structure for step 67.
+	Gaussian terminated normally in 2.34 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 68.
+	Gaussian terminated normally in 2.31 s. (GS_NEW)
+Total QM took 2.42 s.
+Submitting electronic structure for step 69.
+	Gaussian terminated normally in 2.46 s. (GS_NEW)
+Total QM took 2.56 s.
+Submitting electronic structure for step 70.
+	Gaussian terminated normally in 2.43 s. (GS_NEW)
+Total QM took 2.53 s.
+Submitting electronic structure for step 71.
+	Gaussian terminated normally in 2.27 s. (GS_NEW)
+Total QM took 2.38 s.
+Submitting electronic structure for step 72.
+	Gaussian terminated normally in 2.24 s. (GS_NEW)
+Total QM took 2.34 s.
+Submitting electronic structure for step 73.
+	Gaussian terminated normally in 2.42 s. (GS_NEW)
+Total QM took 2.52 s.
+Submitting electronic structure for step 74.
+	Gaussian terminated normally in 2.29 s. (GS_NEW)
+Total QM took 2.39 s.
+Submitting electronic structure for step 75.
+	Gaussian terminated normally in 2.46 s. (GS_NEW)
+Total QM took 2.57 s.
+Submitting electronic structure for step 76.
+	Gaussian terminated normally in 2.45 s. (GS_NEW)
+Total QM took 2.55 s.
+Submitting electronic structure for step 77.
+	Gaussian terminated normally in 2.33 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 78.
+	Gaussian terminated normally in 2.28 s. (GS_NEW)
+Total QM took 2.38 s.
+Submitting electronic structure for step 79.
+	Gaussian terminated normally in 2.49 s. (GS_NEW)
+Total QM took 2.59 s.
+Submitting electronic structure for step 80.
+	Gaussian terminated normally in 2.27 s. (GS_NEW)
+Total QM took 2.37 s.
+Submitting electronic structure for step 81.
+	Gaussian terminated normally in 2.50 s. (GS_NEW)
+Total QM took 2.60 s.
+Submitting electronic structure for step 82.
+	Gaussian terminated normally in 2.31 s. (GS_NEW)
+Total QM took 2.41 s.
+Submitting electronic structure for step 83.
+	Gaussian terminated normally in 2.36 s. (GS_NEW)
+Total QM took 2.46 s.
+Submitting electronic structure for step 84.
+	Gaussian terminated normally in 2.42 s. (GS_NEW)
+Total QM took 2.53 s.
+Submitting electronic structure for step 85.
+	Gaussian terminated normally in 2.53 s. (GS_NEW)
+Total QM took 2.64 s.
+Submitting electronic structure for step 86.
+	Gaussian terminated normally in 2.27 s. (GS_NEW)
+Total QM took 2.37 s.
+Submitting electronic structure for step 87.
+	Gaussian terminated normally in 2.29 s. (GS_NEW)
+Total QM took 2.39 s.
+Submitting electronic structure for step 88.
+	Gaussian terminated normally in 2.30 s. (GS_NEW)
+Total QM took 2.41 s.
+Submitting electronic structure for step 89.
+	Gaussian terminated normally in 2.32 s. (GS_NEW)
+Total QM took 2.42 s.
+Submitting electronic structure for step 90.
+	Gaussian terminated normally in 2.34 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 91.
+	Gaussian terminated normally in 2.43 s. (GS_NEW)
+Total QM took 2.53 s.
+Submitting electronic structure for step 92.
+	Gaussian terminated normally in 2.37 s. (GS_NEW)
+Total QM took 2.47 s.
+Submitting electronic structure for step 93.
+	Gaussian terminated normally in 2.37 s. (GS_NEW)
+Total QM took 2.47 s.
+Submitting electronic structure for step 94.
+	Gaussian terminated normally in 2.34 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 95.
+	Gaussian terminated normally in 2.33 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 96.
+	Gaussian terminated normally in 2.33 s. (GS_NEW)
+Total QM took 2.43 s.
+Submitting electronic structure for step 97.
+	Gaussian terminated normally in 2.36 s. (GS_NEW)
+Total QM took 2.46 s.
+Submitting electronic structure for step 98.
+	Gaussian terminated normally in 2.37 s. (GS_NEW)
+Total QM took 2.47 s.
+Submitting electronic structure for step 99.
+	Gaussian terminated normally in 2.31 s. (GS_NEW)
+Total QM took 2.41 s.
+Submitting electronic structure for step 100.
+	Gaussian terminated normally in 2.39 s. (GS_NEW)
+Total QM took 2.49 s.
+Submitting electronic structure for step 101.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 102.
+	Gaussian terminated normally in 2.34 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 103.
+	Gaussian terminated normally in 2.48 s. (GS_NEW)
+Total QM took 2.59 s.
+Submitting electronic structure for step 104.
+	Gaussian terminated normally in 2.37 s. (GS_NEW)
+Total QM took 2.47 s.
+Submitting electronic structure for step 105.
+	Gaussian terminated normally in 2.50 s. (GS_NEW)
+Total QM took 2.60 s.
+Submitting electronic structure for step 106.
+	Gaussian terminated normally in 2.31 s. (GS_NEW)
+Total QM took 2.41 s.
+Submitting electronic structure for step 107.
+	Gaussian terminated normally in 2.31 s. (GS_NEW)
+Total QM took 2.42 s.
+Submitting electronic structure for step 108.
+	Gaussian terminated normally in 2.40 s. (GS_NEW)
+Total QM took 2.50 s.
+Submitting electronic structure for step 109.
+	Gaussian terminated normally in 2.37 s. (GS_NEW)
+Total QM took 2.47 s.
+Submitting electronic structure for step 110.
+	Gaussian terminated normally in 2.31 s. (GS_NEW)
+Total QM took 2.42 s.
+Submitting electronic structure for step 111.
+	Gaussian terminated normally in 2.34 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 112.
+	Gaussian terminated normally in 2.38 s. (GS_NEW)
+Total QM took 2.48 s.
+Submitting electronic structure for step 113.
+	Gaussian terminated normally in 2.33 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 114.
+	Gaussian terminated normally in 2.34 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 115.
+	Gaussian terminated normally in 2.65 s. (GS_NEW)
+Total QM took 2.76 s.
+Submitting electronic structure for step 116.
+	Gaussian terminated normally in 2.31 s. (GS_NEW)
+Total QM took 2.41 s.
+Submitting electronic structure for step 117.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 118.
+	Gaussian terminated normally in 2.33 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 119.
+	Gaussian terminated normally in 2.38 s. (GS_NEW)
+Total QM took 2.48 s.
+Submitting electronic structure for step 120.
+	Gaussian terminated normally in 2.29 s. (GS_NEW)
+Total QM took 2.39 s.
+Submitting electronic structure for step 121.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 122.
+	Gaussian terminated normally in 2.40 s. (GS_NEW)
+Total QM took 2.50 s.
+Submitting electronic structure for step 123.
+	Gaussian terminated normally in 2.48 s. (GS_NEW)
+Total QM took 2.58 s.
+Submitting electronic structure for step 124.
+	Gaussian terminated normally in 2.42 s. (GS_NEW)
+Total QM took 2.52 s.
+Submitting electronic structure for step 125.
+	Gaussian terminated normally in 2.22 s. (GS_NEW)
+Total QM took 2.32 s.
+Submitting electronic structure for step 126.
+	Gaussian terminated normally in 2.34 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 127.
+	Gaussian terminated normally in 2.27 s. (GS_NEW)
+Total QM took 2.38 s.
+Submitting electronic structure for step 128.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 129.
+	Gaussian terminated normally in 2.28 s. (GS_NEW)
+Total QM took 2.39 s.
+Submitting electronic structure for step 130.
+	Gaussian terminated normally in 2.29 s. (GS_NEW)
+Total QM took 2.40 s.
+Submitting electronic structure for step 131.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.46 s.
+Submitting electronic structure for step 132.
+	Gaussian terminated normally in 2.50 s. (GS_NEW)
+Total QM took 2.60 s.
+Submitting electronic structure for step 133.
+	Gaussian terminated normally in 2.37 s. (GS_NEW)
+Total QM took 2.47 s.
+Submitting electronic structure for step 134.
+	Gaussian terminated normally in 2.30 s. (GS_NEW)
+Total QM took 2.40 s.
+Submitting electronic structure for step 135.
+	Gaussian terminated normally in 2.41 s. (GS_NEW)
+Total QM took 2.52 s.
+Submitting electronic structure for step 136.
+	Gaussian terminated normally in 2.39 s. (GS_NEW)
+Total QM took 2.50 s.
+Submitting electronic structure for step 137.
+	Gaussian terminated normally in 2.41 s. (GS_NEW)
+Total QM took 2.51 s.
+Submitting electronic structure for step 138.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.46 s.
+Submitting electronic structure for step 139.
+	Gaussian terminated normally in 2.27 s. (GS_NEW)
+Total QM took 2.37 s.
+Submitting electronic structure for step 140.
+	Gaussian terminated normally in 2.53 s. (GS_NEW)
+Total QM took 2.63 s.
+Submitting electronic structure for step 141.
+	Gaussian terminated normally in 2.36 s. (GS_NEW)
+Total QM took 2.46 s.
+Submitting electronic structure for step 142.
+	Gaussian terminated normally in 2.32 s. (GS_NEW)
+Total QM took 2.42 s.
+Submitting electronic structure for step 143.
+	Gaussian terminated normally in 2.39 s. (GS_NEW)
+Total QM took 2.49 s.
+Submitting electronic structure for step 144.
+	Gaussian terminated normally in 2.40 s. (GS_NEW)
+Total QM took 2.50 s.
+Submitting electronic structure for step 145.
+	Gaussian terminated normally in 2.28 s. (GS_NEW)
+Total QM took 2.38 s.
+Submitting electronic structure for step 146.
+	Gaussian terminated normally in 2.28 s. (GS_NEW)
+Total QM took 2.38 s.
+Submitting electronic structure for step 147.
+	Gaussian terminated normally in 2.32 s. (GS_NEW)
+Total QM took 2.42 s.
+Submitting electronic structure for step 148.
+	Gaussian terminated normally in 2.40 s. (GS_NEW)
+Total QM took 2.50 s.
+Submitting electronic structure for step 149.
+	Gaussian terminated normally in 2.34 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 150.
+	Gaussian terminated normally in 2.41 s. (GS_NEW)
+Total QM took 2.51 s.
+Submitting electronic structure for step 151.
+	Gaussian terminated normally in 2.37 s. (GS_NEW)
+Total QM took 2.47 s.
+Submitting electronic structure for step 152.
+	Gaussian terminated normally in 2.50 s. (GS_NEW)
+Total QM took 2.60 s.
+Submitting electronic structure for step 153.
+	Gaussian terminated normally in 2.41 s. (GS_NEW)
+Total QM took 2.51 s.
+Submitting electronic structure for step 154.
+	Gaussian terminated normally in 2.38 s. (GS_NEW)
+Total QM took 2.49 s.
+Submitting electronic structure for step 155.
+	Gaussian terminated normally in 2.30 s. (GS_NEW)
+Total QM took 2.40 s.
+Submitting electronic structure for step 156.
+	Gaussian terminated normally in 2.51 s. (GS_NEW)
+Total QM took 2.62 s.
+Submitting electronic structure for step 157.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 158.
+	Gaussian terminated normally in 2.29 s. (GS_NEW)
+Total QM took 2.39 s.
+Submitting electronic structure for step 159.
+	Gaussian terminated normally in 2.23 s. (GS_NEW)
+Total QM took 2.33 s.
+Submitting electronic structure for step 160.
+	Gaussian terminated normally in 2.30 s. (GS_NEW)
+Total QM took 2.41 s.
+Submitting electronic structure for step 161.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.46 s.
+Submitting electronic structure for step 162.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 163.
+	Gaussian terminated normally in 2.32 s. (GS_NEW)
+Total QM took 2.42 s.
+Submitting electronic structure for step 164.
+	Gaussian terminated normally in 2.44 s. (GS_NEW)
+Total QM took 2.54 s.
+Submitting electronic structure for step 165.
+	Gaussian terminated normally in 2.33 s. (GS_NEW)
+Total QM took 2.43 s.
+Submitting electronic structure for step 166.
+	Gaussian terminated normally in 2.34 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 167.
+	Gaussian terminated normally in 2.38 s. (GS_NEW)
+Total QM took 2.48 s.
+Submitting electronic structure for step 168.
+	Gaussian terminated normally in 2.32 s. (GS_NEW)
+Total QM took 2.43 s.
+Submitting electronic structure for step 169.
+	Gaussian terminated normally in 2.41 s. (GS_NEW)
+Total QM took 2.51 s.
+Submitting electronic structure for step 170.
+	Gaussian terminated normally in 2.54 s. (GS_NEW)
+Total QM took 2.64 s.
+Submitting electronic structure for step 171.
+	Gaussian terminated normally in 2.34 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 172.
+	Gaussian terminated normally in 2.29 s. (GS_NEW)
+Total QM took 2.39 s.
+Submitting electronic structure for step 173.
+	Gaussian terminated normally in 2.37 s. (GS_NEW)
+Total QM took 2.47 s.
+Submitting electronic structure for step 174.
+	Gaussian terminated normally in 2.32 s. (GS_NEW)
+Total QM took 2.42 s.
+Submitting electronic structure for step 175.
+	Gaussian terminated normally in 2.27 s. (GS_NEW)
+Total QM took 2.37 s.
+Submitting electronic structure for step 176.
+	Gaussian terminated normally in 2.39 s. (GS_NEW)
+Total QM took 2.49 s.
+Submitting electronic structure for step 177.
+	Gaussian terminated normally in 2.33 s. (GS_NEW)
+Total QM took 2.43 s.
+Submitting electronic structure for step 178.
+	Gaussian terminated normally in 2.43 s. (GS_NEW)
+Total QM took 2.53 s.
+Submitting electronic structure for step 179.
+	Gaussian terminated normally in 2.29 s. (GS_NEW)
+Total QM took 2.39 s.
+Submitting electronic structure for step 180.
+	Gaussian terminated normally in 2.30 s. (GS_NEW)
+Total QM took 2.40 s.
+Submitting electronic structure for step 181.
+	Gaussian terminated normally in 2.30 s. (GS_NEW)
+Total QM took 2.41 s.
+Submitting electronic structure for step 182.
+	Gaussian terminated normally in 2.39 s. (GS_NEW)
+Total QM took 2.51 s.
+Submitting electronic structure for step 183.
+	Gaussian terminated normally in 2.38 s. (GS_NEW)
+Total QM took 2.48 s.
+Submitting electronic structure for step 184.
+	Gaussian terminated normally in 2.23 s. (GS_NEW)
+Total QM took 2.34 s.
+Submitting electronic structure for step 185.
+	Gaussian terminated normally in 2.51 s. (GS_NEW)
+Total QM took 2.61 s.
+Submitting electronic structure for step 186.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.46 s.
+Submitting electronic structure for step 187.
+	Gaussian terminated normally in 2.33 s. (GS_NEW)
+Total QM took 2.43 s.
+Submitting electronic structure for step 188.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 189.
+	Gaussian terminated normally in 2.39 s. (GS_NEW)
+Total QM took 2.49 s.
+Submitting electronic structure for step 190.
+	Gaussian terminated normally in 2.49 s. (GS_NEW)
+Total QM took 2.59 s.
+Submitting electronic structure for step 191.
+	Gaussian terminated normally in 2.26 s. (GS_NEW)
+Total QM took 2.36 s.
+Submitting electronic structure for step 192.
+	Gaussian terminated normally in 2.51 s. (GS_NEW)
+Total QM took 2.61 s.
+Submitting electronic structure for step 193.
+	Gaussian terminated normally in 2.31 s. (GS_NEW)
+Total QM took 2.41 s.
+Submitting electronic structure for step 194.
+	Gaussian terminated normally in 2.36 s. (GS_NEW)
+Total QM took 2.46 s.
+Submitting electronic structure for step 195.
+	Gaussian terminated normally in 2.34 s. (GS_NEW)
+Total QM took 2.44 s.
+Submitting electronic structure for step 196.
+	Gaussian terminated normally in 2.45 s. (GS_NEW)
+Total QM took 2.55 s.
+Submitting electronic structure for step 197.
+	Gaussian terminated normally in 2.43 s. (GS_NEW)
+Total QM took 2.53 s.
+Submitting electronic structure for step 198.
+	Gaussian terminated normally in 2.40 s. (GS_NEW)
+Total QM took 2.50 s.
+Submitting electronic structure for step 199.
+	Gaussian terminated normally in 2.44 s. (GS_NEW)
+Total QM took 2.54 s.
+Submitting electronic structure for step 200.
+	Gaussian terminated normally in 2.31 s. (GS_NEW)
+Total QM took 2.41 s.
+Submitting electronic structure for step 201.
+	Gaussian terminated normally in 2.37 s. (GS_NEW)
+Total QM took 2.48 s.
+Submitting electronic structure for step 202.
+	Gaussian terminated normally in 2.44 s. (GS_NEW)
+Total QM took 2.55 s.
+Submitting electronic structure for step 203.
+	Gaussian terminated normally in 2.33 s. (GS_NEW)
+Total QM took 2.43 s.
+Submitting electronic structure for step 204.
+	Gaussian terminated normally in 2.33 s. (GS_NEW)
+Total QM took 2.43 s.
+Submitting electronic structure for step 205.
+	Gaussian terminated normally in 2.39 s. (GS_NEW)
+Total QM took 2.49 s.
+Submitting electronic structure for step 206.
+	Gaussian terminated normally in 2.40 s. (GS_NEW)
+Total QM took 2.50 s.
+Submitting electronic structure for step 207.
+	Gaussian terminated normally in 2.46 s. (GS_NEW)
+Total QM took 2.57 s.
+Submitting electronic structure for step 208.
+	Gaussian terminated normally in 2.36 s. (GS_NEW)
+Total QM took 2.46 s.
+Submitting electronic structure for step 209.
+	Gaussian terminated normally in 2.40 s. (GS_NEW)
+Total QM took 2.50 s.
+Submitting electronic structure for step 210.
+	Gaussian terminated normally in 2.36 s. (GS_NEW)
+Total QM took 2.46 s.
+Submitting electronic structure for step 211.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 212.
+	Gaussian terminated normally in 2.44 s. (GS_NEW)
+Total QM took 2.54 s.
+Submitting electronic structure for step 213.
+	Gaussian terminated normally in 2.36 s. (GS_NEW)
+Total QM took 2.46 s.
+Submitting electronic structure for step 214.
+	Gaussian terminated normally in 2.38 s. (GS_NEW)
+Total QM took 2.48 s.
+Submitting electronic structure for step 215.
+	Gaussian terminated normally in 2.41 s. (GS_NEW)
+Total QM took 2.51 s.
+Submitting electronic structure for step 216.
+	Gaussian terminated normally in 2.31 s. (GS_NEW)
+Total QM took 2.41 s.
+Submitting electronic structure for step 217.
+	Gaussian terminated normally in 2.37 s. (GS_NEW)
+Total QM took 2.47 s.
+Submitting electronic structure for step 218.
+	Gaussian terminated normally in 2.27 s. (GS_NEW)
+Total QM took 2.37 s.
+Submitting electronic structure for step 219.
+	Gaussian terminated normally in 2.37 s. (GS_NEW)
+Total QM took 2.48 s.
+Submitting electronic structure for step 220.
+	Gaussian terminated normally in 2.32 s. (GS_NEW)
+Total QM took 2.42 s.
+Submitting electronic structure for step 221.
+	Gaussian terminated normally in 2.41 s. (GS_NEW)
+Total QM took 2.51 s.
+Submitting electronic structure for step 222.
+	Gaussian terminated normally in 2.34 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 223.
+	Gaussian terminated normally in 2.57 s. (GS_NEW)
+Total QM took 2.67 s.
+Submitting electronic structure for step 224.
+	Gaussian terminated normally in 2.33 s. (GS_NEW)
+Total QM took 2.43 s.
+Submitting electronic structure for step 225.
+	Gaussian terminated normally in 2.45 s. (GS_NEW)
+Total QM took 2.55 s.
+Submitting electronic structure for step 226.
+	Gaussian terminated normally in 2.42 s. (GS_NEW)
+Total QM took 2.52 s.
+Submitting electronic structure for step 227.
+	Gaussian terminated normally in 2.32 s. (GS_NEW)
+Total QM took 2.42 s.
+Submitting electronic structure for step 228.
+	Gaussian terminated normally in 2.32 s. (GS_NEW)
+Total QM took 2.43 s.
+Submitting electronic structure for step 229.
+	Gaussian terminated normally in 2.52 s. (GS_NEW)
+Total QM took 2.62 s.
+Submitting electronic structure for step 230.
+	Gaussian terminated normally in 2.37 s. (GS_NEW)
+Total QM took 2.47 s.
+Submitting electronic structure for step 231.
+	Gaussian terminated normally in 2.49 s. (GS_NEW)
+Total QM took 2.60 s.
+Submitting electronic structure for step 232.
+	Gaussian terminated normally in 2.32 s. (GS_NEW)
+Total QM took 2.42 s.
+Submitting electronic structure for step 233.
+	Gaussian terminated normally in 2.42 s. (GS_NEW)
+Total QM took 2.53 s.
+Submitting electronic structure for step 234.
+	Gaussian terminated normally in 2.31 s. (GS_NEW)
+Total QM took 2.41 s.
+Submitting electronic structure for step 235.
+	Gaussian terminated normally in 2.43 s. (GS_NEW)
+Total QM took 2.53 s.
+Submitting electronic structure for step 236.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 237.
+	Gaussian terminated normally in 2.46 s. (GS_NEW)
+Total QM took 2.57 s.
+Submitting electronic structure for step 238.
+	Gaussian terminated normally in 2.39 s. (GS_NEW)
+Total QM took 2.49 s.
+Submitting electronic structure for step 239.
+	Gaussian terminated normally in 2.24 s. (GS_NEW)
+Total QM took 2.34 s.
+Submitting electronic structure for step 240.
+	Gaussian terminated normally in 2.29 s. (GS_NEW)
+Total QM took 2.40 s.
+Submitting electronic structure for step 241.
+	Gaussian terminated normally in 2.48 s. (GS_NEW)
+Total QM took 2.58 s.
+Submitting electronic structure for step 242.
+	Gaussian terminated normally in 2.34 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 243.
+	Gaussian terminated normally in 2.40 s. (GS_NEW)
+Total QM took 2.50 s.
+Submitting electronic structure for step 244.
+	Gaussian terminated normally in 2.29 s. (GS_NEW)
+Total QM took 2.39 s.
+Submitting electronic structure for step 245.
+	Gaussian terminated normally in 2.52 s. (GS_NEW)
+Total QM took 2.63 s.
+Submitting electronic structure for step 246.
+	Gaussian terminated normally in 2.36 s. (GS_NEW)
+Total QM took 2.46 s.
+Submitting electronic structure for step 247.
+	Gaussian terminated normally in 2.56 s. (GS_NEW)
+Total QM took 2.66 s.
+Submitting electronic structure for step 248.
+	Gaussian terminated normally in 2.26 s. (GS_NEW)
+Total QM took 2.36 s.
+Submitting electronic structure for step 249.
+	Gaussian terminated normally in 2.40 s. (GS_NEW)
+Total QM took 2.50 s.
+Submitting electronic structure for step 250.
+	Gaussian terminated normally in 2.27 s. (GS_NEW)
+Total QM took 2.37 s.
+Submitting electronic structure for step 251.
+	Gaussian terminated normally in 2.40 s. (GS_NEW)
+Total QM took 2.51 s.
+Submitting electronic structure for step 252.
+	Gaussian terminated normally in 2.40 s. (GS_NEW)
+Total QM took 2.50 s.
+Submitting electronic structure for step 253.
+	Gaussian terminated normally in 2.49 s. (GS_NEW)
+Total QM took 2.60 s.
+Submitting electronic structure for step 254.
+	Gaussian terminated normally in 2.30 s. (GS_NEW)
+Total QM took 2.40 s.
+Submitting electronic structure for step 255.
+	Gaussian terminated normally in 2.43 s. (GS_NEW)
+Total QM took 2.54 s.
+Submitting electronic structure for step 256.
+	Gaussian terminated normally in 2.30 s. (GS_NEW)
+Total QM took 2.40 s.
+Submitting electronic structure for step 257.
+	Gaussian terminated normally in 2.41 s. (GS_NEW)
+Total QM took 2.51 s.
+Submitting electronic structure for step 258.
+	Gaussian terminated normally in 2.38 s. (GS_NEW)
+Total QM took 2.48 s.
+Submitting electronic structure for step 259.
+	Gaussian terminated normally in 2.50 s. (GS_NEW)
+Total QM took 2.60 s.
+Submitting electronic structure for step 260.
+	Gaussian terminated normally in 2.39 s. (GS_NEW)
+Total QM took 2.49 s.
+Submitting electronic structure for step 261.
+	Gaussian terminated normally in 2.34 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 262.
+	Gaussian terminated normally in 2.28 s. (GS_NEW)
+Total QM took 2.39 s.
+Submitting electronic structure for step 263.
+	Gaussian terminated normally in 2.46 s. (GS_NEW)
+Total QM took 2.56 s.
+Submitting electronic structure for step 264.
+	Gaussian terminated normally in 2.28 s. (GS_NEW)
+Total QM took 2.38 s.
+Submitting electronic structure for step 265.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 266.
+	Gaussian terminated normally in 2.39 s. (GS_NEW)
+Total QM took 2.49 s.
+Submitting electronic structure for step 267.
+	Gaussian terminated normally in 2.35 s. (GS_NEW)
+Total QM took 2.45 s.
+Submitting electronic structure for step 268.
+	Gaussian terminated normally in 2.39 s. (GS_NEW)
+Total QM took 2.49 s.
+Submitting electronic structure for step 269.
+	Gaussian terminated normally in 2.36 s. (GS_NEW)
+Total QM took 2.46 s.
+Submitting electronic structure for step 270.
+	Gaussian terminated normally in 2.30 s. (GS_NEW)
+Total QM took 2.40 s.
+Submitting electronic structure for step 271.
+	Gaussian terminated normally in 2.60 s. (GS_NEW)
+Total QM took 2.70 s.
+Submitting electronic structure for step 272.
+	Gaussian terminated normally in 2.33 s. (GS_NEW)
+Total QM took 2.43 s.
+Submitting electronic structure for step 273.
+	Gaussian terminated normally in 2.38 s. (GS_NEW)
+Total QM took 2.48 s.
+Submitting electronic structure for step 274.
+	Gaussian terminated normally in 2.30 s. (GS_NEW)
+Total QM took 2.41 s.
+Submitting electronic structure for step 275.
+	Gaussian terminated normally in 2.37 s. (GS_NEW)
+Total QM took 2.47 s.
+Submitting electronic structure for step 276.
+	Gaussian terminated normally in 2.32 s. (GS_NEW)
+slurmstepd: error: *** JOB 14305633 ON bhd0006 CANCELLED AT 2023-01-09T18:37:16 ***
