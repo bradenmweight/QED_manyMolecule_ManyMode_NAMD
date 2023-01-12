@@ -25,42 +25,7 @@ def save_data(DYN_PROPERTIES):
         if ( NStates >= 2 ):
             file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,DYN_PROPERTIES["DIAG_ENERGIES_NEW"]*27.2114 )) + "\n" )
         else:
-            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  {DYN_PROPERTIES['DIAG_ENERGIES_NEW']*27.2114}\n" )
-
-    with open("MD_OUTPUT/mapping_re.dat","a") as file01:
-        if ( NStates >= 2 ):
-            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,DYN_PROPERTIES["MAPPING_VARS"].real )) + "\n" )
-        else:
-            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  {DYN_PROPERTIES['MAPPING_VARS'].real}\n" )
-
-    with open("MD_OUTPUT/mapping_im.dat","a") as file01:
-        if ( NStates >= 2 ):
-            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,DYN_PROPERTIES["MAPPING_VARS"].imag )) + "\n" )
-        else:
-            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  {DYN_PROPERTIES['MAPPING_VARS'].imag}\n" )
-
-    with open("MD_OUTPUT/Population.dat","a") as file01:
-        if ( NStates >= 2 ):
-            POP = np.real(properties.get_density_matrix( DYN_PROPERTIES )[np.diag_indices(NStates)])
-            PSUM = np.sum(POP)
-            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,POP )) + "  %2.8f" % (PSUM) + "\n" )
-        else:
-            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  1.0 1.0\n" )
-
-    if ( NStates >= 2 ):
-        with open("MD_OUTPUT/Coherence_re.dat","a") as file01:
-            if ( DYN_PROPERTIES['MD_STEP'] == 0 ): 
-                file01.write(f"# Step " + " ".join([f'{j}-{k}' for j in range(NStates) for k in range(j+1,NStates)]) + "\n" )
-            RHO = np.real(properties.get_density_matrix( DYN_PROPERTIES ))
-            COH = np.array([RHO[j,k] for j in range(NStates) for k in range(j+1,NStates)]).real
-            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,COH )) + "\n" )
-
-        with open("MD_OUTPUT/Coherence_im.dat","a") as file01:
-            if ( DYN_PROPERTIES['MD_STEP'] == 0 ): 
-                file01.write(f"# Step " + " ".join([f'{j}-{k}' for j in range(NStates) for k in range(j+1,NStates)]) + "\n" )
-            RHO = np.real(properties.get_density_matrix( DYN_PROPERTIES ))
-            COH = np.array([RHO[j,k] for j in range(NStates) for k in range(j+1,NStates)]).imag
-            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,COH )) + "\n" )
+            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  {np.round(DYN_PROPERTIES['DIAG_ENERGIES_NEW']*27.2114,8)}\n" )
 
     with open("MD_OUTPUT/Energy.dat","a") as file01:
         
@@ -86,6 +51,32 @@ def save_data(DYN_PROPERTIES):
 
 
     if ( NStates >= 2 ):
+
+        with open("MD_OUTPUT/mapping_re.dat","a") as file01:
+            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,DYN_PROPERTIES["MAPPING_VARS"].real )) + "\n" )
+
+        with open("MD_OUTPUT/mapping_im.dat","a") as file01:
+            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,DYN_PROPERTIES["MAPPING_VARS"].imag )) + "\n" )
+
+        with open("MD_OUTPUT/Population.dat","a") as file01:
+            POP = np.real(properties.get_density_matrix( DYN_PROPERTIES )[np.diag_indices(NStates)])
+            PSUM = np.sum(POP)
+            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,POP )) + "  %2.8f" % (PSUM) + "\n" )
+
+        with open("MD_OUTPUT/Coherence_re.dat","a") as file01:
+            if ( DYN_PROPERTIES['MD_STEP'] == 0 ): 
+                file01.write(f"# Step " + " ".join([f'{j}-{k}' for j in range(NStates) for k in range(j+1,NStates)]) + "\n" )
+            RHO = np.real(properties.get_density_matrix( DYN_PROPERTIES ))
+            COH = np.array([RHO[j,k] for j in range(NStates) for k in range(j+1,NStates)]).real
+            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,COH )) + "\n" )
+
+        with open("MD_OUTPUT/Coherence_im.dat","a") as file01:
+            if ( DYN_PROPERTIES['MD_STEP'] == 0 ): 
+                file01.write(f"# Step " + " ".join([f'{j}-{k}' for j in range(NStates) for k in range(j+1,NStates)]) + "\n" )
+            RHO = np.real(properties.get_density_matrix( DYN_PROPERTIES ))
+            COH = np.array([RHO[j,k] for j in range(NStates) for k in range(j+1,NStates)]).imag
+            file01.write( f"{DYN_PROPERTIES['MD_STEP']}  " +  " ".join(map("{:2.8f}".format,COH )) + "\n" )
+
         with open("MD_OUTPUT/Overlap.dat","a") as file01:
             if ( DYN_PROPERTIES['MD_STEP'] == 0 ): 
                 file01.write(f"# Step " + " ".join([f'{j}-{k}' for j in range(NStates) for k in range(j,NStates)]) + "\n" )

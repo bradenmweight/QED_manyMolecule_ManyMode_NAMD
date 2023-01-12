@@ -163,8 +163,8 @@ def read():
             # Look for NVT_TYPE
             if ( t[0].lower() == "NVT_TYPE".lower() ):
                 DYN_PROPERTIES["NVT_TYPE"] = t[1].upper()
-                if ( DYN_PROPERTIES["NVT_TYPE"] not in ["LANGEVIN"] ): # TODO Add simple velocity rescaling as alternative
-                    print("Input for 'NVT_TYPE' must be 'LANGEVIN'.")
+                if ( DYN_PROPERTIES["NVT_TYPE"] not in ["LANGEVIN", "RESCALE"] ): # TODO Add simple velocity rescaling as alternative
+                    print("Input for 'NVT_TYPE' must be 'LANGEVIN' or 'RESCALE'.")
                     exit()
 
             # Look for LANGEVIN_LAMBDA
@@ -175,6 +175,16 @@ def read():
                     print(f"\t'LANGEVIN_LAMBDA' must be a float: '{t[1]}'")
                     exit()
                 assert( DYN_PROPERTIES["LANGEVIN_LAMBDA"] >= 0 ), f"'LANGEVIN_LAMBDA' must be greater than or equal to 0.0: {DYN_PROPERTIES['LANGEVIN_LAMBDA']}"
+
+            # Look for RESCALE_FREQ
+            if ( t[0].lower() == "RESCALE_FREQ".lower() ):
+                try:
+                    DYN_PROPERTIES["RESCALE_FREQ"] = int( t[1] )
+                except ValueError:
+                    print(f"\t'RESCALE_FREQ' must be an integer: '{t[1]}'")
+                    exit()
+                assert( DYN_PROPERTIES["RESCALE_FREQ"] >= 0 ), f"'RESCALE_FREQ' must be greater than or equal to 0: {DYN_PROPERTIES['RESCALE_FREQ']}"
+
 
             # Look for TEMP
             if ( t[0].lower() == "TEMP".lower() ):
@@ -201,22 +211,23 @@ def read():
 
     try:
         print("MANDATORY INPUT VARIABLES:")
-        print( "\tNStates =", DYN_PROPERTIES["NStates"] )
-        print( "\tNSteps =", DYN_PROPERTIES["NSteps"] )
-        print( "\tdtI =", DYN_PROPERTIES["dtI"]/41.341, "(fs)" )
-        print( "\tESTEPS =", DYN_PROPERTIES["ESTEPS"] )
-        print( "\tISTATE =", DYN_PROPERTIES["ISTATE"] )
-        print( "\tFUNCTIONAL =", DYN_PROPERTIES["FUNCTIONAL"] )
-        print( "\tBASIS_SET =", DYN_PROPERTIES["BASIS_SET"] )
-        print( "\tCHARGE =", DYN_PROPERTIES["CHARGE"] )
-        print( "\tMULTIPLICITY =", DYN_PROPERTIES["MULTIPLICITY"] )
-        print( "\tMEMORY =", DYN_PROPERTIES["MEMORY"], "(GB)" )
-        print( "\tPARALLEL_FORCES =", DYN_PROPERTIES["PARALLEL_FORCES"] )
-        print( "\tNAMD_METHOD =", DYN_PROPERTIES["NAMD_METHOD"] )
-        print( "\tEL_PROP =", DYN_PROPERTIES["EL_PROP"] )
-        print( "\tMD_ENSEMBLE =", DYN_PROPERTIES["MD_ENSEMBLE"] )
+        print( "  NStates ="); print("\t\t", DYN_PROPERTIES["NStates"] )
+        print( "  NSteps ="); print("\t\t", DYN_PROPERTIES["NSteps"] )
+        print( "  dtI ="); print("\t\t", DYN_PROPERTIES["dtI"]/41.341, "(fs)" )
+        print( "  ESTEPS ="); print("\t\t", DYN_PROPERTIES["ESTEPS"] )
+        print( "  ISTATE ="); print("\t\t", DYN_PROPERTIES["ISTATE"] )
+        print( "  FUNCTIONAL ="); print("\t\t", DYN_PROPERTIES["FUNCTIONAL"] )
+        print( "  BASIS_SET ="); print("\t\t", DYN_PROPERTIES["BASIS_SET"] )
+        print( "  CHARGE ="); print("\t\t", DYN_PROPERTIES["CHARGE"] )
+        print( "  MULTIPLICITY ="); print("\t\t", DYN_PROPERTIES["MULTIPLICITY"] )
+        print( "  MEMORY ="); print("\t\t", DYN_PROPERTIES["MEMORY"], "(GB)" )
+        print( "  PARALLEL_FORCES ="); print("\t\t", DYN_PROPERTIES["PARALLEL_FORCES"] )
+        print( "  NAMD_METHOD ="); print("\t\t", DYN_PROPERTIES["NAMD_METHOD"] )
+        print( "  EL_PROP ="); print("\t\t", DYN_PROPERTIES["EL_PROP"] )
+        print( "  MD_ENSEMBLE ="); print("\t\t", DYN_PROPERTIES["MD_ENSEMBLE"] )
+        print( "  VELOC ="); print("\t\t", DYN_PROPERTIES["VELOC"] )
     except KeyError:
-        print("Input file is missing mandatory entries. Check it.")
+        print("Input file is missing mandatory entries (see above). Check it.")
         exit()
 
     assert( DYN_PROPERTIES["ISTATE"] <= DYN_PROPERTIES["NStates"]-1 ), "ISTATE must be less than the total number of states."
@@ -370,6 +381,9 @@ def get_initial_velocs(DYN_PROPERTIES):
     elif ( DYN_PROPERTIES["VELOC"] == "READ" ): # This will be usual way to perform with Wigner for now.
         velocs = read_veloc() # Reads "velocity_input.xyz"
 
+    else:
+        assert(False), "Initial velocities not specified properly.\t Must be 'ZERO', 'MB', or 'RED'."
+
     return velocs
 
 def initialize_MD_variables(DYN_PROPERTIES):
@@ -415,46 +429,60 @@ def initialize_MD_variables(DYN_PROPERTIES):
 
 
     if ( DYN_PROPERTIES["MD_ENSEMBLE"] == "NVT" ):
+        
         try:
             tmp = DYN_PROPERTIES["NVT_TYPE"]
         except KeyError:
-            if ( DYN_PROPERTIES["MD_ENSEMBLE"] == "NVE" ):
-                DYN_PROPERTIES["NVT_TYPE"] = None # Do nothing.
-            else:
-                assert(False), f"\t'NVT_TYPE' needs to be defined if 'MD_ENSEMBLE' = {DYN_PROPERTIES['MD_ENSEMBLE']}"
+            assert(False), f"\t'NVT_TYPE' needs to be defined if 'MD_ENSEMBLE' = {DYN_PROPERTIES['MD_ENSEMBLE']}"
+        
         try:
             tmp = DYN_PROPERTIES["LANGEVIN_LAMBDA"]
         except KeyError:
-            if ( DYN_PROPERTIES["MD_ENSEMBLE"] == "NVE" ):
-                DYN_PROPERTIES["LANGEVIN_LAMBDA"] = None # Do nothing.
-            else:
+            if( DYN_PROPERTIES["NVT_TYPE"] == "LANGEVIN" ):
                 assert(False), f"\t'LANGEVIN_LAMBDA' needs to be defined if 'MD_ENSEMBLE' = {DYN_PROPERTIES['MD_ENSEMBLE']}"
+            elif( DYN_PROPERTIES["NVT_TYPE"] == "RESCALE" ):
+                DYN_PROPERTIES["LANGEVIN_LAMBDA"] = None
+            else:
+                assert(False), f"\t'MD_ENSEMBLE', 'NVT_TYPE', and 'RESCALE_FREQ' need to be consistent."
+        
+        try:
+            tmp = DYN_PROPERTIES["RESCALE_FREQ"]
+        except KeyError:
+            if( DYN_PROPERTIES["NVT_TYPE"] == "LANGEVIN" ):
+                DYN_PROPERTIES["RESCALE_FREQ"] = None
+            elif( DYN_PROPERTIES["NVT_TYPE"] == "RESCALE" ):
+                assert(False), f"\t'RESCALE_FREQ' needs to be defined if 'MD_ENSEMBLE' = {DYN_PROPERTIES['MD_ENSEMBLE']}"
+            else:
+                assert(False), f"\t'MD_ENSEMBLE', 'NVT_TYPE', and 'RESCALE_FREQ' need to match."
+
         try:
             tmp = DYN_PROPERTIES["TEMP"]
         except KeyError:
-            if ( DYN_PROPERTIES["MD_ENSEMBLE"] == "NVE" ):
-                DYN_PROPERTIES["TEMP"] = None # Do nothing.
-            else:
-                assert(False), f"\t'TEMP' needs to be defined if 'MD_ENSEMBLE' = {DYN_PROPERTIES['MD_ENSEMBLE']}"
+            assert(False), f"\t'TEMP' needs to be defined if 'MD_ENSEMBLE' = {DYN_PROPERTIES['MD_ENSEMBLE']}"
+    
     elif ( DYN_PROPERTIES["MD_ENSEMBLE"] == "NVE" ):
+        
         try:
             tmp = DYN_PROPERTIES["NVT_TYPE"]
         except KeyError:
             DYN_PROPERTIES["NVT_TYPE"] = None
         assert(DYN_PROPERTIES["NVT_TYPE"] == None ), f"\n\t'MD_ENSEMBLE' = {DYN_PROPERTIES['MD_ENSEMBLE']} and 'NVT_TYPE' = {DYN_PROPERTIES['NVT_TYPE']} are not compatible.\n\t 'NVT_TYPE' should not appear as we are trying to do NVE dynamics !"
+        
         try:
             tmp = DYN_PROPERTIES["LANGEVIN_LAMBDA"]
         except KeyError:
             DYN_PROPERTIES["LANGEVIN_LAMBDA"] = None
         assert(DYN_PROPERTIES["LANGEVIN_LAMBDA"] == None ), f"\n\t'MD_ENSEMBLE' = {DYN_PROPERTIES['MD_ENSEMBLE']} and 'LANGEVIN_LAMBDA' = {DYN_PROPERTIES['LANGEVIN_LAMBDA']} are not compatible.\n\t'LANGEVIN_LAMBDA' should not appear as we are trying to do NVE dynamics !"
+        
         try:
             tmp = DYN_PROPERTIES["TEMP"]
         except KeyError:
             DYN_PROPERTIES["TEMP"] = None
         assert(DYN_PROPERTIES["TEMP"] == None ), f"\n\t'MD_ENSEMBLE' = {DYN_PROPERTIES['MD_ENSEMBLE']} and 'TEMP' = {DYN_PROPERTIES['TEMP']} are not compatible.\n\t'TEMP' should not appear as we are trying to do NVE dynamics !"
     
+    else:
+        assert(False), "'MD_ENSEMBLE' needs to be defined as either 'NVE' or 'NVT'."
     
-
 
 
 

@@ -33,3 +33,12 @@ def compute_PE(DYN_PROPERTIES):
 
     return DYN_PROPERTIES
 
+def computer_Temperature(DYN_PROPERTIES):
+    DYN_PROPERTIES = compute_KE(DYN_PROPERTIES)
+    NAtoms = DYN_PROPERTIES['NAtoms']
+
+    KE = DYN_PROPERTIES["KE"] * 27.2114 # a.u. --> eV
+
+    T = (2/3) * KE / NAtoms * (300 / 0.025) # eV --> K
+
+    return T
