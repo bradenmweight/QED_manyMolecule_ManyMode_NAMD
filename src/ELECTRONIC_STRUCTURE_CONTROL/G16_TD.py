@@ -4,6 +4,7 @@ import os, sys
 import time
 import multiprocessing as mp
 from scipy.linalg import svd
+import time
 
 import get_cartesian_gradients
 import get_diagonal_electronic_energies
@@ -110,10 +111,13 @@ def generate_inputs(DYN_PROPERTIES):
             # Excited State for New Geometry (Use converged wavefunctions from TD root=1)
             os.chdir(f"TD_NEW_S{state}/")
             file01 = open("geometry.com","w")
-            file01.write(f"%oldchk=../TD_NEW_S1/geometry.chk\n")
+            #file01.write(f"%oldchk=../TD_NEW_S1/geometry.chk\n")
+            file01.write(f"%oldchk=../GS_NEW/geometry.chk\n")
             write_header(file01,MEM,NCPUS_G16)
             # Include one additional excited state even though we only perform NAMD on NStates-1 excied states to converge TD-DFT
-            file01.write(f"# {FUNCTIONAL}/{BASIS_SET} SCF=XQC TD=(read,singlets,nstates={NStates},root={state}) FORCE nosym pop=full guess=read\n\n") ### MAIN LINE ###
+            #file01.write(f"# {FUNCTIONAL}/{BASIS_SET} SCF=XQC TD=(read,singlets,nstates={NStates},root={state}) FORCE nosym pop=full guess=read\n\n") ### MAIN LINE ###
+            #file01.write(f"# {FUNCTIONAL}/{BASIS_SET} SCF=XQC TD=(read,root={state}) FORCE nosym pop=full guess=read\n\n") ### MAIN LINE ###
+            file01.write(f"# {FUNCTIONAL}/{BASIS_SET} SCF=XQC TD=(singlets,nstates={NStates},root={state}) FORCE nosym pop=full guess=read\n\n") ### MAIN LINE ###
             write_geom(file01,Atom_labels,Atom_coords_new,MD_STEP,CHARGE,MULTIPLICITY)
             os.chdir("../")
     
@@ -181,13 +185,13 @@ def submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP, directory=None):
 def run_ES_FORCE_parallel( inputs ):
     state, RUN_ELEC_STRUC, SBATCH_G16, MD_STEP = inputs
     print(f"Starting forces for state {state}")
-    #for state in range( 2, NStates ):
     os.chdir(f"TD_NEW_S{state}/")
     submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP)
     os.chdir("../")
 
 def run_ES_FORCE_serial( RUN_ELEC_STRUC, SBATCH_G16, MD_STEP ):
-    for state in range( 2, NStates ):
+    #for state in range( 2, NStates ): # ONLY 2,NStates in PARALLEL
+    for state in range( 1, NStates ): # ALL STATES IN PARALLEL
         os.chdir(f"TD_NEW_S{state}/")
         submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP)
         os.chdir("../")
@@ -196,15 +200,29 @@ def submit_jobs(DYN_PROPERTIES):
     NStates         = DYN_PROPERTIES["NStates"]
     RUN_ELEC_STRUC  = DYN_PROPERTIES["RUN_ELEC_STRUC"]
     SBATCH_G16      = DYN_PROPERTIES["SBATCH_G16"]
-    MD_STEP      = DYN_PROPERTIES["MD_STEP"]
+    MD_STEP         = DYN_PROPERTIES["MD_STEP"]
 
     print(f"Submitting electronic structure for step {MD_STEP}.")
 
-    # GS and first ES must to be serial jobs
+    # GS must a serial job
     os.chdir("GS_NEW/")
     submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP)
     os.chdir("../")
 
+    if ( DYN_PROPERTIES["PARALLEL_FORCES"] == True ):
+        state_List = [] 
+        #for state in range( 2, NStates ): # Skip force for final excited state. We don't include in NAMD.
+        for state in range( 1, NStates ): # Skip force for final excited state. We don't include in NAMD.
+            state_List.append([ state, RUN_ELEC_STRUC, SBATCH_G16, MD_STEP ])
+        with mp.Pool(processes=DYN_PROPERTIES["NCPUS_NAMD"]) as pool:
+            pool.map(run_ES_FORCE_parallel,state_List)
+    else:
+        run_ES_FORCE_serial( RUN_ELEC_STRUC, SBATCH_G16, MD_STEP )
+
+
+
+
+    """ # THIS IS FOR PARALLELIZING NSTATES >= 3
     if ( NStates >= 2 ):
         os.chdir("TD_NEW_S1/")
         submit(RUN_ELEC_STRUC, SBATCH_G16, MD_STEP)
@@ -220,7 +238,7 @@ def submit_jobs(DYN_PROPERTIES):
                 pool.map(run_ES_FORCE_parallel,state_List)
         else:
             run_ES_FORCE_serial( RUN_ELEC_STRUC, SBATCH_G16, MD_STEP )
-
+    """
 
 
     if ( MD_STEP >= 1 and NStates >= 2 ):
@@ -240,7 +258,7 @@ def correct_phase(OVERLAP_ORTHO,MD_STEP,S_OLD=None):
     f = np.zeros(( NStates ))
     for state in range( NStates ):
         f[state] = OVERLAP_ORTHO[state,state] / np.abs(OVERLAP_ORTHO[state,state]) # \pm 1
-        print("Phase Factor f(S%d) = %2.6f" % (state,f[state]))
+        #print("Phase Factor f(S%d) = %2.6f" % (state,f[state]))
 
     OVERLAP_corrected = np.zeros(( NStates, NStates ))
     for j in range( NStates ):
@@ -311,14 +329,14 @@ def calc_NACT(DYN_PROPERTIES):
     OVERLAP = DYN_PROPERTIES["OVERLAP_NEW"]
     dtI     = DYN_PROPERTIES["dtI"]
 
-    print("Original Overlap")
-    print(OVERLAP)
+    #print("Original Overlap")
+    #print(OVERLAP)
 
     OVERLAP_ORTHO = get_Lowdin_SVD(OVERLAP) * 1.0
     DYN_PROPERTIES["OVERLAP_NEW_uncorrected"] = OVERLAP_ORTHO * 1.0
 
-    print("Orthogonalized OVERLAP:")
-    print(OVERLAP_ORTHO)
+    #print("Orthogonalized OVERLAP:")
+    #print(OVERLAP_ORTHO)
 
     # Save uncorrected properties for debugging purposes. Remove later.
     NACT_uncorrected = (OVERLAP_ORTHO - OVERLAP_ORTHO.T) / 2 / dtI
@@ -331,8 +349,8 @@ def calc_NACT(DYN_PROPERTIES):
         OVERLAP_CORR = correct_phase(OVERLAP_ORTHO,DYN_PROPERTIES["MD_STEP"]) * 1.0
     NACT = (OVERLAP_CORR - OVERLAP_CORR.T) / 2 / dtI
 
-    print("Phase-corrected OVERLAP:")
-    print(OVERLAP_CORR)
+    #print("Phase-corrected OVERLAP:")
+    #print(OVERLAP_CORR)
 
 
 
@@ -407,9 +425,15 @@ def main(DYN_PROPERTIES):
     DYN_PROPERTIES = get_diagonal_electronic_energies.main(DYN_PROPERTIES)
     if ( MD_STEP >= 1 ):
         if ( NStates >= 2 ):
+            T0 = time.time()
             DYN_PROPERTIES = G16_NAC.main(DYN_PROPERTIES) # Provides OVERLAP
+            print( f"\tGET_OVERLAP OVERALL TIME (G16_TD.py):", round(time.time() - T0,2), "s" )
+            T0 = time.time()
             DYN_PROPERTIES = calc_NACT(DYN_PROPERTIES) # Provides NACT
+            print( f"\tGET_NACT OVERALL TIME (G16_TD.py):", round(time.time() - T0,2), "s" )
+            T0 = time.time()
             DYN_PROPERTIES = get_approx_NACR(DYN_PROPERTIES) # Provides NACR from NACT and OVERLAP
+            print( f"\tGET_APPROX NACR OVERALL TIME (G16_TD.py):", round(time.time() - T0,2), "s" )
         else:
             DYN_PROPERTIES["OVERLAP_OLD"] = 0
             DYN_PROPERTIES["OVERLAP_NEW"] = 0

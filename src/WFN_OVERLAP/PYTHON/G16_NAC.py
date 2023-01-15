@@ -6,6 +6,8 @@ import math
 from operator import itemgetter
 import shutil
 import subprocess as sp
+import time
+import numpy as np
 
 from read_g16_dimer_ao_overlap import get_AO_Matrix
 from gau_nac import gau_nac
@@ -55,8 +57,8 @@ class gau_log_parser():
             self.files["ao"] = self.directory['overlap'] + "/" + files['gau_log'] 
             self.files["mo"] = self.directory['work'] + "/" + files['gau_log'] 
         
-        self.check_calc()       
-        self.get_dim_info()
+        #self.check_calc()       
+        #self.get_dim_info_BRADEN()
 
         # key words detected
         if 'ci_assign_problem' in list(config.keys()):
@@ -232,7 +234,58 @@ class gau_log_parser():
         # nothing done
         return
         
-    def get_dim_info(self):
+    def get_dim_info_BRADEN(self):
+        if ( not os.path.isfile(self.files['mo']) ):
+            print("DFT & TD calculation results do not exist!")
+            print("Check the DFT calculation!", self.files['mo'])
+            exit(1)
+
+        #print("HERE:", os.getcwd())
+        NAtoms, NActive = np.array(sp.check_output("grep 'NActive=' geometry.out | tail -n 1 | awk '{print $2,$4}'", shell=True).split(), dtype=int)
+        NBasis, NAE, NBE, NFC, NFV = np.array(sp.check_output("grep 'NFC' geometry.out | tail -n 1 | awk '{print $2,$4,$6,$8,$10}'", shell=True).split(), dtype=int)
+        NOA,NOB,NVA,NVB = np.array(sp.check_output("grep 'NVA=' geometry.out | tail -n 1 | awk '{print $4,$6,$8,$10}'", shell=True).split(), dtype=int)
+        NRoots = int(sp.check_output("grep 'Excited State' geometry.out | wc -l", shell=True)) + 1 # Plus ground state
+        NORB = NOA + NVA # Alpha occupied + unoccupied
+        NOCC,NVIR = NAE, NBasis-NAE
+
+        #print("Braden")
+        #print(NAtoms, NActive, NAE, NBE, NFC, NFV)
+        #print(NBasis, NOA+NFC, NVA+NFV, NOB+NFC, NVB+NFV)
+        #print(NOA + NVA,NOA,NOB,NVA,NVB)
+        #print(NRoots)
+
+        #print("ORIGINAL")
+        #print(self.dim['n_atom'], self.dim['n_active'], self.dim['neleA'], self.dim['neleB'], self.dim['nfixcore'], self.dim['nfixvir'])
+        #print(self.dim['nocc_allA'], self.dim['nvir_allA'], self.dim['nocc_allB'], self.dim['nvir_allB'])
+        #print(self.dim['norb'],self.dim['noccA'],self.dim['noccB'],self.dim['nvirA'],self.dim['nvirB'])
+        #print(self.dim['n_state'])
+
+        self.dim['n_state'] = NRoots
+
+        self.dim['norb']  = int(NOA + NVA)
+        self.dim['noccA'] = int(NOA)
+        self.dim['noccB'] = int(NOB)
+        self.dim['nvirA'] = int(NVA)
+        self.dim['nvirB'] = int(NVB)
+
+        self.dim['n_basis']   = int(NBasis)
+        self.dim['nocc_allA'] = int(NOA+NFC)
+        self.dim['nvir_allA'] = int(NVA+NFV)
+        self.dim['nocc_allB'] = int(NOB+NFC)
+        self.dim['nvir_allB'] = int(NVB+NFV)
+
+        self.dim['n_atom']   = int(NAtoms)
+        self.dim['n_active'] = int(NActive)
+        self.dim['neleA']    = int(NAE)
+        self.dim['neleB']    = int(NBE)
+        self.dim['nfixcore'] = int(NFC)
+        self.dim['nfixvir']  = int(NFV)
+
+        tools.dump_data('dimension.json', self.dim)                
+        
+        return
+
+    def get_dim_info_old(self):
         """
         obtain dimension data.
         such as number of atoms and et al.
@@ -967,30 +1020,65 @@ class gau_log_parser():
 ### main program
 def main(DYN_PROPERTIES):
 
+    ao = gau_log_parser()
+    
+    T_G16_NAC_START = time.time()
     for dir1 in ["TD_NEW_S1","TD_OLD_S1","DIMER"]:
         
         os.chdir(f"./{dir1}")
 
-        if ( dir1 == "DIMER" ):
-            ao = gau_log_parser()
-            ao.check_calc()       
-            ao.get_dim_info()
-            ao.get_ao_overlap()
-        
-        elif ( dir1 in ["TD_NEW_S1", "TD_OLD_S1"] ):
-            ao = gau_log_parser()
-            #ao.get_gradient()
-            ao.get_dim_info()
+        if ( dir1 == "TD_NEW_S1" ): 
+            T0 = time.time()
+            ao.get_dim_info_BRADEN()
+            print( f"\t{dir1} DIM_INFO TIME (BRADEN):", round(time.time() - T0,2), "s" )
+            #T0 = time.time()
+            #ao.get_dim_info_old()
+            #print( f"\t{dir1} DIM_INFO TIME (DEPING):", round(time.time() - T0,2), "s" )
+            T0 = time.time()
             ao.get_mo()
+            print( f"\t{dir1} GET_MO TIME:", round(time.time() - T0,2), "s" )
+            T0 = time.time()
             ao.get_ci_td()
+            print( f"\t{dir1} GET_CI TIME:", round(time.time() - T0,2), "s" )
             ao.get_other()
+
+        elif ( dir1 in ["TD_OLD_S1"] ):
+            #ao = gau_log_parser()
+            #T0 = time.time()
+            #ao.get_dim_info_old()
+            
+            #ao.get_dim_info_BRADEN()
+            #print( f"\t{dir1} DIM_INFO TIME:", round(time.time() - T0,2), "s" )
+            T0 = time.time()
+            ao.get_mo()
+            print( f"\t{dir1} GET_MO TIME:", round(time.time() - T0,2), "s" )
+            T0 = time.time()
+            ao.get_ci_td()
+            print( f"\t{dir1} GET_CI TIME:", round(time.time() - T0,2), "s" )
+            ao.get_other()
+
+        elif ( dir1 == "DIMER" ):
+            T0 = time.time()
+            #ao = gau_log_parser()
+            #ao.check_calc()       
+            #ao.get_dim_info_old()
+            ao.get_ao_overlap()
+            print( "\tDIMER TIME:", round(time.time() - T0,2), "s" )
+
+
 
         os.chdir("../")
 
+    print( f"\tG16_NAC.py main:", round(time.time() - T_G16_NAC_START,2), "s" )
+
     sp.call("rm -rf OVERLAP", shell=True)
     sp.call("mkdir OVERLAP", shell=True)
+    T0 = time.time()
     n = gau_nac(DYN_PROPERTIES) 
+    print( f"\tgau_nac() (G16_NAC.py):", round(time.time() - T0,2), "s" )
+    T0 = time.time()
     DYN_PROPERTIES = n.worker()
+    print( f"\tgau_nac.worker() (G16_NAC.py):", round(time.time() - T0,2), "s" )
 
     return DYN_PROPERTIES
 

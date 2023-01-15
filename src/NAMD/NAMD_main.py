@@ -74,10 +74,12 @@ def main( ):
     # Perform first electronic structure calculation
         # Get diagonal energies and gradients
     DYN_PROPERTIES = G16_TD.main(DYN_PROPERTIES)
+    DYN_PROPERTIES["FORCE_NEW"] = nuclear_propagation.get_Force(DYN_PROPERTIES)
     output.save_data(DYN_PROPERTIES)
 
     # Start main MD loop
     for step in range( DYN_PROPERTIES["NSteps"] ):
+        T_STEP_START = time()
         #print(f"Working on step {step} of { DYN_PROPERTIES['NSteps'] }")
 
         # Propagate nuclear coordinates
@@ -113,7 +115,7 @@ def main( ):
 
         output.save_data(DYN_PROPERTIES)
 
-
+        print( "Total MD Step took %2.2f s." % (time() - T_STEP_START) )
 
 if ( __name__ == "__main__" ):
     main()

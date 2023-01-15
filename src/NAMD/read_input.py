@@ -261,7 +261,7 @@ def read_veloc():
     Atom_velocs_new = np.zeros(( NAtoms, 3 ))
     for count, line in enumerate(XYZ_File[2:]):
         t = line.split()
-        Atom_velocs_new[count,:] = np.array([ float(t[1]), float(t[2]), float(t[3]) ]) / 0.529 # Ang -> a.u.
+        Atom_velocs_new[count,:] = np.array([ float(t[1]), float(t[2]), float(t[3]) ]) / 0.529 / 41.341 # Ang -> a.u.
 
     return Atom_velocs_new
 

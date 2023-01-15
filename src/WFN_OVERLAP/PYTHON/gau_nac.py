@@ -6,6 +6,7 @@ import sys
 import re
 import shutil
 import json
+import time
 
 FORTRAN_CI_CODE = "/scratch/bweight/software/many_molecule_many_mode_NAMD/src/WFN_OVERLAP/FORTRAN/main_overlap_slater.exe"
 
@@ -164,7 +165,7 @@ class gau_nac:
         fileout1.write('ci_overlap.dat          read (*,*) filename_output  \n')
         fileout1.close()
 
-        print("OVERLAP Extracted.")
+        #print("OVERLAP Extracted.")
         
         return
 ###
@@ -262,10 +263,16 @@ class gau_nac:
         """
         prepare; run; dump; finilize
         """
+        T0 = time.time()
         self.prepare()
+        print("gau_nac prepare", round(time.time() - T0,2), "s")
+        T0 = time.time()
         self.run()
+        print("WFN OVERLAP FORTRAN TOOK", round(time.time() - T0,2), "s")
         #self.dump()
+        T0 = time.time()
         self.dump_braden()
+        print("gau_nac dump", round(time.time() - T0,2), "s")
         os.chdir("../")
         
         return self.DYN_PROPERTIES
